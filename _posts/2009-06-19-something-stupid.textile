@@ -1,0 +1,21 @@
+---
+layout: post
+title: We're doing something stupid so that you don't have to
+categories: [gospel]
+---
+
+It's a fact, polling sucks, and it sucks, because it's stupid. This is what "kellan":http://twitter.com/kellan and "rabble":http://twitter.com/rabble "showed last year":http://www.slideshare.net/rabble/beyond-rest-building-data-services-with-xmpp-pubsub?src=embed at OSCON : 
+
+bq. On July 21, 2008, Friendfeed hit Flickr 2.9 million times to get the latest photos of 45,754 users, of which 6,721 visited Flickr in that 24-hour period, and could have potentially uploaded a photo.
+
+And this is *just friendfeed*. How many services is there around here that are polling Flickr, Twitter, Delicious, Youtube, or even this blog? Thousands (except maybe for this blog). 
+
+!/images/polling_sucks.png!
+
+*Push is the solution*. Except that it only works if each service out there pushes, and if each consumer actually accepts to receive pushed content. That makes it pretty hypothetical, right?
+
+We (pollers) should *collaborate*. Collaboration means that, even if we can all poll, there is probably no need for that. _We could probably all grow tomatoes, but it makes more sense to buy them from someone who can grow them cheaper and more effectively than us_. 
+
+This is what "Superfeedr":http://superfeedr.com is all about: -growing tomatoes- doing something that you could do, but doing it "cheaper":http://superfeedr.com/cost, more efficiently and, more importantly, by sharing the results with you. 
+
+Yes, polling is still stupid, but we're doing it for you and everybody who cares about the same feeds.
