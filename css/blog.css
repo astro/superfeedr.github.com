@@ -23,3 +23,12 @@
 #license {
     clear:both;
 }
+
+.excerpt {
+}
+
+.meta {
+    display: block;
+    border-top: 1px solid #CCC;
+    color: #CCC;
+}

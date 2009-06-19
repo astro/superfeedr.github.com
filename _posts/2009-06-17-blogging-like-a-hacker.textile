@@ -6,6 +6,6 @@ categories: [meta]
 
 Welcome to the Superfeedr's blog. I am not sure what you expect from here. You know what a geek does when he's embarrassed does, right? He gets into technical details.
 
-This blog has been built with the great piece of code that Jekyll is. It is hosted on Github, and I used TextMate Version 1.5.8 (1498) to write it. I also used Git to push it on our Github repository. TextMate runs on my MacBookPro 2.53 Ghz Intel Core 2 Duo, with 4 GB of DD3 RAM. It's about 85° F in the room in which I am working right now.
+This blog has been built with the great piece of code that "Jekyll":http://github.com/mojombo/jekyll/tree/master is. It is hosted on "Github":http://github.com, and I used "TextMate":http://macromates.com/ Version 1.5.8 (1498) to write it. I also used "Git":http://git-scm.com/ to push it on our "Github":http://github.com/superfeedr repository. TextMate runs on my "MacBookPro":http://www.apple.com/macbookpro/ 2.53 Ghz Intel Core 2 Duo, with 4 GB of DD3 RAM. It's about 85° F in the "room":http://maps.google.com/maps?client=safari&q=PariSoma&oe=UTF-8&ie=UTF8&hl=en&ll=37.774446,-122.41044&spn=0.04152,0.086002&z=14&iwloc=A in which I am working right now.
 
 Welcome!
