@@ -1,0 +1,12 @@
+---
+layout: post
+title: PubSubHubbub
+categories: [api, http, pubsubhubbub]
+---
+
+We're proud to announce that "Superfeedr":http://superfeedr.com is one of the very first services to actually support the infamous "PubSubHubbub":http://code.google.com/p/pubsubhubbub/ protocol. If you think the name is ugly, check the CSS style of the "spec":http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.1.html.
+
+This presentation should give you enough details about PubSubhubbub.
+<iframe src='http://docs.google.com/EmbedSlideshow?docid=ajd8t6gk4mh2_34dvbpchfs&amp;size=s' frameborder='0' width='400' height='350'></iframe>
+
+What does that mean for you superfeedr users? It means that you can get the ATOM payload of the feeds we parsed pushed to your endpoint url. Check our implementation notes to learn more.

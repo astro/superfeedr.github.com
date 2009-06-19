@@ -1,0 +1,11 @@
+---
+layout: default
+title: Real-time cloudy thoughts from a super-hero
+---
+
+{% for post in site.posts limit:3 %}
+    <h2>{{ post.title }}</h2>
+    <p>
+        {{ post.content | strip_html | truncatewords:30 }} &nbsp;  <a href="{{ post.url }}">Read more</a>
+    </p>
+{% endfor %}

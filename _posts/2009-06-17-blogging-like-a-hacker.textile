@@ -1,0 +1,11 @@
+---
+layout: post
+title: Hello World
+categories: [meta]
+---
+
+Welcome to the Superfeedr's blog. I am not sure what you expect from here. You know what a geek does when he's embarrassed does, right? He gets into technical details.
+
+This blog has been built with the great piece of code that Jekyll is. It is hosted on Github, and I used TextMate Version 1.5.8 (1498) to write it. I also used Git to push it on our Github repository. TextMate runs on my MacBookPro 2.53 Ghz Intel Core 2 Duo, with 4 GB of DD3 RAM. It's about 85° F in the room in which I am working right now.
+
+Welcome!
