@@ -1,0 +1,17 @@
+---
+layout: post
+title: RSS or Atom, not both!
+categories: [gospel, feeeds]
+---
+
+"RSS":http://en.wikipedia.org/wiki/RSS_(file_format) and "ATOM":http://www.atomenabled.org/developers/syndication/atom-format-spec.php have very similar (if not identical) purposes. I don't know any feed consumer that consumes only one type, yet, a lot of services are still providing both.
+
+Publishing both is useless, because it's likely that services will end up polling both of them, to identify new content. It is very hard for them to be 100% sure that they actually contain (and will always contain) the same information. You know that "polling your blog or service is stupid":http://blog.superfeedr.com/gospel/something-stupid/... don't make twice as stupid. 
+
+Yet, if you publish both ATOM and RSS, make our lives easier in two steps :
+
+* Remove the extra <code><link href="..."></code>, by keeping just Atom or RSS
+
+* Add a 301 redirection from one to another, so that you're not messing with your existing pollers (as they should probably follow redirections and be able to parse either format) : with Apache it's as easy as: @RedirectMatch 301 /statuses/user_timeline/(.*)\.rss http://twitter.com/statuses/user_timeline/$1.atom@
+
+No more excuse for not doing it! Please note that I am not discussing whether you should keep ATOM or RSS. I'd go for Atom, but that's a not the case for everybody.

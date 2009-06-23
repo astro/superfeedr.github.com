@@ -4,13 +4,30 @@
  <title>Superfeedr Blog</title>
  <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
  <link href="http://blog.superfeedr.com/"/>
- <updated>2009-06-19T13:48:31-07:00</updated>
+ <updated>2009-06-23T10:03:05-07:00</updated>
  <id>http://blog.superfeedr.com/</id>
  <author>
    <name>Julien Genestoux</name>
    <email>julien@superfeedr.com</email>
  </author>
  
+ 
+ <entry>
+   <title>RSS or Atom, not both!</title>
+   <link href="http://blog.superfeedr.com/feeeds/gospel/atom-or-rss-not-both"/>
+   <updated>2009-06-23T00:00:00-07:00</updated>
+   <id>blog.superfeedr.com:/feeeds/gospel/atom-or-rss-not-both</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/RSS_(file_format&quot;&gt;&lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;&lt;/a&gt;) and &lt;a href=&quot;http://www.atomenabled.org/developers/syndication/atom-format-spec.php&quot;&gt;&lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt;&lt;/a&gt; have very similar (if not identical) purposes. I don&amp;#8217;t know any feed consumer that consumes only one type, yet, a lot of services are still providing both.&lt;/p&gt;
+&lt;p&gt;Publishing both is useless, because it&amp;#8217;s likely that services will end up polling both of them, to identify new content. It is very hard for them to be 100% sure that they actually contain (and will always contain) the same information. You know that &lt;a href=&quot;http://blog.superfeedr.com/gospel/something-stupid/&quot;&gt;polling your blog or service is stupid&lt;/a&gt;&amp;#8230; don&amp;#8217;t make twice as stupid.&lt;/p&gt;
+&lt;p&gt;Yet, if you publish both &lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt; and &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;, make our lives easier in two steps :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Remove the extra &lt;code&gt;&amp;lt;link href=&quot;...&quot;&amp;gt;&lt;/code&gt;, by keeping just Atom or &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+	&lt;li&gt;Add a 301 redirection from one to another, so that you&amp;#8217;re not messing with your existing pollers (as they should probably follow redirections and be able to parse either format) : with Apache it&amp;#8217;s as easy as: &lt;code&gt;RedirectMatch 301 /statuses/user_timeline/(.*)\.rss http://twitter.com/statuses/user_timeline/$1.atom&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;No more excuse for not doing it! Please note that I am not discussing whether you should keep &lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt; or &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;. I&amp;#8217;d go for Atom, but that&amp;#8217;s a not the case for everybody.&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>We're doing something stupid so that you don't have to</title>
@@ -23,9 +40,9 @@
 &lt;/blockquote&gt;
 &lt;p&gt;And this is &lt;strong&gt;just friendfeed&lt;/strong&gt;. How many services is there around here that are polling Flickr, Twitter, Delicious, Youtube, or even this blog? Thousands (except maybe for this blog).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/polling_sucks.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Push is the solution&lt;/strong&gt;. Except that it only works if each service out there pushes, and if each consumer actually accepts to receive pushed content. That makes is pretty hypothetical, right?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Push is the solution&lt;/strong&gt;. Except that it only works if each service out there pushes, and if each consumer actually accepts to receive pushed content. That makes it pretty hypothetical, right?&lt;/p&gt;
 &lt;p&gt;We (pollers) should &lt;strong&gt;collaborate&lt;/strong&gt;. Collaboration means that, even if we can all poll, there is probably no need for that. &lt;em&gt;We could probably all grow tomatoes, but it makes more sense to buy them from someone who can grow them cheaper and more effectively than us&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;This is what &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is all about: &lt;del&gt;growing tomatoes&lt;/del&gt; doing something that you could do, but doing it &lt;a href=&quot;http://superfeedr.com/cost&quot;&gt;cheaper&lt;/a&gt;, more efficiently and, more importantly, by sharing the results.&lt;/p&gt;
+&lt;p&gt;This is what &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is all about: &lt;del&gt;growing tomatoes&lt;/del&gt; doing something that you could do, but doing it &lt;a href=&quot;http://superfeedr.com/cost&quot;&gt;cheaper&lt;/a&gt;, more efficiently and, more importantly, by sharing the results with you.&lt;/p&gt;
 &lt;p&gt;Yes, polling is still stupid, but we&amp;#8217;re doing it for you and everybody who cares about the same feeds.&lt;/p&gt;</content>
  </entry>
  
