@@ -1,23 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
- <title>Superfeedr Blog</title>
- <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
- <link href="http://blog.superfeedr.com/"/>
- <updated>2009-06-23T10:03:05-07:00</updated>
- <id>http://blog.superfeedr.com/</id>
- <author>
-   <name>Julien Genestoux</name>
-   <email>julien@superfeedr.com</email>
- </author>
- 
- 
- <entry>
-   <title>RSS or Atom, not both!</title>
-   <link href="http://blog.superfeedr.com/feeeds/gospel/atom-or-rss-not-both"/>
-   <updated>2009-06-23T00:00:00-07:00</updated>
-   <id>blog.superfeedr.com:/feeeds/gospel/atom-or-rss-not-both</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/RSS_(file_format&quot;&gt;&lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;&lt;/a&gt;) and &lt;a href=&quot;http://www.atomenabled.org/developers/syndication/atom-format-spec.php&quot;&gt;&lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt;&lt;/a&gt; have very similar (if not identical) purposes. I don&amp;#8217;t know any feed consumer that consumes only one type, yet, a lot of services are still providing both.&lt;/p&gt;
+    <title>Superfeedr Blog : Real-time cloudy thoughts from a super-hero</title>
+    <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
+    <link href="http://blog.superfeedr.com/"/>
+    <updated>2009-06-25T09:52:07-07:00</updated>
+    <id>http://blog.superfeedr.com/</id>
+    
+    
+    <entry>
+        <title>A better Schema</title>
+        
+        <category term="Atom" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="schema" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/Atom/schema/a-better-schema"/>
+        <updated>2009-06-25T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/Atom/schema/a-better-schema</id>
+        <content type="html">&lt;p&gt;One of the great features of &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is that it sends a standard format for feed entries. Whether the initial feed format was any flavor of Atom, or &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;, we would map this into a standard Atom feed. Thanks to that it is &lt;strong&gt;easier&lt;/strong&gt; for you to integrate this data into your apps, since you will gain &lt;em&gt;consistency&lt;/em&gt; in the format.&lt;/p&gt;
+&lt;p&gt;However, to achieve that, we have to make some decisions and scraps information from the initial feed. Mapping a title is easy, but that&amp;#8217;s about the only obvious data. We actually had to find the smallest common set of attribute that a feed has.&lt;br /&gt;
+Up to now, entries that we sent had this :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;ID&lt;/li&gt;
+	&lt;li&gt;&lt;span class=&quot;caps&quot;&gt;URL&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;Title&lt;/li&gt;
+	&lt;li&gt;Summary&lt;/li&gt;
+	&lt;li&gt;Published date&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We&amp;#8217;ve been working to complete that over the past few weeks, and here is what you will soon get, on top of what you already have:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Content (if available, if not, you&amp;#8217;ll get a summary)&lt;/li&gt;
+	&lt;li&gt;Categories (or tags)&lt;/li&gt;
+	&lt;li&gt;Authors informations : email, name and uri&lt;/li&gt;
+	&lt;li&gt;Links : not only you will get the entry&amp;#8217;s url, but you will also get any other link that the entry may contain : enclosure, comments&amp;#8230; etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The new schema will be published soon, but first, we want to make sure that there is no other element that you would want to see added to it.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>RSS or Atom, not both!</title>
+        
+        <category term="gospel" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="feeds" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/feeds/gospel/atom-or-rss-not-both"/>
+        <updated>2009-06-23T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/feeds/gospel/atom-or-rss-not-both</id>
+        <content type="html">&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/RSS_(file_format&quot;&gt;&lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;&lt;/a&gt;) and &lt;a href=&quot;http://www.atomenabled.org/developers/syndication/atom-format-spec.php&quot;&gt;&lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt;&lt;/a&gt; have very similar (if not identical) purposes. I don&amp;#8217;t know any feed consumer that consumes only one type, yet, a lot of services are still providing both.&lt;/p&gt;
 &lt;p&gt;Publishing both is useless, because it&amp;#8217;s likely that services will end up polling both of them, to identify new content. It is very hard for them to be 100% sure that they actually contain (and will always contain) the same information. You know that &lt;a href=&quot;http://blog.superfeedr.com/gospel/something-stupid/&quot;&gt;polling your blog or service is stupid&lt;/a&gt;&amp;#8230; don&amp;#8217;t make twice as stupid.&lt;/p&gt;
 &lt;p&gt;Yet, if you publish both &lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt; and &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;, make our lives easier in two steps :&lt;/p&gt;
 &lt;ul&gt;
@@ -27,14 +61,21 @@
 	&lt;li&gt;Add a 301 redirection from one to another, so that you&amp;#8217;re not messing with your existing pollers (as they should probably follow redirections and be able to parse either format) : with Apache it&amp;#8217;s as easy as: &lt;code&gt;RedirectMatch 301 /statuses/user_timeline/(.*)\.rss http://twitter.com/statuses/user_timeline/$1.atom&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;No more excuse for not doing it! Please note that I am not discussing whether you should keep &lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt; or &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;. I&amp;#8217;d go for Atom, but that&amp;#8217;s a not the case for everybody.&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>We're doing something stupid so that you don't have to</title>
-   <link href="http://blog.superfeedr.com/gospel/something-stupid"/>
-   <updated>2009-06-19T00:00:00-07:00</updated>
-   <id>blog.superfeedr.com:/gospel/something-stupid</id>
-   <content type="html">&lt;p&gt;It&amp;#8217;s a fact, polling sucks, and it sucks, because it&amp;#8217;s stupid. This is what &lt;a href=&quot;http://twitter.com/kellan&quot;&gt;kellan&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/rabble&quot;&gt;rabble&lt;/a&gt; &lt;a href=&quot;http://www.slideshare.net/rabble/beyond-rest-building-data-services-with-xmpp-pubsub?src=embed&quot;&gt;showed last year&lt;/a&gt; at &lt;span class=&quot;caps&quot;&gt;OSCON&lt;/span&gt; :&lt;/p&gt;
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>We're doing something stupid so that you don't have to</title>
+        
+        <category term="gospel" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/gospel/something-stupid"/>
+        <updated>2009-06-19T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/gospel/something-stupid</id>
+        <content type="html">&lt;p&gt;It&amp;#8217;s a fact, polling sucks, and it sucks, because it&amp;#8217;s stupid. This is what &lt;a href=&quot;http://twitter.com/kellan&quot;&gt;kellan&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/rabble&quot;&gt;rabble&lt;/a&gt; &lt;a href=&quot;http://www.slideshare.net/rabble/beyond-rest-building-data-services-with-xmpp-pubsub?src=embed&quot;&gt;showed last year&lt;/a&gt; at &lt;span class=&quot;caps&quot;&gt;OSCON&lt;/span&gt; :&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;On July 21, 2008, Friendfeed hit Flickr 2.9 million times to get the latest photos of 45,754 users, of which 6,721 visited Flickr in that 24-hour period, and could have potentially uploaded a photo.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -44,29 +85,50 @@
 &lt;p&gt;We (pollers) should &lt;strong&gt;collaborate&lt;/strong&gt;. Collaboration means that, even if we can all poll, there is probably no need for that. &lt;em&gt;We could probably all grow tomatoes, but it makes more sense to buy them from someone who can grow them cheaper and more effectively than us&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;This is what &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is all about: &lt;del&gt;growing tomatoes&lt;/del&gt; doing something that you could do, but doing it &lt;a href=&quot;http://superfeedr.com/cost&quot;&gt;cheaper&lt;/a&gt;, more efficiently and, more importantly, by sharing the results with you.&lt;/p&gt;
 &lt;p&gt;Yes, polling is still stupid, but we&amp;#8217;re doing it for you and everybody who cares about the same feeds.&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>PubSubHubbub</title>
-   <link href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub"/>
-   <updated>2009-06-18T00:00:00-07:00</updated>
-   <id>blog.superfeedr.com:/api/http/pubsubhubbub/pubsubhubbub</id>
-   <content type="html">&lt;p&gt;We&amp;#8217;re proud to announce that &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is one of the very first services to actually support the infamous &lt;a href=&quot;http://code.google.com/p/pubsubhubbub/&quot;&gt;PubSubHubbub&lt;/a&gt; protocol. If you think the name is ugly, check the &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; style of the &lt;a href=&quot;http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.1.html&quot;&gt;spec&lt;/a&gt;.&lt;/p&gt;
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>PubSubHubbub</title>
+        
+        <category term="api" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="http" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub"/>
+        <updated>2009-06-18T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/api/http/pubsubhubbub/pubsubhubbub</id>
+        <content type="html">&lt;p&gt;We&amp;#8217;re proud to announce that &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is one of the very first services to actually support the infamous &lt;a href=&quot;http://code.google.com/p/pubsubhubbub/&quot;&gt;PubSubHubbub&lt;/a&gt; protocol. If you think the name is ugly, check the &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; style of the &lt;a href=&quot;http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.1.html&quot;&gt;spec&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This presentation should give you enough details about PubSubhubbub.&lt;br /&gt;
 &lt;iframe src='http://docs.google.com/EmbedSlideshow?docid=ajd8t6gk4mh2_34dvbpchfs&amp;amp;size=s' frameborder='0' width='400' height='350'&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;p&gt;What does that mean for you superfeedr users? It means that you can get the &lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt; payload of the feeds we parsed pushed to your endpoint url. Check our &lt;a href=&quot;http://groups.google.com/group/superfeedr/web/pubsubhubbub&quot;&gt;implementation notes&lt;/a&gt; to learn more.&lt;/p&gt;
 &lt;p&gt;Ha, I almost forgot, you can find our hub there &lt;a href=&quot;http://superfeedr.com/hubbub&quot;&gt;http://superfeedr.com/hubbub&lt;/a&gt;.&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>Hello World</title>
-   <link href="http://blog.superfeedr.com/meta/hello-world"/>
-   <updated>2009-06-17T00:00:00-07:00</updated>
-   <id>blog.superfeedr.com:/meta/hello-world</id>
-   <content type="html">&lt;p&gt;Welcome to the Superfeedr&amp;#8217;s blog. I am not sure what you expect from here. You know what a geek does when he&amp;#8217;s embarrassed does, right? He gets into technical details.&lt;/p&gt;
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Hello World</title>
+        
+        <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/meta/hello-world"/>
+        <updated>2009-06-17T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/meta/hello-world</id>
+        <content type="html">&lt;p&gt;Welcome to the Superfeedr&amp;#8217;s blog. I am not sure what you expect from here. You know what a geek does when he&amp;#8217;s embarrassed does, right? He gets into technical details.&lt;/p&gt;
 &lt;p&gt;This blog has been built with the great piece of code that &lt;a href=&quot;http://github.com/mojombo/jekyll/tree/master&quot;&gt;Jekyll&lt;/a&gt; is. It is hosted on &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;, and I used &lt;a href=&quot;http://macromates.com/&quot;&gt;TextMate&lt;/a&gt; Version 1.5.8 (1498) to write it. I also used &lt;a href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt; to push it on our &lt;a href=&quot;http://github.com/superfeedr&quot;&gt;Github&lt;/a&gt; repository. TextMate runs on my &lt;a href=&quot;http://www.apple.com/macbookpro/&quot;&gt;MacBookPro&lt;/a&gt; 2.53 Ghz Intel Core 2 Duo, with 4 GB of DD3 &lt;span class=&quot;caps&quot;&gt;RAM&lt;/span&gt;. It&amp;#8217;s about 85° F in the &lt;a href=&quot;http://maps.google.com/maps?client=safari&amp;amp;q=PariSoma&amp;amp;oe=UTF-8&amp;amp;ie=UTF8&amp;amp;hl=en&amp;amp;ll=37.774446,-122.41044&amp;amp;spn=0.04152,0.086002&amp;amp;z=14&amp;amp;iwloc=A&quot;&gt;room&lt;/a&gt; in which I am working right now.&lt;/p&gt;
 &lt;p&gt;Welcome!&lt;/p&gt;</content>
- </entry>
- 
- 
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
 </feed>

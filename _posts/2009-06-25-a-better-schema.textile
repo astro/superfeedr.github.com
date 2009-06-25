@@ -2,6 +2,8 @@
 layout: post
 title: A better Schema
 categories: [Atom, schema]
+author_name: Julien
+author_uri: http://twitter.com/julien51
 ---
 
 One of the great features of "Superfeedr":http://superfeedr.com is that it sends a standard format for feed entries. Whether the initial feed format was any flavor of Atom, or RSS, we would map this into a standard Atom feed. Thanks to that it is *easier* for you to integrate this data into your apps, since you will gain _consistency_ in the format.
@@ -20,4 +22,4 @@ We've been working to complete that over the past few weeks, and here is what yo
 * Authors informations : email, name and uri
 * Links : not only you will get the entry's url, but you will also get any other link that the entry may contain : enclosure, comments... etc.
 
-The new schema will be published soon, but first, we want to make sure that there is no other element that you would want to see added to it.
+The new schema will be published soon, but first, we want to make sure that there is no other element that you would want to see added to it. What would you add in there?

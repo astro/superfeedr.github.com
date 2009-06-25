@@ -2,6 +2,8 @@
 layout: post
 title: Hello World
 categories: [meta]
+author_name: Julien
+author_uri: http://twitter.com/julien51
 ---
 
 Welcome to the Superfeedr's blog. I am not sure what you expect from here. You know what a geek does when he's embarrassed does, right? He gets into technical details.

@@ -2,4 +2,6 @@
 layout: post
 title: Building Realtime
 categories: [realtime, gospel, infrastructure]
+author_name: Julien
+author_uri: http://twitter.com/julien51
 ---

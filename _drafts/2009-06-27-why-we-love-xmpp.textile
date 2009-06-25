@@ -2,4 +2,6 @@
 layout: post
 title: Why we love XMPP
 categories: [xmpp, gospel]
+author_name: Julien
+author_uri: http://twitter.com/julien51
 ---
