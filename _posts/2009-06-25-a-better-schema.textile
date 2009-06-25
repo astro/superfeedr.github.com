@@ -1,0 +1,23 @@
+---
+layout: post
+title: A better Schema
+categories: [Atom, schema]
+---
+
+One of the great features of "Superfeedr":http://superfeedr.com is that it sends a standard format for feed entries. Whether the initial feed format was any flavor of Atom, or RSS, we would map this into a standard Atom feed. Thanks to that it is *easier* for you to integrate this data into your apps, since you will gain _consistency_ in the format.
+
+However, to achieve that, we have to make some decisions and scraps information from the initial feed. Mapping a title is easy, but that's about the only obvious data. We actually had to find the smallest common set of attribute that a feed has.
+Up to now, entries that we sent had this :
+* ID
+* URL
+* Title
+* Summary
+* Published date
+
+We've been working to complete that over the past few weeks, and here is what you will soon get, on top of what you already have:
+* Content (if available, if not, you'll get a summary)
+* Categories (or tags)
+* Authors informations : email, name and uri
+* Links : not only you will get the entry's url, but you will also get any other link that the entry may contain : enclosure, comments... etc.
+
+The new schema will be published soon, but first, we want to make sure that there is no other element that you would want to see added to it.

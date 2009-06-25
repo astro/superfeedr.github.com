@@ -1,0 +1,5 @@
+---
+layout: post
+title: Host a Chat on GitHub
+categories: [realtime, chat, hosting, xmpp]
+---

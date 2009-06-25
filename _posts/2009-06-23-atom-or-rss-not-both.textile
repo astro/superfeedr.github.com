@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RSS or Atom, not both!
-categories: [gospel, feeeds]
+categories: [gospel, feeds]
 ---
 
 "RSS":http://en.wikipedia.org/wiki/RSS_(file_format) and "ATOM":http://www.atomenabled.org/developers/syndication/atom-format-spec.php have very similar (if not identical) purposes. I don't know any feed consumer that consumes only one type, yet, a lot of services are still providing both.
