@@ -3,9 +3,35 @@
     <title>Superfeedr Blog : Real-time cloudy thoughts from a super-hero</title>
     <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
     <link href="http://blog.superfeedr.com/"/>
-    <updated>2009-06-25T09:52:07-07:00</updated>
+    <updated>2009-06-28T16:05:22-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Building Realtime : turning feeds into flows</title>
+        
+        <category term="realtime" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="gospel" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="infrastructure" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime"/>
+        <updated>2009-06-28T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/gospel/infrastructure/realtime/building-realtime</id>
+        <content type="html">&lt;p&gt;Technically, &lt;a href=&quot;http://en.wikipedia.org/wiki/Real-time_computing&quot;&gt;Real-Time Computing&lt;/a&gt; implies that there is a &lt;em&gt;time constraint&lt;/em&gt; in a system, it&amp;#8217;s &lt;strong&gt;different from instantaneity&lt;/strong&gt;. A real-time service is a service that can guarantee that it would do something in a given amount of time. &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is real-time, since we can guarantee that we will notify new entries in a feed to our users within a 15 minutes time frame.&lt;/p&gt;
+&lt;p&gt;This is only achievable if we &amp;#8220;&lt;strong&gt;push&lt;/strong&gt;&amp;#8221; the information toward our users. We couldn&amp;#8217;t guarantee delivery time if we asked them to &amp;#8220;pull&amp;#8221; from us&lt;sup class=&quot;footnote&quot;&gt;&lt;a href=&quot;#fn1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;This is a keyword here : in a real-time web,* information is pushed from a place to another one*. &lt;em&gt;Facebook pushes my friend updates to my homepage, Twitter search pushes new result to the result page, Friendfeed pushes the conversation to a topic&amp;#8217;s page&amp;#8230; etc&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Unfortunately, as the web is right now, the information is almost never pushed to anybody. Look at this blog. I will publish this blog post and wait for you, for Google, for search engines to actually pull its content. Similarly, these services, once they have the information will probably not push it to anyone.&lt;/p&gt;
+&lt;p&gt;In a perfect world, not only I would push this new content to you readers, to Google, to Delicious, to Digg, to Twitter, but also these services would push an update to their users and other services to notify them that received something from superfeedr&amp;#8230; and so on.&lt;/p&gt;
+&lt;p&gt;Our mission at Superfeedr is to take all these &amp;#8216;static&amp;#8217; bits of information that are feeds, and push them to your services so that you can as well push them (or derived information) to other services&amp;#8230; creating a stream.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;We&amp;#8217;re turning feeds into stream.&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;footnote&quot; id=&quot;fn1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt; On top of that, &lt;a href=&quot;http://blog.superfeedr.com/gospel/something-stupid/&quot;&gt;pull is stupid&lt;/a&gt; .&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>A better Schema</title>
@@ -34,7 +60,7 @@ Up to now, entries that we sent had this :&lt;/p&gt;
 	&lt;li&gt;Authors informations : email, name and uri&lt;/li&gt;
 	&lt;li&gt;Links : not only you will get the entry&amp;#8217;s url, but you will also get any other link that the entry may contain : enclosure, comments&amp;#8230; etc.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The new schema will be published soon, but first, we want to make sure that there is no other element that you would want to see added to it.&lt;/p&gt;</content>
+&lt;p&gt;The new schema will be published soon, but first, we want to make sure that there is no other element that you would want to see added to it. What would you add in there?&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>

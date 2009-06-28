@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Building Realtime : turning feeds into streams"
+categories: [realtime, gospel, infrastructure]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+---
+
+Technically, "Real-Time Computing":http://en.wikipedia.org/wiki/Real-time_computing implies that there is a _time constraint_ in a system, it's *different from instantaneity*. A real-time service is a service that can guarantee that it would do something in a given amount of time. "Superfeedr":http://superfeedr.com is real-time, since we can guarantee that we will notify new entries in a feed to our users within a 15 minutes time frame.
+
+This is only achievable if we "*push*" the information toward our users. We couldn't guarantee delivery time if we asked them to "pull" from us[1].
+
+This is a keyword here : in a real-time web, *information is pushed from a place to another one*. _Facebook pushes my friend updates to my homepage, Twitter search pushes new result to the result page, Friendfeed pushes the conversation to a topic's page... etc_.
+
+Unfortunately, as the web is right now, the information is almost never pushed to anybody. Look at this blog. I will publish this blog post and wait for you, for Google, for search engines to actually pull its content. Similarly, these services, once they have the information will probably not push it to anyone.
+
+In a perfect world, not only I would push this new content to you readers, to Google, to Delicious, to Digg, to Twitter, but also these services would push an update to their users and other services to notify them that received something from superfeedr... and so on.
+
+Our mission at Superfeedr is to take all these 'static' bits of information that are feeds, and push them to your services so that you can as well push them (or derived information) to other services... creating a stream.
+
+*We're turning feeds into stream.*
+
+fn1. On top of that, "pull is stupid":http://blog.superfeedr.com/gospel/something-stupid/ .
