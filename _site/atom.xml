@@ -3,7 +3,7 @@
     <title>Superfeedr Blog : Real-time cloudy thoughts from a super-hero</title>
     <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
     <link href="http://blog.superfeedr.com/"/>
-    <updated>2009-06-30T05:07:08-07:00</updated>
+    <updated>2009-06-30T06:18:20-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
     
@@ -27,7 +27,7 @@
 &lt;p&gt;Here is a example of mapping :&lt;br /&gt;
 &lt;script src=&quot;http://gist.github.com/138122.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;If you have identified a feed that you think we&amp;#8217;re not parsing correctly, please, send us a this feed.xml file, along with the corresponding specification yaml file. We will then &lt;strong&gt;fix our code so that we extract the right info from your file&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Here is a &lt;a href=&quot;http://gist.github.com/138123&quot;&gt;template&lt;/a&gt; for the mapping file.&lt;/p&gt;</content>
+&lt;p&gt;You can use this &lt;a href=&quot;http://gist.github.com/138123&quot;&gt;template&lt;/a&gt; for the mapping file.&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
