@@ -1,0 +1,20 @@
+---
+layout: post
+title: Aristochat
+categories: [OSS, Chat, XMPP, MUC]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+---
+
+It all started when we used "Slicehost's chat-room":http://chat.slicehost.com/ for their support : not only it's awesome to have 24/7 support, but it's also great to have a short-message interface that allows real-time discussion and interaction.
+
+Unfortunately, "Campfire":http://campfirenow.com/ is "proprietary" software and it doesn't seem to be XMPP based. XMPP is known as *THE* instant messaging protocol, and it has the fairly well defined and complete "Multi User Chat Extension":http://xmpp.org/extensions/xep-0045.html .
+
+Also, XMPP has "Bosh":http://xmpp.org/extensions/xep-0206.html, which allows transportation of XMPP stanzas over HTTP. From that, there is no reason to think we couldn't do a *Web Based Multi User Chat*, with just _1 HTML page_, and _1 Javascript_ and that could be integrated in any web framework in just a few seconds : meet "Aristochat":http://github.com/superfeedr/aristochat/tree/master.
+
+!/images/aristocats.jpg!
+
+The great thing about Aristochat is that _it's just a MUC client_, which means that you can connect (and manage) to the room as well from your favorite XMPP client (like "Psi":http://psi-im.org/ "Gajim":http://www.gajim.org/ or "Adium":http://adium.im/).
+
+Check the "Superfeer chat":http://superfeedr.com/chat/ to see an example. And, yes, "Aristochat":http://github.com/superfeedr/aristochat/tree/master is OSS, so you can fork, fetch and push it back with more features!
+

@@ -3,9 +3,35 @@
     <title>Superfeedr Blog : Real-time cloudy thoughts from a super-hero</title>
     <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
     <link href="http://blog.superfeedr.com/"/>
-    <updated>2009-07-03T00:20:25-07:00</updated>
+    <updated>2009-07-03T06:56:44-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Aristochat</title>
+        
+        <category term="OSS" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Chat" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="XMPP" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="MUC" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/Chat/MUC/OSS/XMPP/aristochat"/>
+        <updated>2009-07-03T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/Chat/MUC/OSS/XMPP/aristochat</id>
+        <content type="html">&lt;p&gt;It all started when we used Slicehost&amp;#8217;s chat-room for their support : not only it&amp;#8217;s awesome to have 24/7 support, but it&amp;#8217;s also great to have a short-message interface that allows real-time discussion and interaction.&lt;/p&gt;
+&lt;p&gt;Unfortunately, Campfire is &amp;#8220;proprietary&amp;#8221; software and it doesn&amp;#8217;t seem to be &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; based. &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; is known as &lt;strong&gt;&lt;span class=&quot;caps&quot;&gt;THE&lt;/span&gt;&lt;/strong&gt; instant messaging protocol, and it has the fairly well defined and complete &lt;a href=&quot;http://xmpp.org/extensions/xep-0045.html&quot;&gt;Multi User Chat Extension&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Also, &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; has &lt;a href=&quot;http://xmpp.org/extensions/xep-0206.html&quot;&gt;Bosh&lt;/a&gt;, which allows transportation of &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; stanzas over &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt;. From that, there is no reason to think we couldn&amp;#8217;t do a &lt;strong&gt;Web Based Multi User Chat&lt;/strong&gt;, with just &lt;em&gt;1 &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; page&lt;/em&gt;, and &lt;em&gt;1 Javascript&lt;/em&gt; and that could be integrated in any web framework in just a few seconds : meet &lt;a href=&quot;http://github.com/superfeedr/aristochat/tree/master&quot;&gt;Aristochat&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/aristocats.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The great thing about Aristochat is that &lt;em&gt;it&amp;#8217;s just a &lt;span class=&quot;caps&quot;&gt;MUC&lt;/span&gt; client&lt;/em&gt;, which means that you can connect (and manage) to the room as well from your favorite &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; client (like &lt;a href=&quot;http://psi-im.org/&quot;&gt;Psi&lt;/a&gt; &lt;a href=&quot;http://www.gajim.org/&quot;&gt;Gajim&lt;/a&gt; or &lt;a href=&quot;http://adium.im/&quot;&gt;Adium&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Check the &lt;a href=&quot;http://superfeedr.com/chat/&quot;&gt;Superfeer chat&lt;/a&gt; to see an example. And, yes, &lt;a href=&quot;http://github.com/superfeedr/aristochat/tree/master&quot;&gt;Aristochat&lt;/a&gt; is &lt;span class=&quot;caps&quot;&gt;OSS&lt;/span&gt;, so you can fork, fetch and push it back with more features!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>User Test Driven Development</title>
