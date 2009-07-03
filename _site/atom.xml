@@ -3,7 +3,7 @@
     <title>Superfeedr Blog : Real-time cloudy thoughts from a super-hero</title>
     <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
     <link href="http://blog.superfeedr.com/"/>
-    <updated>2009-07-02T16:26:14-07:00</updated>
+    <updated>2009-07-03T00:20:25-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
     
@@ -16,9 +16,9 @@
         
         <category term="mapping" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <link href="http://blog.superfeedr.com/posts/mapping/schema/test/user-test-driven-development"/>
+        <link href="http://blog.superfeedr.com/mapping/schema/test/user-test-driven-development"/>
         <updated>2009-06-30T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/posts/mapping/schema/test/user-test-driven-development</id>
+        <id>blog.superfeedr.com:/mapping/schema/test/user-test-driven-development</id>
         <content type="html">&lt;p&gt;We are &lt;strong&gt;strong believer&lt;/strong&gt; of &lt;a href=&quot;http://en.wikipedia.org/wiki/Test-driven_development&quot;&gt;Test Driven Development&lt;/a&gt;. It&amp;#8217;s a very powerful approach that allows you to write tests before actually writing code. (These tests are actually specifications). That is how we created our parsers : we selected random feeds on the web, and decided what &lt;em&gt;should&lt;/em&gt; be the mapping between their data and our &lt;a href=&quot;http://blog.superfeedr.com/Atom/schema/a-better-schema/&quot;&gt;standard Atom schema&lt;/a&gt;. Then, we wrote the code to actually perform the mapping.&lt;/p&gt;
 &lt;p&gt;Unfortunately, the web &lt;strong&gt;isn&amp;#8217;t&lt;/strong&gt; standard (that&amp;#8217;s actually one of the problems we tackle!), so there are probably feeds out there for which the mapping that we&amp;#8217;ve identified isn&amp;#8217;t what you would expect us to do. You can help us improve our mapping to fit your needs.&lt;/p&gt;
 &lt;p&gt;In our test suites we have &lt;span class=&quot;caps&quot;&gt;YAML&lt;/span&gt; files representing these mappings and their corresponding &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt; files. Then, we run it by comparing the parsed document to the &lt;span class=&quot;caps&quot;&gt;YAML&lt;/span&gt; mappings.&lt;/p&gt;
@@ -43,9 +43,9 @@
         
         <category term="infrastructure" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <link href="http://blog.superfeedr.com/posts/gospel/infrastructure/realtime/building-realtime"/>
+        <link href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime"/>
         <updated>2009-06-28T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/posts/gospel/infrastructure/realtime/building-realtime</id>
+        <id>blog.superfeedr.com:/gospel/infrastructure/realtime/building-realtime</id>
         <content type="html">&lt;p&gt;Technically, &lt;a href=&quot;http://en.wikipedia.org/wiki/Real-time_computing&quot;&gt;Real-Time Computing&lt;/a&gt; implies that there is a &lt;em&gt;time constraint&lt;/em&gt; in a system, it&amp;#8217;s &lt;strong&gt;different from instantaneity&lt;/strong&gt;. A real-time service is a service that can guarantee that it would do something in a given amount of time. &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is real-time, since we can guarantee that we will notify new entries in a feed to our users within a 15 minutes time frame.&lt;/p&gt;
 &lt;p&gt;This is only achievable if we &amp;#8220;&lt;strong&gt;push&lt;/strong&gt;&amp;#8221; the information toward our users. We couldn&amp;#8217;t guarantee delivery time if we asked them to &amp;#8220;pull&amp;#8221; from us&lt;sup class=&quot;footnote&quot;&gt;&lt;a href=&quot;#fn1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;p&gt;This is a keyword here : in a real-time web, &lt;strong&gt;information is pushed from a place to another one&lt;/strong&gt;. &lt;em&gt;Facebook pushes my friend updates to my homepage, Twitter search pushes new result to the result page, Friendfeed pushes the conversation to a topic&amp;#8217;s page&amp;#8230; etc&lt;/em&gt;.&lt;/p&gt;
@@ -67,9 +67,9 @@
         
         <category term="schema" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <link href="http://blog.superfeedr.com/posts/Atom/schema/a-better-schema"/>
+        <link href="http://blog.superfeedr.com/Atom/schema/a-better-schema"/>
         <updated>2009-06-25T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/posts/Atom/schema/a-better-schema</id>
+        <id>blog.superfeedr.com:/Atom/schema/a-better-schema</id>
         <content type="html">&lt;p&gt;One of the great features of &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is that it sends a standard format for feed entries. Whether the initial feed format was any flavor of Atom, or &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;, we would map this into a standard Atom feed. Thanks to that it is &lt;strong&gt;easier&lt;/strong&gt; for you to integrate this data into your apps, since you will gain &lt;em&gt;consistency&lt;/em&gt; in the format.&lt;/p&gt;
 &lt;p&gt;However, to achieve that, we have to make some decisions and scraps information from the initial feed. Mapping a title is easy, but that&amp;#8217;s about the only obvious data. We actually had to find the smallest common set of attribute that a feed has.&lt;br /&gt;
 Up to now, entries that we sent had this :&lt;/p&gt;
@@ -101,9 +101,9 @@ Up to now, entries that we sent had this :&lt;/p&gt;
         
         <category term="feeds" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <link href="http://blog.superfeedr.com/posts/feeds/gospel/atom-or-rss-not-both"/>
+        <link href="http://blog.superfeedr.com/feeds/gospel/atom-or-rss-not-both"/>
         <updated>2009-06-23T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/posts/feeds/gospel/atom-or-rss-not-both</id>
+        <id>blog.superfeedr.com:/feeds/gospel/atom-or-rss-not-both</id>
         <content type="html">&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/RSS_(file_format&quot;&gt;&lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;&lt;/a&gt;) and &lt;a href=&quot;http://www.atomenabled.org/developers/syndication/atom-format-spec.php&quot;&gt;&lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt;&lt;/a&gt; have very similar (if not identical) purposes. I don&amp;#8217;t know any feed consumer that consumes only one type, yet, a lot of services are still providing both.&lt;/p&gt;
 &lt;p&gt;Publishing both is useless, because it&amp;#8217;s likely that services will end up polling both of them, to identify new content. It is very hard for them to be 100% sure that they actually contain (and will always contain) the same information. You know that &lt;a href=&quot;http://blog.superfeedr.com/gospel/something-stupid/&quot;&gt;polling your blog or service is stupid&lt;/a&gt;&amp;#8230; don&amp;#8217;t make twice as stupid.&lt;/p&gt;
 &lt;p&gt;Yet, if you publish both &lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt; and &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;, make our lives easier in two steps :&lt;/p&gt;
@@ -125,9 +125,9 @@ Up to now, entries that we sent had this :&lt;/p&gt;
         
         <category term="gospel" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <link href="http://blog.superfeedr.com/posts/gospel/something-stupid"/>
+        <link href="http://blog.superfeedr.com/gospel/something-stupid"/>
         <updated>2009-06-19T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/posts/gospel/something-stupid</id>
+        <id>blog.superfeedr.com:/gospel/something-stupid</id>
         <content type="html">&lt;p&gt;It&amp;#8217;s a fact, polling sucks, and it sucks, because it&amp;#8217;s stupid. This is what &lt;a href=&quot;http://twitter.com/kellan&quot;&gt;kellan&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/rabble&quot;&gt;rabble&lt;/a&gt; &lt;a href=&quot;http://www.slideshare.net/rabble/beyond-rest-building-data-services-with-xmpp-pubsub?src=embed&quot;&gt;showed last year&lt;/a&gt; at &lt;span class=&quot;caps&quot;&gt;OSCON&lt;/span&gt; :&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;On July 21, 2008, Friendfeed hit Flickr 2.9 million times to get the latest photos of 45,754 users, of which 6,721 visited Flickr in that 24-hour period, and could have potentially uploaded a photo.&lt;/p&gt;
@@ -153,9 +153,9 @@ Up to now, entries that we sent had this :&lt;/p&gt;
         
         <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <link href="http://blog.superfeedr.com/posts/api/http/pubsubhubbub/pubsubhubbub"/>
+        <link href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub"/>
         <updated>2009-06-18T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/posts/api/http/pubsubhubbub/pubsubhubbub</id>
+        <id>blog.superfeedr.com:/api/http/pubsubhubbub/pubsubhubbub</id>
         <content type="html">&lt;p&gt;We&amp;#8217;re proud to announce that &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is one of the very first services to actually support the infamous &lt;a href=&quot;http://code.google.com/p/pubsubhubbub/&quot;&gt;PubSubHubbub&lt;/a&gt; protocol. If you think the name is ugly, check the &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; style of the &lt;a href=&quot;http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.1.html&quot;&gt;spec&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This presentation should give you enough details about PubSubhubbub.&lt;br /&gt;
 &lt;iframe src='http://docs.google.com/EmbedSlideshow?docid=ajd8t6gk4mh2_34dvbpchfs&amp;amp;size=s' frameborder='0' width='400' height='350'&gt;&lt;/iframe&gt;&lt;/p&gt;
@@ -172,9 +172,9 @@ Up to now, entries that we sent had this :&lt;/p&gt;
         
         <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <link href="http://blog.superfeedr.com/posts/meta/hello-world"/>
+        <link href="http://blog.superfeedr.com/meta/hello-world"/>
         <updated>2009-06-17T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/posts/meta/hello-world</id>
+        <id>blog.superfeedr.com:/meta/hello-world</id>
         <content type="html">&lt;p&gt;Welcome to the Superfeedr&amp;#8217;s blog. I am not sure what you expect from here. You know what a geek does when he&amp;#8217;s embarrassed does, right? He gets into technical details.&lt;/p&gt;
 &lt;p&gt;This blog has been built with the great piece of code that &lt;a href=&quot;http://github.com/mojombo/jekyll/tree/master&quot;&gt;Jekyll&lt;/a&gt; is. It is hosted on &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;, and I used &lt;a href=&quot;http://macromates.com/&quot;&gt;TextMate&lt;/a&gt; Version 1.5.8 (1498) to write it. I also used &lt;a href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt; to push it on our &lt;a href=&quot;http://github.com/superfeedr&quot;&gt;Github&lt;/a&gt; repository. TextMate runs on my &lt;a href=&quot;http://www.apple.com/macbookpro/&quot;&gt;MacBookPro&lt;/a&gt; 2.53 Ghz Intel Core 2 Duo, with 4 GB of DD3 &lt;span class=&quot;caps&quot;&gt;RAM&lt;/span&gt;. It&amp;#8217;s about 85° F in the &lt;a href=&quot;http://maps.google.com/maps?client=safari&amp;amp;q=PariSoma&amp;amp;oe=UTF-8&amp;amp;ie=UTF8&amp;amp;hl=en&amp;amp;ll=37.774446,-122.41044&amp;amp;spn=0.04152,0.086002&amp;amp;z=14&amp;amp;iwloc=A&quot;&gt;room&lt;/a&gt; in which I am working right now.&lt;/p&gt;
 &lt;p&gt;Welcome!&lt;/p&gt;</content>
