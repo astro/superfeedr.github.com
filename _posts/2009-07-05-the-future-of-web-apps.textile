@@ -1,0 +1,19 @@
+---
+layout: post
+title: The future of Web apps?
+categories: [dev, gospel, web apps]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+---
+
+A lot of people have shown interest in "Aristochat":http://github.com/superfeedr/aristochat/tree/master and the "Superfeedr chat":http://superfeedr.com/chat last week. However, I haven't talked about what is - according to me - the greatest thing about it : *it's hosted on Github*. Not only the source code, "but the app itself":http://github.com/superfeedr/Superfeedr-Chat/tree/gh-pages, and since it's a "basic HTML file":http://github.com/superfeedr/Superfeedr-Chat/blob/9d01a452c0f5e21b3deda1221e3d47e84e6c34c5/index.html with a "little bit of Javascript":http://github.com/superfeedr/Superfeedr-Chat/blob/9d01a452c0f5e21b3deda1221e3d47e84e6c34c5/chat.js, it could have very been hosted on EC2 as well, or on any type server that can server HTML file.
+
+This blog is also a great example : technically, it's an app, and yet, it's made of static HTML files, "hosted on Github":http://github.com/superfeedr/superfeedr.github.com/tree/master as well. I think these 2 examples can give us a "hint" on what Web apps will look like in a not so distant future :
+* A bunch of static HTTP files with CSS, served by clusters
+* A lot of Javascript inside these pages to enhance the user experience with effects, drag and drops... etc
+* Some AJAX to send and receive data from an application server, through APIS (JSON, or XML)
+
+With this approach, you can really decouple more and more the data and the processing from the views. The APIs can very well be consumed by a webservice, but also by, say, an iPhone App, an Adobe Air App, or even external web services and we sites.
+
+This should sound familiar, doesn't it? It's very close from the MVC model that we all learnt to create desktop apps. 
+
