@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The future of Web apps?
-categories: [dev, gospel, web apps]
+categories: [dev, gospel, web-apps]
 author_name: Julien
 author_uri: http://twitter.com/julien51
 ---
