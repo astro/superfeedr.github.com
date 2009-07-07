@@ -11,7 +11,9 @@ A lot of people have shown interest in "Aristochat":http://github.com/superfeedr
 This blog is also a great example : technically, it's an app, and yet, it's made of static HTML files, "hosted on Github":http://github.com/superfeedr/superfeedr.github.com/tree/master as well. I think these 2 examples can give us a "hint" on what Web apps will look like in a not so distant future :
 * A bunch of static HTTP files with CSS, served by clusters
 * A lot of Javascript inside these pages to enhance the user experience with effects, drag and drops... etc
-* Some AJAX to send and receive data from an application server, through APIS (JSON, or XML)
+* Some AJAX to send and receive data from one (or more) application servers, through APIS (JSON, or XML)
+
+The great thing about that is that web services (and developers) can focus on a single "job", while designers, UX engineers can 'pick' up whatever tool they want to integrate into an app and make it richer.
 
 With this approach, you can really decouple more and more the data and the processing from the views. The APIs can very well be consumed by a webservice, but also by, say, an iPhone App, an Adobe Air App, or even external web services and we sites.
 
