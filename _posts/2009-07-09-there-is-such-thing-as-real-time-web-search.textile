@@ -1,0 +1,18 @@
+---
+layout: post
+title: There is no such thing as Real Time Search
+categories: [real-time]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+---
+
+_Real-time search_ seems to be the most common tagline these days. Real-time is the new hotness ("we agree":http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/!) and Google almost made 'Revenue' and 'Search' synonyms. I guess it was tempting to mix both ;) 
+
+When I am doing a "search" on "Google":http://google.com or "Bing":http://bing.com (try it!), I technically don't know what I will find. To be more precise, I don't know where I will find the information, and I even don't know if what I am looking for exists.
+
+"Twitter Search":http://search.twitter.com (ex-summize) is clearly the best known example of Real-time Search and "Collecta":http://collecta.com is a good "cross-services" examples. I wouldn't call any of them search engines, but rather "*filters*".
+
+In both cases, I do searches about things that are happening (Jackson's death, Palin's resignation...), which proves they exist. I also tend to know what I'll find : images, links to more in-depth articles... etc. I am just trying to "filter" the stream of information, not searching for an answer.
+
+In the end, both traditional search-engines and real-time filters have to deal with *relevance*, but I think the *user's expectations are very different in both cases*. What do you think?
+
