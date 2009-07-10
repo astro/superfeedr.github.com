@@ -1,0 +1,15 @@
+---
+layout: post
+title: Speeding Up RSS : what for?
+categories: [RSS, Atom, Feeds, Push, Techcrunch]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+---
+
+"Erick Schonfeld":http://twitter.com/Erickschonfeld published the "blog post of the -day- week":http://www.techcrunch.com/2009/07/09/speeding-up-rss/. Despite the fact that he should have talked about "Superfeedr":http://superfeedr.com, I think this is an awesome article. I am really looking forward to "tomorrow's panel":http://www.techcrunch.com/2009/07/08/win-a-ticket-to-the-real-time-stream-crunchup-this-friday/ and see what "Brett", Brad, Freddy and Andy have to talk about.
+
+The comments, though are very interesting and they show what we've observed with "Notifixious"http://notifixio.us over the last year : Real-time notification (or faster RSS) scares people a lot. There is at least 4 or 5 comments saying that RSS is fast enough for them. The problem here, is that there is a misconception :* making RSS faster is not for individuals, but for the web itself*.
+
+"PubSubHubbub":http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/ has the potential to bring Push to the RSS and Atom technologies. So not only it will be faster, but it will be instantaneous, and when Feed updates will be instantaneous, nobody will pull anymore ("not even us":http://blog.superfeedr.com/gospel/something-stupid/) and the web will be better.
+
+Better? Publishers will not have to _handle massive loads anymore_ (like Twitter had to), and Subscribers (services) will _not have to poll over and over to get updates_. 
