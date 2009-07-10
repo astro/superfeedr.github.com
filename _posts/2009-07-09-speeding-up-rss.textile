@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Speeding Up RSS : what for?
+title: "Speeding Up RSS : what for?"
 categories: [RSS, Atom, Feeds, Push, Techcrunch]
 author_name: Julien
 author_uri: http://twitter.com/julien51
