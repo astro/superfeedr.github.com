@@ -8,5 +8,5 @@ author_uri: http://twitter.com/julien51
 
 Yesterday, the Carsonified team relaunched their website and it's looking great. The "Mission page":http://carsonified.com/mission/ should be a lesson for everybody:
 
-bq.At Carsonified we believe in treating other people like we want to be treated: with *friendliness, patience and respect*. We believe that the web industry is one of the most exciting places in the world, and that *it's an honor for us to connect, encourage and train that community through our events*. We believe in being more creative than we need to be and having fun while we're at it.
+bq. At Carsonified we believe in treating other people like we want to be treated: with *friendliness, patience and respect*. We believe that the web industry is one of the most exciting places in the world, and that *it's an honor for us to connect, encourage and train that community through our events*. We believe in being more creative than we need to be and having fun while we're at it.
 
