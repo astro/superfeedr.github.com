@@ -3,9 +3,124 @@
     <title>Superfeedr Blog : Real-time cloudy thoughts from a super-hero</title>
     <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
     <link href="http://blog.superfeedr.com/"/>
-    <updated>2009-07-03T06:56:44-07:00</updated>
+    <updated>2009-07-12T08:53:26-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Federating PubSubHubbub</title>
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="api" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="federation" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/api/federation/pubsubhubbub/federating-pubsubhubbub"/>
+        <updated>2009-07-12T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/api/federation/pubsubhubbub/federating-pubsubhubbub</id>
+        <content type="html">&lt;p&gt;PubSubHubbub has been the &lt;a href=&quot;http://search.twitter.com/search?q=PubSubhubbub&quot;&gt;RealTime web celebrity&lt;/a&gt; in the past few days. &lt;a href=&quot;http://adsenseforfeeds.blogspot.com/2009/07/whats-all-hubbub-about-pubsubhubbub.html&quot;&gt;Google announced&lt;/a&gt; their support for Feedburner and Blogger, and that&amp;#8217;s great to see the interest growing.&lt;/p&gt;
+&lt;p&gt;We decided a few weeks ago that &lt;a href=&quot;http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/&quot;&gt;PubSubHubbub would be our &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/a&gt; and it&amp;#8217;s been a great choice for us as many developers have started to work on language specific libraries to interact with hubs.&lt;/p&gt;
+&lt;p&gt;Today, we&amp;#8217;re announcing that &lt;strong&gt;not only we&amp;#8217;re a hub, but we&amp;#8217;re also a subscriber&lt;/strong&gt;. In other terms, it means that whenever a feed indicates a hub, Superfeedr will subscribe to this hub to get updates from it in real-time. That is a great addition to &lt;a href=&quot;http://superfeedr.com/technology&quot;&gt;our set of helpers&lt;/a&gt; and it will hopefully help us &lt;em&gt;improve yet again our detection time&lt;/em&gt; of new entries.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://docs.google.com/present/view?id=ajd8t6gk4mh2_34dvbpchfs&quot;&gt;&lt;img src=&quot;/images/federated_pubsubhubbub.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;At a broader level, it is &lt;a href=&quot;http://www.scripting.com/stories/2009/07/11/morePubsubhubbubFeedback.html&quot;&gt;interesting to compare&lt;/a&gt; PubSubHubbub with previous initiatives, and, as far as I know, PubSubHubbub is the first one to actually enable easily this &amp;#8220;federation&amp;#8221; structure (similar to what &lt;a href=&quot;http://xmpp.org/rfcs/rfc3920.html&quot;&gt;&lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; offers&lt;/a&gt;), where &lt;em&gt;subscribers can select their favorite hubs&lt;/em&gt; and &lt;em&gt;hubs can communicate together&lt;/em&gt; to provide updates to all their users.&lt;/p&gt;
+&lt;p&gt;It makes the PubSubHubbub &amp;#8220;network&amp;#8221; even more decentralized and scalable/fault-resistant. For those into &lt;a href=&quot;http://en.wikipedia.org/wiki/Graph_%28mathematics%29&quot;&gt;graph theory&lt;/a&gt;, you will immediately see the benefit of such an architecture : virtually ubiquitous new data publication, as long as there is a (not too long) path from any node to any other node!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51<img src="../../../Desktop/federated_pubsubhubbub.png" width="386" height="303" alt="Federated Pubsubhubbub"></uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Customer Care Lesson</title>
+        
+        <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/meta/customer-care-lesson"/>
+        <updated>2009-07-10T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/meta/customer-care-lesson</id>
+        <content type="html">&lt;p&gt;Yesterday, the Carsonified team relaunched their website and it&amp;#8217;s looking great. The &lt;a href=&quot;http://carsonified.com/mission/&quot;&gt;Mission page&lt;/a&gt; should be a lesson for everybody:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;At Carsonified we believe in treating other people like we want to be treated: with &lt;strong&gt;friendliness, patience and respect&lt;/strong&gt;. We believe that the web industry is one of the most exciting places in the world, and that &lt;strong&gt;it&amp;#8217;s an honor for us to connect, encourage and train that community through our events&lt;/strong&gt;. We believe in being more creative than we need to be and having fun while we&amp;#8217;re at it.&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>There is no such thing as Real Time Search</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/real-time/there-is-such-thing-as-real-time-web-search"/>
+        <updated>2009-07-09T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/real-time/there-is-such-thing-as-real-time-web-search</id>
+        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href=&quot;http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/&quot;&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
+&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt; or &lt;a href=&quot;http://bing.com&quot;&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://search.twitter.com&quot;&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href=&quot;http://collecta.com&quot;&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
+&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Speeding Up RSS : what for?</title>
+        
+        <category term="RSS" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Atom" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Feeds" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Push" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Techcrunch" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/Atom/Feeds/Push/RSS/Techcrunch/speeding-up-rss"/>
+        <updated>2009-07-09T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/Atom/Feeds/Push/RSS/Techcrunch/speeding-up-rss</id>
+        <content type="html">&lt;p&gt;&lt;a href=&quot;http://twitter.com/Erickschonfeld&quot;&gt;Erick Schonfeld&lt;/a&gt; published the &lt;a href=&quot;http://www.techcrunch.com/2009/07/09/speeding-up-rss/&quot;&gt;blog post of the &lt;del&gt;day&lt;/del&gt; week&lt;/a&gt;. Despite the fact that he should have talked about &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt;, I think this is an awesome article. I am really looking forward to &lt;a href=&quot;http://www.techcrunch.com/2009/07/08/win-a-ticket-to-the-real-time-stream-crunchup-this-friday/&quot;&gt;tomorrow&amp;#8217;s panel&lt;/a&gt; and see what &amp;#8220;Brett&amp;#8221;, Brad, Freddy and Andy have to talk about.&lt;/p&gt;
+&lt;p&gt;The comments, though are very interesting and they show what we&amp;#8217;ve observed with &amp;quot;Notifixious&amp;quot;http://notifixio.us over the last year : Real-time notification (or faster &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;) scares people a lot. There is at least 4 or 5 comments saying that &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; is fast enough for them. The problem here, is that there is a misconception :* making &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; faster is not for individuals, but for the web itself*.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/&quot;&gt;PubSubHubbub&lt;/a&gt; has the potential to bring Push to the &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; and Atom technologies. So not only it will be faster, but it will be instantaneous, and when Feed updates will be instantaneous, nobody will pull anymore (&lt;a href=&quot;http://blog.superfeedr.com/gospel/something-stupid/&quot;&gt;not even us&lt;/a&gt;) and the web will be better.&lt;/p&gt;
+&lt;p&gt;Better? Publishers will not have to &lt;em&gt;handle massive loads anymore&lt;/em&gt; (like Twitter had to), and Subscribers (services) will &lt;em&gt;not have to poll over and over to get updates&lt;/em&gt;.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>The future of Web apps?</title>
+        
+        <category term="dev" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="gospel" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="web-apps" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/dev/gospel/web-apps/the-future-of-web-apps"/>
+        <updated>2009-07-05T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/dev/gospel/web-apps/the-future-of-web-apps</id>
+        <content type="html">&lt;p&gt;A lot of people have shown interest in &lt;a href=&quot;http://github.com/superfeedr/aristochat/tree/master&quot;&gt;Aristochat&lt;/a&gt; and the &lt;a href=&quot;http://superfeedr.com/chat&quot;&gt;Superfeedr chat&lt;/a&gt; last week. However, I haven&amp;#8217;t talked about what is &amp;#8211; according to me &amp;#8211; the greatest thing about it : &lt;strong&gt;it&amp;#8217;s hosted on Github&lt;/strong&gt;. Not only the source code, &lt;a href=&quot;http://github.com/superfeedr/Superfeedr-Chat/tree/gh-pages&quot;&gt;but the app itself&lt;/a&gt;, and since it&amp;#8217;s a &lt;a href=&quot;http://github.com/superfeedr/Superfeedr-Chat/blob/9d01a452c0f5e21b3deda1221e3d47e84e6c34c5/index.html&quot;&gt;basic &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; file&lt;/a&gt; with a &lt;a href=&quot;http://github.com/superfeedr/Superfeedr-Chat/blob/9d01a452c0f5e21b3deda1221e3d47e84e6c34c5/chat.js&quot;&gt;little bit of Javascript&lt;/a&gt;, it could have very been hosted on EC2 as well, or on any type server that can server &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; file.&lt;/p&gt;
+&lt;p&gt;This blog is also a great example : technically, it&amp;#8217;s an app, and yet, it&amp;#8217;s made of static &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; files, &lt;a href=&quot;http://github.com/superfeedr/superfeedr.github.com/tree/master&quot;&gt;hosted on Github&lt;/a&gt; as well. I think these 2 examples can give us a &amp;#8220;hint&amp;#8221; on what Web apps will look like in a not so distant future :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;A bunch of static &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; files with &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt;, served by clusters&lt;/li&gt;
+	&lt;li&gt;A lot of Javascript inside these pages to enhance the user experience with effects, drag and drops&amp;#8230; etc&lt;/li&gt;
+	&lt;li&gt;Some &lt;span class=&quot;caps&quot;&gt;AJAX&lt;/span&gt; to send and receive data from one (or more) application servers, through &lt;span class=&quot;caps&quot;&gt;APIS&lt;/span&gt; (&lt;span class=&quot;caps&quot;&gt;JSON&lt;/span&gt;, or &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The great thing about that is that web services (and developers) can focus on a single &amp;#8220;job&amp;#8221;, while designers, UX engineers can &amp;#8216;pick&amp;#8217; up whatever tool they want to integrate into an app and make it richer.&lt;/p&gt;
+&lt;p&gt;With this approach, you can really decouple more and more the data and the processing from the views. The APIs can very well be consumed by a webservice, but also by, say, an iPhone App, an Adobe Air App, or even external web services and we sites.&lt;/p&gt;
+&lt;p&gt;This should sound familiar, doesn&amp;#8217;t it? It&amp;#8217;s very close from the &lt;span class=&quot;caps&quot;&gt;MVC&lt;/span&gt; model that we all learnt to create desktop apps.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Aristochat</title>
@@ -21,8 +136,8 @@
         <link href="http://blog.superfeedr.com/Chat/MUC/OSS/XMPP/aristochat"/>
         <updated>2009-07-03T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/Chat/MUC/OSS/XMPP/aristochat</id>
-        <content type="html">&lt;p&gt;It all started when we used Slicehost&amp;#8217;s chat-room for their support : not only it&amp;#8217;s awesome to have 24/7 support, but it&amp;#8217;s also great to have a short-message interface that allows real-time discussion and interaction.&lt;/p&gt;
-&lt;p&gt;Unfortunately, Campfire is &amp;#8220;proprietary&amp;#8221; software and it doesn&amp;#8217;t seem to be &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; based. &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; is known as &lt;strong&gt;&lt;span class=&quot;caps&quot;&gt;THE&lt;/span&gt;&lt;/strong&gt; instant messaging protocol, and it has the fairly well defined and complete &lt;a href=&quot;http://xmpp.org/extensions/xep-0045.html&quot;&gt;Multi User Chat Extension&lt;/a&gt; .&lt;/p&gt;
+        <content type="html">&lt;p&gt;It all started when we used &lt;a href=&quot;http://chat.slicehost.com/&quot;&gt;Slicehost&amp;#8217;s chat-room&lt;/a&gt; for their support : not only it&amp;#8217;s awesome to have 24/7 support, but it&amp;#8217;s also great to have a short-message interface that allows real-time discussion and interaction.&lt;/p&gt;
+&lt;p&gt;Unfortunately, &lt;a href=&quot;http://campfirenow.com/&quot;&gt;Campfire&lt;/a&gt; is &amp;#8220;proprietary&amp;#8221; software and it doesn&amp;#8217;t seem to be &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; based. &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; is known as &lt;strong&gt;&lt;span class=&quot;caps&quot;&gt;THE&lt;/span&gt;&lt;/strong&gt; instant messaging protocol, and it has the fairly well defined and complete &lt;a href=&quot;http://xmpp.org/extensions/xep-0045.html&quot;&gt;Multi User Chat Extension&lt;/a&gt; .&lt;/p&gt;
 &lt;p&gt;Also, &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; has &lt;a href=&quot;http://xmpp.org/extensions/xep-0206.html&quot;&gt;Bosh&lt;/a&gt;, which allows transportation of &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; stanzas over &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt;. From that, there is no reason to think we couldn&amp;#8217;t do a &lt;strong&gt;Web Based Multi User Chat&lt;/strong&gt;, with just &lt;em&gt;1 &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; page&lt;/em&gt;, and &lt;em&gt;1 Javascript&lt;/em&gt; and that could be integrated in any web framework in just a few seconds : meet &lt;a href=&quot;http://github.com/superfeedr/aristochat/tree/master&quot;&gt;Aristochat&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/aristocats.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;The great thing about Aristochat is that &lt;em&gt;it&amp;#8217;s just a &lt;span class=&quot;caps&quot;&gt;MUC&lt;/span&gt; client&lt;/em&gt;, which means that you can connect (and manage) to the room as well from your favorite &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; client (like &lt;a href=&quot;http://psi-im.org/&quot;&gt;Psi&lt;/a&gt; &lt;a href=&quot;http://www.gajim.org/&quot;&gt;Gajim&lt;/a&gt; or &lt;a href=&quot;http://adium.im/&quot;&gt;Adium&lt;/a&gt;).&lt;/p&gt;

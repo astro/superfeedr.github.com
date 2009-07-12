@@ -1,0 +1,20 @@
+---
+layout: post
+title: Federating PubSubHubbub
+categories: [pubsubhubbub, api, federation]
+author_name: Julien
+author_uri: http://twitter.com/julien51<img src="../../../Desktop/federated_pubsubhubbub.png" width="386" height="303" alt="Federated Pubsubhubbub">
+---
+
+PubSubHubbub has been the "RealTime web celebrity":http://search.twitter.com/search?q=PubSubhubbub in the past few days. "Google announced":http://adsenseforfeeds.blogspot.com/2009/07/whats-all-hubbub-about-pubsubhubbub.html their support for Feedburner and Blogger, and that's great to see the interest growing.
+
+We decided a few weeks ago that "PubSubHubbub would be our HTTP API":http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/ and it's been a great choice for us as many developers have started to work on language specific libraries to interact with hubs.
+
+Today, we're announcing that *not only we're a hub, but we're also a subscriber*. In other terms, it means that whenever a feed indicates a hub, Superfeedr will subscribe to this hub to get updates from it in real-time. That is a great addition to "our set of helpers":http://superfeedr.com/technology and it will hopefully help us _improve yet again our detection time_ of new entries.
+
+!/images/federated_pubsubhubbub.png!:http://docs.google.com/present/view?id=ajd8t6gk4mh2_34dvbpchfs
+
+At a broader level, it is "interesting to compare":http://www.scripting.com/stories/2009/07/11/morePubsubhubbubFeedback.html PubSubHubbub with previous initiatives, and, as far as I know, PubSubHubbub is the first one to actually enable easily this "federation" structure (similar to what "XMPP offers":http://xmpp.org/rfcs/rfc3920.html), where _subscribers can select their favorite hubs_ and _hubs can communicate together_ to provide updates to all their users. 
+
+It makes the PubSubHubbub "network" even more decentralized and scalable/fault-resistant. For those into "graph theory":http://en.wikipedia.org/wiki/Graph_%28mathematics%29, you will immediately see the benefit of such an architecture : virtually ubiquitous new data publication, as long as there is a (not too long) path from any node to any other node!
+
