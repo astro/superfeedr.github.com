@@ -1,0 +1,20 @@
+---
+layout: post
+title: Kind of Open Source
+categories: [OSS, gospel]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+---
+
+When "I tweeted about sharing":http://twitter.com/superfeedr/status/2762315579 our Investor Deck yesterday, I received immediately a few IM and email of friends who wanted to make sure I was doing the right decision. They were scared that I would make some private things public. I *fully understand their concern*, but I really want *Superfeedr to be an Open Service*, where we are guided by our users more than our wallet. _We value their opinion more than ours because in the end, they are going to pay for our service, not us_.
+
+h3. Why not release our software as Open Source, then?
+
+!>http://upload.wikimedia.org/wikipedia/commons/4/42/Opensource.svg!
+
+*Because that wouldn't work.* The idea with Superfeedr is to "do something stupid so that nobody else has to do it":http://blog.superfeedr.com/gospel/something-stupid/. If we release our software, then, everybody would run their standalone superfeedr and people will keep doing this inefficient polling that wastes our resources.
+_Superfeedr will work only with massive economies of scale_.
+
+We will eventually release huge parts (and "we already started":http://github.com/superfeedr) of our software as open source, as we will probably communicate and ask advices on as much as we can that relates to Superfeedr. If you'd like to give a look at our deck, send us your email as a "direct message":http://twitter.com/direct_messages/create/superfeedr. Also, follow us on Twitter, because I will ("thanks to @jineshmehta":http://twitter.com/jineshmehta/statuses/2777183409) release there the master file of our logo. I hope you can then make it even nicer. (BTW, "red, or green?":http://twitter.com/superfeedr/status/2772907149)
+
+You are the brains of our service, giving the ideas, suggesting the directions. We are just the -small- hands selecting, organizing and implementing ideas. 
