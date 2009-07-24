@@ -3,9 +3,39 @@
     <title>Superfeedr Blog : Real-time cloudy thoughts from a super-hero</title>
     <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
     <link href="http://blog.superfeedr.com/"/>
-    <updated>2009-07-22T08:39:27-07:00</updated>
+    <updated>2009-07-24T12:48:28-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>The Console</title>
+        
+        <category term="console" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="debugging" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="xmpp" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/console/debugging/xmpp/the-console"/>
+        <updated>2009-07-24T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/console/debugging/xmpp/the-console</id>
+        <content type="html">&lt;p&gt;It is quite hard to debug notification based systems, because &lt;em&gt;developers usually have to wait&lt;/em&gt; for a notification to happen. It&amp;#8217;s been a &lt;a href=&quot;http://groups.google.com/group/superfeedr/browse_thread/thread/b237d690372050b2&quot;&gt;common request from several&lt;/a&gt; of our users over the past month and we&amp;#8217;re happy to say that we released today a solution to this problem : &lt;strong&gt;the console&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Basically, when logged in, you should see &amp;#8216;Your feeds&amp;#8217; in the top bar. Click there, and then, at the bottom of the page, click on &amp;#8220;Console&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/console.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The console is a tool that will enable you to see notifications directly pushed to your browser, exactly as they would be pushed to your &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; client (technically, the console IS an &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; client).&lt;/p&gt;
+&lt;p&gt;To see actual notifications happening, we&amp;#8217;ve also created a &lt;a href=&quot;http://superfeedr.com/dummy.xml&quot;&gt;dummy atom feeds&lt;/a&gt;. In the console interface, you should see a link that, when clicks, publishes a new entry in this dummy feed. A few seconds (or less) later, you should see the new notification in your console. Of course, &lt;em&gt;that works with any feed&lt;/em&gt;, so you can as well add others.&lt;/p&gt;
+&lt;p&gt;Here a a few tips to make that console even more useful :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;The console only works if your using using your default jid : user@superfeedr.com  (no webhooks, no &amp;#8216;private&amp;#8217; jid)&lt;/li&gt;
+	&lt;li&gt;Add http://superfeedr.com/dummy.xml to your feeds (and more feeds)&lt;/li&gt;
+	&lt;li&gt;Change your notification mode (See &amp;#8216;settings&amp;#8217;) to &amp;#8220;Each time we pull and parse one of your feeds&amp;#8221;&lt;/li&gt;
+	&lt;li&gt;Leave the console open for a few hours : notifications will stack up (most recent at the top)&lt;/li&gt;
+&lt;/ul&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Kind of Open Source</title>
@@ -17,7 +47,7 @@
         <link href="http://blog.superfeedr.com/OSS/gospel/kind-of-open-source"/>
         <updated>2009-07-22T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/OSS/gospel/kind-of-open-source</id>
-        <content type="html">&lt;p&gt;When &lt;a href=&quot;http://twitter.com/superfeedr/status/2762315579&quot;&gt;I tweeted about sharing&lt;/a&gt; our Investor Deck yesterday, I received immediately a few IM and email of friends who wanted to make sure I was doing the right decision. They were scared that I would make some private things public. I &lt;strong&gt;fully understand their concern&lt;/strong&gt;, but I really want &lt;strong&gt;Superfeedr to be an Open Service&lt;/strong&gt;, where we are guided by our users more than our wallet. &lt;em&gt;We value their opinion on everything more than ours because in the end, they are going to pay for our service, not us&lt;/em&gt;.&lt;/p&gt;
+        <content type="html">&lt;p&gt;When &lt;a href=&quot;http://twitter.com/superfeedr/status/2762315579&quot;&gt;I tweeted about sharing&lt;/a&gt; our Investor Deck yesterday, I received immediately a few IM and email of friends who wanted to make sure I was doing the right decision. They were scared that I would make some private things public. I &lt;strong&gt;fully understand their concern&lt;/strong&gt;, but I really want &lt;strong&gt;Superfeedr to be an Open Service&lt;/strong&gt;, where we are guided by our users more than our wallet. &lt;em&gt;We value their opinion more than ours because in the end, they are going to pay for our service, not us&lt;/em&gt;.&lt;/p&gt;
 &lt;h3&gt;Why not release our software as Open Source, then?&lt;/h3&gt;
 &lt;p style=&quot;float:right;&quot;&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/4/42/Opensource.svg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Because that wouldn&amp;#8217;t work.&lt;/strong&gt; The idea with Superfeedr is to &lt;a href=&quot;http://blog.superfeedr.com/gospel/something-stupid/&quot;&gt;do something stupid so that nobody else has to do it&lt;/a&gt;. If we release our software, then, everybody would run their standalone superfeedr and people will keep doing this inefficient polling that wastes our resources.&lt;br /&gt;

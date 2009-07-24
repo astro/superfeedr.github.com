@@ -1,0 +1,24 @@
+---
+layout: post
+title: The Console
+categories: [console, debugging, xmpp]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+---
+
+It is quite hard to debug notification based systems, because _developers usually have to wait_ for a notification to happen. It's been a "common request from several":http://groups.google.com/group/superfeedr/browse_thread/thread/b237d690372050b2 of our users over the past month and we're happy to say that we released today a solution to this problem : *the console*.
+
+Basically, when logged in, you should see 'Your feeds' in the top bar. Click there, and then, at the bottom of the page, click on "Console".
+
+!/images/console.png!
+
+The console is a tool that will enable you to see notifications directly pushed to your browser, exactly as they would be pushed to your XMPP client (technically, the console IS an XMPP client). 
+
+To see actual notifications happening, we've also created a "dummy atom feeds":http://superfeedr.com/dummy.xml. In the console interface, you should see a link that, when clicks, publishes a new entry in this dummy feed. A few seconds (or less) later, you should see the new notification in your console. Of course, _that works with any feed_, so you can as well add others.
+
+Here a a few tips to make that console even more useful :
+* The console only works if your using using your default jid : user@superfeedr.com  (no webhooks, no 'private' jid)
+* Add http://superfeedr.com/dummy.xml to your feeds (and more feeds)
+* Change your notification mode (See 'settings') to "Each time we pull and parse one of your feeds"
+* Leave the console open for a few hours : notifications will stack up (most recent at the top)
+
