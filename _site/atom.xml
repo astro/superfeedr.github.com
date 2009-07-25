@@ -3,9 +3,32 @@
     <title>Superfeedr Blog : Real-time cloudy thoughts from a super-hero</title>
     <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
     <link href="http://blog.superfeedr.com/"/>
-    <updated>2009-07-24T12:48:28-07:00</updated>
+    <updated>2009-07-25T13:57:19-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Make Our Logo!</title>
+        
+        <category term="logo" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="open source" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/logo/meta/open source/make-our-logo"/>
+        <updated>2009-07-25T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/logo/meta/open source/make-our-logo</id>
+        <content type="html">&lt;p&gt;A lot of &lt;a href=&quot;http://twitter.com/lauragatning/status/2181168813&quot;&gt;our friends complained&lt;/a&gt; about the fact that we didn&amp;#8217;t have a logo. That&amp;#8217;s a valid concern, but I really didn&amp;#8217;t have the skills (even far from it) that it takes. So what I basically asked a very &lt;a href=&quot;http://www.lafraise.com/User/profile/id/660804&quot;&gt;talented friend&lt;/a&gt; to make a concept. He did a great job and you can see it right below, with several different colors.&lt;/p&gt;
+&lt;p&gt;I am releasing it here because I know some of you might have great ideas to actually make it even nicer, and well, I&amp;#8217;d love to be able to have feedback and improvements from our actual users.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/images/logos/logos.jpg&quot;&gt;&lt;img src=&quot;/images/logos/logos.jpg&quot; style=&quot;width:90%;&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here a few words that represent what the logo should convey : &lt;em&gt;superhero, &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;, speed, cloud, reliability, strength, seriousness&lt;/em&gt;&amp;#8230; Do you see others?&lt;/p&gt;
+&lt;p&gt;Here are 3 versions of the same logo : &lt;a href=&quot;/images/logos/superfeedr.ai&quot;&gt;AI&lt;/a&gt;, &lt;a href=&quot;/images/logos/superfeedr.eps&quot;&gt;&lt;span class=&quot;caps&quot;&gt;EPS&lt;/span&gt;&lt;/a&gt;, &lt;a href=&quot;/images/logos/superfeedr.pdf&quot;&gt;&lt;span class=&quot;caps&quot;&gt;PDF&lt;/span&gt;&lt;/a&gt; and you can see on our &lt;a href=&quot;http://twitter.com/account/profile_image/superfeedr?hreflang=en&quot;&gt;twitter account&lt;/a&gt; my own version! What do you think? You can download them and remix them as much as you want!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>The Console</title>

@@ -1,7 +1,0 @@
----
-layout: post
-title: Host a Chat on GitHub
-categories: [realtime, chat, hosting, xmpp]
-author_name: Julien
-author_uri: http://twitter.com/julien51
----

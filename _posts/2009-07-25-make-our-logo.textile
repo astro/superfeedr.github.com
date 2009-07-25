@@ -1,0 +1,17 @@
+---
+layout: post
+title: Make Our Logo!
+categories: [logo, meta, open source]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+---
+
+A lot of "our friends complained":http://twitter.com/lauragatning/status/2181168813 about the fact that we didn't have a logo. That's a valid concern, but I really didn't have the skills (even far from it) that it takes. So what I basically asked a very "talented friend":http://www.lafraise.com/User/profile/id/660804 to make a concept. He did a great job and you can see it right below, with several different colors. 
+
+I am releasing it here because I know some of you might have great ideas to actually make it even nicer, and well, I'd love to be able to have feedback and improvements from our actual users.
+
+!{width:90%}/images/logos/logos.jpg!:/images/logos/logos.jpg
+
+Here a few words that represent what the logo should convey : _superhero, RSS, speed, cloud, reliability, strength, seriousness_... Do you see others?
+
+Here are 3 versions of the same logo : "AI":/images/logos/superfeedr.ai, "EPS":/images/logos/superfeedr.eps, "PDF":/images/logos/superfeedr.pdf and you can see on our "twitter account":http://twitter.com/account/profile_image/superfeedr?hreflang=en my own version! What do you think? You can download them and remix them as much as you want!
