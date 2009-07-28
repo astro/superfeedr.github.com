@@ -1,0 +1,21 @@
+---
+layout: post
+title: A Perl Wrapper
+categories: [API, Perl, XMPP]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+---
+
+Thanks to our friend "Yann":http://blog.cyberion.net/, we now have a "Perl wrapper for the Superfeedr API":http://github.com/superfeedr/superfeedr-perl/tree/master (here is "yann's repo":http://github.com/yannk/perl-anyevent-superfeedr/tree/master if you want faster updates).
+
+!{float:left; width: 30%; margin: 10px}http://http.cdnlayer.com/itke/blogs.dir/8/files/2008/02/perl.jpg!
+
+What I like with Yann's wrapper is that it has a _callback_ that users can implement to return the new feeds to _subscribe to in a asynchronous fashion_.
+
+So, for example, when you need to add a feed to superfeedr, you can save it in your database, and then, implement the callback so that it returns that feed. Any feed that will be returned will be subscribed to. One of the great advantages is that it shouldn't affect your service performance, since the subscription is then asynchronous.
+
+Yann will soon put that "wrapper on CPAN":http://search.cpan.org/perldoc?AnyEvent::Superfeedr (not yet there, though), but as with any of our other wrappers, *you can of course fork it and improve it (or add doc, tests, examples)* ;)
+
+PS: You need to use "his version of AnyEvent::XMPP":http://github.com/yannk/perl-anyevent-xmpp/ to fix a "weird defect":http://github.com/yannk/perl-anyevent-xmpp/commit/dff1b3a3addf0cf44eb0c023990c4ef9fec3ddbd in the way this lib handles xmpp-urls. 
+
+Thank you "Yann":http://blog.cyberion.net/ ! We owe you dinner!
