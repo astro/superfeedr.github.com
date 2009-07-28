@@ -3,9 +3,34 @@
     <title>Superfeedr Blog : Real-time cloudy thoughts from a super-hero</title>
     <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
     <link href="http://blog.superfeedr.com/"/>
-    <updated>2009-07-25T14:49:20-07:00</updated>
+    <updated>2009-07-27T23:06:24-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>A Perl Wrapper</title>
+        
+        <category term="API" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Perl" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="XMPP" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/API/Perl/XMPP/a-perl-wrapper"/>
+        <updated>2009-07-26T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/API/Perl/XMPP/a-perl-wrapper</id>
+        <content type="html">&lt;p&gt;Thanks to our friend &lt;a href=&quot;http://blog.cyberion.net/&quot;&gt;Yann&lt;/a&gt;, we now have a &lt;a href=&quot;http://github.com/superfeedr/superfeedr-perl/tree/master&quot;&gt;Perl wrapper for the Superfeedr &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/a&gt; (here is &lt;a href=&quot;http://github.com/yannk/perl-anyevent-superfeedr/tree/master&quot;&gt;yann&amp;#8217;s repo&lt;/a&gt; if you want faster updates).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://http.cdnlayer.com/itke/blogs.dir/8/files/2008/02/perl.jpg&quot; style=&quot;float:left; width: 30%; margin: 10px;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;What I like with Yann&amp;#8217;s wrapper is that it has a &lt;em&gt;callback&lt;/em&gt; that users can implement to return the new feeds to &lt;em&gt;subscribe to in a asynchronous fashion&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;So, for example, when you need to add a feed to superfeedr, you can save it in your database, and then, implement the callback so that it returns that feed. Any feed that will be returned will be subscribed to. One of the great advantages is that it shouldn&amp;#8217;t affect your service performance, since the subscription is then asynchronous.&lt;/p&gt;
+&lt;p&gt;Yann will soon put that &lt;a href=&quot;http://search.cpan.org/perldoc?AnyEvent::Superfeedr&quot;&gt;wrapper on &lt;span class=&quot;caps&quot;&gt;CPAN&lt;/span&gt;&lt;/a&gt; (not yet there, though), but as with any of our other wrappers, &lt;strong&gt;you can of course fork it and improve it (or add doc, tests, examples)&lt;/strong&gt; ;)&lt;/p&gt;
+&lt;p&gt;PS: You need to use &lt;a href=&quot;http://github.com/yannk/perl-anyevent-xmpp/&quot;&gt;his version of AnyEvent::&lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt;&lt;/a&gt; to fix a &lt;a href=&quot;http://github.com/yannk/perl-anyevent-xmpp/commit/dff1b3a3addf0cf44eb0c023990c4ef9fec3ddbd&quot;&gt;weird defect&lt;/a&gt; in the way this lib handles xmpp-urls.&lt;/p&gt;
+&lt;p&gt;Thank you &lt;a href=&quot;http://blog.cyberion.net/&quot;&gt;Yann&lt;/a&gt; ! We owe you dinner!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Make Our Logo!</title>
@@ -149,25 +174,6 @@
     </entry>
     
     <entry>
-        <title>There is no such thing as Real Time Search</title>
-        
-        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
-        
-        <link href="http://blog.superfeedr.com/real-time/there-is-such-thing-as-real-time-web-search"/>
-        <updated>2009-07-09T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/real-time/there-is-such-thing-as-real-time-web-search</id>
-        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href=&quot;http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/&quot;&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
-&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt; or &lt;a href=&quot;http://bing.com&quot;&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://search.twitter.com&quot;&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href=&quot;http://collecta.com&quot;&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
-&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
-        <author>
-            <name>Julien</name>
-            <uri>http://twitter.com/julien51</uri>
-        </author>
-    </entry>
-    
-    <entry>
         <title>Speeding Up RSS : what for?</title>
         
         <category term="RSS" scheme="http://www.sixapart.com/ns/types#tag" />
@@ -187,6 +193,25 @@
 &lt;p&gt;The comments, though are very interesting and they show what we&amp;#8217;ve observed with &amp;quot;Notifixious&amp;quot;http://notifixio.us over the last year : Real-time notification (or faster &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;) scares people a lot. There is at least 4 or 5 comments saying that &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; is fast enough for them. The problem here, is that there is a misconception :* making &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; faster is not for individuals, but for the web itself*.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/&quot;&gt;PubSubHubbub&lt;/a&gt; has the potential to bring Push to the &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; and Atom technologies. So not only it will be faster, but it will be instantaneous, and when Feed updates will be instantaneous, nobody will pull anymore (&lt;a href=&quot;http://blog.superfeedr.com/gospel/something-stupid/&quot;&gt;not even us&lt;/a&gt;) and the web will be better.&lt;/p&gt;
 &lt;p&gt;Better? Publishers will not have to &lt;em&gt;handle massive loads anymore&lt;/em&gt; (like Twitter had to), and Subscribers (services) will &lt;em&gt;not have to poll over and over to get updates&lt;/em&gt;.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>There is no such thing as Real Time Search</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/real-time/there-is-such-thing-as-real-time-web-search"/>
+        <updated>2009-07-09T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/real-time/there-is-such-thing-as-real-time-web-search</id>
+        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href=&quot;http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/&quot;&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
+&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt; or &lt;a href=&quot;http://bing.com&quot;&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://search.twitter.com&quot;&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href=&quot;http://collecta.com&quot;&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
+&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
