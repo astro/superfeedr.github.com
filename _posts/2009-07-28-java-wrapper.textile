@@ -1,0 +1,19 @@
+---
+layout: post
+title: Superfeedr Java Wrapper
+categories: [API, Java, XMPP, wrappers, OSS]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+---
+
+This seems to be the wrapper week! Our friend "Thomas":http://twitter.com/mastooo just pushed a first version of a "Java wrapper":http://github.com/superfeedr/superfeedr-java/tree/master to our API ("his branch":http://github.com/mastooo/java-superfeedr/tree/master). I'd like to take this as an occasion to explain how we see these wrappers. 
+
+We *know our limits* and we know we can't actively support wrappers in all languages. Like everybody, we have our favorite languages and platform, and there is little chance that we ever get a deep enough knownledge in all that languages that you guys use to offer great services. So, for us, _the limit of what we can provide and support is our API_ (both XMPP and PubSubHubbub).
+
+However, we're not blind either and we know how *these parsers are important* for everybody to get started and integrate Superfeedr into their existing apps, so we take great care of them and try to help people use them or fix problems. "Aneil":http://twitter.com/aneilbaboo helped us a lot on the "Python lib":http://github.com/superfeedr/supeefeedr-python/tree/master, "Nathan":http://nathan.fritzclan.com/, "Yann":http://blog.cyberion.net/ or "Thomas":http://twitter.com/mastooo did an awesome job with the "PHP":http://github.com/superfeedr/supeefeedr-php/tree, "Perl":http://github.com/superfeedr/superfeedr-perl/tree and "Java":http://github.com/superfeedr/superfeedr-java/tree libs; all of which we would have been unable to make.
+
+*These libs are not ours*, _they wait for your input_, y_our documentation, your testing_, as well as your _suggestions for new features_. We will just help "gathering" them and keeping track by "connecting" the people who made them with the people who use them.
+
+Again, *thank you Nathan, Yann, Thomas, Aneil*!
+
+PS: anybody for the C# one? ;) (find "them all here":http://github.com/superfeedr)

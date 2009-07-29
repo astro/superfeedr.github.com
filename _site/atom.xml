@@ -3,9 +3,37 @@
     <title>Superfeedr Blog : Real-time cloudy thoughts from a super-hero</title>
     <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
     <link href="http://blog.superfeedr.com/"/>
-    <updated>2009-07-27T23:06:24-07:00</updated>
+    <updated>2009-07-28T23:13:13-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Superfeedr Java Wrapper</title>
+        
+        <category term="API" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Java" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="XMPP" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="wrappers" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="OSS" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/API/Java/OSS/XMPP/wrappers/java-wrapper"/>
+        <updated>2009-07-28T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/API/Java/OSS/XMPP/wrappers/java-wrapper</id>
+        <content type="html">&lt;p&gt;This seems to be the wrapper week! Our friend &lt;a href=&quot;http://twitter.com/mastooo&quot;&gt;Thomas&lt;/a&gt; just pushed a first version of a &lt;a href=&quot;http://github.com/superfeedr/superfeedr-java/tree/master&quot;&gt;Java wrapper&lt;/a&gt; to our &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; (&lt;a href=&quot;http://github.com/mastooo/java-superfeedr/tree/master&quot;&gt;his branch&lt;/a&gt;). I&amp;#8217;d like to take this as an occasion to explain how we see these wrappers.&lt;/p&gt;
+&lt;p&gt;We &lt;strong&gt;know our limits&lt;/strong&gt; and we know we can&amp;#8217;t actively support wrappers in all languages. Like everybody, we have our favorite languages and platform, and there is little chance that we ever get a deep enough knownledge in all that languages that you guys use to offer great services. So, for us, &lt;em&gt;the limit of what we provide is our &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/em&gt; (both &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; and PubSubHubbub).&lt;/p&gt;
+&lt;p&gt;However, we&amp;#8217;re not blind either and we know how &lt;strong&gt;these parsers are important&lt;/strong&gt; for everybody to get started and integrate Superfeedr into their existing apps, so we take great care of them and try to help people use them or fix problems. &lt;a href=&quot;http://twitter.com/aneilbaboo&quot;&gt;Aneil&lt;/a&gt; helped us a lot on the &lt;a href=&quot;http://github.com/superfeedr/supeefeedr-python/tree/master&quot;&gt;Python lib&lt;/a&gt;, &lt;a href=&quot;http://nathan.fritzclan.com/&quot;&gt;Nathan&lt;/a&gt;, &lt;a href=&quot;http://blog.cyberion.net/&quot;&gt;Yann&lt;/a&gt; or &lt;a href=&quot;http://twitter.com/mastooo&quot;&gt;Thomas&lt;/a&gt; did an awesome job with the &lt;a href=&quot;http://github.com/superfeedr/supeefeedr-php/tree&quot;&gt;&lt;span class=&quot;caps&quot;&gt;PHP&lt;/span&gt;&lt;/a&gt;, &lt;a href=&quot;http://github.com/superfeedr/superfeedr-perl/tree&quot;&gt;Perl&lt;/a&gt; and &lt;a href=&quot;http://github.com/superfeedr/superfeedr-java/tree&quot;&gt;Java&lt;/a&gt; libs; all of which we would have been unable to make.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;These libs are not ours&lt;/strong&gt;, &lt;em&gt;they wait for your input&lt;/em&gt;, y_our documentation, your testing_, as well as your &lt;em&gt;suggestions for new features&lt;/em&gt;. We will just help &amp;#8220;gathering&amp;#8221; them and keeping track by &amp;#8220;connecting&amp;#8221; the people who made them with the people who use them.&lt;/p&gt;
+&lt;p&gt;Again, &lt;strong&gt;thank you Nathan, Yann, Thomas, Aneil&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;PS: anybody for the C# one? ;) (find &lt;a href=&quot;http://github.com/superfeedr&quot;&gt;them all here&lt;/a&gt;)&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>A Perl Wrapper</title>
