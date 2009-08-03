@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Make Our Logo!
-categories: [logo, meta, open source]
+categories: [logo, meta, open-source]
 author_name: Julien
 author_uri: http://twitter.com/julien51
 ---
