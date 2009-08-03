@@ -3,7 +3,7 @@ layout: post
 title: Federating PubSubHubbub
 categories: [pubsubhubbub, api, federation]
 author_name: Julien
-author_uri: http://twitter.com/julien51<img src="../../../Desktop/federated_pubsubhubbub.png" width="386" height="303" alt="Federated Pubsubhubbub">
+author_uri: http://twitter.com/julien51
 ---
 
 PubSubHubbub has been the "RealTime web celebrity":http://search.twitter.com/search?q=PubSubhubbub in the past few days. "Google announced":http://adsenseforfeeds.blogspot.com/2009/07/whats-all-hubbub-about-pubsubhubbub.html their support for Feedburner and Blogger, and that's great to see the interest growing.
