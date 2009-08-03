@@ -25,13 +25,15 @@ They say that _scaling usually has 3 steps_ :
 * *configuration* : the goal here is to change a "vanilla" server into something operational.
 * *command and control* : once the server is configured and running, you still need to send him specific instructions and have feedback on how it performs.
 
-There are several options for the configuration. The most basic one is to _do everything by hand_ (and try to repeat for as many servers you need to deploy). Another one is to _deal with an "image"_ (a ghost if you want), but then it's quite hard to improve it and evolve it. At superfeedr, the option we chose is to use "Chef":http://wiki.opscode.com/display/chef/Home.
+There are several options for the configuration. The most basic one is to _do everything by hand_ (and try to repeat for as many servers you need to deploy). Another one is to _deal with an "image"_ (a ghost if you want), but then it's quite hard to improve it and evolve it. At "superfeedr":http://superfeedr.com, the option we chose is to use "Chef":http://wiki.opscode.com/display/chef/Home.
 
 h3. Chef
 
 Chef allows you to define a set of *specifications* (packages to be installed, files to de deployed, options to be configured...) of what our server should like when it's ready. There are a few advantages to that : it's _stateless_, it is _idempotent_, it is _repeatable_... etc.
 
 There are a lot of ways to use Chef. Here is *ours*. It's probably _not the best for everyone_ (and maybe not even for us), but playing with it gave us some experience and we're sharing it with you.
+
+!{width: 30%; float:left; margin: 5px;}http://upload.wikimedia.org/wikipedia/en/thumb/8/82/Chef.svg/350px-Chef.svg.png!
 
 Chef is a *client-server architecture*, where the client is the node to be configured, which implies several things. The first one (and most impacting) is that *everything happens from the client* (called node). If you used to do your configurations by hand (or using scripts), you were not doing it from the client. Another consequence is that you need to have your clients to be 'chef-ready'. This might (and will) sound weird, but _you need to have some basic configuration on your servers before you can start to do the actual configuration_. Luckily this configuration is rather basic and can be automated by using a script "like this one":http://gist.github.com/160263.
 
