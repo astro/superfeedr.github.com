@@ -1,0 +1,68 @@
+---
+layout: post
+title: Scale with Chef
+categories: [chef, deployment, infrastructure, configuration]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+---
+
+This will be a long post, but it deserves some time. Go get a glass of water, breathe deeply and let's dive!
+
+h3. The why?
+
+Even though we use "smart" techniques to get content from the feeds in real-time (or close), we still need to do some polling (remember, "we're doing something stupid, so that you don't have to":http://blog.superfeedr.com/gospel/something-stupid/). To achieve that, we have a distributed architecture where workers can ask dispatchers for feeds to parse.
+
+From there it is somehow easy to scale : *more feeds to fetch? add more workers*. We're building a system that, at any given time knows how many workers are (and will be) needed. Once we know that, we just have to fire off some new workers (or kill unneeded ones), and we need this to happen in something like 5 minutes.
+
+h3. Theory
+
+You should really check out this -long- presentation from "Ezra":http://brainspl.at and "Adam":http://twitter.com/adamhjk
+
+<embed src="http://blip.tv/play/AYGMpxGLqzQ" type="application/x-shockwave-flash" width="480" height="290" allowscriptaccess="always" allowfullscreen="true"></embed> 
+
+They say that _scaling usually has 3 steps_ : 
+* *bootstrapping* : it is the act of 'acquiring' resources. Basically starting servers at a given IP, with a base (naked OS), and hopefully a way to connect (ssh).
+* *configuration* : the goal here is to change a "vanilla" server into something operational.
+* *command and control* : once the server is configured and running, you still need to send him specific instructions and have feedback on how it performs.
+
+There are several options for the configuration. The most basic one is to _do everything by hand_ (and try to repeat for as many servers you need to deploy). Another one is to _deal with an "image"_ (a ghost if you want), but then it's quite hard to improve it and evolve it. At superfeedr, the option we chose is to use "Chef":http://wiki.opscode.com/display/chef/Home.
+
+h3. Chef
+
+Chef allows you to define a set of *specifications* (packages to be installed, files to de deployed, options to be configured...) of what our server should like when it's ready. There are a few advantages to that : it's _stateless_, it is _idempotent_, it is _repeatable_... etc.
+
+There are a lot of ways to use Chef. Here is *ours*. It's probably _not the best for everyone_ (and maybe not even for us), but playing with it gave us some experience and we're sharing it with you.
+
+Chef is a *client-server architecture*, where the client is the node to be configured, which implies several things. The first one (and most impacting) is that *everything happens from the client* (called node). If you used to do your configurations by hand (or using scripts), you were not doing it from the client. Another consequence is that you need to have your clients to be 'chef-ready'. This might (and will) sound weird, but _you need to have some basic configuration on your servers before you can start to do the actual configuration_. Luckily this configuration is rather basic and can be automated by using a script "like this one":http://gist.github.com/160263.
+
+h4. Cookbooks
+
+On the chef server, you would define a set of *cookbooks*. Cookbooks are *collections of related recipes*. For example, a cookbook can deal with installing the "build-essentials" packages, the apache server or git... etc. For each cookbook, you would have a set of recipes. For example, the git cookbook, may have recipes such as : install client and install server.
+
+Technically the cookbooks can be used by different users and/or for different machines in your architecture. Actually, you *want* them to be as generic as they can. 
+
+h4. Roles
+
+Once you have your cookbooks, you should define *roles*. A role is a "type" of node you'd like to configure. Technically, roles are just sets of cookbooks. A role for a blog application would include recipes for Apache, MySQL, and Wordpress for example. A Rails application may have an "MySQL server" role, a "Memcached server" role, and a Web application role.
+
+h4. Attributes
+
+To differentiate a cookbook for 2 nodes, Chef has *attributes*. An attribute would be for example the name of your server, or the port used by apache, the names of the gems you want to install, the user who runs your apache server... etc. Of course, you can define attributes at several levels : inside a cookbook, they would be the default values, or at the "role" level and even, at the node level. For example, a node IP is clearly at the node level, but the login/password to an external MySQL database can be set at the role level, while the apache cookbook should probably set the default http port to 80.
+
+Got it? Of course, this clearly a "crash-course", you can find a lot more information in the "Opscode wiki":http://wiki.opscode.com/display/chef/Home, as well as in the "#chef room at irc.freenode.net":irc://irc.freenode.net/chef. Ezra also wrote a "great blog post":http://brainspl.at/articles/2009/01/31/cooking-with-chef-101 that you should read as well.
+
+h3. Where to start?
+
+# I'd start *first with setting up a Chef Server*. The Chef server will provide you with a few things, including a web application that can be used to see all your cookbooks, roles, and nodes at a glance. 
+# Once that's done, *setup a chef repository*, that would basically contain the code of your cookbooks. Then, add a few cookbooks, define a first role and assign it some recipes, as well as attributes. Writing cookbooks shouldn't be too hard, but you should first try to see if someone has written one. Check "opscode repository":http://github.com/opscode/chef/tree/master and all the "associated branches":http://github.com/opscode/chef/network. With a little luck, *you won't have to write anything but define attributes*. 
+When you have a few cookbooks, clone that chef repo on your chef server and run @rake deploy@ anytime you want to update the configuration.
+# Then, create a bootstrap script, "like this one":http://gist.github.com/160263, which installs the bricks for a chef client on your node.
+# Finally, start a new node on your favorite cloud provider (Slicehost:"http://slicehost.com", "Linode":http://linode.com, "EC2":http://aws.amazon.com/ec2/), copy the boostrap (@scp@ should make it) script and run it.
+
+The great thing with this "spec" approach is that you can (and should) kill instances all the time and re-configure clean ones in minutes. 
+
+Hosting in the cloud really means that *you don't know (or at least shouldn't care) about the nodes* on which your app is running. 
+
+I've heard people like "37signals":http://37signals.com/, "EngineYard":http://www.engineyard.com/ or even "Twitter":http://twitter.com are using Chef to scale and deploy their architectures, that can only be a good sign ;)
+
+Again, this was a very light intro, but, when we started to play with Chef, we found that resources (and feedback) were missing.
