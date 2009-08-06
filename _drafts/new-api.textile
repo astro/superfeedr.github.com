@@ -1,0 +1,2 @@
+Downward compatible... (more XML)
+No more user settings, but a feed by feed subscription
