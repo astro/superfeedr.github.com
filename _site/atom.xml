@@ -1,11 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Superfeedr Blog : Real-time cloudy thoughts from a super-hero</title>
     <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
     <link href="http://blog.superfeedr.com/"/>
-    <updated>2009-08-02T17:46:53-07:00</updated>
+    <updated>2009-08-05T20:28:48-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Harper's friends</title>
+        
+        <category term="use-case" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="friends" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="harper" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/friends/harper/use-case/harper-s-friends"/>
+        <published>2009-08-05T00:00:00-07:00</published>
+        <updated>2009-08-05T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/friends/harper/use-case/harper-s-friends</id>
+        <content type="html">&lt;p&gt;There is &lt;strong&gt;already a lot of fun stuff&lt;/strong&gt; that people are doing with &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; and we thought it would be interesting to share them here. Of course, if you have any story, you can either write it on your blog and we&amp;#8217;ll link to it (on &lt;a href=&quot;http://twitter.com/superfeedr&quot;&gt;twitter&lt;/a&gt; or here), or you can send it by email and we will be more than happy to post it on this &lt;a href=&quot;http://blog.superfeedr.com&quot;&gt;blog&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/harper&quot;&gt;Harper&lt;/a&gt; was among our very first users, and even though he told be he was interested by &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt;, it seems that he fell in love with &lt;a href=&quot;http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/&quot;&gt;PubSubHubbub&lt;/a&gt;. Over the course of last week end he created a small app called &lt;a href=&quot;http://www.harpersfriends.com/&quot;&gt;Harper&amp;#8217;s friends&lt;/a&gt; (Oh Yeah!) which basically aggregates the content of his friends &lt;a href=&quot;http://www.harpersfriends.com/tweets/&quot;&gt;twits&lt;/a&gt;, &lt;a href=&quot;http://www.harpersfriends.com/photos/&quot;&gt;pictures&lt;/a&gt; and &lt;a href=&quot;http://www.harpersfriends.com/blogs/&quot;&gt;blog posts&lt;/a&gt; on a page. You can also show items by users or by type, like a standalone &lt;a href=&quot;http://friendfeed.com&quot;&gt;friendfeed&lt;/a&gt; if you want.&lt;/p&gt;
+&lt;p&gt;All the polling content is done via Superfeedr and he uses the &lt;a href=&quot;http://superfeedr.com/hubbub&quot;&gt;PubSubHubbub &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/a&gt; to notify an &lt;a href=&quot;http://code.google.com/appengine/&quot;&gt;AppEngine&lt;/a&gt; app. I guess the fact that you can&amp;#8217;t run &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; apps on appengine (&lt;a href=&quot;http://googleappengine.blogspot.com/2009/02/roadmap-update.html&quot;&gt;yet&lt;/a&gt;) was one of the reasons he chose the web based &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;One of the key reasons to use Superfeedr is that you don&amp;#8217;t have to deal with (or even care about) &lt;em&gt;building a polling infrastructure&lt;/em&gt;. Believe it or not, but I can bet Harper would have spent easily 2 or 3 times the time he spent if he had to implement that, and he would probably not have had the same kind of results that we have (probably because that would be overkill).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Focus on what you do best and we will focus on what we do best&lt;/strong&gt;. This way, the world will be awesome.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Scale with Chef</title>
@@ -19,6 +43,7 @@
         <category term="configuration" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/chef/configuration/deployment/infrastructure/scale-with-chef"/>
+        <published>2009-08-02T00:00:00-07:00</published>
         <updated>2009-08-02T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/chef/configuration/deployment/infrastructure/scale-with-chef</id>
         <content type="html">&lt;p&gt;This will be a long post, but it deserves some time. Go get a glass of water, breathe deeply and let&amp;#8217;s dive!&lt;/p&gt;
@@ -80,6 +105,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="OSS" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/API/Java/OSS/XMPP/wrappers/java-wrapper"/>
+        <published>2009-07-28T00:00:00-07:00</published>
         <updated>2009-07-28T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/API/Java/OSS/XMPP/wrappers/java-wrapper</id>
         <content type="html">&lt;p&gt;This seems to be the wrapper week! Our friend &lt;a href=&quot;http://twitter.com/mastooo&quot;&gt;Thomas&lt;/a&gt; just pushed a first version of a &lt;a href=&quot;http://github.com/superfeedr/superfeedr-java/tree/master&quot;&gt;Java wrapper&lt;/a&gt; to our &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; (&lt;a href=&quot;http://github.com/mastooo/java-superfeedr/tree/master&quot;&gt;his branch&lt;/a&gt;). I&amp;#8217;d like to take this as an occasion to explain how we see these wrappers.&lt;/p&gt;
@@ -104,6 +130,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="XMPP" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/API/Perl/XMPP/a-perl-wrapper"/>
+        <published>2009-07-26T00:00:00-07:00</published>
         <updated>2009-07-26T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/API/Perl/XMPP/a-perl-wrapper</id>
         <content type="html">&lt;p&gt;Thanks to our friend &lt;a href=&quot;http://blog.cyberion.net/&quot;&gt;Yann&lt;/a&gt;, we now have a &lt;a href=&quot;http://github.com/superfeedr/superfeedr-perl/tree/master&quot;&gt;Perl wrapper for the Superfeedr &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/a&gt; (here is &lt;a href=&quot;http://github.com/yannk/perl-anyevent-superfeedr/tree/master&quot;&gt;yann&amp;#8217;s repo&lt;/a&gt; if you want faster updates).&lt;/p&gt;
@@ -126,11 +153,12 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         
         <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <category term="open source" scheme="http://www.sixapart.com/ns/types#tag" />
+        <category term="open-source" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <link href="http://blog.superfeedr.com/logo/meta/open source/make-our-logo"/>
+        <link href="http://blog.superfeedr.com/logo/meta/open-source/make-our-logo"/>
+        <published>2009-07-25T00:00:00-07:00</published>
         <updated>2009-07-25T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/logo/meta/open source/make-our-logo</id>
+        <id>blog.superfeedr.com:/logo/meta/open-source/make-our-logo</id>
         <content type="html">&lt;p&gt;A lot of &lt;a href=&quot;http://twitter.com/lauragatning/status/2181168813&quot;&gt;our friends complained&lt;/a&gt; about the fact that we didn&amp;#8217;t have a logo. That&amp;#8217;s a valid concern, but I really didn&amp;#8217;t have the skills (even far from it) that it takes. So what I basically asked a very &lt;a href=&quot;http://www.lafraise.com/User/profile/id/660804&quot;&gt;talented friend&lt;/a&gt; to make a concept. He did a great job and you can see it right below, with several different colors.&lt;/p&gt;
 &lt;p&gt;I am releasing it here because I know some of you might have great ideas to actually make it even nicer, and well, I&amp;#8217;d love to be able to have feedback and improvements from our actual users.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;/images/logos/logos.jpg&quot;&gt;&lt;img src=&quot;/images/logos/logos.jpg&quot; style=&quot;width:90%;&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -152,6 +180,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="xmpp" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/console/debugging/xmpp/the-console"/>
+        <published>2009-07-24T00:00:00-07:00</published>
         <updated>2009-07-24T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/console/debugging/xmpp/the-console</id>
         <content type="html">&lt;p&gt;It is quite hard to debug notification based systems, because &lt;em&gt;developers usually have to wait&lt;/em&gt; for a notification to happen. It&amp;#8217;s been a &lt;a href=&quot;http://groups.google.com/group/superfeedr/browse_thread/thread/b237d690372050b2&quot;&gt;common request from several&lt;/a&gt; of our users over the past month and we&amp;#8217;re happy to say that we released today a solution to this problem : &lt;strong&gt;the console&lt;/strong&gt;.&lt;/p&gt;
@@ -180,6 +209,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="gospel" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/OSS/gospel/kind-of-open-source"/>
+        <published>2009-07-22T00:00:00-07:00</published>
         <updated>2009-07-22T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/OSS/gospel/kind-of-open-source</id>
         <content type="html">&lt;p&gt;When &lt;a href=&quot;http://twitter.com/superfeedr/status/2762315579&quot;&gt;I tweeted about sharing&lt;/a&gt; our Investor Deck yesterday, I received immediately a few IM and email of friends who wanted to make sure I was doing the right decision. They were scared that I would make some private things public. I &lt;strong&gt;fully understand their concern&lt;/strong&gt;, but I really want &lt;strong&gt;Superfeedr to be an Open Service&lt;/strong&gt;, where we are guided by our users more than our wallet. &lt;em&gt;We value their opinion more than ours because in the end, they are going to pay for our service, not us&lt;/em&gt;.&lt;/p&gt;
@@ -201,6 +231,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/meta/reality-checked"/>
+        <published>2009-07-21T00:00:00-07:00</published>
         <updated>2009-07-21T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/meta/reality-checked</id>
         <content type="html">&lt;p&gt;A lot of people have asked us why we built &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; or what is the relationship to &lt;a href=&quot;http://notifixio.us&quot;&gt;Notifixious&lt;/a&gt;. Here are a few hints.&lt;/p&gt;
@@ -228,6 +259,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="federation" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/api/federation/pubsubhubbub/federating-pubsubhubbub"/>
+        <published>2009-07-12T00:00:00-07:00</published>
         <updated>2009-07-12T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/api/federation/pubsubhubbub/federating-pubsubhubbub</id>
         <content type="html">&lt;p&gt;PubSubHubbub has been the &lt;a href=&quot;http://search.twitter.com/search?q=PubSubhubbub&quot;&gt;RealTime web celebrity&lt;/a&gt; in the past few days. &lt;a href=&quot;http://adsenseforfeeds.blogspot.com/2009/07/whats-all-hubbub-about-pubsubhubbub.html&quot;&gt;Google announced&lt;/a&gt; their support for Feedburner and Blogger, and that&amp;#8217;s great to see the interest growing.&lt;/p&gt;
@@ -238,7 +270,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
 &lt;p&gt;It makes the PubSubHubbub &amp;#8220;network&amp;#8221; even more decentralized and scalable/fault-resistant. For those into &lt;a href=&quot;http://en.wikipedia.org/wiki/Graph_%28mathematics%29&quot;&gt;graph theory&lt;/a&gt;, you will immediately see the benefit of such an architecture : virtually ubiquitous new data publication, as long as there is a (not too long) path from any node to any other node!&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
-            <uri>http://twitter.com/julien51<img src="../../../Desktop/federated_pubsubhubbub.png" width="386" height="303" alt="Federated Pubsubhubbub"></uri>
+            <uri>http://twitter.com/julien51</uri>
         </author>
     </entry>
     
@@ -248,6 +280,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/meta/customer-care-lesson"/>
+        <published>2009-07-10T00:00:00-07:00</published>
         <updated>2009-07-10T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/meta/customer-care-lesson</id>
         <content type="html">&lt;p&gt;Yesterday, the Carsonified team relaunched their website and it&amp;#8217;s looking great. The &lt;a href=&quot;http://carsonified.com/mission/&quot;&gt;Mission page&lt;/a&gt; should be a lesson for everybody:&lt;/p&gt;
@@ -274,6 +307,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="Techcrunch" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/Atom/Feeds/Push/RSS/Techcrunch/speeding-up-rss"/>
+        <published>2009-07-09T00:00:00-07:00</published>
         <updated>2009-07-09T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/Atom/Feeds/Push/RSS/Techcrunch/speeding-up-rss</id>
         <content type="html">&lt;p&gt;&lt;a href=&quot;http://twitter.com/Erickschonfeld&quot;&gt;Erick Schonfeld&lt;/a&gt; published the &lt;a href=&quot;http://www.techcrunch.com/2009/07/09/speeding-up-rss/&quot;&gt;blog post of the &lt;del&gt;day&lt;/del&gt; week&lt;/a&gt;. Despite the fact that he should have talked about &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt;, I think this is an awesome article. I am really looking forward to &lt;a href=&quot;http://www.techcrunch.com/2009/07/08/win-a-ticket-to-the-real-time-stream-crunchup-this-friday/&quot;&gt;tomorrow&amp;#8217;s panel&lt;/a&gt; and see what &amp;#8220;Brett&amp;#8221;, Brad, Freddy and Andy have to talk about.&lt;/p&gt;
@@ -292,6 +326,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/real-time/there-is-such-thing-as-real-time-web-search"/>
+        <published>2009-07-09T00:00:00-07:00</published>
         <updated>2009-07-09T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/real-time/there-is-such-thing-as-real-time-web-search</id>
         <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href=&quot;http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/&quot;&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
@@ -315,6 +350,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="web-apps" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/dev/gospel/web-apps/the-future-of-web-apps"/>
+        <published>2009-07-05T00:00:00-07:00</published>
         <updated>2009-07-05T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/dev/gospel/web-apps/the-future-of-web-apps</id>
         <content type="html">&lt;p&gt;A lot of people have shown interest in &lt;a href=&quot;http://github.com/superfeedr/aristochat/tree/master&quot;&gt;Aristochat&lt;/a&gt; and the &lt;a href=&quot;http://superfeedr.com/chat&quot;&gt;Superfeedr chat&lt;/a&gt; last week. However, I haven&amp;#8217;t talked about what is &amp;#8211; according to me &amp;#8211; the greatest thing about it : &lt;strong&gt;it&amp;#8217;s hosted on Github&lt;/strong&gt;. Not only the source code, &lt;a href=&quot;http://github.com/superfeedr/Superfeedr-Chat/tree/gh-pages&quot;&gt;but the app itself&lt;/a&gt;, and since it&amp;#8217;s a &lt;a href=&quot;http://github.com/superfeedr/Superfeedr-Chat/blob/9d01a452c0f5e21b3deda1221e3d47e84e6c34c5/index.html&quot;&gt;basic &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; file&lt;/a&gt; with a &lt;a href=&quot;http://github.com/superfeedr/Superfeedr-Chat/blob/9d01a452c0f5e21b3deda1221e3d47e84e6c34c5/chat.js&quot;&gt;little bit of Javascript&lt;/a&gt;, it could have very been hosted on EC2 as well, or on any type server that can server &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; file.&lt;/p&gt;
@@ -345,6 +381,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="MUC" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/Chat/MUC/OSS/XMPP/aristochat"/>
+        <published>2009-07-03T00:00:00-07:00</published>
         <updated>2009-07-03T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/Chat/MUC/OSS/XMPP/aristochat</id>
         <content type="html">&lt;p&gt;It all started when we used &lt;a href=&quot;http://chat.slicehost.com/&quot;&gt;Slicehost&amp;#8217;s chat-room&lt;/a&gt; for their support : not only it&amp;#8217;s awesome to have 24/7 support, but it&amp;#8217;s also great to have a short-message interface that allows real-time discussion and interaction.&lt;/p&gt;
@@ -369,6 +406,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="mapping" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/mapping/schema/test/user-test-driven-development"/>
+        <published>2009-06-30T00:00:00-07:00</published>
         <updated>2009-06-30T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/mapping/schema/test/user-test-driven-development</id>
         <content type="html">&lt;p&gt;We are &lt;strong&gt;strong believer&lt;/strong&gt; of &lt;a href=&quot;http://en.wikipedia.org/wiki/Test-driven_development&quot;&gt;Test Driven Development&lt;/a&gt;. It&amp;#8217;s a very powerful approach that allows you to write tests before actually writing code. (These tests are actually specifications). That is how we created our parsers : we selected random feeds on the web, and decided what &lt;em&gt;should&lt;/em&gt; be the mapping between their data and our &lt;a href=&quot;http://blog.superfeedr.com/Atom/schema/a-better-schema/&quot;&gt;standard Atom schema&lt;/a&gt;. Then, we wrote the code to actually perform the mapping.&lt;/p&gt;
@@ -396,6 +434,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="infrastructure" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime"/>
+        <published>2009-06-28T00:00:00-07:00</published>
         <updated>2009-06-28T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/gospel/infrastructure/realtime/building-realtime</id>
         <content type="html">&lt;p&gt;Technically, &lt;a href=&quot;http://en.wikipedia.org/wiki/Real-time_computing&quot;&gt;Real-Time Computing&lt;/a&gt; implies that there is a &lt;em&gt;time constraint&lt;/em&gt; in a system, it&amp;#8217;s &lt;strong&gt;different from instantaneity&lt;/strong&gt;. A real-time service is a service that can guarantee that it would do something in a given amount of time. &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is real-time, since we can guarantee that we will notify new entries in a feed to our users within a 15 minutes time frame.&lt;/p&gt;
@@ -420,6 +459,7 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="schema" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/Atom/schema/a-better-schema"/>
+        <published>2009-06-25T00:00:00-07:00</published>
         <updated>2009-06-25T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/Atom/schema/a-better-schema</id>
         <content type="html">&lt;p&gt;One of the great features of &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is that it sends a standard format for feed entries. Whether the initial feed format was any flavor of Atom, or &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;, we would map this into a standard Atom feed. Thanks to that it is &lt;strong&gt;easier&lt;/strong&gt; for you to integrate this data into your apps, since you will gain &lt;em&gt;consistency&lt;/em&gt; in the format.&lt;/p&gt;
@@ -454,6 +494,7 @@ Up to now, entries that we sent had this :&lt;/p&gt;
         <category term="feeds" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/feeds/gospel/atom-or-rss-not-both"/>
+        <published>2009-06-23T00:00:00-07:00</published>
         <updated>2009-06-23T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/feeds/gospel/atom-or-rss-not-both</id>
         <content type="html">&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/RSS_(file_format&quot;&gt;&lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;&lt;/a&gt;) and &lt;a href=&quot;http://www.atomenabled.org/developers/syndication/atom-format-spec.php&quot;&gt;&lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt;&lt;/a&gt; have very similar (if not identical) purposes. I don&amp;#8217;t know any feed consumer that consumes only one type, yet, a lot of services are still providing both.&lt;/p&gt;
@@ -478,6 +519,7 @@ Up to now, entries that we sent had this :&lt;/p&gt;
         <category term="gospel" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/gospel/something-stupid"/>
+        <published>2009-06-19T00:00:00-07:00</published>
         <updated>2009-06-19T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/gospel/something-stupid</id>
         <content type="html">&lt;p&gt;It&amp;#8217;s a fact, polling sucks, and it sucks, because it&amp;#8217;s stupid. This is what &lt;a href=&quot;http://twitter.com/kellan&quot;&gt;kellan&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/rabble&quot;&gt;rabble&lt;/a&gt; &lt;a href=&quot;http://www.slideshare.net/rabble/beyond-rest-building-data-services-with-xmpp-pubsub?src=embed&quot;&gt;showed last year&lt;/a&gt; at &lt;span class=&quot;caps&quot;&gt;OSCON&lt;/span&gt; :&lt;/p&gt;
@@ -506,6 +548,7 @@ Up to now, entries that we sent had this :&lt;/p&gt;
         <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub"/>
+        <published>2009-06-18T00:00:00-07:00</published>
         <updated>2009-06-18T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/api/http/pubsubhubbub/pubsubhubbub</id>
         <content type="html">&lt;p&gt;We&amp;#8217;re proud to announce that &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; is one of the very first services to actually support the infamous &lt;a href=&quot;http://code.google.com/p/pubsubhubbub/&quot;&gt;PubSubHubbub&lt;/a&gt; protocol. If you think the name is ugly, check the &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; style of the &lt;a href=&quot;http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.1.html&quot;&gt;spec&lt;/a&gt;.&lt;/p&gt;
@@ -525,6 +568,7 @@ Up to now, entries that we sent had this :&lt;/p&gt;
         <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/meta/hello-world"/>
+        <published>2009-06-17T00:00:00-07:00</published>
         <updated>2009-06-17T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/meta/hello-world</id>
         <content type="html">&lt;p&gt;Welcome to the Superfeedr&amp;#8217;s blog. I am not sure what you expect from here. You know what a geek does when he&amp;#8217;s embarrassed does, right? He gets into technical details.&lt;/p&gt;

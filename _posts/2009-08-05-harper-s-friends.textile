@@ -1,0 +1,17 @@
+---
+layout: post
+title: Harper's friends
+categories: [use-case, friends, harper]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+---
+
+There is *already a lot of fun stuff* that people are doing with "Superfeedr":http://superfeedr.com and we thought it would be interesting to share them here. Of course, if you have any story, you can either write it on your blog and we'll link to it (on "twitter":http://twitter.com/superfeedr or here), or you can send it by email and we will be more than happy to post it on this "blog":http://blog.superfeedr.com .
+
+"Harper":http://twitter.com/harper was among our very first users, and even though he told be he was interested by XMPP, it seems that he fell in love with "PubSubHubbub":http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/. Over the course of last week end he created a small app called "Harper's friends":http://www.harpersfriends.com/ (Oh Yeah!) which basically aggregates the content of his friends "twits":http://www.harpersfriends.com/tweets/, "pictures":http://www.harpersfriends.com/photos/ and "blog posts":http://www.harpersfriends.com/blogs/ on a page. You can also show items by users or by type, like a standalone "friendfeed":http://friendfeed.com if you want.
+
+All the polling content is done via Superfeedr and he uses the "PubSubHubbub API":http://superfeedr.com/hubbub to notify an "AppEngine":http://code.google.com/appengine/ app. I guess the fact that you can't run XMPP apps on appengine ("yet":http://googleappengine.blogspot.com/2009/02/roadmap-update.html) was one of the reasons he chose the web based API.
+
+One of the key reasons to use Superfeedr is that you don't have to deal with (or even care about) _building a polling infrastructure_. Believe it or not, but I can bet Harper would have spent easily 2 or 3 times the time he spent if he had to implement that, and he would probably not have had the same kind of results that we have (probably because that would be overkill). 
+
+*Focus on what you do best and we will focus on what we do best*. This way, the world will be awesome.
