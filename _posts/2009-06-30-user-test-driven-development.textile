@@ -4,7 +4,7 @@ title: User Test Driven Development
 categories: [schema, test, mapping]
 author_name: Julien
 author_uri: http://twitter.com/julien51
-author_email_md5: julien.genestoux@gmail.com
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
 ---
 
 We are *strong believer* of "Test Driven Development":http://en.wikipedia.org/wiki/Test-driven_development. It's a very powerful approach that allows you to write tests before actually writing code. (These tests are actually specifications). That is how we created our parsers : we selected random feeds on the web, and decided what _should_ be the mapping between their data and our "standard Atom schema":http://blog.superfeedr.com/Atom/schema/a-better-schema/. Then, we wrote the code to actually perform the mapping.

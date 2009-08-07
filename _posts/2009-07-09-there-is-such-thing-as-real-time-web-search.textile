@@ -4,7 +4,7 @@ title: There is no such thing as Real Time Search
 categories: [real-time]
 author_name: Julien
 author_uri: http://twitter.com/julien51
-author_email_md5: julien.genestoux@gmail.com
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
 ---
 
 _Real-time search_ seems to be the most common tagline these days. Real-time is the new hotness ("we agree":http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/!) and Google almost made 'Revenue' and 'Search' synonyms. I guess it was tempting to mix both ;) 

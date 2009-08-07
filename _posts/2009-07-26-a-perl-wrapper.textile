@@ -4,7 +4,7 @@ title: A Perl Wrapper
 categories: [API, Perl, XMPP]
 author_name: Julien
 author_uri: http://twitter.com/julien51
-author_email_md5: julien.genestoux@gmail.com
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
 ---
 
 Thanks to our friend "Yann":http://blog.cyberion.net/, we now have a "Perl wrapper for the Superfeedr API":http://github.com/superfeedr/superfeedr-perl/tree/master (here is "yann's repo":http://github.com/yannk/perl-anyevent-superfeedr/tree/master if you want faster updates).

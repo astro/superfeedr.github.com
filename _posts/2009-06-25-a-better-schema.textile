@@ -4,7 +4,7 @@ title: A better Schema
 categories: [Atom, schema]
 author_name: Julien
 author_uri: http://twitter.com/julien51
-author_email_md5: julien.genestoux@gmail.com
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
 ---
 
 One of the great features of "Superfeedr":http://superfeedr.com is that it sends a standard format for feed entries. Whether the initial feed format was any flavor of Atom, or RSS, we would map this into a standard Atom feed. Thanks to that it is *easier* for you to integrate this data into your apps, since you will gain _consistency_ in the format.

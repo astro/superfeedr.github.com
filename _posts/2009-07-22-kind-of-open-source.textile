@@ -4,7 +4,7 @@ title: Kind of Open Source
 categories: [OSS, gospel]
 author_name: Julien
 author_uri: http://twitter.com/julien51
-author_email_md5: julien.genestoux@gmail.com
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
 ---
 
 When "I tweeted about sharing":http://twitter.com/superfeedr/status/2762315579 our Investor Deck yesterday, I received immediately a few IM and email of friends who wanted to make sure I was doing the right decision. They were scared that I would make some private things public. I *fully understand their concern*, but I really want *Superfeedr to be an Open Service*, where we are guided by our users more than our wallet. _We value their opinion more than ours because in the end, they are going to pay for our service, not us_.

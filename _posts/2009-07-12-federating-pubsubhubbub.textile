@@ -4,7 +4,7 @@ title: Federating PubSubHubbub
 categories: [pubsubhubbub, api, federation]
 author_name: Julien
 author_uri: http://twitter.com/julien51
-author_email_md5: julien.genestoux@gmail.com
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
 ---
 
 PubSubHubbub has been the "RealTime web celebrity":http://search.twitter.com/search?q=PubSubhubbub in the past few days. "Google announced":http://adsenseforfeeds.blogspot.com/2009/07/whats-all-hubbub-about-pubsubhubbub.html their support for Feedburner and Blogger, and that's great to see the interest growing.

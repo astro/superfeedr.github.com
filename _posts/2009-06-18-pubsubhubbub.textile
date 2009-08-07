@@ -4,7 +4,7 @@ title: PubSubHubbub
 categories: [api, http, pubsubhubbub]
 author_name: Julien
 author_uri: http://twitter.com/julien51
-author_email_md5: julien.genestoux@gmail.com
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
 ---
 
 We're proud to announce that "Superfeedr":http://superfeedr.com is one of the very first services to actually support the infamous "PubSubHubbub":http://code.google.com/p/pubsubhubbub/ protocol. If you think the name is ugly, check the CSS style of the "spec":http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.1.html.
