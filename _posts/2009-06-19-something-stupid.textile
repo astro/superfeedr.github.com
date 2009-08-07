@@ -4,6 +4,7 @@ title: We're doing something stupid so that you don't have to
 categories: [gospel]
 author_name: Julien
 author_uri: http://twitter.com/julien51
+author_email_md5: julien.genestoux@gmail.com
 ---
 
 It's a fact, polling sucks, and it sucks, because it's stupid. This is what "kellan":http://twitter.com/kellan and "rabble":http://twitter.com/rabble "showed last year":http://www.slideshare.net/rabble/beyond-rest-building-data-services-with-xmpp-pubsub?src=embed at OSCON : 

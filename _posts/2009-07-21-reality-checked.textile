@@ -4,6 +4,7 @@ title: Reality checked
 categories: [meta]
 author_name: Julien
 author_uri: http://twitter.com/julien51
+author_email_md5: julien.genestoux@gmail.com
 ---
 
 A lot of people have asked us why we built "Superfeedr":http://superfeedr.com or what is the relationship to "Notifixious":http://notifixio.us. Here are a few hints.

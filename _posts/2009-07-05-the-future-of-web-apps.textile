@@ -4,6 +4,7 @@ title: The future of Web apps?
 categories: [dev, gospel, web-apps]
 author_name: Julien
 author_uri: http://twitter.com/julien51
+author_email_md5: julien.genestoux@gmail.com
 ---
 
 A lot of people have shown interest in "Aristochat":http://github.com/superfeedr/aristochat/tree/master and the "Superfeedr chat":http://superfeedr.com/chat last week. However, I haven't talked about what is - according to me - the greatest thing about it : *it's hosted on Github*. Not only the source code, "but the app itself":http://github.com/superfeedr/Superfeedr-Chat/tree/gh-pages, and since it's a "basic HTML file":http://github.com/superfeedr/Superfeedr-Chat/blob/9d01a452c0f5e21b3deda1221e3d47e84e6c34c5/index.html with a "little bit of Javascript":http://github.com/superfeedr/Superfeedr-Chat/blob/9d01a452c0f5e21b3deda1221e3d47e84e6c34c5/chat.js, it could have very been hosted on EC2 as well, or on any type server that can server HTML file.

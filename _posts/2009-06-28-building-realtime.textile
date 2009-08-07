@@ -4,6 +4,7 @@ title: "Building Realtime : turning feeds into streams"
 categories: [realtime, gospel, infrastructure]
 author_name: Julien
 author_uri: http://twitter.com/julien51
+author_email_md5: julien.genestoux@gmail.com
 ---
 
 Technically, "Real-Time Computing":http://en.wikipedia.org/wiki/Real-time_computing implies that there is a _time constraint_ in a system, it's *different from instantaneity*. A real-time service is a service that can guarantee that it would do something in a given amount of time. "Superfeedr":http://superfeedr.com is real-time, since we can guarantee that we will notify new entries in a feed to our users within a 15 minutes time frame.

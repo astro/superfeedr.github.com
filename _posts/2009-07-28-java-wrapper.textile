@@ -4,6 +4,7 @@ title: Superfeedr Java Wrapper
 categories: [API, Java, XMPP, wrappers, OSS]
 author_name: Julien
 author_uri: http://twitter.com/julien51
+author_email_md5: julien.genestoux@gmail.com
 ---
 
 This seems to be the wrapper week! Our friend "Thomas":http://twitter.com/mastooo just pushed a first version of a "Java wrapper":http://github.com/superfeedr/superfeedr-java/tree/master to our API ("his branch":http://github.com/mastooo/java-superfeedr/tree/master). I'd like to take this as an occasion to explain how we see these wrappers. 

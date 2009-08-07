@@ -4,6 +4,7 @@ title: Harper's friends
 categories: [use-case, friends, harper]
 author_name: Julien
 author_uri: http://twitter.com/julien51
+author_email_md5: julien.genestoux@gmail.com
 ---
 
 There is *already a lot of fun stuff* that people are doing with "Superfeedr":http://superfeedr.com and we thought it would be interesting to share them here. Of course, if you have any story, you can either write it on your blog and we'll link to it (on "twitter":http://twitter.com/superfeedr or here), or you can send it by email and we will be more than happy to post it on this "blog":http://blog.superfeedr.com .

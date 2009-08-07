@@ -4,6 +4,7 @@ title: Scale with Chef
 categories: [chef, deployment, infrastructure, configuration]
 author_name: Julien
 author_uri: http://twitter.com/julien51
+author_email_md5: julien.genestoux@gmail.com
 ---
 
 This will be a long post, but it deserves some time. Go get a glass of water, breathe deeply and let's dive!

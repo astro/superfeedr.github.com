@@ -4,6 +4,7 @@ title: The Console
 categories: [console, debugging, xmpp]
 author_name: Julien
 author_uri: http://twitter.com/julien51
+author_email_md5: julien.genestoux@gmail.com
 ---
 
 It is quite hard to debug notification based systems, because _developers usually have to wait_ for a notification to happen. It's been a "common request from several":http://groups.google.com/group/superfeedr/browse_thread/thread/b237d690372050b2 of our users over the past month and we're happy to say that we released today a solution to this problem : *the console*.

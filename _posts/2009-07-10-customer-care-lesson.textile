@@ -4,6 +4,7 @@ title: Customer Care Lesson
 categories: [meta]
 author_name: Julien
 author_uri: http://twitter.com/julien51
+author_email_md5: julien.genestoux@gmail.com
 ---
 
 Yesterday, the Carsonified team relaunched their website and it's looking great. The "Mission page":http://carsonified.com/mission/ should be a lesson for everybody:

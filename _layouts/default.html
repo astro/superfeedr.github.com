@@ -34,6 +34,7 @@
                     <li><a href="http://superfeedr.com">Superfeedr</a></li>
                     <li><a href="http://twitter.com/superfeedr">@superfeedr</a></li>
                     <li><a href="http://blog.superfeedr.com">Blog</a></li>
+                    <li><a href="http://blog.superfeedr.com/archive.html">Archive</a></li>
                 </ul>
                 <div id="twitter_div">
                     
@@ -91,6 +92,22 @@
     });
     </script>
     <!-- /End Survey.io code -->
+    
+    
+    <script type="text/javascript">
+    //<![CDATA[
+    (function() {
+    		var links = document.getElementsByTagName('a');
+    		var query = '?';
+    		for(var i = 0; i < links.length; i++) {
+    			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+    				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+    			}
+    		}
+    		document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/superfeedr-thoughts/get_num_replies.js' + query + '"></' + 'script>');
+    	})();
+    //]]>
+    </script>
 
 </body>
 </html>

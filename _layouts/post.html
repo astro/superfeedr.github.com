@@ -3,8 +3,17 @@ layout: default
 ---
 <div id="post">
     <h2>{{page.title}}</h2>
+    <span style="color:#666; font-size:0.9em;"><img style="float:left; margin: -2px 3px 3px 0px" src="http://www.gravatar.com/avatar/{{page.author_email_md5}}?s=20" >By <a href="{{ page.author_uri}}">{{ page.author_name }}</a>, on {{ page.date | date_to_string }}</span>
 {{ content }}
 </div>
+
+<small class="meta">{% for t in page.categories %}
+  <a href='http://www.google.com/search?q={{ t | escape }}+site:blog.superfeedr.com'>{{ t }}</a>{% if forloop.last == false %}, {% endif %}
+  {% endfor %} 
+</small>
+
+<br />
+
 <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=fadf5fa4-58b2-47d0-a42b-62a8c6959ba2&amp;type=website&amp;style=rotate"></script>
 
 <div id="comments">

@@ -4,6 +4,7 @@ title: "Speeding Up RSS : what for?"
 categories: [RSS, Atom, Feeds, Push, Techcrunch]
 author_name: Julien
 author_uri: http://twitter.com/julien51
+author_email_md5: julien.genestoux@gmail.com
 ---
 
 "Erick Schonfeld":http://twitter.com/Erickschonfeld published the "blog post of the -day- week":http://www.techcrunch.com/2009/07/09/speeding-up-rss/. Despite the fact that he should have talked about "Superfeedr":http://superfeedr.com, I think this is an awesome article. I am really looking forward to "tomorrow's panel":http://www.techcrunch.com/2009/07/08/win-a-ticket-to-the-real-time-stream-crunchup-this-friday/ and see what "Brett", Brad, Freddy and Andy have to talk about.

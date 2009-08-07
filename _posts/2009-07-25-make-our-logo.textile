@@ -4,6 +4,7 @@ title: Make Our Logo!
 categories: [logo, meta, open-source]
 author_name: Julien
 author_uri: http://twitter.com/julien51
+author_email_md5: julien.genestoux@gmail.com
 ---
 
 A lot of "our friends complained":http://twitter.com/lauragatning/status/2181168813 about the fact that we didn't have a logo. That's a valid concern, but I really didn't have the skills (even far from it) that it takes. So what I basically asked a very "talented friend":http://www.lafraise.com/User/profile/id/660804 to make a concept. He did a great job and you can see it right below, with several different colors. 

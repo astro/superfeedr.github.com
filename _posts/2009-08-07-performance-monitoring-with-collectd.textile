@@ -4,22 +4,23 @@ title: Performance monitoring with collectd
 categories: [OSS, open-source, infrastructure, collectd]
 author_name: Astro
 author_uri: http://identi.ca/astro
+author_email_md5: 0120a25badc6b1e50f6890527dca7042
 ---
 
-One challenge we face when working in the Cloud is knowing *when to scale up.* That means we need some obvious figures telling us we need more resources.
+One challenge we face when working in the Cloud is knowing *when to "scale up":http://blog.superfeedr.com/chef/configuration/deployment/infrastructure/scale-with-chef/.* That means we need some obvious figures telling us we need more resources.
 
-!{float: right; margin: 5px;}/images/collectd.png! This requires performance monitoring. From the many tools around we chose "collectd":http://collectd.org/. This daemon is built on a very sleek plugin infrastructure, allowing it to run with with only the functionality you actually need. If you want to know how clean C looks the collectd source code is worth a look.
+!{float: right; margin: 5px;}/images/collectd.png! This requires performance monitoring. From the many tools around we chose "collectd":http://collectd.org/. This daemon is built on a very sleek plugin infrastructure, allowing it to run with only the functionality you actually need. If you want to know how clean C looks the collectd source code is worth a look.
 
-Contrary to a lot of other monitoring software, the watched hosts don't have listening network sockets but *only send UDP packets* to a central server. It's not neccessary to control any data gathering from the outside, thus it avoids potential remote security holes.
+Contrary to a lot of other monitoring software, the watched hosts don't have listening network sockets but *only send UDP packets* to a central server. It's not necessary to control any data gathering from the outside, thus it avoids potential remote security holes.
 
-!{float:left; margin: 5px;}/images/collectd-mem.png! The primary use of collectd is *monitoring of operating system resources* and this is done very efficiently by its native plugins. There's no expensive @fork()@ for calling other programs. If you still need that, there's a "exec":http://collectd.org/documentation/manpages/collectd-exec.5.shtml plugin for that.
+!{float:left; margin: 10px;}/images/collectd-mem.png! The primary use of collectd is *monitoring of operating system resources* and this is done very efficiently by its native plugins. There's no expensive @fork()@ for calling other programs. If you still need that, there's a "exec":http://collectd.org/documentation/manpages/collectd-exec.5.shtml plugin for that.
 
 Once you figured out which host is responsible for gathering all the data, you can configure collectd's "network plugin":http://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_network to open a listening socket for receiving other hosts' statistics.
 
 To make use of the collected data you've got the "rrdtool plugin":http://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_rrdtool which writes locally-generated or remotely-received values into the round-robin database files of the popular and proven "rrdtool":http://oss.oetiker.ch/rrdtool/. Pay attention to the configuration of that plugin: once you start monitoring dozens of hosts with hundreds of plugins, rrdtool will randomly write to the many RRD files. There are some tunable parameters and the "rrdcached":http://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_rrdcached solution.
 
-You can generate your pretty graphs with the *rrdgraph* utility. This is being done by the included *collection3* CGI scripts. Unfortunately, this web interface is rather Web 1.0 and allows basic browsing of your graphs only. We hope for the advent of some alternative projects to allow more convenient viewing of statistics.
+!{float:right; margin: 10px;}/images/collectd-superparsr.png! You can generate your pretty graphs with the *rrdgraph* utility. This is being done by the included *collection3* CGI scripts. Unfortunately, this web interface is rather Web 1.0 and allows basic browsing of your graphs only. We hope for the advent of some alternative projects to allow more convenient viewing of statistics.
 
-!{float:right; margin: 5px;}/images/collectd-superparsr.png! Because we do not only want to watch host resources but also the quality of our processes we have developed the "ruby-collectd":http://github.com/astro/ruby-collectd/ library. Basically, you just define a collectd server on application startup and sprinkle your code with statements like @Stats.counter(:job_done).count! 1@
+Because we do not only want to watch host resources but also the quality of our processes we have developed the "ruby-collectd":http://github.com/astro/ruby-collectd/ library. Basically, you just define a collectd server on application startup and sprinkle your code with statements like @Stats.counter(:job_done).count! 1@
 
-ruby-collectd does not require collectd, so you don't need to install it for just watching your own application.
+ruby-collectd does not require collectd, so you don't need to install it locally just for watching your own application. 
