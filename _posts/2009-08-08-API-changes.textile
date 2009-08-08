@@ -1,0 +1,39 @@
+---
+layout: post
+title: API changes
+categories: [api, xmpp, pubsubhubbub]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+With more and more users, we get more and more feedback and we're slowly but surely improving our service to take into account all that feedback. As a consequence, every once in a while we need to push a new codebase with slight changes in the API. Hopefully these changes should be "backward compatible":http://en.wikipedia.org/wiki/Backward_compatibility, which means *they shouldn't affect any of the existing applications*. 
+
+This changes will be *released on, or after August 15*. 
+
+h3. Subscription API changes
+
+Up until now, subscription _end-points where "user-centric"_ which means that you could only have one JID or one web-hook for all the user's subscriptions. *From now on, you will be able to have a specific endpoint for each subscription* :
+
+* *A different URL for each of your PubSubHubbub subscriptions*. Technically, this means that Superfeedr will implement the full specification, including the "subscription verification":http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.1.html#anchor5. That requires a little bit more work on the subscriber side, but it also gives you more flexibility with different URL for different "types" of feeds, or even a simple load-balancing on the subscriber side.
+
+* *A different JID for each of your XMPP subscriptions*, as long as the subscription JID matches the IQ jid. If the IQ jid (in the "from" attribute) is: 
+** a regular JID, like _user@server.tld_, you will only be able to subscribe with _user@server.tld_
+** a "component jid" like _component.server.tld_, you will be able to subscribe with _any-user@component.server.tld_.
+
+As a consequence you'll be able to have both PubSubHubbub and XMPP/PubSub notifications, even for the same feeds. But, don't forget : we charge by the notification : 2 subscriptions to the same feed with different endpoints means you will be charged twice for the 2 notifications. 
+
+By default, for all the subscriptions prior to this change, we will use by default your user-defined endpoint.
+
+h3. Subscriptions listing changes
+
+This is only valid for the XMPP API since the PubSubHubbub doesn't define any subscription listing API.
+We will send status information along with the feeds, like in this example :
+<script src="http://gist.github.com/164251.js"></script>
+
+Similarly, you will receive the feed information upon subscription with the XMPP API.
+
+Please, note that, contrary to notifications, the &lt;status&gt; will not include a feed attribute, as the feed url is already included in the &lt;subscription&gt; node attribute.
+
+
+We appreciate your feedback and are committed to implement as much as we can in a non-destructive way to avoid any compatibility issue. Please, if you see problem in any of your apps, do not hesitate to get in touch with us and we will shortly find a solution.
