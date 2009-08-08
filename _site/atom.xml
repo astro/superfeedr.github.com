@@ -1,11 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Superfeedr Blog : Real-time cloudy thoughts from a super-hero</title>
-    <link href="http://blog.superfeedr.com/atom.xml" rel="self"/>
-    <link href="http://blog.superfeedr.com/"/>
-    <updated>2009-08-07T09:45:09-07:00</updated>
+    <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
+    <link rel="hub" href="http://superfeedr.com/hubbub" />
+    <updated>2009-08-08T11:47:56-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>API changes</title>
+        
+        <category term="api" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="xmpp" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/api/pubsubhubbub/xmpp/API-changes"/>
+        <published>2009-08-08T00:00:00-07:00</published>
+        <updated>2009-08-08T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/api/pubsubhubbub/xmpp/API-changes</id>
+        <content type="html">&lt;p&gt;With more and more users, we get more and more feedback and we&amp;#8217;re slowly but surely improving our service to take into account all that feedback. As a consequence, every once in a while we need to push a new codebase with slight changes in the &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. Hopefully these changes should be &lt;a href=&quot;http://en.wikipedia.org/wiki/Backward_compatibility&quot;&gt;backward compatible&lt;/a&gt;, which means &lt;strong&gt;they shouldn&amp;#8217;t affect any of the existing applications&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This changes will be &lt;strong&gt;released on, or after August 15&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;Subscription &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; changes&lt;/h3&gt;
+&lt;p&gt;Up until now, subscription &lt;em&gt;end-points where &amp;#8220;user-centric&amp;#8221;&lt;/em&gt; which means that you could only have one &lt;span class=&quot;caps&quot;&gt;JID&lt;/span&gt; or one web-hook for all the user&amp;#8217;s subscriptions. &lt;strong&gt;From now on, you will be able to have a specific endpoint for each subscription&lt;/strong&gt; :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;A different &lt;span class=&quot;caps&quot;&gt;URL&lt;/span&gt; for each of your PubSubHubbub subscriptions&lt;/strong&gt;. Technically, this means that Superfeedr will implement the full specification, including the &lt;a href=&quot;http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.1.html#anchor5&quot;&gt;subscription verification&lt;/a&gt;. That requires a little bit more work on the subscriber side, but it also gives you more flexibility with different &lt;span class=&quot;caps&quot;&gt;URL&lt;/span&gt; for different &amp;#8220;types&amp;#8221; of feeds, or even a simple load-balancing on the subscriber side.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;A different &lt;span class=&quot;caps&quot;&gt;JID&lt;/span&gt; for each of your &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; subscriptions&lt;/strong&gt;, as long as the subscription &lt;span class=&quot;caps&quot;&gt;JID&lt;/span&gt; matches the IQ jid. If the IQ jid (in the &amp;#8220;from&amp;#8221; attribute) is:
+	&lt;ul&gt;
+		&lt;li&gt;a regular &lt;span class=&quot;caps&quot;&gt;JID&lt;/span&gt;, like &lt;em&gt;user@server.tld&lt;/em&gt;, you will only be able to subscribe with &lt;em&gt;user@server.tld&lt;/em&gt;&lt;/li&gt;
+		&lt;li&gt;a &amp;#8220;component jid&amp;#8221; like &lt;em&gt;component.server.tld&lt;/em&gt;, you will be able to subscribe with &lt;em&gt;any-user@component.server.tld&lt;/em&gt;.&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As a consequence you&amp;#8217;ll be able to have both PubSubHubbub and &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt;/PubSub notifications, even for the same feeds. But, don&amp;#8217;t forget : we charge by the notification : 2 subscriptions to the same feed with different endpoints means you will be charged twice for the 2 notifications.&lt;/p&gt;
+&lt;p&gt;By default, for all the subscriptions prior to this change, we will use by default your user-defined endpoint.&lt;/p&gt;
+&lt;h3&gt;Subscriptions listing changes&lt;/h3&gt;
+&lt;p&gt;This is only valid for the &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; since the PubSubHubbub doesn&amp;#8217;t define any subscription listing &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;.&lt;br /&gt;
+We will send status information along with the feeds, like in this example :&lt;br /&gt;
+&lt;script src=&quot;http://gist.github.com/164251.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Similarly, you will receive the feed information upon subscription with the &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Please, note that, contrary to notifications, the &amp;lt;status&amp;gt; will not include a feed attribute, as the feed url is already included in the &amp;lt;subscription&amp;gt; node attribute.&lt;/p&gt;
+&lt;p&gt;We appreciate your feedback and are committed to implement as much as we can in a non-destructive way to avoid any compatibility issue. Please, if you see problem in any of your apps, do not hesitate to get in touch with us and we will shortly find a solution.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Performance monitoring with collectd</title>

@@ -27,7 +27,7 @@
             <div id="main">
                 <div id="post">
     <h2>PubSubHubbub</h2>
-    <span style="color:#666; font-size:0.9em;"><img style="float:left; margin: -2px 3px 3px 0px" src="http://www.gravatar.com/avatar/julien.genestoux@gmail.com?s=20" >By <a href="http://twitter.com/julien51">Julien</a>, on 18 Jun 2009</span>
+    <span style="color:#666; font-size:0.9em;"><img style="float:left; margin: -2px 3px 3px 0px" src="http://www.gravatar.com/avatar/b30ce50678f0e934eaa6697425c59dd7?s=20" >By <a href="http://twitter.com/julien51">Julien</a>, on 18 Jun 2009</span>
 <p>We&#8217;re proud to announce that <a href="http://superfeedr.com">Superfeedr</a> is one of the very first services to actually support the infamous <a href="http://code.google.com/p/pubsubhubbub/">PubSubHubbub</a> protocol. If you think the name is ugly, check the <span class="caps">CSS</span> style of the <a href="http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.1.html">spec</a>.</p>
 <p>This presentation should give you enough details about PubSubhubbub.<br />
 <iframe src='http://docs.google.com/EmbedSlideshow?docid=ajd8t6gk4mh2_34dvbpchfs&amp;size=s' frameborder='0' width='400' height='350'></iframe></p>
@@ -124,6 +124,22 @@
     });
     </script>
     <!-- /End Survey.io code -->
+    
+    
+    <script type="text/javascript">
+    //<![CDATA[
+    (function() {
+    		var links = document.getElementsByTagName('a');
+    		var query = '?';
+    		for(var i = 0; i < links.length; i++) {
+    			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+    				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+    			}
+    		}
+    		document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/superfeedr-thoughts/get_num_replies.js' + query + '"></' + 'script>');
+    	})();
+    //]]>
+    </script>
 
 </body>
 </html>
