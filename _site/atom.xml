@@ -4,7 +4,7 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-08-26T14:50:01-07:00</updated>
+    <updated>2009-08-26T14:56:26-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
     
@@ -53,7 +53,7 @@ Here is what happens when you subscribe or unsubscribe with the PubSubHubbub &lt
 	&lt;li&gt;it returns it to you as an &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; response.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Of course, there is a performance cost to that, but it&amp;#8217;s not that big, as our &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; server is &amp;quot;geographically&amp;quot;&amp;quot; very close to the &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; app. Also, at the first PubSubHubbub query that you make, we store the connection into a &lt;a href=&quot;http://www.danga.com/memcached/&quot;&gt;Memcached&lt;/a&gt; server, which allows faster processing on the following requests. In terms of results, we can server any PubSubHubbub query in something like 200ms to 500ms. It is slow, but don&amp;#8217;t forget that we also &lt;a href=&quot;http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.1.html#verifysub&quot;&gt;check acceptance of the subscription/unsusbcription&lt;/a&gt; (by sending an &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;GET&lt;/span&gt; request) on your side, and that accounts for the biggest part of that time, actually.&lt;/p&gt;
-&lt;p&gt;We &lt;a href=&quot;http://blog.superfeedr.com/dev/gospel/web-apps/the-future-of-web-apps/&quot;&gt;wrote it earlier&lt;/a&gt;, but we&amp;#8217;re true believers in the fact that web apps are about to see a massive shift in their architecture, and we think that &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; based apps, where the browser is just an &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; client are going to be a significant part of that trend. We hope &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; will be an example that parents will show their kids, when they teach them about web apps ;) (Other nice examples include &amp;#8211; among others &amp;#8211; &lt;a href=&quot;http://collecta.com/&quot;&gt;Collecta&lt;/a&gt; or &lt;a href=&quot;https://presentlyapp.com/&quot;&gt;Present.ly&lt;/a&gt; &amp;#8230;)&lt;/p&gt;</content>
+&lt;p&gt;We &lt;a href=&quot;http://blog.superfeedr.com/dev/gospel/web-apps/the-future-of-web-apps/&quot;&gt;wrote it earlier&lt;/a&gt;, but we&amp;#8217;re true believers in the fact that web apps are about to see a massive shift in their architecture, and we think that &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; based apps, where the browser is just an &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; client are going to be a significant part of that trend. We hope &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; will be an example that parents will show their kids, when they teach them about web apps ;) (Other cool examples include &lt;a href=&quot;http://collecta.com/&quot;&gt;Collecta&lt;/a&gt; or &lt;a href=&quot;https://presentlyapp.com/&quot;&gt;Present.ly&lt;/a&gt; &amp;#8230;)&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
