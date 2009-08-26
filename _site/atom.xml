@@ -4,9 +4,61 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-08-08T11:47:56-07:00</updated>
+    <updated>2009-08-26T14:50:01-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>A new Architecture</title>
+        
+        <category term="api" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="xmpp" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="architecture" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/api/architecture/pubsubhubbub/xmpp/simpler-architecture"/>
+        <published>2009-08-25T00:00:00-07:00</published>
+        <updated>2009-08-25T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/api/architecture/pubsubhubbub/xmpp/simpler-architecture</id>
+        <content type="html">&lt;p&gt;No post for almost 2 weeks : we&amp;#8217;ve been incredibly busy. We had a lot of instability in the past 10 days, in conjonction (but not related) to significant &lt;a href=&quot;/api/pubsubhubbub/xmpp/API-changes/&quot;&gt;&lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; changes&lt;/a&gt;. We&amp;#8217;d like to apologize for the few times when you had problems accessing our service. We&amp;#8217;ve done our best to limit these downtime periods and most of the time they only affected subscription/unsubscriptions : &lt;strong&gt;notifications were still going on, as usual&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In that period, the number of feeds in our system increased by 50%, most of them through the &lt;a href=&quot;http://superfeedr.com/hubbub&quot;&gt;PubSubHubbub &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/a&gt;. This significant growth in the &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; traffic made light on the weaknesses of our &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; architecture. The &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; had a direct access to the MySQL database. &lt;em&gt;This was quite bad design from us, as both the &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; and &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; were accessing this database and basically doing the same thing : subscribing and unsubscribing users to feeds&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;As I am a true &amp;#8216;&lt;a href=&quot;http://en.wikipedia.org/wiki/Don&quot;&gt;&lt;span class=&quot;caps&quot;&gt;DRY&lt;/span&gt;&lt;/a&gt;&amp;#8217;t_repeat_yourself&amp;#8217; lover, I just hated the fact that we had to create and maintain 2 components doing exactly the same thing and I&amp;#8217;ve been looking for ways to change that.&lt;/p&gt;
+&lt;p&gt;Here is how our architecture looked like until this morning:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/before.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;The &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; App would deal with all subscriptions and unsubscriptions, as well as notifications from users using the &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. Nothing changed there.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+	&lt;li&gt;The Web app would do the same with both the website (you can add/remove feeds through our website) and the PubSubHubbub &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. It was a plain vanilla Rails application.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+	&lt;li&gt;It was simple to understand, but not so clean and probably not very easy to maintain, since we have so much duplicate information. I was also &amp;#8220;scared&amp;#8221; by the scaling issues we might have had to face on both sides, but I knew that our &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; app can scale pretty easily as &lt;a href=&quot;http://xmpp.org/extensions/xep-0114.html&quot;&gt;&lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; components&lt;/a&gt; are load balanced by default by &lt;a href=&quot;http://www.ejabberd.im/&quot;&gt;EJabberd&lt;/a&gt;, which means that we can scale horizontally in a mater of minutes (&lt;a href=&quot;http://blog.superfeedr.com/chef/configuration/deployment/infrastructure/scale-with-chef/&quot;&gt;Chef is great&lt;/a&gt;!).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is how it looks like now:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/after.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;At first sight it looks more complex, and you&amp;#8217;re probably right, but it&amp;#8217;s also more coherent and much much much dryer. What changed? Basically, &lt;strong&gt;both the web app and the PubSubHubbub &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; became &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; clients&lt;/strong&gt;, as they now both access the &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; App to add/remove/list subscriptions. In both cases, this is &lt;a href=&quot;http://xmpp.org/extensions/xep-0206.html&quot;&gt;&lt;span class=&quot;caps&quot;&gt;BOSH&lt;/span&gt;&lt;/a&gt; magic.&lt;/p&gt;
+&lt;p&gt;Bosh is and &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; extension that allows bi-directional streams &amp;#8211; very much like &lt;a href=&quot;http://blog.leahculver.com/2009/07/a-is-for-ajax-and-c-is-for-comet.html&quot;&gt;comet&lt;/a&gt; -. &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; has a &lt;span class=&quot;caps&quot;&gt;BOSH&lt;/span&gt; extension, that has been implemented in eJabberd. Once you&amp;#8217;ve got this stream, &lt;em&gt;it&amp;#8217;s pretty easy to transmit &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; traffic over &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt;&lt;/em&gt;. A key feature is that these connection are &amp;#8220;stored&amp;#8221; on the &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; side of the &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; server. It means that as long as your client remembers the session id of this stream, you can re-connect to the &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; server and take the connection where it was left.&lt;/p&gt;
+&lt;h4&gt;The web app : Strophe&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://code.stanziq.com/strophe/&quot;&gt;Strophe&lt;/a&gt; is a very well done Javascript library for &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt;. My friend &lt;a href=&quot;http://metajack.im/&quot;&gt;Jack&lt;/a&gt; wrote it and it&amp;#8217;s awesome. Among its key advantages : a simple syntax, very close to &lt;a href=&quot;http://jquery.com/&quot;&gt;Jquery&lt;/a&gt;, and an &amp;#8220;attach&amp;#8221; feature that allows the application server (Rails in our case), to start the &lt;span class=&quot;caps&quot;&gt;BOSH&lt;/span&gt; stream and then hand it over to Javascript so that user credentials are never sent back to the client. That is exactly what we used for the web application. You can now list, unsubscribe, and subscribe to feeds through a simple interface that uses our &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. How cool is that?&lt;/p&gt;
+&lt;h4&gt;PubSubHubbub : Proxying&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://code.google.com/p/pubsubhubbub/&quot;&gt;PubSubHubbub&lt;/a&gt; is an &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. That was a little trickier, because obviously, running javascript on the server side doesn&amp;#8217;t make much sense. However, like any &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;, we can of course &amp;#8220;proxy&amp;#8221; it from Rails. That is what we did. &lt;br /&gt;
+Here is what happens when you subscribe or unsubscribe with the PubSubHubbub &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; :&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;&lt;strong&gt;on the server&lt;/strong&gt;, it starts an &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; Bosh session with your credentials&lt;/li&gt;
+	&lt;li&gt;it sends the corresponding &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; query,&lt;/li&gt;
+	&lt;li&gt;it translate the &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; response&lt;/li&gt;
+	&lt;li&gt;it returns it to you as an &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; response.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Of course, there is a performance cost to that, but it&amp;#8217;s not that big, as our &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; server is &amp;quot;geographically&amp;quot;&amp;quot; very close to the &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; app. Also, at the first PubSubHubbub query that you make, we store the connection into a &lt;a href=&quot;http://www.danga.com/memcached/&quot;&gt;Memcached&lt;/a&gt; server, which allows faster processing on the following requests. In terms of results, we can server any PubSubHubbub query in something like 200ms to 500ms. It is slow, but don&amp;#8217;t forget that we also &lt;a href=&quot;http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.1.html#verifysub&quot;&gt;check acceptance of the subscription/unsusbcription&lt;/a&gt; (by sending an &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;GET&lt;/span&gt; request) on your side, and that accounts for the biggest part of that time, actually.&lt;/p&gt;
+&lt;p&gt;We &lt;a href=&quot;http://blog.superfeedr.com/dev/gospel/web-apps/the-future-of-web-apps/&quot;&gt;wrote it earlier&lt;/a&gt;, but we&amp;#8217;re true believers in the fact that web apps are about to see a massive shift in their architecture, and we think that &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; based apps, where the browser is just an &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; client are going to be a significant part of that trend. We hope &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; will be an example that parents will show their kids, when they teach them about web apps ;) (Other nice examples include &amp;#8211; among others &amp;#8211; &lt;a href=&quot;http://collecta.com/&quot;&gt;Collecta&lt;/a&gt; or &lt;a href=&quot;https://presentlyapp.com/&quot;&gt;Present.ly&lt;/a&gt; &amp;#8230;)&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>API changes</title>
@@ -367,26 +419,6 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
     </entry>
     
     <entry>
-        <title>There is no such thing as Real Time Search</title>
-        
-        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
-        
-        <link href="http://blog.superfeedr.com/real-time/there-is-such-thing-as-real-time-web-search"/>
-        <published>2009-07-09T00:00:00-07:00</published>
-        <updated>2009-07-09T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/real-time/there-is-such-thing-as-real-time-web-search</id>
-        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href=&quot;http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/&quot;&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
-&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt; or &lt;a href=&quot;http://bing.com&quot;&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://search.twitter.com&quot;&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href=&quot;http://collecta.com&quot;&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
-&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
-        <author>
-            <name>Julien</name>
-            <uri>http://twitter.com/julien51</uri>
-        </author>
-    </entry>
-    
-    <entry>
         <title>Speeding Up RSS : what for?</title>
         
         <category term="RSS" scheme="http://www.sixapart.com/ns/types#tag" />
@@ -407,6 +439,26 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
 &lt;p&gt;The comments, though are very interesting and they show what we&amp;#8217;ve observed with &amp;quot;Notifixious&amp;quot;http://notifixio.us over the last year : Real-time notification (or faster &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;) scares people a lot. There is at least 4 or 5 comments saying that &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; is fast enough for them. The problem here, is that there is a misconception :* making &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; faster is not for individuals, but for the web itself*.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/&quot;&gt;PubSubHubbub&lt;/a&gt; has the potential to bring Push to the &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; and Atom technologies. So not only it will be faster, but it will be instantaneous, and when Feed updates will be instantaneous, nobody will pull anymore (&lt;a href=&quot;http://blog.superfeedr.com/gospel/something-stupid/&quot;&gt;not even us&lt;/a&gt;) and the web will be better.&lt;/p&gt;
 &lt;p&gt;Better? Publishers will not have to &lt;em&gt;handle massive loads anymore&lt;/em&gt; (like Twitter had to), and Subscribers (services) will &lt;em&gt;not have to poll over and over to get updates&lt;/em&gt;.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>There is no such thing as Real Time Search</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/real-time/there-is-such-thing-as-real-time-web-search"/>
+        <published>2009-07-09T00:00:00-07:00</published>
+        <updated>2009-07-09T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/real-time/there-is-such-thing-as-real-time-web-search</id>
+        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href=&quot;http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/&quot;&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
+&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt; or &lt;a href=&quot;http://bing.com&quot;&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://search.twitter.com&quot;&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href=&quot;http://collecta.com&quot;&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
+&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>

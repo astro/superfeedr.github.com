@@ -1,0 +1,9 @@
+---
+layout: post
+title: Do it for the kids
+categories: [gospel]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
