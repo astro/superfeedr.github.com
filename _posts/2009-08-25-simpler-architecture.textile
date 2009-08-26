@@ -48,4 +48,3 @@ Of course, there is a performance cost to that, but it's not that big, as our HT
 
 We "wrote it earlier":http://blog.superfeedr.com/dev/gospel/web-apps/the-future-of-web-apps/, but we're true believers in the fact that web apps are about to see a massive shift in their architecture, and we think that XMPP based apps, where the browser is just an XMPP client are going to be a significant part of that trend. We hope "Superfeedr":http://superfeedr.com will be an example that parents will show their kids, when they teach them about web apps ;) (Other cool examples include "Collecta":http://collecta.com/ or "Present.ly":https://presentlyapp.com/ ...)
 
-
