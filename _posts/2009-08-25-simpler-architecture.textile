@@ -11,7 +11,7 @@ No post for almost 2 weeks : we've been incredibly busy. We had a lot of instabi
 
 In that period, the number of feeds in our system increased by 50%, most of them through the "PubSubHubbub API":http://superfeedr.com/hubbub. This significant growth in the HTTP traffic made light on the weaknesses of our HTTP architecture. The HTTP API had a direct access to the MySQL database. _This was quite bad design from us, as both the XMPP and HTTP were accessing this database and basically doing the same thing : subscribing and unsubscribing users to feeds_. 
 
-As I am a true '"DRY":http://en.wikipedia.org/wiki/Don't_repeat_yourself' lover, I just hated the fact that we had to create and maintain 2 components doing exactly the same thing and I've been looking for ways to change that.
+As I am a true "DRY":http://bit.ly/3lJOzV lover, I just hated the fact that we had to create and maintain 2 components doing exactly the same thing and I've been looking for ways to change that.
 
 Here is how our architecture looked like until this morning:
 
