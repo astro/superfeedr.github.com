@@ -13,7 +13,7 @@ Yes, I am pissed off I am not at "Foo Camp":http://en.wikipedia.org/wiki/Foo_Cam
 
 Based on that, a real-time search engine would be a search engine that would be able to *guarantee that the results of your query happened within an X seconds/minutes/hours/days*. 
 
-If I search for ""Foo" on twitter":http://search.twitter.com/search?q=foo, Twitter tells me that the constraint is 'now' (_See what's happening — right now._), I am guaranteed that the results have been posted 'now' : I'll leave the now definition to Twitter :D.
+If I search for "'Foo' on twitter":http://search.twitter.com/search?q=foo, Twitter tells me that the constraint is 'now' (_See what's happening — right now._), I am guaranteed that the results have been posted 'now' : I'll leave the now definition to Twitter :D.
 
 By studying a query over different time-constraints (within 1 year, 1 month, 1 day, 1 hour), we can probably get very interesting results : maybe something like the log of Google's "Database of Intentions":http://battellemedia.com/archives/000063.php. Applied to Twitter, that would allow us to _learn a lot on how we communicate, react to "information" and propagate it, or even correlation between things people are talking about_.
 
