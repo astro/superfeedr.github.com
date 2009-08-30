@@ -7,7 +7,7 @@ author_uri: http://twitter.com/julien51
 author_email_md5: b30ce50678f0e934eaa6697425c59dd7
 ---
 
-Yes, I am pissed off I am not at "Foo Camp":http://en.wikipedia.org/wiki/Foo_Camp, but I am working to be there next year, bear with me. I really wish I could be there because I think we're making the term "real-time web" as the new "web 2.0" : a "brand as Tom calls it":http://twitter.com/plasticbagUK/status/3638809764. _"Blahblah is doing real-time"__, __"Blihblih has a real-time approach"__... And this is bad : when words lose their meaning, concepts get over-looked. *This is not just playing on words*.
+Yes, I am pissed off I am not at "Foo Camp":http://en.wikipedia.org/wiki/Foo_Camp, but I am working to be there next year, bear with me. I really wish I could be there because I think we're making the term "real-time web" as the new "web 2.0" : a "brand as Tom calls it":http://twitter.com/plasticbagUK/status/3638809764. _"Blahblah is doing real-time"_, _"Blihblih has a real-time approach"_... And this is bad : when words lose their meaning, concepts get over-looked. *This is not just playing on words*.
 
 "Real-time is not instantaneity":http://en.wikipedia.org/wiki/Real-time_computing. *Real-time means time-constrained*. That's it. That constraint can of course be low (up to the second if you want, even).
 
