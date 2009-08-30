@@ -1,0 +1,23 @@
+---
+layout: post
+title: Real-time search
+categories: [meta, real-time, search, foo]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Yes, I am pissed off I am not at "Foo Camp":http://en.wikipedia.org/wiki/Foo_Camp, but I am working to be there next year, bear with me. I really wish I could be there because I think we're making the term "real-time web" as the new "web 2.0" : a "brand as Tom calls it":http://twitter.com/plasticbagUK/status/3638809764. _"Blahblah is doing real-time"__, __"Blihblih has a real-time approach"__... And this is bad : when words lose their meaning, concepts get over-looked. *This is not just playing on words*.
+
+"Real-time is not instantaneity":http://en.wikipedia.org/wiki/Real-time_computing. *Real-time means time-constrained*. That's it. That constraint can of course be low (up to the second if you want, even).
+
+Based on that, a real-time search engine would be a search engine that would be able to guarantee that the results of your query happened within an X seconds/minutes/hours/days. 
+
+If I search for ""Foo" on twitter":http://search.twitter.com/search?q=foo, Twitter tells me that the constraint is 'now' (_See what's happening — right now._), I am guaranteed that the results have been posted 'now' : I'll leave the now definition to Twitter :D.
+
+
+By studying a query over different time-constraints (within 1 year, 1 month, 1 day, 1 hour), we can probably get very interesting results : maybe something like the log of Google's "Database of Intentions":http://battellemedia.com/archives/000063.php. Applied to Twitter, that would allow us to learn a lot on how, we, communicate, react to "information" and propagate it, or even correlation between things people are talking about.
+
+Remember Google's proudness when they announce they could predict the "flu pandemic" better than doctors? Well, my bet is that Twitter can do that even better than Google, and for maybe less "common" things. A real-time search on "heading":http://search.twitter.com/search?q=heading into Twitter, coupled with a hint of geo-localisation and a pinch of semantic analysis would probably be quite powerful to know (and predict) what the traffic looked like at a given place, on a given time.
+
+Want to predict the "economy"? Track down keywords like "laid off/let go", "hired", "profit", "loss", "chapter 11"...
