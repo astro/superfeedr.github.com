@@ -4,9 +4,99 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-08-26T14:56:26-07:00</updated>
+    <updated>2009-09-02T19:43:01-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Getting Stated with PubSubHubbub</title>
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="API" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/API/pubsubhubbub/getting-started-with-pubsubhubbub"/>
+        <published>2009-09-02T00:00:00-07:00</published>
+        <updated>2009-09-02T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/API/pubsubhubbub/getting-started-with-pubsubhubbub</id>
+        <content type="html">&lt;p&gt;To my knowledge, Superfeedr is the only non-google PubSubHubbub out there. Let&amp;#8217;s see why and how to use it.&lt;/p&gt;
+&lt;h3&gt;Why using PubSubHubbub?&lt;/h3&gt;
+&lt;p&gt;Superfeedr &lt;a href=&quot;http://superfeedr.com/documentation&quot;&gt;provides 2 &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/a&gt;. Here are some reasons why you&amp;#8217;d be better off &lt;strong&gt;using the PubSubHubbub &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;You don&amp;#8217;t want to run a background job&lt;/li&gt;
+	&lt;li&gt;You have an existing Web application&lt;/li&gt;
+	&lt;li&gt;You already use PubSubHubbub with another hub.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And here are a few reasons why you may want to &lt;strong&gt;avoid the PubSubHubbub &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Your endpoint (where you will receive notifications) is *behind a firewall&lt;/li&gt;
+	&lt;li&gt;You want to receive a notification each time Superfeedr fetches and parses a feed for you&lt;/li&gt;
+	&lt;li&gt;Your endpoint(s) are either desktop applications or embedded applications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;What do I need to do?&lt;/h3&gt;
+&lt;p&gt;The PubSubHubbub &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; will allow you to receive notifications from us when we identify new entries in feeds to which you subscribed. Thus, there are 2 things that you need to do : &lt;em&gt;subscribe&lt;/em&gt; and &lt;em&gt;implement a &amp;#8220;receiver&amp;#8221; to deal with notifications&lt;/em&gt;.&lt;/p&gt;
+&lt;h4&gt;Subscription&lt;/h4&gt;
+&lt;p&gt;The subscription process is not obvious, because the hub needs to verify your intent. Here is how it works.&lt;br /&gt;
+Our hub is located at &lt;a href=&quot;http://superfeedr.com/hubbub&quot;&gt;http://superfeedr.com/hubbub&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;Send an &lt;strong&gt;authenticated&lt;/strong&gt; (with your superfeedr login/password) &lt;strong&gt;&lt;span class=&quot;caps&quot;&gt;POST&lt;/span&gt; request&lt;/strong&gt; to our &lt;span class=&quot;caps&quot;&gt;URL&lt;/span&gt; with the following parameters : &lt;br /&gt;
+    * &lt;em&gt;hub.mode&lt;/em&gt; = subscribe|unsubscribe&lt;br /&gt;
+    * &lt;em&gt;hub.verify&lt;/em&gt; = sync&lt;br /&gt;
+    * &lt;em&gt;hub.callback&lt;/em&gt; = http://domain.tld/your/callback&lt;br /&gt;
+    * &lt;em&gt;hub.topic&lt;/em&gt; = http//feeds.you.want.to/subscribe&lt;/li&gt;
+	&lt;li&gt;When our server receives this &lt;span class=&quot;caps&quot;&gt;POST&lt;/span&gt; request, it will &lt;strong&gt;send back a &lt;span class=&quot;caps&quot;&gt;GET&lt;/span&gt; request to your callback &lt;span class=&quot;caps&quot;&gt;URL&lt;/span&gt;&lt;/strong&gt;, with the following :&lt;br /&gt;
+   * &lt;em&gt;hub.mode&lt;/em&gt; = subscribe|unsubscribe&lt;br /&gt;
+   * &lt;em&gt;hub.topic&lt;/em&gt; = http//feeds.you.want.to/subscribe&lt;br /&gt;
+   * &lt;em&gt;hub.challenge&lt;/em&gt; = a-random-string&lt;/li&gt;
+	&lt;li&gt;If your server &lt;strong&gt;echoes the hub.challenge&lt;/strong&gt; parameter, the &lt;strong&gt;subscription will be accepted&lt;/strong&gt;. It will be refused in any other case.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To debug the process, you can use &lt;a href=&quot;http://hurl.r09.railsrumble.com/hurls/ea7a8a4fbc75d92497f6e1ce4f904cb5b4c04609/59aa8bca27078865519ded6c7c8d01023789348f&quot;&gt;this hurl to send subscriptions requests&lt;/a&gt; (don&amp;#8217;t forget to adjust the values of the params, though). &lt;a href=&quot;http://curl.haxx.se/&quot;&gt;Curl&lt;/a&gt; is another great option.&lt;/p&gt;
+&lt;h4&gt;Receive Notifications&lt;/h4&gt;
+&lt;p&gt;Your application must &amp;#8220;deal&amp;#8221; with the notifications. Notifications are &lt;span class=&quot;caps&quot;&gt;POST&lt;/span&gt; requests sent to you callback &lt;span class=&quot;caps&quot;&gt;URL&lt;/span&gt;, the new entries are in the request body. You then have to use an &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt; parser to fetch that body. Since we use standard &lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt;, any parser that can deal with &lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt; will be great.&lt;/p&gt;
+&lt;p&gt;If you&amp;#8217;re using a web application framework like Rails, Django, Merb or Symfony, it should be quite easy to register a &amp;#8220;route&amp;#8221; connected to the right Controller, in charge of parsing this body.&lt;/p&gt;
+&lt;h3&gt;Existing libraries and plugins&lt;/h3&gt;
+&lt;p&gt;The great advantage about using a standard protocol, is that you can re-use any &amp;#8220;code&amp;#8221; that&amp;#8217;s been written for other hubs. Here is a small list of existing libraries that can help you deal with the subscriptions and handling notification from your web app. That should all be fairly easy to implement.&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;http://github.com/empika/Superfeedr-PubSubHubbub-Rails-Plugin/tree/master&quot;&gt;Empika&amp;#8217;s Rails plugin&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://git.participatoryculture.org/djpubsubhubbub/&quot;&gt;Django App&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://github.com/igrigorik/PubSubHubbub/tree/master&quot;&gt;Ilya&amp;#8217;s EventMachine Ruby daemon&lt;/a&gt;&lt;br /&gt;
+&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can also find several &lt;a href=&quot;http://github.com/search?langOverride=&amp;amp;q=pubsubhubbub&quot;&gt;PubSubHubbub repositories on github&lt;/a&gt;, some of them claim to implement the subscriber part of the protocol.&lt;/p&gt;
+&lt;p&gt;Finally, please take the time to read our &lt;a href=&quot;http://superfeedr.com/documentation#pubsubhubbub&quot;&gt;PubSubHubbub documentation&lt;/a&gt; as this blog post is just a &amp;#8220;getting started&amp;#8221; guide.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Real-time search</title>
+        
+        <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="search" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="foo" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/foo/meta/real-time/search/real-time-search"/>
+        <published>2009-08-29T00:00:00-07:00</published>
+        <updated>2009-08-29T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/foo/meta/real-time/search/real-time-search</id>
+        <content type="html">&lt;p&gt;Yes, I am pissed off I am not at &lt;a href=&quot;http://en.wikipedia.org/wiki/Foo_Camp&quot;&gt;Foo Camp&lt;/a&gt;, but I am working to be there next year, bear with me. I really wish I could be there because I think we&amp;#8217;re making the term &amp;#8220;real-time web&amp;#8221; as the new &amp;#8220;web 2.0&amp;#8221; : a &lt;a href=&quot;http://twitter.com/plasticbagUK/status/3638809764&quot;&gt;brand as Tom calls it&lt;/a&gt;. &lt;em&gt;&amp;#8220;Blahblah is doing real-time&amp;#8221;&lt;/em&gt;, &lt;em&gt;&amp;#8220;Blihblih has a real-time approach&amp;#8221;&lt;/em&gt;&amp;#8230; And this is bad : when words lose their meaning, concepts get over-looked. &lt;strong&gt;This is not just playing on words&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Real-time_computing&quot;&gt;Real-time is not instantaneity&lt;/a&gt;. &lt;strong&gt;Real-time means time-constrained&lt;/strong&gt;. That&amp;#8217;s it. That constraint can of course be low (up to the second if you want, even).&lt;/p&gt;
+&lt;p&gt;Based on that, a real-time search engine would be a search engine that would be able to &lt;strong&gt;guarantee that the results of your query happened within an X seconds/minutes/hours/days&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If I search for &lt;a href=&quot;http://search.twitter.com/search?q=foo&quot;&gt;&amp;#8216;Foo&amp;#8217; on twitter&lt;/a&gt;, Twitter tells me that the constraint is &amp;#8216;now&amp;#8217; (&lt;em&gt;See what&amp;#8217;s happening — right now.&lt;/em&gt;), I am guaranteed that the results have been posted &amp;#8216;now&amp;#8217; : I&amp;#8217;ll leave the now definition to Twitter :D.&lt;/p&gt;
+&lt;p&gt;By studying a query over different time-constraints (within 1 year, 1 month, 1 day, 1 hour), we can probably get very interesting results : maybe something like the log of Google&amp;#8217;s &lt;a href=&quot;http://battellemedia.com/archives/000063.php&quot;&gt;Database of Intentions&lt;/a&gt;. Applied to Twitter, that would allow us to &lt;em&gt;learn a lot on how we communicate, react to &amp;#8220;information&amp;#8221; and propagate it, or even correlation between things people are talking about&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Remember when Google &lt;a href=&quot;http://www.google.org/flutrends/&quot;&gt;announced they could predict&lt;/a&gt; the &amp;#8220;flu trend&amp;#8221; better than the &lt;span class=&quot;caps&quot;&gt;CDC&lt;/span&gt;? Well, my bet is that &lt;strong&gt;Twitter can do that even better than Google&lt;/strong&gt;, and for maybe less &amp;#8220;common&amp;#8221; things. A real-time search on &lt;a href=&quot;http://search.twitter.com/search?q=heading&quot;&gt;heading&lt;/a&gt; into Twitter, coupled with a hint of geo-localisation and a pinch of semantic analysis would probably be quite powerful to know (and predict) what the traffic looked like at a given place, on a given time.&lt;/p&gt;
+&lt;p&gt;Want to predict the &amp;#8220;economy&amp;#8221;? Track down keywords like &amp;#8220;laid off/let go&amp;#8221;, &amp;#8220;hired&amp;#8221;, &amp;#8220;profit&amp;#8221;, &amp;#8220;loss&amp;#8221;, &amp;#8220;chapter 11&amp;#8221;&amp;#8230;&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>A new Architecture</title>
@@ -25,7 +115,7 @@
         <id>blog.superfeedr.com:/api/architecture/pubsubhubbub/xmpp/simpler-architecture</id>
         <content type="html">&lt;p&gt;No post for almost 2 weeks : we&amp;#8217;ve been incredibly busy. We had a lot of instability in the past 10 days, in conjonction (but not related) to significant &lt;a href=&quot;/api/pubsubhubbub/xmpp/API-changes/&quot;&gt;&lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; changes&lt;/a&gt;. We&amp;#8217;d like to apologize for the few times when you had problems accessing our service. We&amp;#8217;ve done our best to limit these downtime periods and most of the time they only affected subscription/unsubscriptions : &lt;strong&gt;notifications were still going on, as usual&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;In that period, the number of feeds in our system increased by 50%, most of them through the &lt;a href=&quot;http://superfeedr.com/hubbub&quot;&gt;PubSubHubbub &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/a&gt;. This significant growth in the &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; traffic made light on the weaknesses of our &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; architecture. The &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; had a direct access to the MySQL database. &lt;em&gt;This was quite bad design from us, as both the &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; and &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; were accessing this database and basically doing the same thing : subscribing and unsubscribing users to feeds&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;As I am a true &amp;#8216;&lt;a href=&quot;http://en.wikipedia.org/wiki/Don&quot;&gt;&lt;span class=&quot;caps&quot;&gt;DRY&lt;/span&gt;&lt;/a&gt;&amp;#8217;t_repeat_yourself&amp;#8217; lover, I just hated the fact that we had to create and maintain 2 components doing exactly the same thing and I&amp;#8217;ve been looking for ways to change that.&lt;/p&gt;
+&lt;p&gt;As I am a true &lt;a href=&quot;http://bit.ly/3lJOzV&quot;&gt;&lt;span class=&quot;caps&quot;&gt;DRY&lt;/span&gt;&lt;/a&gt; lover, I just hated the fact that we had to create and maintain 2 components doing exactly the same thing and I&amp;#8217;ve been looking for ways to change that.&lt;/p&gt;
 &lt;p&gt;Here is how our architecture looked like until this morning:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/before.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -419,6 +509,26 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
     </entry>
     
     <entry>
+        <title>There is no such thing as Real Time Search</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/real-time/there-is-such-thing-as-real-time-web-search"/>
+        <published>2009-07-09T00:00:00-07:00</published>
+        <updated>2009-07-09T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/real-time/there-is-such-thing-as-real-time-web-search</id>
+        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href=&quot;http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/&quot;&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
+&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt; or &lt;a href=&quot;http://bing.com&quot;&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://search.twitter.com&quot;&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href=&quot;http://collecta.com&quot;&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
+&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
         <title>Speeding Up RSS : what for?</title>
         
         <category term="RSS" scheme="http://www.sixapart.com/ns/types#tag" />
@@ -439,26 +549,6 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
 &lt;p&gt;The comments, though are very interesting and they show what we&amp;#8217;ve observed with &amp;quot;Notifixious&amp;quot;http://notifixio.us over the last year : Real-time notification (or faster &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;) scares people a lot. There is at least 4 or 5 comments saying that &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; is fast enough for them. The problem here, is that there is a misconception :* making &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; faster is not for individuals, but for the web itself*.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/&quot;&gt;PubSubHubbub&lt;/a&gt; has the potential to bring Push to the &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; and Atom technologies. So not only it will be faster, but it will be instantaneous, and when Feed updates will be instantaneous, nobody will pull anymore (&lt;a href=&quot;http://blog.superfeedr.com/gospel/something-stupid/&quot;&gt;not even us&lt;/a&gt;) and the web will be better.&lt;/p&gt;
 &lt;p&gt;Better? Publishers will not have to &lt;em&gt;handle massive loads anymore&lt;/em&gt; (like Twitter had to), and Subscribers (services) will &lt;em&gt;not have to poll over and over to get updates&lt;/em&gt;.&lt;/p&gt;</content>
-        <author>
-            <name>Julien</name>
-            <uri>http://twitter.com/julien51</uri>
-        </author>
-    </entry>
-    
-    <entry>
-        <title>There is no such thing as Real Time Search</title>
-        
-        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
-        
-        <link href="http://blog.superfeedr.com/real-time/there-is-such-thing-as-real-time-web-search"/>
-        <published>2009-07-09T00:00:00-07:00</published>
-        <updated>2009-07-09T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/real-time/there-is-such-thing-as-real-time-web-search</id>
-        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href=&quot;http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/&quot;&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
-&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt; or &lt;a href=&quot;http://bing.com&quot;&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://search.twitter.com&quot;&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href=&quot;http://collecta.com&quot;&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
-&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>

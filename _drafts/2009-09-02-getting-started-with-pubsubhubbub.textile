@@ -1,0 +1,62 @@
+---
+layout: post
+title: Getting Stated with PubSubHubbub
+categories: [pubsubhubbub, API]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+To my knowledge, Superfeedr is the only non-google PubSubHubbub out there. Let's see why and how to use it.
+
+h3. Why using PubSubHubbub?
+
+Superfeedr "provides 2 API":http://superfeedr.com/documentation. Here are some reasons why you'd be better off *using the PubSubHubbub API*:
+* You don't want to run a background job
+* You have an existing Web application
+* You already use PubSubHubbub with another hub.
+
+And here are a few reasons why you may want to *avoid the PubSubHubbub API*.
+* Your endpoint (where you will receive notifications) is *behind a firewall
+* You want to receive a notification each time Superfeedr fetches and parses a feed for you
+* Your endpoint(s) are either desktop applications or embedded applications
+
+h3. What do I need to do?
+
+The PubSubHubbub API will allow you to receive notifications from us when we identify new entries in feeds to which you subscribed. Thus, there are 2 things that you need to do : _subscribe_ and _implement a "receiver" to deal with notifications_.
+
+h4. Subscription
+
+The subscription process is not obvious, because the hub needs to verify your intent. Here is how it works.
+Our hub is located at "http://superfeedr.com/hubbub":http://superfeedr.com/hubbub 
+# Send an *authenticated* (with your superfeedr login/password) *POST request* to our URL with the following parameters : 
+    * _hub.mode_ = subscribe|unsubscribe
+    * _hub.verify_ = sync
+    * _hub.callback_ = http://domain.tld/your/callback
+    * _hub.topic_ = http//feeds.you.want.to/subscribe
+# When our server receives this POST request, it will *send back a GET request to your callback URL*, with the following :
+   * _hub.mode_ = subscribe|unsubscribe
+   * _hub.topic_ = http//feeds.you.want.to/subscribe
+   * _hub.challenge_ = a-random-string
+# If your server *echoes the hub.challenge* parameter, the *subscription will be accepted*. It will be refused in any other case.
+
+To debug the process, you can use "this hurl to send subscriptions requests":http://hurl.r09.railsrumble.com/hurls/ea7a8a4fbc75d92497f6e1ce4f904cb5b4c04609/59aa8bca27078865519ded6c7c8d01023789348f (don't forget to adjust the values of the params, though). "Curl":http://curl.haxx.se/ is another great option.
+
+h4. Receive Notifications
+
+Your application must "deal" with the notifications. Notifications are POST requests sent to you callback URL, the new entries are in the request body. You then have to use an XML parser to fetch that body. Since we use standard ATOM, any parser that can deal with ATOM will be great. 
+
+If you're using a web application framework like Rails, Django, Merb or Symfony, it should be quite easy to register a "route" connected to the right Controller, in charge of parsing this body.
+
+h3. Existing libraries and plugins
+
+The great advantage about using a standard protocol, is that you can re-use any "code" that's been written for other hubs. Here is a small list of existing libraries that can help you deal with the subscriptions and handling notification from your web app. That should all be fairly easy to implement.
+
+* "Empika's Rails plugin":http://github.com/empika/Superfeedr-PubSubHubbub-Rails-Plugin/tree/master
+* "Django App":https://git.participatoryculture.org/djpubsubhubbub/
+* "Ilya's EventMachine Ruby daemon":http://github.com/igrigorik/PubSubHubbub/tree/master
+...
+
+You can also find several "PubSubHubbub repositories on github":http://github.com/search?langOverride=&q=pubsubhubbub, some of them claim to implement the subscriber part of the protocol.
+
+Finally, please take the time to read our "PubSubHubbub documentation":http://superfeedr.com/documentation#pubsubhubbub as this blog post is just a "getting started" guide.
