@@ -38,7 +38,7 @@ Our hub is located at "http://superfeedr.com/hubbub":http://superfeedr.com/hubbu
    * _hub.mode_ = subscribe|unsubscribe
    * _hub.topic_ = http//feeds.you.want.to/subscribe
    * _hub.challenge_ = a-random-string
-# If your server *echoes the hub.challenge* parameter, the *subscription will be accepted*. It will be refused in any other case.
+# If your server *echoes the hub.challenge* parameter (along with a 200 response), the *subscription will be accepted*. It will be refused in any other case.
 
 To debug the process, you can use "this hurl to send subscriptions requests":http://hurl.r09.railsrumble.com/hurls/ea7a8a4fbc75d92497f6e1ce4f904cb5b4c04609/59aa8bca27078865519ded6c7c8d01023789348f (don't forget to adjust the values of the params, though). "Curl":http://curl.haxx.se/ is another great option.
 
@@ -55,6 +55,10 @@ The great advantage about using a standard protocol, is that you can re-use any 
 * "Empika's Rails plugin":http://github.com/empika/Superfeedr-PubSubHubbub-Rails-Plugin/tree/master
 * "Django App":https://git.participatoryculture.org/djpubsubhubbub/
 * "Ilya's EventMachine Ruby daemon":http://github.com/igrigorik/PubSubHubbub/tree/master
+* "PHP subscriber Client":http://code.google.com/p/pubsubhubbub/source/browse/trunk/subscriber_clients/php/subscriber.php
+* "Zend Subscriber":http://framework.zend.com/code/browse/Standard_Incubator/library/Zend/Feed/Pubsubhubbub
+* "Haskell Client":http://hackage.haskell.org/package/pubsub-0.10
+* "Python Subscriber":http://code.google.com/p/pubsubhubbub/source/browse/#svn/trunk/subscriber
 ...
 
 You can also find several "PubSubHubbub repositories on github":http://github.com/search?langOverride=&q=pubsubhubbub, some of them claim to implement the subscriber part of the protocol.
