@@ -30,14 +30,14 @@ h4. Subscription
 The subscription process is not obvious, because the hub needs to verify your intent. Here is how it works.
 Our hub is located at "http://superfeedr.com/hubbub":http://superfeedr.com/hubbub 
 # Send an *authenticated* (with your superfeedr login/password) *POST request* to our URL with the following parameters : 
-    * _hub.mode_ = subscribe|unsubscribe
-    * _hub.verify_ = sync
-    * _hub.callback_ = http://domain.tld/your/callback
-    * _hub.topic_ = http//feeds.you.want.to/subscribe
+    - _hub.mode_ = subscribe|unsubscribe
+    - _hub.verify_ = sync
+    - _hub.callback_ = http://domain.tld/your/callback
+    - _hub.topic_ = http//feeds.you.want.to/subscribe
 # When our server receives this POST request, it will *send back a GET request to your callback URL*, with the following :
-   * _hub.mode_ = subscribe|unsubscribe
-   * _hub.topic_ = http//feeds.you.want.to/subscribe
-   * _hub.challenge_ = a-random-string
+    - _hub.mode_ = subscribe|unsubscribe
+    - _hub.topic_ = http//feeds.you.want.to/subscribe
+    - _hub.challenge_ = a-random-string
 # If your server *echoes the hub.challenge* parameter (along with a 200 response), the *subscription will be accepted*. It will be refused in any other case.
 
 To debug the process, you can use "this hurl to send subscriptions requests":http://hurl.r09.railsrumble.com/hurls/ea7a8a4fbc75d92497f6e1ce4f904cb5b4c04609/59aa8bca27078865519ded6c7c8d01023789348f (don't forget to adjust the values of the params, though). "Curl":http://curl.haxx.se/ is another great option.
