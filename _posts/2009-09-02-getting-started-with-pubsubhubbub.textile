@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stated with PubSubHubbub
+title: Getting Started with PubSubHubbub
 categories: [pubsubhubbub, API]
 author_name: Julien
 author_uri: http://twitter.com/julien51
