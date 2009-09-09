@@ -4,12 +4,35 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-09-02T19:43:01-07:00</updated>
+    <updated>2009-09-08T20:16:27-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
     
     <entry>
-        <title>Getting Stated with PubSubHubbub</title>
+        <title>What API to chose</title>
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="xmpp" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="API" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/API/pubsubhubbub/xmpp/what-api-to-chose"/>
+        <published>2009-09-08T00:00:00-07:00</published>
+        <updated>2009-09-08T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/API/pubsubhubbub/xmpp/what-api-to-chose</id>
+        <content type="html">&lt;p&gt;Superfeedr is technology-agnostic, which means that we don&amp;#8217;t force you into any &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. We use standards so that our users aren&amp;#8217;t locked in any way to our service. However, being agnostic doesn&amp;#8217;t mean that a solution is not better than another one in your specific case.&lt;/p&gt;
+&lt;p&gt;Actually, we even believe that in some cases, it is better to use &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; and in some it is better to use PubSubHubbub. We creates this small &amp;#8220;decision-chart&amp;#8221; to help you decide with yes/no questions. Of course, this would apply to 99% of cases and there will always be times that this chart is wrong, but I am pretty confident that it should work for you.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/api-decision-chart.png&quot; style=&quot;margin: 10px; width:80%;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;What do you think?&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Getting Started with PubSubHubbub</title>
         
         <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
         
@@ -40,15 +63,15 @@
 Our hub is located at &lt;a href=&quot;http://superfeedr.com/hubbub&quot;&gt;http://superfeedr.com/hubbub&lt;/a&gt;&lt;/p&gt;
 &lt;ol&gt;
 	&lt;li&gt;Send an &lt;strong&gt;authenticated&lt;/strong&gt; (with your superfeedr login/password) &lt;strong&gt;&lt;span class=&quot;caps&quot;&gt;POST&lt;/span&gt; request&lt;/strong&gt; to our &lt;span class=&quot;caps&quot;&gt;URL&lt;/span&gt; with the following parameters : &lt;br /&gt;
-    * &lt;em&gt;hub.mode&lt;/em&gt; = subscribe|unsubscribe&lt;br /&gt;
-    * &lt;em&gt;hub.verify&lt;/em&gt; = sync&lt;br /&gt;
-    * &lt;em&gt;hub.callback&lt;/em&gt; = http://domain.tld/your/callback&lt;br /&gt;
-    * &lt;em&gt;hub.topic&lt;/em&gt; = http//feeds.you.want.to/subscribe&lt;/li&gt;
+    &amp;#8211; &lt;em&gt;hub.mode&lt;/em&gt; = subscribe|unsubscribe&lt;br /&gt;
+    &amp;#8211; &lt;em&gt;hub.verify&lt;/em&gt; = sync&lt;br /&gt;
+    &amp;#8211; &lt;em&gt;hub.callback&lt;/em&gt; = http://domain.tld/your/callback&lt;br /&gt;
+    &amp;#8211; &lt;em&gt;hub.topic&lt;/em&gt; = http//feeds.you.want.to/subscribe&lt;/li&gt;
 	&lt;li&gt;When our server receives this &lt;span class=&quot;caps&quot;&gt;POST&lt;/span&gt; request, it will &lt;strong&gt;send back a &lt;span class=&quot;caps&quot;&gt;GET&lt;/span&gt; request to your callback &lt;span class=&quot;caps&quot;&gt;URL&lt;/span&gt;&lt;/strong&gt;, with the following :&lt;br /&gt;
-   * &lt;em&gt;hub.mode&lt;/em&gt; = subscribe|unsubscribe&lt;br /&gt;
-   * &lt;em&gt;hub.topic&lt;/em&gt; = http//feeds.you.want.to/subscribe&lt;br /&gt;
-   * &lt;em&gt;hub.challenge&lt;/em&gt; = a-random-string&lt;/li&gt;
-	&lt;li&gt;If your server &lt;strong&gt;echoes the hub.challenge&lt;/strong&gt; parameter, the &lt;strong&gt;subscription will be accepted&lt;/strong&gt;. It will be refused in any other case.&lt;/li&gt;
+    &amp;#8211; &lt;em&gt;hub.mode&lt;/em&gt; = subscribe|unsubscribe&lt;br /&gt;
+    &amp;#8211; &lt;em&gt;hub.topic&lt;/em&gt; = http//feeds.you.want.to/subscribe&lt;br /&gt;
+    &amp;#8211; &lt;em&gt;hub.challenge&lt;/em&gt; = a-random-string&lt;/li&gt;
+	&lt;li&gt;If your server &lt;strong&gt;echoes the hub.challenge&lt;/strong&gt; parameter (along with a 200 response), the &lt;strong&gt;subscription will be accepted&lt;/strong&gt;. It will be refused in any other case.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;To debug the process, you can use &lt;a href=&quot;http://hurl.r09.railsrumble.com/hurls/ea7a8a4fbc75d92497f6e1ce4f904cb5b4c04609/59aa8bca27078865519ded6c7c8d01023789348f&quot;&gt;this hurl to send subscriptions requests&lt;/a&gt; (don&amp;#8217;t forget to adjust the values of the params, though). &lt;a href=&quot;http://curl.haxx.se/&quot;&gt;Curl&lt;/a&gt; is another great option.&lt;/p&gt;
 &lt;h4&gt;Receive Notifications&lt;/h4&gt;
@@ -59,7 +82,11 @@ Our hub is located at &lt;a href=&quot;http://superfeedr.com/hubbub&quot;&gt;htt
 &lt;ul&gt;
 	&lt;li&gt;&lt;a href=&quot;http://github.com/empika/Superfeedr-PubSubHubbub-Rails-Plugin/tree/master&quot;&gt;Empika&amp;#8217;s Rails plugin&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;https://git.participatoryculture.org/djpubsubhubbub/&quot;&gt;Django App&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;http://github.com/igrigorik/PubSubHubbub/tree/master&quot;&gt;Ilya&amp;#8217;s EventMachine Ruby daemon&lt;/a&gt;&lt;br /&gt;
+	&lt;li&gt;&lt;a href=&quot;http://github.com/igrigorik/PubSubHubbub/tree/master&quot;&gt;Ilya&amp;#8217;s EventMachine Ruby daemon&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/pubsubhubbub/source/browse/trunk/subscriber_clients/php/subscriber.php&quot;&gt;&lt;span class=&quot;caps&quot;&gt;PHP&lt;/span&gt; subscriber Client&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://framework.zend.com/code/browse/Standard_Incubator/library/Zend/Feed/Pubsubhubbub&quot;&gt;Zend Subscriber&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://hackage.haskell.org/package/pubsub-0.10&quot;&gt;Haskell Client&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/pubsubhubbub/source/browse/#svn/trunk/subscriber&quot;&gt;Python Subscriber&lt;/a&gt;&lt;br /&gt;
 &amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You can also find several &lt;a href=&quot;http://github.com/search?langOverride=&amp;amp;q=pubsubhubbub&quot;&gt;PubSubHubbub repositories on github&lt;/a&gt;, some of them claim to implement the subscriber part of the protocol.&lt;/p&gt;

@@ -1,0 +1,16 @@
+---
+layout: post
+title: What API to choose
+categories: [pubsubhubbub, xmpp, API]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Superfeedr is technology-agnostic, which means that we don't force you into any API. We use standards so that our users aren't locked in any way to our service. However, being agnostic doesn't mean that a solution is not better than another one in your specific case.
+
+Actually, we even believe that in some cases, it is better to use XMPP and in some it is better to use PubSubHubbub. We creates this small "decision-chart" to help you decide with yes/no questions. Of course, this would apply to 99% of cases and there will always be times that this chart is wrong, but I am pretty confident that it should work for you.
+
+!{margin: 10px; width:80%}/images/api-decision-chart.png!
+
+What do you think?
