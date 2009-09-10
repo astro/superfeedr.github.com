@@ -4,12 +4,12 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-09-08T20:16:27-07:00</updated>
+    <updated>2009-09-09T12:47:07-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
     
     <entry>
-        <title>What API to chose</title>
+        <title>What API to choose</title>
         
         <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
         
@@ -17,11 +17,11 @@
         
         <category term="API" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <link href="http://blog.superfeedr.com/API/pubsubhubbub/xmpp/what-api-to-chose"/>
+        <link href="http://blog.superfeedr.com/API/pubsubhubbub/xmpp/what-api-to-choose"/>
         <published>2009-09-08T00:00:00-07:00</published>
         <updated>2009-09-08T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/API/pubsubhubbub/xmpp/what-api-to-chose</id>
-        <content type="html">&lt;p&gt;Superfeedr is technology-agnostic, which means that we don&amp;#8217;t force you into any &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. We use standards so that our users aren&amp;#8217;t locked in any way to our service. However, being agnostic doesn&amp;#8217;t mean that a solution is not better than another one in your specific case.&lt;/p&gt;
+        <id>blog.superfeedr.com:/API/pubsubhubbub/xmpp/what-api-to-choose</id>
+        <content type="html">&lt;p&gt;Superfeedr is &lt;em&gt;technology-agnostic&lt;/em&gt;, which means that we don&amp;#8217;t force you into any &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. &lt;a href=&quot;http://blog.superfeedr.com/OSS/gospel/kind-of-open-source/&quot;&gt;We use standards&lt;/a&gt; so that our users aren&amp;#8217;t locked in any way to our service. However, being agnostic doesn&amp;#8217;t mean that a solution is not better than another one in your specific case.&lt;/p&gt;
 &lt;p&gt;Actually, we even believe that in some cases, it is better to use &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; and in some it is better to use PubSubHubbub. We creates this small &amp;#8220;decision-chart&amp;#8221; to help you decide with yes/no questions. Of course, this would apply to 99% of cases and there will always be times that this chart is wrong, but I am pretty confident that it should work for you.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/api-decision-chart.png&quot; style=&quot;margin: 10px; width:80%;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;What do you think?&lt;/p&gt;</content>

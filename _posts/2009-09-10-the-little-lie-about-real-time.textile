@@ -1,0 +1,19 @@
+---
+layout: post
+title: The little lie about Real-time Data
+categories: [real-time, lie]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+It is very exciting to see all the jazz about *real-time data* being available. It is however a little disappointing that the RSS vs. Atom war is starting again through the _PubSubHubbub vs. RssCloud conflict_ (read "Techcrunch's post":http://www.techcrunch.com/2009/09/09/rsscloud-vs-pubsubhubbub-why-the-fat-pings-win/ about that). "Wordpress said they will adopt RssCloud":http://en.blog.wordpress.com/2009/09/07/rss-in-the-clouds/, while "Google massively adopted PubSubHubbub":http://googlecode.blogspot.com/2009/08/towards-programmable-web-pubsubhubbub.html and "SixApart":http://sixapart.com showed strong interest for the latter.
+
+The only little lie about that is that _almost all of the data that you can access through these hubs or clouds, was actually already available through other Real-time_ (or close to real-time) means. SixApart has had an *AtomStream* for years, Google implemented the *changes.xml syntax* a few years ago and Wordpress announced last year that they had an *XMPP stream* with all the blog posts and comments.
+
+Again, don't get me wrong : this is really exciting that from having 1 technology for each provider we now have -almost- the same protocols across the board, but I think that proves also why we need services like Superfeedr : a huge part of the content that is published daily is not being pushed to anywhere.
+
+Again, pushing your content to reduce the "polling" load makes sense, but we strongly believe that *the vast majority of the data out there will probably never be pushed* to any hub of cloud, and that's precisely where Superfeedr is so useful!
+
+
+
