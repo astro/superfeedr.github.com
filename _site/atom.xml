@@ -4,9 +4,67 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-09-09T12:47:07-07:00</updated>
+    <updated>2009-09-11T08:57:59-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Real-time RSS notifications on your iPhone</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="notification" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="web" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="iPhone" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Desktop" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/Desktop/iPhone/notification/real-time/web/real-time-rss-notification-on-iphone"/>
+        <published>2009-09-11T00:00:00-07:00</published>
+        <updated>2009-09-11T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/Desktop/iPhone/notification/real-time/web/real-time-rss-notification-on-iphone</id>
+        <content type="html">&lt;p&gt;I have always been a great fan of the iPhone (I had mine on June 29th 2007 : iPhone D-day), but I haven&amp;#8217;t found many applications that were making good use of the &amp;#8220;notification&amp;#8221; feature that Apple added in its last iPhone OS, until today.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://appnotifications.com/system/app_icons/0000/0001/appnotifications-icos-twitt_large.png?1252050483&quot; style=&quot;float:right;margin:10px;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.appnotifications.com/&quot;&gt;AppNotification&lt;/a&gt; is an app that allows you to receive any notification. Its creator, Fabien just spent the last day interfacing his app with &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; and the result is here today : you can get &lt;strong&gt;real-time &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; notifications on your iPhone&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s quite easy :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;First, &lt;a href=&quot;http://bit.ly/19T8V7&quot;&gt;buy the app from the iTunes store&lt;/a&gt; : $1.99.&lt;/li&gt;
+	&lt;li&gt;Then, &lt;a href=&quot;http://appnotifications.com/account/new&quot;&gt;create an account&lt;/a&gt; and enter your credentials into the App.&lt;/li&gt;
+	&lt;li&gt;Add the &lt;a href=&quot;http://www.appnotifications.com/account/apps/22/authorize&quot;&gt;Superfeedr application&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://appnotifications.com/account/app_user_connections/2619/edit&quot;&gt;Enter a list of &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; feeds&lt;/a&gt; which will be pushed to your iPhone&lt;/li&gt;
+	&lt;li&gt;&amp;#8230; &lt;em&gt;wait for notifications to come&lt;/em&gt;!&lt;sup class=&quot;footnote&quot;&gt;&lt;a href=&quot;#fn1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&amp;#8217;ve added a few &lt;a href=&quot;http://spy.appspot.com/&quot;&gt;&lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; from Spy&lt;/a&gt;, as well as the &lt;a href=&quot;http://weather.yahooapis.com/forecastrss?p=94123&quot;&gt;weather in San Francisco&lt;/a&gt; or the &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; for &lt;a href=&quot;http://feeds.delicious.com/v2/rss/url/00f1b15f8f356e11da3dc20f28a915a8?count=15&quot;&gt;Superfeedr&amp;#8217;s delicious page&lt;/a&gt;, but you could also add any &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; that you&amp;#8217;d like.&lt;/p&gt;
+&lt;p&gt;How cool is that?&lt;/p&gt;
+&lt;p class=&quot;footnote&quot; id=&quot;fn1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt; If you have a superfeedr account, you can generate notifications to the &lt;a href=&quot;http://superfeedr.com/dummy.xml&quot;&gt;dummy feed&lt;/a&gt;, in the console, as long as you add it to your feeds into AppNotifications.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>The little lie about Real-time Data</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="lie" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/lie/real-time/the-little-lie-about-real-time"/>
+        <published>2009-09-10T00:00:00-07:00</published>
+        <updated>2009-09-10T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/lie/real-time/the-little-lie-about-real-time</id>
+        <content type="html">&lt;p&gt;It is very exciting to see all the jazz about &lt;strong&gt;real-time data&lt;/strong&gt; being available. It is however a little disappointing that the &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; vs. Atom war is starting again through the &lt;em&gt;PubSubHubbub vs. RssCloud conflict&lt;/em&gt; (read &lt;a href=&quot;http://www.techcrunch.com/2009/09/09/rsscloud-vs-pubsubhubbub-why-the-fat-pings-win/&quot;&gt;Techcrunch&amp;#8217;s post&lt;/a&gt; about that). &lt;a href=&quot;http://en.blog.wordpress.com/2009/09/07/rss-in-the-clouds/&quot;&gt;Wordpress said they will adopt RssCloud&lt;/a&gt;, while &lt;a href=&quot;http://googlecode.blogspot.com/2009/08/towards-programmable-web-pubsubhubbub.html&quot;&gt;Google massively adopted PubSubHubbub&lt;/a&gt; and &lt;a href=&quot;http://sixapart.com&quot;&gt;SixApart&lt;/a&gt; showed strong interest for the latter.&lt;/p&gt;
+&lt;p&gt;The only little lie about that is that &lt;em&gt;almost all of the data that you can access through these hubs or clouds, was actually already available through other Real-time&lt;/em&gt; (or close to real-time) means. SixApart has had an &lt;strong&gt;AtomStream&lt;/strong&gt; for years, Google implemented the &lt;strong&gt;changes.xml syntax&lt;/strong&gt; a few years ago and Wordpress announced last year that they had an &lt;strong&gt;&lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; stream&lt;/strong&gt; with all the blog posts and comments.&lt;/p&gt;
+&lt;p&gt;Again, don&amp;#8217;t get me wrong : this is really exciting that from having 1 technology for each provider we now have &lt;del&gt;almost&lt;/del&gt; the same protocols across the board, but I think that proves also why we need services like Superfeedr : a huge part of the content that is published daily is not being pushed to anywhere.&lt;/p&gt;
+&lt;p&gt;Again, pushing your content to reduce the &amp;#8220;polling&amp;#8221; load makes sense, but we strongly believe that &lt;strong&gt;the vast majority of the data out there will probably never be pushed&lt;/strong&gt; to any hub of cloud, and that&amp;#8217;s precisely where Superfeedr is so useful!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>What API to choose</title>
@@ -536,26 +594,6 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
     </entry>
     
     <entry>
-        <title>There is no such thing as Real Time Search</title>
-        
-        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
-        
-        <link href="http://blog.superfeedr.com/real-time/there-is-such-thing-as-real-time-web-search"/>
-        <published>2009-07-09T00:00:00-07:00</published>
-        <updated>2009-07-09T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/real-time/there-is-such-thing-as-real-time-web-search</id>
-        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href=&quot;http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/&quot;&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
-&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt; or &lt;a href=&quot;http://bing.com&quot;&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://search.twitter.com&quot;&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href=&quot;http://collecta.com&quot;&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
-&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
-        <author>
-            <name>Julien</name>
-            <uri>http://twitter.com/julien51</uri>
-        </author>
-    </entry>
-    
-    <entry>
         <title>Speeding Up RSS : what for?</title>
         
         <category term="RSS" scheme="http://www.sixapart.com/ns/types#tag" />
@@ -576,6 +614,26 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
 &lt;p&gt;The comments, though are very interesting and they show what we&amp;#8217;ve observed with &amp;quot;Notifixious&amp;quot;http://notifixio.us over the last year : Real-time notification (or faster &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;) scares people a lot. There is at least 4 or 5 comments saying that &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; is fast enough for them. The problem here, is that there is a misconception :* making &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; faster is not for individuals, but for the web itself*.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/&quot;&gt;PubSubHubbub&lt;/a&gt; has the potential to bring Push to the &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; and Atom technologies. So not only it will be faster, but it will be instantaneous, and when Feed updates will be instantaneous, nobody will pull anymore (&lt;a href=&quot;http://blog.superfeedr.com/gospel/something-stupid/&quot;&gt;not even us&lt;/a&gt;) and the web will be better.&lt;/p&gt;
 &lt;p&gt;Better? Publishers will not have to &lt;em&gt;handle massive loads anymore&lt;/em&gt; (like Twitter had to), and Subscribers (services) will &lt;em&gt;not have to poll over and over to get updates&lt;/em&gt;.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>There is no such thing as Real Time Search</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/real-time/there-is-such-thing-as-real-time-web-search"/>
+        <published>2009-07-09T00:00:00-07:00</published>
+        <updated>2009-07-09T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/real-time/there-is-such-thing-as-real-time-web-search</id>
+        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href=&quot;http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/&quot;&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
+&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt; or &lt;a href=&quot;http://bing.com&quot;&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://search.twitter.com&quot;&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href=&quot;http://collecta.com&quot;&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
+&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
