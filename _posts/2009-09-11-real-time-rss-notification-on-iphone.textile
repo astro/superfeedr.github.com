@@ -1,0 +1,27 @@
+---
+layout: post
+title: Real-time RSS notifications on your iPhone
+categories: [real-time, notification, RSS, iPhone]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+I have always been a great fan of the iPhone (I had mine on June 29th 2007 : iPhone D-day), but I haven't found many applications that were making good use of the "notification" feature that Apple added in its last iPhone OS, until today.
+
+!{float:right;margin:10px}http://appnotifications.com/system/app_icons/0000/0001/appnotifications-icos-twitt_large.png?1252050483!
+
+"AppNotification":http://www.appnotifications.com/ is an app that allows you to receive any notification. Its creator, Fabien just spent the last day interfacing his app with "Superfeedr":http://superfeedr.com and the result is here today : you can get *real-time RSS notifications on your iPhone*.
+
+It's quite easy :
+* First, "buy the app from the iTunes store":http://bit.ly/19T8V7 : $1.99.
+* Then, "create an account":http://appnotifications.com/account/new and enter your credentials into the App.
+* Add the "Superfeedr application":http://www.appnotifications.com/account/apps/22/authorize
+* "Enter a list of RSS feeds":http://appnotifications.com/account/app_user_connections/2619/edit which will be pushed to your iPhone
+* ... _wait for notifications to come_![1]
+
+I've added a few "RSS from Spy":http://spy.appspot.com/, as well as the "weather in San Francisco":http://weather.yahooapis.com/forecastrss?p=94123 or the RSS for "Superfeedr's delicious page":http://feeds.delicious.com/v2/rss/url/00f1b15f8f356e11da3dc20f28a915a8?count=15, but you could also add any RSS that you'd like.
+
+How cool is that?
+
+fn1. If you have a superfeedr account, you can generate notifications to the "dummy feed":http://superfeedr.com/dummy.xml, in the console, as long as you add it to your feeds into AppNotifications.
