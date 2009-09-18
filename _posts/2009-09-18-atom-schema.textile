@@ -1,0 +1,32 @@
+---
+layout: post
+title: The New Atom Schema is up!
+categories: [API, Atom, schema]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+We deployed yesterday a new code for our parsers, and it now includes a more "complete schema":http://superfeedr.com/documentation#schema that will allow you to do a lot more things with superfeedr!
+
+h3. Content or summary?
+
+Up until now we were considering that anything was a summary, which wasn't really accurate since some feeds actually *offer the whole content*. We fixed that. If the entry contains the full content, you'll have a <code><content></code> tag, if not, then, it will have a <code><summary></code> tag.
+
+h3. Links
+
+The biggest addition is the fact that <code><entry></code> elements now include all the <code><links></code> of the original entry, including attachments. Of course, to differentiate between them you can use the _<code>"rel"</code> value_, as well as <code>"type"</code> which gives you the _mime type_. For example, here is what you'd receive for this flick RSS feed :
+<script src="http://gist.github.com/189179.js"></script>
+
+As you can see, there are 2 <code><link></code> elements, *one for the entry* (the page that contains the image), and *one for the image itself*. These links are various and may include links to the _comments section, to the RSS feed of comments, to any attachment, to related articles_... etc.
+
+h3. Categories
+
+The Web2.0 era has long be associated with the presence of *tags*, implemented by "Delicious":http://delicious.com, "Flickr":http://flickr.com, "Youtube":http://youtube.com and by bloggers. They are very useful to group things and can do a better job than search engines to find "binary" content. *Superfeedr will now provide the tags* (or categories from the original entries).
+In the above example, you can see that the tags used are _sergio, expo, lyon, western and prefecture_.
+
+h3. Authors
+
+Last, but not least, we now support *author informations*. There can be several authors in one entry. For each author, we provide (when available) a _name, an email address and a profile URI_.
+
+If you'd like anything else to be added, please let us know in the comments. With the current information, we estimate we cover 80-90% of the original entry content. Also, if you're not satisfied with our mapping, please do not hesitate to "suggest fixes":http://blog.superfeedr.com/Atom/schema/a-better-schema/ as well.
