@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Time vs. Space : how do we apprehend information?"
+categories: [real-time, gospel]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+There are several ways information comes to us, but they are either mostly either *geographical* or *temporal*. 
+
+!{float:right;margin:3px; width: 50%}http://www.informationarchitects.jp/slash/iA_WebTrends_2007_2_1600x1024.gif!
+
+By geographical, I mean that we basically *lay-out information and draw connections* between them : a _map_ can help us understand how a city is organized, how a product is conceived, but also a conference speech is usually _logically organized with bullet-points, transitions_, etc.... *Most of the web information is currently available on a geographical basis* : a web-site is a collection of pages linked together, and even pages are "flat" : related information are usually displayed together. Comments are show under a main story, images are included in the body, etc... I fully agree to that extend with "Chris":http://factoryjoe.com/ and "Jyri's":http://zengestrom.com/ "article":http://www.arcticstartup.com/2009/09/11/the-web-at-a-new-crossroads/ about the web being document-oriented.
+
+We mostly use the this geographical approach because the *human brain also uses location to relate things* together : our thoughts are linked and that is how we end-up remember things. Of course, we still have some sort of "index" which are the main things from which others are linked, like our name, the place we live in... but all that started to be connections from stuff we perceived and these connection became so obvious (our brain kept taking them), that we forgot how they happened[1]. Everybody started with a mnemonic to remember his phone number, but nobody needs it anymore after some time.
+
+!{float:right;margin:3px;}http://farm1.static.flickr.com/52/129125140_e110fd46c1_m.jpg!:http://www.flickr.com/photos/limowreck666/129125140/
+
+The *real-time web is all about using time, instead of links*. The connections between elements don't matter so much anymore. "Unrelated tweets stack up":http://twitter.com/public_timeline. *Our brain is not so good at stacking things*. It's even pretty bad at that, because in a stack _it's hard to find links between things_. One of the most common examples is names. How often have you been introduced to some people in a group, just to figure out 10 seconds later that you don't even remember anyone's name? 
+
+Do you remember the _sequence memory game_ we used to play when we were kids? You hear a random number between 0 and 10, and must repeat it, then you hear a second number and must repeat both the first and the second... etc. It is usually very hard past 8 to 10 numbers. _It's modern counterpart is just remembering a phone number_.[2]
+
+The fact that our short memory is very bad (or at "least worse than chimpanzee":http://www.youtube.com/watch?v=zJAH4ZJBiN8) can also be related to that as well : we have trouble dealing with short unrelated messages coming at a high frequency, or at the same time (like numbers on a grid).
+
+As humans, we can deal pretty easily with complex information as long as we can tie things together and lay down this information in a geographical manner. Dealing with a river of news, with a tweet timeline is, on the end, quite stressful, because this information is time-organized.
+
+I am not sure it's "one of the problems":http://blog.superfeedr.com/meta/reality-checked we faced with "Notifixious":http://notifixio.us/ (as there are many others), but I know for sure that we will either have to accept to lose parts of this stream of information or train computers to help us relate things in the real-time stream.
+
+fn1. I really wish I could remember how I initially linked my name to me; this must have been a huge breakthrough!
+
+fn2. The most common technique to split the number in 2 or 3 and ask people to remember a part each is a way to actually transform a stacked-information into something more logical, where we can draw connection between numbers.

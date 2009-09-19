@@ -4,9 +4,34 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-09-18T11:10:03-07:00</updated>
+    <updated>2009-09-19T11:33:11-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Time vs. Space : how do we apprehend information?</title>
+        
+        <link href="http://blog.superfeedr.com/2009/09/19/time-vs-space.html"/>
+        <published>2009-09-19T00:00:00-07:00</published>
+        <updated>2009-09-19T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/2009/09/19/time-vs-space</id>
+        <content type="html">&lt;p&gt;There are several ways information comes to us, but they are either mostly either &lt;strong&gt;geographical&lt;/strong&gt; or &lt;strong&gt;temporal&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://www.informationarchitects.jp/slash/iA_WebTrends_2007_2_1600x1024.gif" style="float:right;margin:3px; width: 50%;" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;By geographical, I mean that we basically &lt;strong&gt;lay-out information and draw connections&lt;/strong&gt; between them : a &lt;em&gt;map&lt;/em&gt; can help us understand how a city is organized, how a product is conceived, but also a conference speech is usually &lt;em&gt;logically organized with bullet-points, transitions&lt;/em&gt;, etc&amp;#8230;. &lt;strong&gt;Most of the web information is currently available on a geographical basis&lt;/strong&gt; : a web-site is a collection of pages linked together, and even pages are &amp;#8220;flat&amp;#8221; : related information are usually displayed together. Comments are show under a main story, images are included in the body, etc&amp;#8230; I fully agree to that extend with &lt;a href="http://factoryjoe.com/"&gt;Chris&lt;/a&gt; and &lt;a href="http://zengestrom.com/"&gt;Jyri&amp;#8217;s&lt;/a&gt; &lt;a href="http://www.arcticstartup.com/2009/09/11/the-web-at-a-new-crossroads/"&gt;article&lt;/a&gt; about the web being document-oriented.&lt;/p&gt;
+&lt;p&gt;We mostly use the this geographical approach because the &lt;strong&gt;human brain also uses location to relate things&lt;/strong&gt; together : our thoughts are linked and that is how we end-up remember things. Of course, we still have some sort of &amp;#8220;index&amp;#8221; which are the main things from which others are linked, like our name, the place we live in&amp;#8230; but all that started to be connections from stuff we perceived and these connection became so obvious (our brain kept taking them), that we forgot how they happened&lt;sup class="footnote"&gt;&lt;a href="#fn1"&gt;1&lt;/a&gt;&lt;/sup&gt;. Everybody started with a mnemonic to remember his phone number, but nobody needs it anymore after some time.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.flickr.com/photos/limowreck666/129125140/"&gt;&lt;img src="http://farm1.static.flickr.com/52/129125140_e110fd46c1_m.jpg" style="float:right;margin:3px;" alt="" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;real-time web is all about using time, instead of links&lt;/strong&gt;. The connections between elements don&amp;#8217;t matter so much anymore. &lt;a href="http://twitter.com/public_timeline"&gt;Unrelated tweets stack up&lt;/a&gt;. &lt;strong&gt;Our brain is not so good at stacking things&lt;/strong&gt;. It&amp;#8217;s even pretty bad at that, because in a stack &lt;em&gt;it&amp;#8217;s hard to find links between things&lt;/em&gt;. One of the most common examples is names. How often have you been introduced to some people in a group, just to figure out 10 seconds later that you don&amp;#8217;t even remember anyone&amp;#8217;s name?&lt;/p&gt;
+&lt;p&gt;Do you remember the &lt;em&gt;sequence memory game&lt;/em&gt; we used to play when we were kids? You hear a random number between 0 and 10, and must repeat it, then you hear a second number and must repeat both the first and the second&amp;#8230; etc. It is usually very hard past 8 to 10 numbers. &lt;em&gt;It&amp;#8217;s modern counterpart is just remembering a phone number&lt;/em&gt;.&lt;sup class="footnote"&gt;&lt;a href="#fn2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The fact that our short memory is very bad (or at &lt;a href="http://www.youtube.com/watch?v=zJAH4ZJBiN8"&gt;least worse than chimpanzee&lt;/a&gt;) can also be related to that as well : we have trouble dealing with short unrelated messages coming at a high frequency, or at the same time (like numbers on a grid).&lt;/p&gt;
+&lt;p&gt;As humans, we can deal pretty easily with complex information as long as we can tie things together and lay down this information in a geographical manner. Dealing with a river of news, with a tweet timeline is, on the end, quite stressful, because this information is time-organized.&lt;/p&gt;
+&lt;p&gt;I am not sure it&amp;#8217;s &lt;a href="http://blog.superfeedr.com/meta/reality-checked"&gt;one of the problems&lt;/a&gt; we faced with &lt;a href="http://notifixio.us/"&gt;Notifixious&lt;/a&gt; (as there are many others), but I know for sure that we will either have to accept to lose parts of this stream of information or train computers to help us relate things in the real-time stream.&lt;/p&gt;
+&lt;p class="footnote" id="fn1"&gt;&lt;sup&gt;1&lt;/sup&gt; I really wish I could remember how I initially linked my name to me; this must have been a huge breakthrough!&lt;/p&gt;
+&lt;p class="footnote" id="fn2"&gt;&lt;sup&gt;2&lt;/sup&gt; The most common technique to split the number in 2 or 3 and ask people to remember a part each is a way to actually transform a stacked-information into something more logical, where we can draw connection between numbers.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>The New Atom Schema is up!</title>
