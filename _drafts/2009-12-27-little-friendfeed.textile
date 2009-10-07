@@ -1,0 +1,22 @@
+---
+layout: post
+title: "A little friendfeed on your blog"
+categories: [friendfeed, blog, superfeedr]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+You probably know the principle of Friendfeed : as a user, you can aggregate all your content from several other web application into the same page, so that your friends can follow your "web activity" pretty conveniently and interact with you very easily.
+
+Luckily, most web applications now have RSS/Atom feeds for your profile, which means you can easily plug them into Superfeedr. 
+
+Blogs are still the best interface to "communicate" with your readers and maybe post content, so "re-publishing" your content from flickr, twitter, delicious, youtube or facebook to your blog would totally make sense!
+
+I've been working on a small Google App Engine Application that 'translates' PubSubHubbub Notifications into XML-RPC queries, since most blog platforms implement the XML-RPC interface. You can find the code here and play with the app there.
+
+Please note that this is just a proof of concept with which you can experiment. Please note however that you may want to host your own application if you plan a more advanced.
+
+Since I didn't want to store any credentials in the code or on GAE, I used a great property of the Webhooks, by extracting the XML-RPC credentials from the URL itself. Here is how it works :
+
+* the hook url is like that : http://

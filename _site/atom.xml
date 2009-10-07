@@ -4,12 +4,39 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-09-19T11:33:11-07:00</updated>
+    <updated>2009-10-06T21:57:10-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
     
     <entry>
+        <title>RSSCloud and PubSubHubbub</title>
+        
+        <category term="rsscloud" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="api" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="PubSubHubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/10/06/RSSCloud.html"/>
+        <published>2009-10-06T00:00:00-07:00</published>
+        <updated>2009-10-06T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/2009/10/06/RSSCloud</id>
+        <content type="html">&lt;p&gt;&lt;img src="http://a6.vox.com/6a00c2252999c6f21900d414196c066a47-500pi" style="float:right;margin:3px;width:40%;" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;#8220;Why make things simple when you can make them complex?&amp;#8221; is probably what &lt;a href="http://www.scripting.com/"&gt;Dave Winer&lt;/a&gt; thought when he read about &lt;a href="http://code.google.com/p/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt;. It was probably just too easy to have a common &lt;strong&gt;open&lt;/strong&gt; protocol that everyone would share and use for push notifications of feed changes. At Superfeedr, we chose &lt;a href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt;, for &lt;a href="http://www.techcrunch.com/2009/09/09/rsscloud-vs-pubsubhubbub-why-the-fat-pings-win/"&gt;obvious reasons&lt;/a&gt;, and we&amp;#8217;re quite happy with it.&lt;/p&gt;
+&lt;p&gt;Yet, &lt;a href="http://en.blog.wordpress.com/2009/09/07/rss-in-the-clouds/"&gt;some publishers&lt;/a&gt; have made a different choice and since &lt;em&gt;it always eventually comes down to the customer&amp;#8217;s experience&lt;/em&gt;, we had to implement RSSCloud. Superfeedr is now an &lt;a href="http://rsscloud.org/walkthrough.html"&gt;aggregator&lt;/a&gt;. As a user, if you give us a feed that is RSSCloud enabled, then, we will subscribe to the right &lt;em&gt;cloud&lt;/em&gt; and you should get updates from this feed in a few seconds as well (exactly like with PubSubHubbub).&lt;/p&gt;
+&lt;p&gt;The awesome part of that news: since we use &lt;a href="http://superfeedr.com/hubbub"&gt;PubSubHubbub as our &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt; (we&amp;#8217;re one of the few independent hubs), this means that if you use us, &lt;em&gt;you don&amp;#8217;t even have to care about RSSCloud&lt;/em&gt;. &lt;a href="http://blog.superfeedr.com/gospel/something-stupid/"&gt;Once again&lt;/a&gt;, we do all the &amp;#8220;hard&amp;#8221; work for you :) &lt;strong&gt;Just implement the PubSubHubbub subscriber part, and you&amp;#8217;ll get the RSSCloud feeds through that as well&lt;/strong&gt;.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
         <title>Time vs. Space : how do we apprehend information?</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="gospel" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/09/19/time-vs-space.html"/>
         <published>2009-09-19T00:00:00-07:00</published>

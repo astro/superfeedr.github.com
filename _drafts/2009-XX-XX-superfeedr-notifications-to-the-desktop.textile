@@ -1,0 +1,55 @@
+---
+layout: post
+title: "RSS updates pushed to your desktop application"
+categories: [real-time, desktop, API]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+There are several ways to use Superfeedr with Desktop application to receive pushed notifications. The most obvious one is XMPP and we can't advise more people to look into that direction.
+Another option makes great use of ReverseHTTP.
+
+bq. Tunnel HTTP over HTTP, in a structured, controllable, securable way. Let programs claim part of URL space, and serve HTTP, all by using an ordinary HTTP client library.
+
+h3. Theory!
+
+That's rather simple actually and you'll be pretty surprised. 
+
+* Run a lightweight HTTP server in your app. Ideally your server will just have to parse the ATOM that superfeedr sends and you can use this in the rest of your app.
+
+* Connect your Sinatra App to a given ReverseHTTP url
+
+* Subscribe to feeds in Superfeedr using the PubSubHubbub URL with the reverseHTTP url chosen at the previous step.
+
+h3. Practice
+
+We're using Ruby and we just want to display Growl messages when we receive notifications. For our purpose, we use Hookout to make a Sinatra-based web application available to the outside world via a Reverse HTTP server.
+
+Let's start, by building our application:
+You need the following gems :
+* sinatra
+* atom
+* ruby-growl
+Name the following file 'superfeedr-hook'
+<script src="http://gist.github.com/189675.js"></script>
+As you can see it's rather simple : we connect to growl (and send an initial notification), we wait for incoming HTTP requests, upon new notifications, we just parse the Atom and send a message to growl.
+
+Once that is done, let's use hookout to configure our sintra app:
+<code>
+sudo gem install sinatra thin
+sudo gem sources -a http://gems.github.com
+sudo gem install paulj-hookout
+</code>
+Create a config.ru file with the following :
+<script src="http://gist.github.com/189678.js"></script>
+
+Finally, run the app with the following command (you might have to change _my-superfeedr-hook_ into something more personal):
+<code>hookout -a http://www.reversehttp.net/reversehttp -n my-superfeedr-hook -R config.ru start</code>
+
+Finally, reach your Superfeedr dashboard, and add new feeds, for the endpoint, put http://my-superfeedr-hook.www.reversehttp.net/ (again, change _my-superfeedr-hook_) 
+
+A few minutes later (when new entries are published in the feeds you subscribed to), you should see growl notifications :)
+
+h3. Summary
+This is just one of the numerous ways you can actually receive Superfeedr notifications inside a Desktop app! Doing anything cool? Let us know!

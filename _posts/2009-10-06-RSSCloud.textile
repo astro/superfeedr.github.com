@@ -1,0 +1,17 @@
+---
+layout: post
+title: "RSSCloud and PubSubHubbub"
+categories: [rsscloud, api, PubSubHubbub]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+!{float:right;margin:3px;width:40%}http://a6.vox.com/6a00c2252999c6f21900d414196c066a47-500pi!
+
+"Why make things simple when you can make them complex?" is probably what "Dave Winer":http://www.scripting.com/ thought when he read about "PubSubHubbub":http://code.google.com/p/pubsubhubbub/. It was probably just too easy to have a common *open* protocol that everyone would share and use for push notifications of feed changes. At Superfeedr, we chose "PubSubHubbub":http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/, for "obvious reasons":http://www.techcrunch.com/2009/09/09/rsscloud-vs-pubsubhubbub-why-the-fat-pings-win/, and we're quite happy with it.
+
+Yet, "some publishers":http://en.blog.wordpress.com/2009/09/07/rss-in-the-clouds/ have made a different choice and since _it always eventually comes down to the customer's experience_, we had to implement RSSCloud. Superfeedr is now an "aggregator":http://rsscloud.org/walkthrough.html. As a user, if you give us a feed that is RSSCloud enabled, then, we will subscribe to the right _cloud_ and you should get updates from this feed in a few seconds as well (exactly like with PubSubHubbub).
+
+The awesome part of that news: since we use "PubSubHubbub as our API":http://superfeedr.com/hubbub (we're one of the few independent hubs), this means that if you use us, _you don't even have to care about RSSCloud_. "Once again":http://blog.superfeedr.com/gospel/something-stupid/, we do all the "hard" work for you :) *Just implement the PubSubHubbub subscriber part, and you'll get the RSSCloud feeds through that as well*.
+
