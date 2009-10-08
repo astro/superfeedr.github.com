@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Real-Time web browsers"
+categories: [Real-time, gospel, Seesmic, Tweetdeck]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+!{float:right;margin:3px;}http://www.devx.com/assets/articlefigs/6939.gif!
+The "web was geographical":http://blog.superfeedr.com/gospel/real-time/time-vs-space/ ("document-based":http://www.arcticstartup.com/2009/09/11/the-web-at-a-new-crossroads/) until very recently and it is now evolving faster and faster to add a "time" dimension. Back in the days, "Mosaic":http://en.wikipedia.org/wiki/Mosaic_(web_browser) was the very first tool to actually browse these sites from a site to another. Unfortunately, *all these browsers were built to deal with documents, not with a stream*. The best proof of that is the presence of a "reload" button! 
+
+
+"Twitter":http://twitter.com and "facebook":http://facebook.com are definitely making real-time web mainstream, but they are just "content" producers, *we need the browsers to consume that content*. And before the browsers, _we need the protocols_ (I'll talk about that later!).
+
+There are many tools that start to look like this *real-time browser* : "Seesmic":http://seesmic.com is paving the way, "Tweetdeck":http://tweetdeck.com/beta/ is another example, but "Growl":http://growl.info/ also presents some very interesting features. iPhone applications like "AppNotifications":http://appnotifications.com/ can also be considered as real-time web browsers.
+
+Here is the set of functionalities that I'd like this stream-browser to implement :
+
+* *Stream-agnostic* : Mosaic could display _any_ web site... not just and handful of them. Seesmic should be able to receive content from _any_ stream, not just Twitter or Facebook. _I want my RSS feeds_, I want my emails, I even want Google news... etc.
+* *Context-Aware* : I want the stream to follow me on the desktop, on my phone, or even by fax (yeah!). If I am on the laptop, it should show the message there, if I am watching TV, it should show it there, and if it's 3AM, please, do not notify me.
+* *History* : I want to be able to travel back in time.
+* *Re-Stream (share)* : exactly like the Re-Tweet functionality on Twitter. The Real-time browser must not be the 'end' of the stream : data must flow from there to my friends, to other services that I use... etc.
+
+I know all that sounds quite ambitious, but we're really not too far from there. All the bricks are ready actually, we just need some glue between them. 
