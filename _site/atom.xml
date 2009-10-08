@@ -4,9 +4,42 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-10-06T21:57:10-07:00</updated>
+    <updated>2009-10-08T13:51:00-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Real-Time web browsers</title>
+        
+        <category term="Real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="gospel" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Seesmic" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Tweetdeck" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/10/08/Real-time-web-browser.html"/>
+        <published>2009-10-08T00:00:00-07:00</published>
+        <updated>2009-10-08T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/2009/10/08/Real-time-web-browser</id>
+        <content type="html">&lt;p&gt;&lt;img src="http://www.devx.com/assets/articlefigs/6939.gif" style="float:right;margin:3px;" alt="" /&gt;&lt;br /&gt;
+The &lt;a href="http://blog.superfeedr.com/gospel/real-time/time-vs-space/"&gt;web was geographical&lt;/a&gt; (&lt;a href="http://www.arcticstartup.com/2009/09/11/the-web-at-a-new-crossroads/"&gt;document-based&lt;/a&gt;) until very recently and it is now evolving faster and faster to add a &amp;#8220;time&amp;#8221; dimension. Back in the days, &lt;a href="http://en.wikipedia.org/wiki/Mosaic_(web_browser)"&gt;Mosaic&lt;/a&gt; was the very first tool to actually browse these sites from a site to another. Unfortunately, &lt;strong&gt;all these browsers were built to deal with documents, not with a stream&lt;/strong&gt;. The best proof of that is the presence of a &amp;#8220;reload&amp;#8221; button!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://twitter.com"&gt;Twitter&lt;/a&gt; and &lt;a href="http://facebook.com"&gt;facebook&lt;/a&gt; are definitely making real-time web mainstream, but they are just &amp;#8220;content&amp;#8221; producers, &lt;strong&gt;we need the browsers to consume that content&lt;/strong&gt;. And before the browsers, &lt;em&gt;we need the protocols&lt;/em&gt; (I&amp;#8217;ll talk about that later!).&lt;/p&gt;
+&lt;p&gt;There are many tools that start to look like this &lt;strong&gt;real-time browser&lt;/strong&gt; : &lt;a href="http://seesmic.com"&gt;Seesmic&lt;/a&gt; is paving the way, &lt;a href="http://tweetdeck.com/beta/"&gt;Tweetdeck&lt;/a&gt; is another example, but &lt;a href="http://growl.info/"&gt;Growl&lt;/a&gt; also presents some very interesting features. iPhone applications like &lt;a href="http://appnotifications.com/"&gt;AppNotifications&lt;/a&gt; can also be considered as real-time web browsers.&lt;/p&gt;
+&lt;p&gt;Here is the set of functionalities that I&amp;#8217;d like this stream-browser to implement :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Stream-agnostic&lt;/strong&gt; : Mosaic could display &lt;em&gt;any&lt;/em&gt; web site&amp;#8230; not just and handful of them. Seesmic should be able to receive content from &lt;em&gt;any&lt;/em&gt; stream, not just Twitter or Facebook. I want my &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds, I want my emails, I even want Google news&amp;#8230; etc.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Context-Aware&lt;/strong&gt; : I want the stream to follow me on the desktop (like growl), on my phone, or even by fax (yeah!). If I am on the laptop, it should show the message there, if I am watching TV, it should show it there, and if it&amp;#8217;s 3AM, please, do not notify me.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;History&lt;/strong&gt; : I want to be able to travel back in time&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Re-Stream (share)&lt;/strong&gt; : exactly like the Re-Tweet functionality on Twitter. The Real-time browser must not be the &amp;#8216;end&amp;#8217; of the stream : data must flow from there to my friends, to other services that I use&amp;#8230; etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I know all that sounds quite ambitious, but we&amp;#8217;re really not too far from there. All the bricks are ready actually, we just need some glue between them.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>RSSCloud and PubSubHubbub</title>
@@ -21,8 +54,7 @@
         <published>2009-10-06T00:00:00-07:00</published>
         <updated>2009-10-06T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/2009/10/06/RSSCloud</id>
-        <content type="html">&lt;p&gt;&lt;img src="http://a6.vox.com/6a00c2252999c6f21900d414196c066a47-500pi" style="float:right;margin:3px;width:40%;" alt="" /&gt;&lt;/p&gt;
-&lt;p&gt;&amp;#8220;Why make things simple when you can make them complex?&amp;#8221; is probably what &lt;a href="http://www.scripting.com/"&gt;Dave Winer&lt;/a&gt; thought when he read about &lt;a href="http://code.google.com/p/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt;. It was probably just too easy to have a common &lt;strong&gt;open&lt;/strong&gt; protocol that everyone would share and use for push notifications of feed changes. At Superfeedr, we chose &lt;a href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt;, for &lt;a href="http://www.techcrunch.com/2009/09/09/rsscloud-vs-pubsubhubbub-why-the-fat-pings-win/"&gt;obvious reasons&lt;/a&gt;, and we&amp;#8217;re quite happy with it.&lt;/p&gt;
+        <content type="html">&lt;p&gt;&amp;#8220;Why make things simple when you can make them complex?&amp;#8221;. It was probably just too easy to have a common &lt;strong&gt;open&lt;/strong&gt; protocol that everyone would share and use for push notifications of feed changes. At Superfeedr, we chose &lt;a href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt;, for &lt;a href="http://www.techcrunch.com/2009/09/09/rsscloud-vs-pubsubhubbub-why-the-fat-pings-win/"&gt;obvious reasons&lt;/a&gt;, and we&amp;#8217;re quite happy with it.&lt;/p&gt;
 &lt;p&gt;Yet, &lt;a href="http://en.blog.wordpress.com/2009/09/07/rss-in-the-clouds/"&gt;some publishers&lt;/a&gt; have made a different choice and since &lt;em&gt;it always eventually comes down to the customer&amp;#8217;s experience&lt;/em&gt;, we had to implement RSSCloud. Superfeedr is now an &lt;a href="http://rsscloud.org/walkthrough.html"&gt;aggregator&lt;/a&gt;. As a user, if you give us a feed that is RSSCloud enabled, then, we will subscribe to the right &lt;em&gt;cloud&lt;/em&gt; and you should get updates from this feed in a few seconds as well (exactly like with PubSubHubbub).&lt;/p&gt;
 &lt;p&gt;The awesome part of that news: since we use &lt;a href="http://superfeedr.com/hubbub"&gt;PubSubHubbub as our &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt; (we&amp;#8217;re one of the few independent hubs), this means that if you use us, &lt;em&gt;you don&amp;#8217;t even have to care about RSSCloud&lt;/em&gt;. &lt;a href="http://blog.superfeedr.com/gospel/something-stupid/"&gt;Once again&lt;/a&gt;, we do all the &amp;#8220;hard&amp;#8221; work for you :) &lt;strong&gt;Just implement the PubSubHubbub subscriber part, and you&amp;#8217;ll get the RSSCloud feeds through that as well&lt;/strong&gt;.&lt;/p&gt;</content>
         <author>
