@@ -4,9 +4,39 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-10-08T13:51:00-07:00</updated>
+    <updated>2009-10-10T13:14:31-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>State of Real-Time feeds</title>
+        
+        <category term="Real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="statistics" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="market" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/10/10/state-of-realtime-feeds.html"/>
+        <published>2009-10-10T00:00:00-07:00</published>
+        <updated>2009-10-10T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/2009/10/10/state-of-realtime-feeds</id>
+        <content type="html">&lt;p&gt;&lt;strong&gt;Real-time is the new hotness&lt;/strong&gt;. At Superfeedr, we&amp;#8217;re lucky enough to have many feeds we&amp;#8217;re fetching, some of them being &lt;a href="http://code.google.com/p/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt; enabled, some of them being &lt;a href="http://rsscloud.org/"&gt;RSSCloud&lt;/a&gt; and other being none of that. &lt;strong&gt;We&amp;#8217;re in a good position to assess how many feeds are using which technology&lt;/strong&gt;. Being french, I appreciate showing your this &lt;del&gt;pie&lt;/del&gt; camembert chart, which shows how we get the data for the feeds in our database.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/feeds_by_technique-10-09.png" style="float:left;margin:10px; width:50%;" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;Please, &lt;em&gt;assume that we have a bias&lt;/em&gt;: we&amp;#8217;re still pretty young, and our bigger users give a &amp;#8220;taste&amp;#8221; to the type of feeds that we have.&lt;/p&gt;
+&lt;p&gt;If you&amp;#8217;re building your own feed polling infrastructure, &amp;#8211; &lt;em&gt;but &lt;a href="http://blog.superfeedr.com/gospel/something-stupid/"&gt;you obviously shouldn&amp;#8217;t&lt;/a&gt;&lt;/em&gt; -, you can save:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;7.1% of your work by implementing PubSubHubbub subscriber,&lt;/li&gt;
+	&lt;li&gt;0.3% if you&amp;#8217;re an RSSCloud subscriber.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you&amp;#8217;ve built that, you can easily do some math and see how much it costs you. Then, &lt;a href="http://superfeedr.com/hubbub"&gt;use our hub&lt;/a&gt; (it should be trivial since you have implemented PubSubHubbub) for all your feeds, &lt;a href="http://superfeedr.com/cost"&gt;and start saving&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;We &lt;a href="http://blog.superfeedr.com/lie/real-time/the-little-lie-about-real-time/"&gt;said a few weeks ago&lt;/a&gt; that we believe that the amount of real-time available feeds is pretty much stable. &lt;em&gt;What is RSSCloud or PubSubHubbub now was either &lt;span class="caps"&gt;XMPP&lt;/span&gt; or AtomStream a months weeks ago&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;We&amp;#8217;ll see in the future how these ratios evolve.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Real-Time web browsers</title>
@@ -29,9 +59,9 @@ The &lt;a href="http://blog.superfeedr.com/gospel/real-time/time-vs-space/"&gt;w
 &lt;p&gt;There are many tools that start to look like this &lt;strong&gt;real-time browser&lt;/strong&gt; : &lt;a href="http://seesmic.com"&gt;Seesmic&lt;/a&gt; is paving the way, &lt;a href="http://tweetdeck.com/beta/"&gt;Tweetdeck&lt;/a&gt; is another example, but &lt;a href="http://growl.info/"&gt;Growl&lt;/a&gt; also presents some very interesting features. iPhone applications like &lt;a href="http://appnotifications.com/"&gt;AppNotifications&lt;/a&gt; can also be considered as real-time web browsers.&lt;/p&gt;
 &lt;p&gt;Here is the set of functionalities that I&amp;#8217;d like this stream-browser to implement :&lt;/p&gt;
 &lt;ul&gt;
-	&lt;li&gt;&lt;strong&gt;Stream-agnostic&lt;/strong&gt; : Mosaic could display &lt;em&gt;any&lt;/em&gt; web site&amp;#8230; not just and handful of them. Seesmic should be able to receive content from &lt;em&gt;any&lt;/em&gt; stream, not just Twitter or Facebook. I want my &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds, I want my emails, I even want Google news&amp;#8230; etc.&lt;/li&gt;
-	&lt;li&gt;&lt;strong&gt;Context-Aware&lt;/strong&gt; : I want the stream to follow me on the desktop (like growl), on my phone, or even by fax (yeah!). If I am on the laptop, it should show the message there, if I am watching TV, it should show it there, and if it&amp;#8217;s 3AM, please, do not notify me.&lt;/li&gt;
-	&lt;li&gt;&lt;strong&gt;History&lt;/strong&gt; : I want to be able to travel back in time&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Stream-agnostic&lt;/strong&gt; : Mosaic could display &lt;em&gt;any&lt;/em&gt; web site&amp;#8230; not just and handful of them. Seesmic should be able to receive content from &lt;em&gt;any&lt;/em&gt; stream, not just Twitter or Facebook. &lt;em&gt;I want my &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds&lt;/em&gt;, I want my emails, I even want Google news&amp;#8230; etc.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Context-Aware&lt;/strong&gt; : I want the stream to follow me on the desktop, on my phone, or even by fax (yeah!). If I am on the laptop, it should show the message there, if I am watching TV, it should show it there, and if it&amp;#8217;s 3AM, please, do not notify me.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;History&lt;/strong&gt; : I want to be able to travel back in time.&lt;/li&gt;
 	&lt;li&gt;&lt;strong&gt;Re-Stream (share)&lt;/strong&gt; : exactly like the Re-Tweet functionality on Twitter. The Real-time browser must not be the &amp;#8216;end&amp;#8217; of the stream : data must flow from there to my friends, to other services that I use&amp;#8230; etc.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I know all that sounds quite ambitious, but we&amp;#8217;re really not too far from there. All the bricks are ready actually, we just need some glue between them.&lt;/p&gt;</content>

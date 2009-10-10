@@ -1,0 +1,25 @@
+---
+layout: post
+title: "State of Real-Time feeds"
+categories: [Real-time, statistics, market]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+*Real-time is the new hotness*. At Superfeedr, we're lucky enough to have many feeds we're fetching, some of them being "PubSubHubbub":http://code.google.com/p/pubsubhubbub/ enabled, some of them being "RSSCloud":http://rsscloud.org/ and other being none of that. *We're in a good position to assess how many feeds are using which technology*. Being french, I appreciate showing your this -pie- camembert chart, which shows how we get the data for the feeds in our database.
+
+!{float:left;margin:10px; width:50%}/images/feeds_by_technique-10-09.png!
+
+Please, _assume that we have a bias_: we're still pretty young, and our bigger users give a "taste" to the type of feeds that we have.
+
+If you're building your own feed polling infrastructure, - _but "you obviously shouldn't":http://blog.superfeedr.com/gospel/something-stupid/_ -, you can save: 
+
+* 7.1% of your work by implementing PubSubHubbub subscriber, 
+* 0.3% if you're an RSSCloud subscriber. 
+
+Once you've built that, you can easily do some math and see how much it costs you. Then, "use our hub":http://superfeedr.com/hubbub (it should be trivial since you have implemented PubSubHubbub) for all your feeds, "and start saving":http://superfeedr.com/cost!
+
+We "said a few weeks ago":http://blog.superfeedr.com/lie/real-time/the-little-lie-about-real-time/ that we believe that the amount of real-time available feeds is pretty much stable. _What is RSSCloud or PubSubHubbub now was either XMPP or AtomStream a months weeks ago_. 
+
+We'll see in the future how these ratios evolve.
