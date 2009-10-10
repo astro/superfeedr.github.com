@@ -20,6 +20,6 @@ If you're building your own feed polling infrastructure, - _but "you obviously s
 
 Once you've built that, you can easily do some math and see how much it costs you. Then, "use our hub":http://superfeedr.com/hubbub (it should be trivial since you have implemented PubSubHubbub) for all your feeds, "and start saving":http://superfeedr.com/cost!
 
-We "said a few weeks ago":http://blog.superfeedr.com/lie/real-time/the-little-lie-about-real-time/ that we believe that the amount of real-time available feeds is pretty much stable. _What is RSSCloud or PubSubHubbub now was either XMPP or AtomStream a months weeks ago_. 
+We "said a few weeks ago":http://blog.superfeedr.com/lie/real-time/the-little-lie-about-real-time/ that we believe that the amount of real-time available feeds is pretty much stable. _What is RSSCloud or PubSubHubbub now was either XMPP or AtomStream weeks ago_. 
 
 We'll see in the future how these ratios evolve.
