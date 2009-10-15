@@ -1,0 +1,26 @@
+---
+layout: post
+title: "PubSubHubbub for Everybody"
+categories: [pubsubhubbub, API, publishers]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Today is an exciting day! We're are at the "ReadWriteWeb Real-time summit":http://www.readwriteweb.com/summit/. If you're here, come and ping us, "I":http://twitter.com/julien51 wear a yellow sweatshirt.
+
+It's also exciting because we're launching a "new version of our website":http://superfeedr.com with many many improvements over the previous iteration. I'd like to thank my friend "Beau":http://beausmith.com/ for his great help, as well as "David":http://www.davidrecordon.com/. We're perfectly aware that _we have a long way to go_, but we're _moving toward the destination_.
+
+If you go check this new iteration, you'll immediately notice the shiny orange buttons. The "subscriber":http://superfeedr.com/subscriber part is nothing new, however, the "publisher":http://superfeedr.com/publisher part is brand new!
+
+We're announcing today that Superfeedr now offers *white-label hubs*. What is that? If you read this blog, you know how crucial it is to *engage your content consumers with real-time data*, but building a hub is not the most easy thing to do. "Again":http://blog.superfeedr.com/gospel/something-stupid, we've done that for you, so that you don't have too.
+
+We're introducing to options : 
+
+* *A free version*, where your app's hub is accessible at http://appname.superfeedr.com and where you basically just need to add the 'discovery' tag to your feeds. Check out our "Wordpress":http://wordpress.superfeedr.com/ and "Identica":http://identica.superfeedr.com/ hubs.
+
+* *A _for profit_ version*, where you can use your own domain, where the subscribers will not even know that this service is provided by superfeedr.
+
+We're very excited about that, and we already started working with several great teams to integrate hubs into their apps. What do you think?
+
+PS: As I write this, I see that our blog's layout is not as shinny as I'd wanted :/ I am working on that...
