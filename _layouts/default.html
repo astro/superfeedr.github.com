@@ -20,46 +20,39 @@
 	</style>
 </head>
 <body>
-    <div id="top">
-        <a href="http://superfeedr.com">Superfeedr Home</a>
+    <div id="navigation">
+        <div>
+            <a href="http://superfeedr.com/" class="home"><img alt="Superfeedr" src="http:/superfeedr.com/images/superfeedr.png" /> Superfeedr</a>
+            <a href="http://superfeedr.com//documentation">Docs</a>
+            <a href="http://superfeedr.com//about">About</a>
+        </div>
     </div>
-    
-    <div id="content">
-    <div id="banner">
-        <img src="http://en.gravatar.com/avatar/a2f7d4dd6df7dd59e4adab811c00a3a1.jpg?size=100" />
-        <h1><a href="http://blog.superfeedr.com">Superfeedr' thoughts</a></h1>
-        <h2>Real-time cloudy thoughts from a super-hero</h2>
-        <p>
-            This is where you can learn about stuff <a href="http://superfeedr.com/about">we</a> needed to tell you.
-        </p>
+    <div id="user-navigation">
+        <div>&nbsp;</div>
     </div>
     
     <div id="page">
-            <div id="main">
-                {{ content }}
+        <div id="sidebar">
+            <h2>Superfeedr speaking</h2>
+            <p>We build a complex feed fetching and parsing infrastructure so that you don't have to.</p>
+            <ul>
+                <li><a href="http://superfeedr.com">Superfeedr</a></li>
+                <li><a href="http://twitter.com/superfeedr">@superfeedr</a></li>
+                <li><a href="/archive.html">Archive</a></li>
+            </ul>
+            
+            <div id="dsq-recentcomments" class="dsq-widget"><h2 class="dsq-widget-title">Recent Comments</h2><script type="text/javascript" src="http://disqus.com/forums/superfeedr-thoughts/recent_comments_widget.js?num_items=5&avatar_size=32"></script></div><a href="http://disqus.com">Powered by Disqus</a>
+            
+            <div id="twitter_div">
+            <h2>Twitter Updates</h2>
+            <ul id="twitter_update_list"></ul>
+            <a href="http://twitter.com/superfeedr" id="twitter-link" style="display:block;text-align:right;">follow me on Twitter</a>
             </div>
-            <div id="sidebar">
-                <h2>Superfeedr speaking</h2>
-                <p>We build a complex feed fetching and parsing infrastructure so that you don't have to.</p>
-                <ul>
-                    <li><a href="http://superfeedr.com">Superfeedr</a></li>
-                    <li><a href="http://twitter.com/superfeedr">@superfeedr</a></li>
-                    <li><a href="http://blog.superfeedr.com">Blog</a></li>
-                    <li><a href="http://blog.superfeedr.com/archive.html">Archive</a></li>
-                </ul>
-                
-                <div id="dsq-recentcomments" class="dsq-widget"><h2 class="dsq-widget-title">Recent Comments</h2><script type="text/javascript" src="http://disqus.com/forums/superfeedr-thoughts/recent_comments_widget.js?num_items=5&avatar_size=32"></script></div><a href="http://disqus.com">Powered by Disqus</a>
-                
-                <div id="twitter_div">
-                <h2>Twitter Updates</h2>
-                <ul id="twitter_update_list"></ul>
-                <a href="http://twitter.com/superfeedr" id="twitter-link" style="display:block;text-align:right;">follow me on Twitter</a>
-                </div>
 
-            </div>
-        <div id="license">
         </div>
-        
+        <div id="main">
+            {{ content }}
+        </div>
     </div>
 </div>
 

@@ -4,9 +4,41 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-10-10T13:14:31-07:00</updated>
+    <updated>2009-10-16T23:12:48-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>PubSubHubbub for Everybody</title>
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="API" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="publishers" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/10/11/white-label-hubs.html"/>
+        <published>2009-10-11T00:00:00-07:00</published>
+        <updated>2009-10-11T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/2009/10/11/white-label-hubs</id>
+        <content type="html">&lt;p&gt;Today is an exciting day! We&amp;#8217;re are at the &lt;a href="http://www.readwriteweb.com/summit/"&gt;ReadWriteWeb Real-time summit&lt;/a&gt;. If you&amp;#8217;re here, come and ping us, &lt;a href="http://twitter.com/julien51"&gt;I&lt;/a&gt; wear a yellow sweatshirt.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s also exciting because we&amp;#8217;re launching a &lt;a href="http://superfeedr.com"&gt;new version of our website&lt;/a&gt; with many many improvements over the previous iteration. I&amp;#8217;d like to thank my friend &lt;a href="http://beausmith.com/"&gt;Beau&lt;/a&gt; for his great help, as well as &lt;a href="http://www.davidrecordon.com/"&gt;David&lt;/a&gt;. We&amp;#8217;re perfectly aware that &lt;em&gt;we have a long way to go&lt;/em&gt;, but we&amp;#8217;re &lt;em&gt;moving toward the destination&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;If you go check this new iteration, you&amp;#8217;ll immediately notice the shiny orange buttons. The &lt;a href="http://superfeedr.com/subscriber"&gt;subscriber&lt;/a&gt; part is nothing new, however, the &lt;a href="http://superfeedr.com/publisher"&gt;publisher&lt;/a&gt; part is brand new!&lt;/p&gt;
+&lt;p&gt;We&amp;#8217;re announcing today that Superfeedr now offers &lt;strong&gt;white-label hubs&lt;/strong&gt;. What is that? If you read this blog, you know how crucial it is to &lt;strong&gt;engage your content consumers with real-time data&lt;/strong&gt;, but building a hub is not the most easy thing to do. &lt;a href="http://blog.superfeedr.com/gospel/something-stupid"&gt;Again&lt;/a&gt;, we&amp;#8217;ve done that for you, so that you don&amp;#8217;t have too.&lt;/p&gt;
+&lt;p&gt;We&amp;#8217;re introducing to options :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;A free version&lt;/strong&gt;, where your app&amp;#8217;s hub is accessible at http://appname.superfeedr.com and where you basically just need to add the &amp;#8216;discovery&amp;#8217; tag to your feeds. Check out our &lt;a href="http://wordpress.superfeedr.com/"&gt;Wordpress&lt;/a&gt; and &lt;a href="http://identica.superfeedr.com/"&gt;Identica&lt;/a&gt; hubs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;A &lt;em&gt;for profit&lt;/em&gt; version&lt;/strong&gt;, where you can use your own domain, where the subscribers will not even know that this service is provided by superfeedr.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We&amp;#8217;re very excited about that, and we already started working with several great teams to integrate hubs into their apps. What do you think?&lt;/p&gt;
+&lt;p&gt;PS: As I write this, I see that our blog&amp;#8217;s layout is not as shinny as I&amp;#8217;d wanted :/ I am working on that&amp;#8230;&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>State of Real-Time feeds</title>
@@ -21,7 +53,7 @@
         <published>2009-10-10T00:00:00-07:00</published>
         <updated>2009-10-10T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/2009/10/10/state-of-realtime-feeds</id>
-        <content type="html">&lt;p&gt;&lt;strong&gt;Real-time is the new hotness&lt;/strong&gt;. At Superfeedr, we&amp;#8217;re lucky enough to have many feeds we&amp;#8217;re fetching, some of them being &lt;a href="http://code.google.com/p/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt; enabled, some of them being &lt;a href="http://rsscloud.org/"&gt;RSSCloud&lt;/a&gt; and other being none of that. &lt;strong&gt;We&amp;#8217;re in a good position to assess how many feeds are using which technology&lt;/strong&gt;. Being french, I appreciate showing your this &lt;del&gt;pie&lt;/del&gt; camembert chart, which shows how we get the data for the feeds in our database.&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;strong&gt;Real-time is the new hotness&lt;/strong&gt;. At Superfeedr, we&amp;#8217;re lucky enough to have many feeds we&amp;#8217;re fetching, some of them being &lt;a href="http://code.google.com/p/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt; enabled, some of them being &lt;a href="http://rsscloud.org/"&gt;RSSCloud&lt;/a&gt; and other being none of that. &lt;strong&gt;We&amp;#8217;re in a good position to assess how many feeds are using which technology&lt;/strong&gt;. Being french, I appreciate showing you this &lt;del&gt;pie&lt;/del&gt; camembert chart, which shows how we get the data for the feeds in our database.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/feeds_by_technique-10-09.png" style="float:left;margin:10px; width:50%;" alt="" /&gt;&lt;/p&gt;
 &lt;p&gt;Please, &lt;em&gt;assume that we have a bias&lt;/em&gt;: we&amp;#8217;re still pretty young, and our bigger users give a &amp;#8220;taste&amp;#8221; to the type of feeds that we have.&lt;/p&gt;
 &lt;p&gt;If you&amp;#8217;re building your own feed polling infrastructure, &amp;#8211; &lt;em&gt;but &lt;a href="http://blog.superfeedr.com/gospel/something-stupid/"&gt;you obviously shouldn&amp;#8217;t&lt;/a&gt;&lt;/em&gt; -, you can save:&lt;/p&gt;
@@ -30,7 +62,7 @@
 	&lt;li&gt;0.3% if you&amp;#8217;re an RSSCloud subscriber.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Once you&amp;#8217;ve built that, you can easily do some math and see how much it costs you. Then, &lt;a href="http://superfeedr.com/hubbub"&gt;use our hub&lt;/a&gt; (it should be trivial since you have implemented PubSubHubbub) for all your feeds, &lt;a href="http://superfeedr.com/cost"&gt;and start saving&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;We &lt;a href="http://blog.superfeedr.com/lie/real-time/the-little-lie-about-real-time/"&gt;said a few weeks ago&lt;/a&gt; that we believe that the amount of real-time available feeds is pretty much stable. &lt;em&gt;What is RSSCloud or PubSubHubbub now was either &lt;span class="caps"&gt;XMPP&lt;/span&gt; or AtomStream a months weeks ago&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;We &lt;a href="http://blog.superfeedr.com/lie/real-time/the-little-lie-about-real-time/"&gt;said a few weeks ago&lt;/a&gt; that we believe that the amount of real-time available feeds is pretty much stable. &lt;em&gt;What is RSSCloud or PubSubHubbub now was either &lt;span class="caps"&gt;XMPP&lt;/span&gt; or AtomStream weeks ago&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;We&amp;#8217;ll see in the future how these ratios evolve.&lt;/p&gt;</content>
         <author>
             <name>Julien</name>

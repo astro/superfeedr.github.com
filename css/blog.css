@@ -1,6 +1,20 @@
 #main {
-    float:left;
-    width: 65%;
+/*    float:left;
+*/    width: 550px;
+}
+
+#page .banner h1 a {
+  text-decoration:none;
+  color:black;
+}
+
+#main h3 {
+  margin-top: 30px;
+}
+
+#main h3 a {
+  text-decoration:none;
+  color:black;
 }
 
 #sidebar {

@@ -3,9 +3,14 @@ layout: default
 title: Real-time cloudy thoughts from a super-hero
 ---
 
-
+<div class="banner">
+    <h1><a href="/">Cloudy Superhero thoughts</a></h1>
+    <p>
+        This is where you can learn about stuff <a href="http://superfeedr.com/about">we</a> needed to tell you.
+    </p>
+</div>
 {% for post in site.posts limit:10 %}
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <p class="excerpt">
         {{ post.content | strip_html | truncatewords:30 }} &nbsp;  <a href="{{ post.url }}/">Read more</a>
     </p>
