@@ -4,9 +4,35 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-10-21T23:36:31-07:00</updated>
+    <updated>2009-10-22T07:54:08-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>EventVue's Chatter</title>
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="API" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="PHP" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="eventvue" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/10/23/eventvue-s-chatter.html"/>
+        <published>2009-10-23T00:00:00-07:00</published>
+        <updated>2009-10-23T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/2009/10/23/eventvue-s-chatter</id>
+        <content type="html">&lt;p&gt;Meeting the right people at conferences is &lt;strong&gt;always very difficult&lt;/strong&gt;. Even if you&amp;#8217;re the most extraverted person in the room, most of the time, you just don&amp;#8217;t have enough time. &lt;a href="http://www.eventvue.com/"&gt;Eventvue&lt;/a&gt; is providing a very elegant way for that by helping you prepare your conferences in advance.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.eventvue.com/"&gt;&lt;img src="http://cache0.techcrunch.com/wp-content/uploads/2009/08/eventvue_logo-630x315.png" style="display:block;margin-left:auto;margin-right:auto;width:50%;" alt="" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When we started Superfeedr, &lt;a href="http://twitter.com/joshfraser"&gt;Josh&lt;/a&gt; helped us a lot by providing a good use-case. We said it in the past, but Superfeedr is yours, and you can thank him for his feedback. We&amp;#8217;re now thrilled that EventVue uses Superfeedr for its &lt;a href="http://www.eventvue.com/chatter_frame/index.php"&gt;chatter&lt;/a&gt; functionality.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;chatter&lt;/em&gt; is a stream that contains any message that was posted by people at a given conference : they write on their &lt;em&gt;blogs&lt;/em&gt;, they &lt;em&gt;tweet&lt;/em&gt;, they post to &lt;em&gt;Youtube&lt;/em&gt;, &lt;em&gt;Flickr&lt;/em&gt;&amp;#8230; it all ends up there. It&amp;#8217;s like &lt;strong&gt;Twitter Lists on steroids&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;EventVue uses &lt;a href="http://php.net/index.php"&gt;&lt;span class="caps"&gt;PHP&lt;/span&gt;&lt;/a&gt; and the &lt;a href="http://superfeedr.com/documentation#pubsubhubbub"&gt;PubSubHubbub &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;. They do not use any specific library.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Smacksale</title>
@@ -25,7 +51,7 @@
         <id>blog.superfeedr.com:/2009/10/21/smacksale</id>
         <content type="html">&lt;p&gt;There is not a day where people don&amp;#8217;t ask us about applications that use Superfeedr. We have been truly &lt;strong&gt;amazed by the quality&lt;/strong&gt; of some of these apps and we thought we should share them with you. Today&amp;#8217;s example is &lt;a href="http://www.smacksale.com/"&gt;Smacksale&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://smacksale.com/images/logo.png" style="display:block;margin-left:auto;margin-right:auto;" alt="" /&gt;&lt;/p&gt;
-&lt;p&gt;Smacksale is a &lt;em&gt;simple aggregator&lt;/em&gt; of the &lt;em&gt;best e-commerce deals&lt;/em&gt; out on the web. You can vote up, down or comment these deals : simple, efficient and useful (I just found a &lt;a href="http://www.intridea.com/about/people/paul"&gt;great deal for Gogo Inflight&lt;/a&gt;; can&amp;#8217;t wait to try it).&lt;/p&gt;
+&lt;p&gt;Smacksale is a &lt;em&gt;simple aggregator&lt;/em&gt; of the &lt;em&gt;best e-commerce deals&lt;/em&gt; out on the web. You can vote up, down or comment these deals : simple, efficient and useful (I just found a &lt;a href="http://www.smacksale.com/sales/18037-GoGo-in-flight-WiFi-coupon-Free-trial-for-new-users-flying-AirTran-or-Delta/view"&gt;great deal for Gogo Inflight&lt;/a&gt; ; can&amp;#8217;t wait to try it).&lt;/p&gt;
 &lt;p&gt;Built for the &lt;a href="http://r09.railsrumble.com/entries"&gt;2009 Rails Rumble&lt;/a&gt;, Smacksale was created by &lt;a href="http://twitter.com/adambair"&gt;Adam&lt;/a&gt;, &lt;a href="http://twitter.com/pradeep24"&gt;Pradeep&lt;/a&gt;, &lt;a href="http://twitter.com/brendanlim"&gt;Brendan&lt;/a&gt; and &lt;a href="http://www.intridea.com/about/people/paul"&gt;Paul&lt;/a&gt;. It&amp;#8217;s a &lt;a href="http://rubyonrails.org/"&gt;RubyOnRails&lt;/a&gt; application, hosted at &lt;a href="http://heroku.com/"&gt;Heroku&lt;/a&gt; and they use our &lt;a href="http://superfeedr.com/documentation#pubsubhubbub"&gt;PubSubHubbub &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt; to receive the new deals from other services. They extract the information they need from these notifications and build their own tag-cloud out of them.&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
