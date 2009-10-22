@@ -4,7 +4,7 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-10-22T07:54:08-07:00</updated>
+    <updated>2009-10-22T10:06:32-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
     
@@ -23,11 +23,15 @@
         <published>2009-10-23T00:00:00-07:00</published>
         <updated>2009-10-23T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/2009/10/23/eventvue-s-chatter</id>
-        <content type="html">&lt;p&gt;Meeting the right people at conferences is &lt;strong&gt;always very difficult&lt;/strong&gt;. Even if you&amp;#8217;re the most extraverted person in the room, most of the time, you just don&amp;#8217;t have enough time. &lt;a href="http://www.eventvue.com/"&gt;Eventvue&lt;/a&gt; is providing a very elegant way for that by helping you prepare your conferences in advance.&lt;/p&gt;
+        <content type="html">&lt;p&gt;Meeting the right people at conferences is &lt;strong&gt;always very difficult&lt;/strong&gt;. Even if you&amp;#8217;re the most extraverted person in the room, most of the time, you just don&amp;#8217;t have enough time. &lt;a href="http://www.eventvue.com/"&gt;EventVue&lt;/a&gt; is providing a very elegant way for that by helping you prepare your conferences in advance.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.eventvue.com/"&gt;&lt;img src="http://cache0.techcrunch.com/wp-content/uploads/2009/08/eventvue_logo-630x315.png" style="display:block;margin-left:auto;margin-right:auto;width:50%;" alt="" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;When we started Superfeedr, &lt;a href="http://twitter.com/joshfraser"&gt;Josh&lt;/a&gt; helped us a lot by providing a good use-case. We said it in the past, but Superfeedr is yours, and you can thank him for his feedback. We&amp;#8217;re now thrilled that EventVue uses Superfeedr for its &lt;a href="http://www.eventvue.com/chatter_frame/index.php"&gt;chatter&lt;/a&gt; functionality.&lt;/p&gt;
+&lt;p&gt;When we started Superfeedr, &lt;a href="http://twitter.com/joshfraser"&gt;Josh&lt;/a&gt; helped us a lot by providing a good use-case. We said it in the past, but Superfeedr is yours, and you can thank him for his feedback. We&amp;#8217;re now thrilled that EventVue uses Superfeedr for its &amp;#8220;chatter&amp;#8221; functionality.&lt;/p&gt;
 &lt;p&gt;The &lt;em&gt;chatter&lt;/em&gt; is a stream that contains any message that was posted by people at a given conference : they write on their &lt;em&gt;blogs&lt;/em&gt;, they &lt;em&gt;tweet&lt;/em&gt;, they post to &lt;em&gt;Youtube&lt;/em&gt;, &lt;em&gt;Flickr&lt;/em&gt;&amp;#8230; it all ends up there. It&amp;#8217;s like &lt;strong&gt;Twitter Lists on steroids&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;EventVue uses &lt;a href="http://php.net/index.php"&gt;&lt;span class="caps"&gt;PHP&lt;/span&gt;&lt;/a&gt; and the &lt;a href="http://superfeedr.com/documentation#pubsubhubbub"&gt;PubSubHubbub &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;. They do not use any specific library.&lt;/p&gt;</content>
+&lt;p&gt;EventVue uses &lt;a href="http://php.net/index.php"&gt;&lt;span class="caps"&gt;PHP&lt;/span&gt;&lt;/a&gt; and the &lt;a href="http://superfeedr.com/documentation#pubsubhubbub"&gt;PubSubHubbub &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;. I&amp;#8217;ll just let Josh saying what he likes about Superfeedr :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;We&amp;#8217;re really grateful to Superfeedr for the service they provide. Polling thousands of feeds was beginning to be a huge distraction from working on our core product. Superfeedr allowed us to stay focused on the features that matter while still being confident that our feeds will arrive in a timely and reliable manner.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href="http://www.youtube.com/watch?v=DfyeXrdZZ1o"&gt;What else&lt;/a&gt;&amp;#8230;&lt;/em&gt;&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
