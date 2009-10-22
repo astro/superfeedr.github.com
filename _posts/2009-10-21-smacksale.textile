@@ -12,7 +12,7 @@ There is not a day where people don't ask us about applications that use Superfe
 
 !{display:block;margin-left:auto;margin-right:auto;}http://smacksale.com/images/logo.png!
 
-Smacksale is a _simple aggregator_ of the _best e-commerce deals_ out on the web. You can vote up, down or comment these deals : simple, efficient and useful (I just found a "great deal for Gogo Inflight":http://www.intridea.com/about/people/paul; can't wait to try it).
+Smacksale is a _simple aggregator_ of the _best e-commerce deals_ out on the web. You can vote up, down or comment these deals : simple, efficient and useful (I just found a "great deal for Gogo Inflight":http://www.smacksale.com/sales/18037-GoGo-in-flight-WiFi-coupon-Free-trial-for-new-users-flying-AirTran-or-Delta/view ; can't wait to try it).
 
 Built for the "2009 Rails Rumble":http://r09.railsrumble.com/entries, Smacksale was created by "Adam":http://twitter.com/adambair, "Pradeep":http://twitter.com/pradeep24, "Brendan":http://twitter.com/brendanlim and "Paul":http://www.intridea.com/about/people/paul. It's a "RubyOnRails":http://rubyonrails.org/ application, hosted at "Heroku":http://heroku.com/ and they use our "PubSubHubbub API":http://superfeedr.com/documentation#pubsubhubbub to receive the new deals from other services. They extract the information they need from these notifications and build their own tag-cloud out of them.
 
