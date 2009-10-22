@@ -4,9 +4,34 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-10-16T23:12:48-07:00</updated>
+    <updated>2009-10-21T23:32:47-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Smacksale</title>
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="API" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="heroku" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="smacksale" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/10/21/smacksale.html"/>
+        <published>2009-10-21T00:00:00-07:00</published>
+        <updated>2009-10-21T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/2009/10/21/smacksale</id>
+        <content type="html">&lt;p&gt;&lt;img src="http://smacksale.com/images/logo.png" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;There is not a day where people don&amp;#8217;t ask us about applications that use Superfeedr. We have been truly &lt;strong&gt;amazed by the quality&lt;/strong&gt; of some of these apps and we thought we should share them with you. Today&amp;#8217;s example is &lt;a href="http://www.smacksale.com/"&gt;Smacksale&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Smacksale is a &lt;em&gt;simple aggregator&lt;/em&gt; of the &lt;em&gt;best e-commerce deals&lt;/em&gt; out on the web. You can vote up, down or comment these deals : simple, efficient and useful (I just found a &lt;a href="http://www.intridea.com/about/people/paul"&gt;great deal for Gogo Inflight&lt;/a&gt;; can&amp;#8217;t wait to try it).&lt;/p&gt;
+&lt;p&gt;Built for the &lt;a href="http://r09.railsrumble.com/entries"&gt;2009 Rails Rumble&lt;/a&gt;, Smacksale was created by &lt;a href="http://twitter.com/adambair"&gt;Adam&lt;/a&gt;, &lt;a href="http://twitter.com/pradeep24"&gt;Pradeep&lt;/a&gt;, &lt;a href="http://twitter.com/brendanlim"&gt;Brendan&lt;/a&gt; and &lt;a href="http://www.intridea.com/about/people/paul"&gt;Paul&lt;/a&gt;. It&amp;#8217;s a &lt;a href="http://rubyonrails.org/"&gt;RubyOnRails&lt;/a&gt; application, hosted at &lt;a href="http://heroku.com/"&gt;Heroku&lt;/a&gt; and they use our &lt;a href="http://superfeedr.com/documentation#pubsubhubbub"&gt;PubSubHubbub &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt; to receive the new deals from other services. They extract the information they need from these notifications and build their own tag-cloud out of them.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>PubSubHubbub for Everybody</title>
@@ -770,26 +795,6 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
     </entry>
     
     <entry>
-        <title>There is no such thing as Real Time Search</title>
-        
-        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
-        
-        <link href="http://blog.superfeedr.com/2009/07/09/there-is-such-thing-as-real-time-web-search.html"/>
-        <published>2009-07-09T00:00:00-07:00</published>
-        <updated>2009-07-09T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/2009/07/09/there-is-such-thing-as-real-time-web-search</id>
-        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/"&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
-&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href="http://google.com"&gt;Google&lt;/a&gt; or &lt;a href="http://bing.com"&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://search.twitter.com"&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href="http://collecta.com"&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
-&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
-        <author>
-            <name>Julien</name>
-            <uri>http://twitter.com/julien51</uri>
-        </author>
-    </entry>
-    
-    <entry>
         <title>Speeding Up RSS : what for?</title>
         
         <category term="RSS" scheme="http://www.sixapart.com/ns/types#tag" />
@@ -810,6 +815,26 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
 &lt;p&gt;The comments, though are very interesting and they show what we&amp;#8217;ve observed with &amp;quot;Notifixious&amp;quot;http://notifixio.us over the last year : Real-time notification (or faster &lt;span class="caps"&gt;RSS&lt;/span&gt;) scares people a lot. There is at least 4 or 5 comments saying that &lt;span class="caps"&gt;RSS&lt;/span&gt; is fast enough for them. The problem here, is that there is a misconception :* making &lt;span class="caps"&gt;RSS&lt;/span&gt; faster is not for individuals, but for the web itself*.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt; has the potential to bring Push to the &lt;span class="caps"&gt;RSS&lt;/span&gt; and Atom technologies. So not only it will be faster, but it will be instantaneous, and when Feed updates will be instantaneous, nobody will pull anymore (&lt;a href="http://blog.superfeedr.com/gospel/something-stupid/"&gt;not even us&lt;/a&gt;) and the web will be better.&lt;/p&gt;
 &lt;p&gt;Better? Publishers will not have to &lt;em&gt;handle massive loads anymore&lt;/em&gt; (like Twitter had to), and Subscribers (services) will &lt;em&gt;not have to poll over and over to get updates&lt;/em&gt;.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>There is no such thing as Real Time Search</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/07/09/there-is-such-thing-as-real-time-web-search.html"/>
+        <published>2009-07-09T00:00:00-07:00</published>
+        <updated>2009-07-09T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/2009/07/09/there-is-such-thing-as-real-time-web-search</id>
+        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/"&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
+&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href="http://google.com"&gt;Google&lt;/a&gt; or &lt;a href="http://bing.com"&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://search.twitter.com"&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href="http://collecta.com"&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
+&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
