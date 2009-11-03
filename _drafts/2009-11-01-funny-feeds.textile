@@ -1,0 +1,25 @@
+---
+layout: post
+title: Funny Feeds
+categories: [feeds, RSS, ATOM]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Our business cards say : "We make something stupid so that nobody else has to do it". And it's true : we do a lot of things so that nobody else has to. While debugging some code this weekend, I checked at some feeds that we had trouble dealing with. If you use Superfeedr, you won't have to deal with that, because we do it for you, and trust me these things can break your feed parsing module.
+
+h3. Never Ending HTTP responses
+
+This was actually one of the very first things our parsers encountered. Want to see an example : check out the "six-apart Atom stream":http://updates.sixapart.com/atom-stream.xml. Technically, this is perfectly legit, except that if our parser starts to get content from there, well, it will eat more and more content, and will eventually die of indigestion. When we had only a handful of servers, we had the problem with some hacker implementing a similar thing on his servers (with no content, just an un-finished HTTP connection). This ended-up keeping our parsers busy to such an extent that they wouldn't parse anything else. 
+
+It was an easy fix : timeout on HTTP connections. 
+
+h3. 6847 entries feed.
+
+You read that correctly. That is 6847 feeds.
+
+http://www.kocosports.com/absolutenm/rss.asp?z=3
+
+h3. Permanent redirections  
+

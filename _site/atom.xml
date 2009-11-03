@@ -4,9 +4,60 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-10-22T10:06:32-07:00</updated>
+    <updated>2009-11-03T09:47:44-08:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Post Mortem 02/11</title>
+        
+        <category term="post-mortem" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="MySQL" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Memcache" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/11/03/post-mortem-02-11.html"/>
+        <published>2009-11-03T00:00:00-08:00</published>
+        <updated>2009-11-03T00:00:00-08:00</updated>
+        <id>blog.superfeedr.com:/2009/11/03/post-mortem-02-11</id>
+        <content type="html">&lt;p&gt;Superfeedr went down yesterday evening. We immediately saw that it was a &lt;strong&gt;database performance issue&lt;/strong&gt; (MySQL), given that the load on our &lt;em&gt;MySQL host was about 30+&lt;/em&gt;. Since we have 2 MySQL hosts (Master &amp;#8211; Master replication), we switched to the second one, hoping that was just a problem on the host. No luck.&lt;/p&gt;
+&lt;h3&gt;Finding the issue&lt;/h3&gt;
+&lt;p&gt;Up until yesterday, our entry detection was was done by &lt;strong&gt;storing in Memcached and MySQL an unique identifier by entry&lt;/strong&gt;. If the item was not present in Memcached, it would be inserted into MySQL, which has a unique index on these unique ids. The goal of that is that a check on Memcached is much cheaper than a check on MySQL. We had then a maintenance script that would clean up the entries that are old enough to not be considered new again.&lt;/p&gt;
+&lt;p&gt;When we investigated a little further yesterday, we found that the it was actually &lt;strong&gt;these &lt;span class="caps"&gt;INSERT&lt;/span&gt; queries on MySQL that were taking much longer than they should, and, worse, much more often than they should&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Logically, we checked our Memcached and found out that our caching mechanism didn&amp;#8217;t work as expected: &lt;em&gt;whether the unique entry was present in the cache or not, we would send the entry to be saved in MySQL&lt;/em&gt;. We fixed that. But the problem was still the same : way too many INSERTs in MySQL.&lt;/p&gt;
+&lt;p&gt;After checking Memcached into more details, we figured out that our keys were &amp;#8220;disappearing&amp;#8221;. Looking at &lt;a href="http://code.google.com/p/memcached/wiki/FAQ#My_cache_items_always_expire_early!_My_cache_never_fills_all_the"&gt;Memcached&amp;#8217;s &lt;span class="caps"&gt;FAQ&lt;/span&gt;&lt;/a&gt; was helpful. &lt;em&gt;We indeed had a flush somewhere, that we had forgotten about&lt;/em&gt;. Removing the flush was good. The load on MySQL started to decrease, but not enough.&lt;/p&gt;
+&lt;p&gt;There was a problem with MySQL. Another proof of that is that the 2 issues we had in our cache system had been here for weeks.&lt;/p&gt;
+&lt;p&gt;After checking the entries table, it had about &lt;strong&gt;65 Million rows, 12GB Data and a 15GB Index&lt;/strong&gt;. Every time we insert a row, it has to check the keys. And since we&amp;#8217;re inserting about &lt;strong&gt;100 new rows per seconds&lt;/strong&gt;, even small operations start to become too heavy, specially if they involve disk access (we don&amp;#8217;t have 15GB &lt;span class="caps"&gt;RAM&lt;/span&gt; on the MySQL host).&lt;/p&gt;
+&lt;p&gt;We had to clean this table. It was easy to see that some feeds had more than 1M entries in MySQL. We started some queries to clean them up. It took 7hours and didn&amp;#8217;t complete. We needed to be back up faster than that.&lt;/p&gt;
+&lt;h3&gt;Fixing the problem&lt;/h3&gt;
+&lt;p&gt;Here is what we did : we changed the way we store entries in MySQL. Instead of cleaning them only once they&amp;#8217;re too old, &lt;strong&gt;we only keep in the cache a handful of entries : twice the size of the feed&lt;/strong&gt; actually, so that we don&amp;#8217;t store millions of useless entries, and we clean these entries each time we add some.&lt;/p&gt;
+&lt;p&gt;The &amp;#8220;reboot&amp;#8221; process comes next :&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;We then truncated the entries table,&lt;/li&gt;
+	&lt;li&gt;We stopped the notifications,&lt;/li&gt;
+	&lt;li&gt;We restarted Memcached,&lt;/li&gt;
+	&lt;li&gt;We forced all the feeds to be ran once to populate the entries table again.&lt;/li&gt;
+	&lt;li&gt;When that was done, we restarted the notifications, and Superfeedr was back up.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;There is a small risk for you to see duplicate entries (if the feed couldn&amp;#8217;t be parsed/fetched during the populating phase), but that should stay minimal.&lt;/p&gt;
+&lt;h3&gt;What did we lean?&lt;/h3&gt;
+&lt;ul&gt;
+	&lt;li&gt;MySQL is not the right tool for what we do. Unfortunately, we haven&amp;#8217;t found any tool that really complies by all of our requirements. We studied several of the NoSQL alternative. We&amp;#8217;ll do that again in the coming days.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+	&lt;li&gt;A problem can have several causes. The first one you find might not be the good one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+	&lt;li&gt;You have to take drastic (like truncating the table) steps earlier : trying the &amp;#8220;soft&amp;#8221; methods may sometimes just be a time loss.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We know we may pay a price for these lessons in terms of customer and conversion rate. We also know how valuable these lessons are and this also validates our biggest assumption that nobody else should build a similar infrastructure. Of course, not everybody would have fallen into those traps, but at least, if you use us, &lt;a href="http://blog.superfeedr.com/gospel/something-stupid/"&gt;we did that for you, too&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Please, let us know what we can improve and how to be better. We also learn from you.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>EventVue's Chatter</title>
