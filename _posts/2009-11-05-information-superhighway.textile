@@ -7,7 +7,7 @@ author_uri: http://identi.ca/astro
 author_email_md5: 0120a25badc6b1e50f6890527dca7042
 ---
 
-!{float:right; margin: 10px;}../../../../../../images/superhighway.png! Because we provide a service to developers and businesses it is quite difficult to "show off" to people without prior knowledge of the technology. Julien Genestoux built our website with quite some interactivity, but it is still rather hard to understand because you're going to see the gory protocol in detail.
+!{float:right; margin: 10px;}../../../../../../images/superhighway.png! Because we provide a service to developers and businesses it is quite difficult to "show off" to people without prior knowledge of the technology. "Julien":http://twitter.com/julien51 built our website with quite some interactivity, but it is still rather hard to understand because you're going to see the gory protocol in detail.
 
 The well-standardized XMPP with its many implementations has always made it easy for developers to use us. There's a vast amount of tools and libraries out there. That makes it easy to put together a demo consumer of Superfeedr notifications in very short time.
 
@@ -19,4 +19,4 @@ I took "StropheJS":http://code.stanziq.com/strophe/, easened XML and DOM handlin
 
 Log in, subscribe to feeds (or even Twitter searches), and get amazed by that millions of content producers on the "Information Superhighway":http://en.wikipedia.org/wiki/Information_Superhighway.
 
-If you want to host & modify it yourself, you'll need one tiny hack: the browser's *Same Origin Policy* will allow script access only to the local domain for good reason. To proxy the BOSH entry point I included a configuration file for "nginx":http://nginx.net/. All you need to do is to run *start.sh* and visit localhost in your browser.
+If you want to host & modify it yourself, you'll need one tiny hack: the browser's *Same Origin Policy* will allow script access only to the local domain for good reason. To proxy the BOSH entry point I included a configuration file for "nginx":http://nginx.net/. All you need to do is to run @start.sh@ and visit localhost in your browser.
