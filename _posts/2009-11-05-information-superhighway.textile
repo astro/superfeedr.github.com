@@ -7,16 +7,37 @@ author_uri: http://identi.ca/astro
 author_email_md5: 0120a25badc6b1e50f6890527dca7042
 ---
 
-!{float:right; margin: 10px;}../../../../../../images/superhighway.png! Because we provide a service to developers and businesses it is quite difficult to "show off" to people without prior knowledge of the technology. "Julien":http://twitter.com/julien51 built our website with quite some interactivity, but it is still rather hard to understand because you're going to see the gory protocol in detail.
+!{float:right; margin: 10px;width: 35%}../../../../../../images/superhighway.png! Because we provide a service to developers and businesses *it is quite difficult to "show off"* to people without prior knowledge of the technology. "Julien":http://twitter.com/julien51 built our website with quite some interactivity, but it is still rather hard to understand because you're going to see the gory protocol in detail.
 
-The well-standardized XMPP with its many implementations has always made it easy for developers to use us. There's a vast amount of tools and libraries out there. That makes it easy to put together a demo consumer of Superfeedr notifications in very short time.
+The well-standardized XMPP with its many implementations has always made it easy for developers to use us. There's a *vast amount of tools and libraries* out there. That makes it easy to put together a demo consumer of Superfeedr notifications in very short time.
 
-So we want a graphical app but not restrict ourselves to one platform. And there's the browser, where you don't even need to install anything, just click and everything's in a sandbox. That's why it has to be a webapp.
+So we want a graphical app but not restrict ourselves to one platform. The web browser, where you don't even need to install anything, just click and everything's in a sandbox is the solution. That's why it has to be a webapp.
 
-The nature of our service is very dynamic and content must be delivered quickly. That requires JavaScript. Despite not being affine to that language, I've always been intrigued how AJAX, nowadays a common web technology, can be used with a tiny glue of "BOSH":http://xmpp.org/extensions/xep-0124.html to run an XMPP client in just your browser.
+h3. How it's built
+
+The nature of our service is very dynamic and content must be delivered quickly. That requires *JavaScript*. Despite not being affine to that language, I've always been intrigued how *AJAX*, nowadays a common web technology, can be used with a tiny glue of "BOSH":http://xmpp.org/extensions/xep-0124.html to *run an XMPP client* in just your browser.
 
 I took "StropheJS":http://code.stanziq.com/strophe/, easened XML and DOM handling a bit with "JQuery":http://jquery.com/, and made a really tiny webapp: "Notification Superhighway":http://github.com/astro/superhighway.
 
 Log in, subscribe to feeds (or even Twitter searches), and get amazed by that millions of content producers on the "Information Superhighway":http://en.wikipedia.org/wiki/Information_Superhighway.
 
-If you want to host & modify it yourself, you'll need one tiny hack: the browser's *Same Origin Policy* will allow script access only to the local domain for good reason. To proxy the BOSH entry point I included a configuration file for "nginx":http://nginx.net/. All you need to do is to run @start.sh@ and visit localhost in your browser.
+h3. Running it yourself
+
+# Pull the code :
+@git clone git://github.com/astro/superhighway.git@
+
+#  @cd superhighway@
+
+# Get the StropheJs code:
+@git submodule init@
+@git submodule update@
+
+# Proxy the @http://localhost/http-bind/@ to use @http://superfeedr.com/http-bind/@.  The browser's *Same Origin Policy* will allow script access only to the local domain for good reason. To proxy the BOSH entry point I included a configuration file for "nginx":http://nginx.net/. [1]
+
+# @./start.sh@ (you may need to use @sudo@) [2]
+
+# "http://localhost:8080":http://localhost:8080 should do it :). The Interface clearly needs a little work! Please "fork Notification SuperHighway":http://github.com/astro/superhighway :)
+
+fn1. On a Mac, I suggest installing Nginx with @sudo port install nginx@.
+
+fn2. On a Mac, you will need to comment the @use epoll;@ line of the nginx configuration.

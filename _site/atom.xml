@@ -4,9 +4,63 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-11-03T09:47:44-08:00</updated>
+    <updated>2009-11-05T12:05:02-08:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Information Superhighway</title>
+        
+        <category term="OSS" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="XMPP" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="JavaScript" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="http" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="web-apps" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/11/05/information-superhighway.html"/>
+        <published>2009-11-05T00:00:00-08:00</published>
+        <updated>2009-11-05T00:00:00-08:00</updated>
+        <id>blog.superfeedr.com:/2009/11/05/information-superhighway</id>
+        <content type="html">&lt;p&gt;&lt;img src="../../../../../../images/superhighway.png" style="float:right; margin: 10px;width: 35%;" alt="" /&gt; Because we provide a service to developers and businesses it is quite difficult to &amp;#8220;show off&amp;#8221; to people without prior knowledge of the technology. &lt;a href="http://twitter.com/julien51"&gt;Julien&lt;/a&gt; built our website with quite some interactivity, but it is still rather hard to understand because you&amp;#8217;re going to see the gory protocol in detail.&lt;/p&gt;
+&lt;p&gt;The well-standardized &lt;span class="caps"&gt;XMPP&lt;/span&gt; with its many implementations has always made it easy for developers to use us. There&amp;#8217;s a vast amount of tools and libraries out there. That makes it easy to put together a demo consumer of Superfeedr notifications in very short time.&lt;/p&gt;
+&lt;p&gt;So we want a graphical app but not restrict ourselves to one platform. And there&amp;#8217;s the browser, where you don&amp;#8217;t even need to install anything, just click and everything&amp;#8217;s in a sandbox. That&amp;#8217;s why it has to be a webapp.&lt;/p&gt;
+&lt;h3&gt;How it&amp;#8217;s built&lt;/h3&gt;
+&lt;p&gt;The nature of our service is very dynamic and content must be delivered quickly. That requires JavaScript. Despite not being affine to that language, I&amp;#8217;ve always been intrigued how &lt;span class="caps"&gt;AJAX&lt;/span&gt;, nowadays a common web technology, can be used with a tiny glue of &lt;a href="http://xmpp.org/extensions/xep-0124.html"&gt;&lt;span class="caps"&gt;BOSH&lt;/span&gt;&lt;/a&gt; to run an &lt;span class="caps"&gt;XMPP&lt;/span&gt; client in just your browser.&lt;/p&gt;
+&lt;p&gt;I took &lt;a href="http://code.stanziq.com/strophe/"&gt;StropheJS&lt;/a&gt;, easened &lt;span class="caps"&gt;XML&lt;/span&gt; and &lt;span class="caps"&gt;DOM&lt;/span&gt; handling a bit with &lt;a href="http://jquery.com/"&gt;JQuery&lt;/a&gt;, and made a really tiny webapp: &lt;a href="http://github.com/astro/superhighway"&gt;Notification Superhighway&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Log in, subscribe to feeds (or even Twitter searches), and get amazed by that millions of content producers on the &lt;a href="http://en.wikipedia.org/wiki/Information_Superhighway"&gt;Information Superhighway&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Running it yourself&lt;/h3&gt;
+&lt;ol&gt;
+	&lt;li&gt;Pull the code :&lt;br /&gt;
+&lt;code&gt;git clone git://github.com/astro/superhighway.git&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+	&lt;li&gt;&lt;code&gt;cd superhighway&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+	&lt;li&gt;Get the StropheJs code:&lt;br /&gt;
+&lt;code&gt;git submodule init&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;git submodule update&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+	&lt;li&gt;Proxy the &lt;code&gt;http://localhost/http-bind/&lt;/code&gt; to use &lt;code&gt;http://superfeedr.com/http-bind/&lt;/code&gt;.  The browser&amp;#8217;s &lt;strong&gt;Same Origin Policy&lt;/strong&gt; will allow script access only to the local domain for good reason. To proxy the &lt;span class="caps"&gt;BOSH&lt;/span&gt; entry point I included a configuration file for &lt;a href="http://nginx.net/"&gt;nginx&lt;/a&gt;. &lt;sup class="footnote"&gt;&lt;a href="#fn1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+	&lt;li&gt;&lt;code&gt;./start.sh&lt;/code&gt; (you may need to use &lt;code&gt;sudo&lt;/code&gt;) &lt;sup class="footnote"&gt;&lt;a href="#fn2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+	&lt;li&gt;&lt;a href="http://localhost:8080"&gt;http://localhost:8080&lt;/a&gt; should do it :). The Interface clearly needs a little work! Please &lt;a href="http://github.com/astro/superhighway"&gt;fork Notification SuperHighway&lt;/a&gt; :)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class="footnote" id="fn1"&gt;&lt;sup&gt;1&lt;/sup&gt; On a Mac, I suggest installing Nginx with &lt;code&gt;sudo port install nginx&lt;/code&gt;.&lt;/p&gt;
+&lt;p class="footnote" id="fn2"&gt;&lt;sup&gt;2&lt;/sup&gt; On a Mac, you will need to comment the &lt;code&gt;use epoll;&lt;/code&gt; line of the nginx configuration.&lt;/p&gt;</content>
+        <author>
+            <name>Astro</name>
+            <uri>http://identi.ca/astro</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Post Mortem 02/11</title>
@@ -36,20 +90,20 @@
 &lt;ol&gt;
 	&lt;li&gt;We then truncated the entries table,&lt;/li&gt;
 	&lt;li&gt;We stopped the notifications,&lt;/li&gt;
-	&lt;li&gt;We restarted Memcached,&lt;/li&gt;
-	&lt;li&gt;We forced all the feeds to be ran once to populate the entries table again.&lt;/li&gt;
+	&lt;li&gt;We restarted Memcached to clean any cached entries,&lt;/li&gt;
+	&lt;li&gt;We forced all the feeds to be ran through our parser once to populate the entries table again.&lt;/li&gt;
 	&lt;li&gt;When that was done, we restarted the notifications, and Superfeedr was back up.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;There is a small risk for you to see duplicate entries (if the feed couldn&amp;#8217;t be parsed/fetched during the populating phase), but that should stay minimal.&lt;/p&gt;
 &lt;h3&gt;What did we lean?&lt;/h3&gt;
 &lt;ul&gt;
-	&lt;li&gt;MySQL is not the right tool for what we do. Unfortunately, we haven&amp;#8217;t found any tool that really complies by all of our requirements. We studied several of the NoSQL alternative. We&amp;#8217;ll do that again in the coming days.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;MySQL is not the right tool for what we do&lt;/strong&gt;. Unfortunately, we haven&amp;#8217;t found any tool that really complies by all of our requirements. We studied several of the NoSQL alternative. We&amp;#8217;ll do that again in the coming days.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
-	&lt;li&gt;A problem can have several causes. The first one you find might not be the good one.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;A problem can have several causes&lt;/strong&gt;. The first one you find might not be the good one.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
-	&lt;li&gt;You have to take drastic (like truncating the table) steps earlier : trying the &amp;#8220;soft&amp;#8221; methods may sometimes just be a time loss.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;You have to take drastic steps earlier&lt;/strong&gt; : trying the &amp;#8220;soft&amp;#8221; methods may sometimes just be a time loss. We should have not even tried to clean only parts of the entries table and that lost us about 7 hours.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We know we may pay a price for these lessons in terms of customer and conversion rate. We also know how valuable these lessons are and this also validates our biggest assumption that nobody else should build a similar infrastructure. Of course, not everybody would have fallen into those traps, but at least, if you use us, &lt;a href="http://blog.superfeedr.com/gospel/something-stupid/"&gt;we did that for you, too&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Please, let us know what we can improve and how to be better. We also learn from you.&lt;/p&gt;</content>
