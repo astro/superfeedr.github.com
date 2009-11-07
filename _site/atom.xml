@@ -4,9 +4,40 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-11-05T12:05:02-08:00</updated>
+    <updated>2009-11-06T21:02:07-08:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Funny Feeds</title>
+        
+        <category term="feeds" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="RSS" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="ATOM" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/11/06/funny-feeds.html"/>
+        <published>2009-11-06T00:00:00-08:00</published>
+        <updated>2009-11-06T00:00:00-08:00</updated>
+        <id>blog.superfeedr.com:/2009/11/06/funny-feeds</id>
+        <content type="html">&lt;p&gt;Our business cards say : &amp;#8220;&lt;em&gt;We make something stupid so that nobody else has to do it&lt;/em&gt;&amp;#8221;. And it&amp;#8217;s true : we do a lot of things so that nobody else has to. While debugging some code last weekend, I checked at some feeds that we had trouble dealing with. If you use &lt;a href="http://superfeedr.com"&gt;Superfeedr&lt;/a&gt;, you won&amp;#8217;t have to deal with that, and that&amp;#8217;s good, because these things can break your feed parsing module.&lt;/p&gt;
+&lt;h3&gt;Never Ending &lt;span class="caps"&gt;HTTP&lt;/span&gt; responses&lt;/h3&gt;
+&lt;p&gt;This was actually one of the very first things our parsers encountered. Want to see an example : check out the &lt;a href="http://updates.sixapart.com/atom-stream.xml"&gt;six-apart Atom stream&lt;/a&gt;. Technically, &lt;em&gt;this is perfectly legit&lt;/em&gt;, except that if our parser starts to get content from there, well, it will eat more and more content, and will eventually die of indigestion. When we had only a handful of servers, we had the problem with some hacker implementing a similar thing on his servers (with no content, just an un-endind &lt;span class="caps"&gt;HTTP&lt;/span&gt; connection). This ended-up &lt;strong&gt;keeping our parsers busy&lt;/strong&gt; to such an extent that they wouldn&amp;#8217;t parse anything else.&lt;/p&gt;
+&lt;p&gt;It was an easy fix : &lt;strong&gt;timeout on active &lt;span class="caps"&gt;HTTP&lt;/span&gt; connections&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;6847 entries feed.&lt;/h3&gt;
+&lt;p&gt;You read that correctly. That is &lt;em&gt;6847 entries&lt;/em&gt;, in one &lt;a href="http://www.kocosports.com/absolutenm/rss.asp?z=3"&gt;feed&lt;/a&gt; (that&amp;#8217;s fluctuating though), and it &lt;em&gt;weights about 2MB&lt;/em&gt;. As such that&amp;#8217;s not really a problem. We fetch this feed in more or less 5 seconds. However, to identify new entries, we need to &lt;strong&gt;compare each of them&lt;/strong&gt; with a &amp;#8220;cached&amp;#8221; version. Comparing 5, 10 or even 100 entries is not a big deal. Comparing several thousands can actually take up to a few seconds (we store these entries into Memcache). Eventually, this feed was taking forever (20, 30 seconds or even a few minutes) to be fetched and parsed. We built our parsers such as if a feed takes &lt;strong&gt;too long to be processed, it&amp;#8217;s dropped&lt;/strong&gt;. This feed was eventually never fully processed.&lt;/p&gt;
+&lt;p&gt;We increased the allowance on the feed processing. That was not enough : many feeds could not be fetched anyway, we were just spending more time on them. We finally decided to &lt;strong&gt;limit the number of legit new entries in a given feed to 500&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;Permanent redirections&lt;/h3&gt;
+&lt;p&gt;That is a much harder one. The &lt;a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol"&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt; protocol&lt;/a&gt; has stuff like redirections. A redirection is just a way for a server to say &amp;#8220;what was here is now there&amp;#8221;. There are 2 types of redirections : Temporary and Permanent. When it&amp;#8217;s temporary, we don&amp;#8217;t even keep track of it : our parser follows the redirection and gets the content where it is. When it&amp;#8217;s permanent, it&amp;#8217;s different. We follow the redirection, but we also &lt;strong&gt;save the new feed url and assign it to the subscribers of the initial feed&lt;/strong&gt;. We still keep the &amp;#8216;old&amp;#8217; feed, just in case the &lt;em&gt;permanent is not really permanent&lt;/em&gt; (and because we hate deleting stuff), but we reduce the polling frequency to a minimum. Some feeds, however make our life hard in this case. This &lt;a href="http://vmware.simplefeed.net/rss"&gt;feed from VMWare&lt;/a&gt; is an example. If you open it, you&amp;#8217;ll see that it permanently redirects to a url &lt;a href="http://feeds.vmware.com/rss?f=8b93e6a0-01de-11de-2fb2-0030486070c6"&gt;like this one&lt;/a&gt;  and if you load it again, you&amp;#8217;ll see that it permanently redirects to another feed&amp;#8230; and so on. In other word, this &lt;strong&gt;feed permanently redirects to different urls&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We &lt;strong&gt;haven&amp;#8217;t found a good solution for that yet&lt;/strong&gt;. We hate to do it, but we basically clean these redirections once in a while to avoid having thousands of them.&lt;/p&gt;
+&lt;p&gt;As you can see, building a polling infrastructure is full of traps. There is not a day where we don&amp;#8217;t find new challenges. It is very interesting and we like that. However, there is absolutely &lt;strong&gt;no valid reason for another person to spend time and money solving the same problem&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;That doesn&amp;#8217;t mean either that the solution we come up with are the best; and that is why we&amp;#8217;re sharing them here! &lt;em&gt;Your ideas are our food&lt;/em&gt;&amp;#8230;&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Information Superhighway</title>
@@ -25,11 +56,11 @@
         <published>2009-11-05T00:00:00-08:00</published>
         <updated>2009-11-05T00:00:00-08:00</updated>
         <id>blog.superfeedr.com:/2009/11/05/information-superhighway</id>
-        <content type="html">&lt;p&gt;&lt;img src="../../../../../../images/superhighway.png" style="float:right; margin: 10px;width: 35%;" alt="" /&gt; Because we provide a service to developers and businesses it is quite difficult to &amp;#8220;show off&amp;#8221; to people without prior knowledge of the technology. &lt;a href="http://twitter.com/julien51"&gt;Julien&lt;/a&gt; built our website with quite some interactivity, but it is still rather hard to understand because you&amp;#8217;re going to see the gory protocol in detail.&lt;/p&gt;
-&lt;p&gt;The well-standardized &lt;span class="caps"&gt;XMPP&lt;/span&gt; with its many implementations has always made it easy for developers to use us. There&amp;#8217;s a vast amount of tools and libraries out there. That makes it easy to put together a demo consumer of Superfeedr notifications in very short time.&lt;/p&gt;
-&lt;p&gt;So we want a graphical app but not restrict ourselves to one platform. And there&amp;#8217;s the browser, where you don&amp;#8217;t even need to install anything, just click and everything&amp;#8217;s in a sandbox. That&amp;#8217;s why it has to be a webapp.&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;img src="../../../../../../images/superhighway.png" style="float:right; margin: 10px;width: 35%;" alt="" /&gt; Because we provide a service to developers and businesses &lt;strong&gt;it is quite difficult to &amp;#8220;show off&amp;#8221;&lt;/strong&gt; to people without prior knowledge of the technology. &lt;a href="http://twitter.com/julien51"&gt;Julien&lt;/a&gt; built our website with quite some interactivity, but it is still rather hard to understand because you&amp;#8217;re going to see the gory protocol in detail.&lt;/p&gt;
+&lt;p&gt;The well-standardized &lt;span class="caps"&gt;XMPP&lt;/span&gt; with its many implementations has always made it easy for developers to use us. There&amp;#8217;s a &lt;strong&gt;vast amount of tools and libraries&lt;/strong&gt; out there. That makes it easy to put together a demo consumer of Superfeedr notifications in very short time.&lt;/p&gt;
+&lt;p&gt;So we want a graphical app but not restrict ourselves to one platform. The web browser, where you don&amp;#8217;t even need to install anything, just click and everything&amp;#8217;s in a sandbox is the solution. That&amp;#8217;s why it has to be a webapp.&lt;/p&gt;
 &lt;h3&gt;How it&amp;#8217;s built&lt;/h3&gt;
-&lt;p&gt;The nature of our service is very dynamic and content must be delivered quickly. That requires JavaScript. Despite not being affine to that language, I&amp;#8217;ve always been intrigued how &lt;span class="caps"&gt;AJAX&lt;/span&gt;, nowadays a common web technology, can be used with a tiny glue of &lt;a href="http://xmpp.org/extensions/xep-0124.html"&gt;&lt;span class="caps"&gt;BOSH&lt;/span&gt;&lt;/a&gt; to run an &lt;span class="caps"&gt;XMPP&lt;/span&gt; client in just your browser.&lt;/p&gt;
+&lt;p&gt;The nature of our service is very dynamic and content must be delivered quickly. That requires &lt;strong&gt;JavaScript&lt;/strong&gt;. Despite not being affine to that language, I&amp;#8217;ve always been intrigued how &lt;strong&gt;&lt;span class="caps"&gt;AJAX&lt;/span&gt;&lt;/strong&gt;, nowadays a common web technology, can be used with a tiny glue of &lt;a href="http://xmpp.org/extensions/xep-0124.html"&gt;&lt;span class="caps"&gt;BOSH&lt;/span&gt;&lt;/a&gt; to &lt;strong&gt;run an &lt;span class="caps"&gt;XMPP&lt;/span&gt; client&lt;/strong&gt; in just your browser.&lt;/p&gt;
 &lt;p&gt;I took &lt;a href="http://code.stanziq.com/strophe/"&gt;StropheJS&lt;/a&gt;, easened &lt;span class="caps"&gt;XML&lt;/span&gt; and &lt;span class="caps"&gt;DOM&lt;/span&gt; handling a bit with &lt;a href="http://jquery.com/"&gt;JQuery&lt;/a&gt;, and made a really tiny webapp: &lt;a href="http://github.com/astro/superhighway"&gt;Notification Superhighway&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Log in, subscribe to feeds (or even Twitter searches), and get amazed by that millions of content producers on the &lt;a href="http://en.wikipedia.org/wiki/Information_Superhighway"&gt;Information Superhighway&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Running it yourself&lt;/h3&gt;
@@ -930,6 +961,26 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
     </entry>
     
     <entry>
+        <title>There is no such thing as Real Time Search</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/07/09/there-is-such-thing-as-real-time-web-search.html"/>
+        <published>2009-07-09T00:00:00-07:00</published>
+        <updated>2009-07-09T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/2009/07/09/there-is-such-thing-as-real-time-web-search</id>
+        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/"&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
+&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href="http://google.com"&gt;Google&lt;/a&gt; or &lt;a href="http://bing.com"&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://search.twitter.com"&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href="http://collecta.com"&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
+&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
         <title>Speeding Up RSS : what for?</title>
         
         <category term="RSS" scheme="http://www.sixapart.com/ns/types#tag" />
@@ -950,26 +1001,6 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
 &lt;p&gt;The comments, though are very interesting and they show what we&amp;#8217;ve observed with &amp;quot;Notifixious&amp;quot;http://notifixio.us over the last year : Real-time notification (or faster &lt;span class="caps"&gt;RSS&lt;/span&gt;) scares people a lot. There is at least 4 or 5 comments saying that &lt;span class="caps"&gt;RSS&lt;/span&gt; is fast enough for them. The problem here, is that there is a misconception :* making &lt;span class="caps"&gt;RSS&lt;/span&gt; faster is not for individuals, but for the web itself*.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt; has the potential to bring Push to the &lt;span class="caps"&gt;RSS&lt;/span&gt; and Atom technologies. So not only it will be faster, but it will be instantaneous, and when Feed updates will be instantaneous, nobody will pull anymore (&lt;a href="http://blog.superfeedr.com/gospel/something-stupid/"&gt;not even us&lt;/a&gt;) and the web will be better.&lt;/p&gt;
 &lt;p&gt;Better? Publishers will not have to &lt;em&gt;handle massive loads anymore&lt;/em&gt; (like Twitter had to), and Subscribers (services) will &lt;em&gt;not have to poll over and over to get updates&lt;/em&gt;.&lt;/p&gt;</content>
-        <author>
-            <name>Julien</name>
-            <uri>http://twitter.com/julien51</uri>
-        </author>
-    </entry>
-    
-    <entry>
-        <title>There is no such thing as Real Time Search</title>
-        
-        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
-        
-        <link href="http://blog.superfeedr.com/2009/07/09/there-is-such-thing-as-real-time-web-search.html"/>
-        <published>2009-07-09T00:00:00-07:00</published>
-        <updated>2009-07-09T00:00:00-07:00</updated>
-        <id>blog.superfeedr.com:/2009/07/09/there-is-such-thing-as-real-time-web-search</id>
-        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/"&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
-&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href="http://google.com"&gt;Google&lt;/a&gt; or &lt;a href="http://bing.com"&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://search.twitter.com"&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href="http://collecta.com"&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
-&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>

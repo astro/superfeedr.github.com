@@ -1,0 +1,32 @@
+---
+layout: post
+title: Funny Feeds
+categories: [feeds, RSS, ATOM]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Our business cards say : "_We make something stupid so that nobody else has to do it_". And it's true : we do a lot of things so that nobody else has to. While debugging some code last weekend, I checked at some feeds that we had trouble dealing with. If you use "Superfeedr":http://superfeedr.com, you won't have to deal with that, and that's good, because these things can break your feed parsing module.
+
+h3. Never Ending HTTP responses
+
+This was actually one of the very first things our parsers encountered. Want to see an example : check out the "six-apart Atom stream":http://updates.sixapart.com/atom-stream.xml. Technically, _this is perfectly legit_, except that if our parser starts to get content from there, well, it will eat more and more content, and will eventually die of indigestion. When we had only a handful of servers, we had the problem with some hacker implementing a similar thing on his servers (with no content, just an un-endind HTTP connection). This ended-up *keeping our parsers busy* to such an extent that they wouldn't parse anything else. 
+
+It was an easy fix : *timeout on active HTTP connections*. 
+
+h3. 6847 entries feed.
+
+You read that correctly. That is _6847 entries_, in one "feed":http://www.kocosports.com/absolutenm/rss.asp?z=3 (that's fluctuating though), and it _weights about 2MB_. As such that's not really a problem. We fetch this feed in more or less 5 seconds. However, to identify new entries, we need to *compare each of them* with a "cached" version. Comparing 5, 10 or even 100 entries is not a big deal. Comparing several thousands can actually take up to a few seconds (we store these entries into Memcache). Eventually, this feed was taking forever (20, 30 seconds or even a few minutes) to be fetched and parsed. We built our parsers such as if a feed takes *too long to be processed, it's dropped*. This feed was eventually never fully processed.
+
+We increased the allowance on the feed processing. That was not enough : many feeds could not be fetched anyway, we were just spending more time on them. We finally decided to *limit the number of legit new entries in a given feed to 500*. 
+
+h3. Permanent redirections  
+
+That is a much harder one. The "HTTP protocol":http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol has stuff like redirections. A redirection is just a way for a server to say "what was here is now there". There are 2 types of redirections : Temporary and Permanent. When it's temporary, we don't even keep track of it : our parser follows the redirection and gets the content where it is. When it's permanent, it's different. We follow the redirection, but we also *save the new feed url and assign it to the subscribers of the initial feed*. We still keep the 'old' feed, just in case the _permanent is not really permanent_ (and because we hate deleting stuff), but we reduce the polling frequency to a minimum. Some feeds, however make our life hard in this case. This "feed from VMWare":http://vmware.simplefeed.net/rss is an example. If you open it, you'll see that it permanently redirects to a url "like this one":http://feeds.vmware.com/rss?f=8b93e6a0-01de-11de-2fb2-0030486070c6  and if you load it again, you'll see that it permanently redirects to another feed... and so on. In other word, this *feed permanently redirects to different urls*. 
+
+We *haven't found a good solution for that yet*. We hate to do it, but we basically clean these redirections once in a while to avoid having thousands of them.
+
+As you can see, building a polling infrastructure is full of traps. There is not a day where we don't find new challenges. It is very interesting and we like that. However, there is absolutely *no valid reason for another person to spend time and money solving the same problem*. 
+
+That doesn't mean either that the solution we come up with are the best; and that is why we're sharing them here! _Your ideas are our food_...
