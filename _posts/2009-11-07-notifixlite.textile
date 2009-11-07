@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Notifixlite"
+categories: [Superfeedr, XMPP, Google App Engine]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Superfeedr "comes from":http://blog.superfeedr.com/meta/reality-checked/ "Notifixious":http://notifixio.us/. We followed "Dave's":http://500hats.typepad.com/ advice and removed many features, so much that we found a market! :) However, I am still using Notifixious on a daily basis and I know many other people do. Yet, *I am not fully satisfied with it* and there are many things that deserve to be changed and improved. One of it's biggest "disadvantages" is its code-base : it _lacks documentation, tests_ and I am scared to even change a tiny thing because I'm afraid it may break a lot of stuff.
+
+!{float:right; margin: 10px;width: 35%}http://cache0.techcrunch.com/wp-content/google_appengine.png! When Google announced that "AppEngine":http://code.google.com/appengine/ was supporting "XMPP":http://xmpp.org/, I felt it was a great occasion to see if I could give it a shot and I created "Notifixlite":http://notifixlite.appspot.com/. It's a *simple XMPP bot* that you can use to _subscribe to your favorite blogs_ and receive entries via Jabber/Gtalk. It's powered by Superfeedr and uses the "PubSubHubbub API":http://superfeedr.com/documentation#pubsubhubbub. Why not the XMPP? because *Google's implementation of XMPP is very very light* and doesn't support IQs. As a matter of fact the implementation is only geared to build bots that can interact with "humans".
+
+Anyway, I learnt a little bit about *Google AppEngine and I kind of felt in love* with that, it's a wonderful feeling to just "write code", the rest (configuartion, deployement, datastores... etc) being dealt with by Google. I can't recommend more to look into it for anyone with a project that can fit there. I also -learnt- played with Python, and I am sure _my code needs a lot of improvements_!
+
+Please "fork Notifixlite":http://github.com/superfeedr/notifixlight, and, as would the Beatles say : make it better!
