@@ -4,9 +4,39 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-11-07T16:33:41-07:00</updated>
+    <updated>2009-11-07T18:51:57-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Sunday Package</title>
+        
+        <category term="PubSubHubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Facebook" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Sunday" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="wrapper" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="ruby" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/11/08/sunday-package.html"/>
+        <published>2009-11-08T00:00:00-07:00</published>
+        <updated>2009-11-08T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/2009/11/08/sunday-package</id>
+        <content type="html">&lt;p&gt;A few little news on this glorious sunday.&lt;/p&gt;
+&lt;h3&gt;Async Subscription supported with PubSubHubbub&lt;/h3&gt;
+&lt;p&gt;Several of our users wanted that, we did it. Up until now, we only supported the &lt;a href="http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.2.html#verifysub"&gt;&lt;em&gt;sync&lt;/em&gt; verification&lt;/a&gt; for the subscriber&amp;#8217;s intent in PubSubHubbub. That was an issue for several people who were debugging with a server that could only accept a single &lt;span class="caps"&gt;HTTP&lt;/span&gt; request at a time, or with hosts like &lt;a href="http://heroku.com"&gt;Heroku&lt;/a&gt;, which allows a limited (starting at 1) number of simultaneous &lt;span class="caps"&gt;HTTP&lt;/span&gt; requests. &lt;strong&gt;You can now use &lt;code&gt;async&lt;/code&gt; for the &lt;code&gt;hub.verify&lt;/code&gt; param&lt;/strong&gt;. Please note however, that the dashboard currently uses the sync mode.&lt;/p&gt;
+&lt;h3&gt;A Facebook fan page&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Keeping in touch&lt;/strong&gt; with our friends is very important to us. There is a pretty strong chance that you&amp;#8217;re already on Facebook. &lt;a href="http://www.facebook.com/pages/Superfeedr/205234549391"&gt;Become a Superfeedr fan&lt;/a&gt;, we&amp;#8217;ll give you &lt;em&gt;exclusive content&lt;/em&gt; very soon :)&lt;/p&gt;
+&lt;h3&gt;Another Ruby wrapper&lt;/h3&gt;
+&lt;p&gt;The topic of the last &lt;span class="caps"&gt;XMPP&lt;/span&gt; meetup was hacking. I investigated &lt;a href="http://code.google.com/appengine/"&gt;Google App Engine&amp;#8217;s &lt;span class="caps"&gt;XMPP&lt;/span&gt;&lt;/a&gt; support (and used that to build &lt;a href="http://blog.superfeedr.com/2009/11/07/notifixlite.html"&gt;notifixlite&lt;/a&gt;), and I know some friends worked on some other cool stuff. Our friend &lt;a href="http://twitter.com/sprsquish"&gt;Jeff&lt;/a&gt;, who created Blather, a pretty awesome &lt;span class="caps"&gt;XMPP&lt;/span&gt; library worked on &lt;strong&gt;another Ruby wrapper for the &lt;a href="http://superfeedr.local/documentation#xmpp"&gt;Superfeedr &lt;span class="caps"&gt;XMPP&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;&lt;/strong&gt;. Check it out, it&amp;#8217;s awesomely simple!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Notifixlite</title>
@@ -21,10 +51,10 @@
         <published>2009-11-07T00:00:00-07:00</published>
         <updated>2009-11-07T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/2009/11/07/notifixlite</id>
-        <content type="html">&lt;p&gt;Superfeedr &lt;a href="http://blog.superfeedr.com/meta/reality-checked/"&gt;comes from&lt;/a&gt; &lt;a href="http://notifixio.us/"&gt;Notifixious&lt;/a&gt;. We followed &lt;a href="http://500hats.typepad.com/&amp;#39;s"&gt;Dave&lt;/a&gt; advice and removed many features, so much that we found a market! :) However, I am still using Notifixious on a daily basis and I know many other people do. Yet, &lt;em&gt;I am not fully satisfied with it&lt;/em&gt; and there are many things that deserve to be changed and improved. One of it&amp;#8217;s biggest &amp;#8220;disadvantages&amp;#8221; is its code-base : it lacks documentation, tests and I am scared to even change a tiny thing because I&amp;#8217;m afraid it may break a lot of stuff.&lt;/p&gt;
+        <content type="html">&lt;p&gt;Superfeedr &lt;a href="http://blog.superfeedr.com/meta/reality-checked/"&gt;comes from&lt;/a&gt; &lt;a href="http://notifixio.us/"&gt;Notifixious&lt;/a&gt;. We followed &lt;a href="http://500hats.typepad.com/"&gt;Dave&amp;#8217;s&lt;/a&gt; advice and removed many features, so much that we found a market! :) However, I am still using Notifixious on a daily basis and I know many other people do. Yet, &lt;strong&gt;I am not fully satisfied with it&lt;/strong&gt; and there are many things that deserve to be changed and improved. One of it&amp;#8217;s biggest &amp;#8220;disadvantages&amp;#8221; is its code-base : it &lt;em&gt;lacks documentation, tests&lt;/em&gt; and I am scared to even change a tiny thing because I&amp;#8217;m afraid it may break a lot of stuff.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://cache0.techcrunch.com/wp-content/google_appengine.png" style="float:right; margin: 10px;width: 35%;" alt="" /&gt; When Google announced that &lt;a href="http://code.google.com/appengine/"&gt;AppEngine&lt;/a&gt; was supporting &lt;a href="http://xmpp.org/"&gt;&lt;span class="caps"&gt;XMPP&lt;/span&gt;&lt;/a&gt;, I felt it was a great occasion to see if I could give it a shot and I created &lt;a href="http://notifixlite.appspot.com/"&gt;Notifixlite&lt;/a&gt;. It&amp;#8217;s a &lt;strong&gt;simple &lt;span class="caps"&gt;XMPP&lt;/span&gt; bot&lt;/strong&gt; that you can use to &lt;em&gt;subscribe to your favorite blogs&lt;/em&gt; and receive entries via Jabber/Gtalk. It&amp;#8217;s powered by Superfeedr and uses the &lt;a href="http://superfeedr.com/documentation#pubsubhubbub"&gt;PubSubHubbub &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;. Why not the &lt;span class="caps"&gt;XMPP&lt;/span&gt;? because &lt;strong&gt;Google&amp;#8217;s implementation of &lt;span class="caps"&gt;XMPP&lt;/span&gt; is very very light&lt;/strong&gt; and doesn&amp;#8217;t support IQs. As a matter of fact the implementation is only geared to build bots that can interact with &amp;#8220;humans&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;Anyway, I learnt a little bit about Google AppEngine and I kind of felt in love with that, it&amp;#8217;s a wonderful feeling to just &amp;#8220;write code&amp;#8221;, the rest (configuartion, deployement, datastores&amp;#8230; etc) being dealt with by Google. I can&amp;#8217;t recommend more to look into it for anyone with a project that can fit there. I also &lt;del&gt;learnt&lt;/del&gt; played with Python, and I am sue my code needs a lot of improvements!&lt;/p&gt;
-&lt;p&gt;Please fork Notifixlite, and, as would the Beatles say : make it better!&lt;/p&gt;</content>
+&lt;p&gt;Anyway, I learnt a little bit about &lt;strong&gt;Google AppEngine and I kind of felt in love&lt;/strong&gt; with that, it&amp;#8217;s a wonderful feeling to just &amp;#8220;write code&amp;#8221;, the rest (configuartion, deployement, datastores&amp;#8230; etc) being dealt with by Google. I can&amp;#8217;t recommend more to look into it for anyone with a project that can fit there. I also &lt;del&gt;learnt&lt;/del&gt; played with Python, and I am sure &lt;em&gt;my code needs a lot of improvements&lt;/em&gt;!&lt;/p&gt;
+&lt;p&gt;Please &lt;a href="http://github.com/superfeedr/notifixlight"&gt;fork Notifixlite&lt;/a&gt;, and, as would the Beatles say : make it better!&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
@@ -984,26 +1014,6 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
     </entry>
     
     <entry>
-        <title>There is no such thing as Real Time Search</title>
-        
-        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
-        
-        <link href="http://blog.superfeedr.com/2009/07/09/there-is-such-thing-as-real-time-web-search.html"/>
-        <published>2009-07-09T00:00:00-06:00</published>
-        <updated>2009-07-09T00:00:00-06:00</updated>
-        <id>blog.superfeedr.com:/2009/07/09/there-is-such-thing-as-real-time-web-search</id>
-        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/"&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
-&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href="http://google.com"&gt;Google&lt;/a&gt; or &lt;a href="http://bing.com"&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://search.twitter.com"&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href="http://collecta.com"&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
-&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
-        <author>
-            <name>Julien</name>
-            <uri>http://twitter.com/julien51</uri>
-        </author>
-    </entry>
-    
-    <entry>
         <title>Speeding Up RSS : what for?</title>
         
         <category term="RSS" scheme="http://www.sixapart.com/ns/types#tag" />
@@ -1024,6 +1034,26 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
 &lt;p&gt;The comments, though are very interesting and they show what we&amp;#8217;ve observed with &amp;quot;Notifixious&amp;quot;http://notifixio.us over the last year : Real-time notification (or faster &lt;span class="caps"&gt;RSS&lt;/span&gt;) scares people a lot. There is at least 4 or 5 comments saying that &lt;span class="caps"&gt;RSS&lt;/span&gt; is fast enough for them. The problem here, is that there is a misconception :* making &lt;span class="caps"&gt;RSS&lt;/span&gt; faster is not for individuals, but for the web itself*.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt; has the potential to bring Push to the &lt;span class="caps"&gt;RSS&lt;/span&gt; and Atom technologies. So not only it will be faster, but it will be instantaneous, and when Feed updates will be instantaneous, nobody will pull anymore (&lt;a href="http://blog.superfeedr.com/gospel/something-stupid/"&gt;not even us&lt;/a&gt;) and the web will be better.&lt;/p&gt;
 &lt;p&gt;Better? Publishers will not have to &lt;em&gt;handle massive loads anymore&lt;/em&gt; (like Twitter had to), and Subscribers (services) will &lt;em&gt;not have to poll over and over to get updates&lt;/em&gt;.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>There is no such thing as Real Time Search</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/07/09/there-is-such-thing-as-real-time-web-search.html"/>
+        <published>2009-07-09T00:00:00-06:00</published>
+        <updated>2009-07-09T00:00:00-06:00</updated>
+        <id>blog.superfeedr.com:/2009/07/09/there-is-such-thing-as-real-time-web-search</id>
+        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/"&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
+&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href="http://google.com"&gt;Google&lt;/a&gt; or &lt;a href="http://bing.com"&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://search.twitter.com"&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href="http://collecta.com"&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
+&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
