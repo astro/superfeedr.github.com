@@ -1,0 +1,18 @@
+---
+layout: post
+title: Posterous supports PubSubHubbub
+categories: [PubSubHubbub, posterous, publisher]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+!{float:left; margin: 10px;}http://posterous.com/images/homepage2/posterous_logo1.png!
+
+We're very excited to say that "Posterous":http://posterous.com/ now *supports PubSubHubbub* and became *real-time*! If you've got a posterous blog (and you should!), your posts will now show up in real-time in any feed reader that supports PubSubHubbub on the subscriber side. 
+
+What's even better (for us), is that the Posterous chose to use our "publisher services":http://superfeedr.com/publisher for that, and *their hub is hosted at Superfeedr* at the following address : "http://posterous.superfeedr.com/":http://posterous.superfeedr.com/
+
+We're working hard to have more and more publishers support this awesome protocol and it's great that the Posterous team (which I met recently) is paving the way. 
+
+If you're a "Superfeedr subscriber":http://superfeedr.com/subscriber user, _there is nothing you need to do, you'll receive Posterous feeds in real-time too_ :)
