@@ -4,9 +4,32 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-11-07T18:51:57-07:00</updated>
+    <updated>2009-11-09T09:53:28-06:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Posterous supports PubSubHubbub</title>
+        
+        <category term="PubSubHubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="posterous" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="publisher" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/11/09/posterous-supports-pubsubhubbub-with-superfeedr.html"/>
+        <published>2009-11-09T00:00:00-06:00</published>
+        <updated>2009-11-09T00:00:00-06:00</updated>
+        <id>blog.superfeedr.com:/2009/11/09/posterous-supports-pubsubhubbub-with-superfeedr</id>
+        <content type="html">&lt;p&gt;&lt;img src="http://posterous.com/images/homepage2/posterous_logo1.png" style="float:left; margin: 10px;" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;We&amp;#8217;re very excited to say that &lt;a href="http://posterous.com/"&gt;Posterous&lt;/a&gt; now &lt;strong&gt;supports PubSubHubbub&lt;/strong&gt; and became &lt;strong&gt;real-time&lt;/strong&gt;! If you&amp;#8217;ve got a posterous blog (and you should!), your posts will now show up in real-time in any feed reader that supports PubSubHubbub on the subscriber side.&lt;/p&gt;
+&lt;p&gt;What&amp;#8217;s even better (for us), is that the Posterous chose to use our &lt;a href="http://superfeedr.com/publisher"&gt;publisher services&lt;/a&gt; for that, and &lt;strong&gt;their hub is hosted at Superfeedr&lt;/strong&gt; at the following address : &lt;a href="http://posterous.superfeedr.com/"&gt;http://posterous.superfeedr.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We&amp;#8217;re working hard to have more and more publishers support this awesome protocol and it&amp;#8217;s great that the Posterous team (which I met recently) is paving the way. If you&amp;#8217;re a &lt;a href="http://superfeedr.com/subscriber"&gt;Superfeedr subscriber&lt;/a&gt; user, there is nothing you need to do, you&amp;#8217;ll receive Posterous feeds in real-time too :)&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Sunday Package</title>
@@ -22,8 +45,8 @@
         <category term="ruby" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/11/08/sunday-package.html"/>
-        <published>2009-11-08T00:00:00-07:00</published>
-        <updated>2009-11-08T00:00:00-07:00</updated>
+        <published>2009-11-08T00:00:00-06:00</published>
+        <updated>2009-11-08T00:00:00-06:00</updated>
         <id>blog.superfeedr.com:/2009/11/08/sunday-package</id>
         <content type="html">&lt;p&gt;A few little news on this glorious sunday.&lt;/p&gt;
 &lt;h3&gt;Async Subscription supported with PubSubHubbub&lt;/h3&gt;
@@ -31,7 +54,7 @@
 &lt;h3&gt;A Facebook fan page&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Keeping in touch&lt;/strong&gt; with our friends is very important to us. There is a pretty strong chance that you&amp;#8217;re already on Facebook. &lt;a href="http://www.facebook.com/pages/Superfeedr/205234549391"&gt;Become a Superfeedr fan&lt;/a&gt;, we&amp;#8217;ll give you &lt;em&gt;exclusive content&lt;/em&gt; very soon :)&lt;/p&gt;
 &lt;h3&gt;Another Ruby wrapper&lt;/h3&gt;
-&lt;p&gt;The topic of the last &lt;span class="caps"&gt;XMPP&lt;/span&gt; meetup was hacking. I investigated &lt;a href="http://code.google.com/appengine/"&gt;Google App Engine&amp;#8217;s &lt;span class="caps"&gt;XMPP&lt;/span&gt;&lt;/a&gt; support (and used that to build &lt;a href="http://blog.superfeedr.com/2009/11/07/notifixlite.html"&gt;notifixlite&lt;/a&gt;), and I know some friends worked on some other cool stuff. Our friend &lt;a href="http://twitter.com/sprsquish"&gt;Jeff&lt;/a&gt;, who created Blather, a pretty awesome &lt;span class="caps"&gt;XMPP&lt;/span&gt; library worked on &lt;strong&gt;another Ruby wrapper for the &lt;a href="http://superfeedr.local/documentation#xmpp"&gt;Superfeedr &lt;span class="caps"&gt;XMPP&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;&lt;/strong&gt;. Check it out, it&amp;#8217;s awesomely simple!&lt;/p&gt;</content>
+&lt;p&gt;The topic of the last &lt;a href="http://technology.meetup.com/11/"&gt;&lt;span class="caps"&gt;XMPP&lt;/span&gt; meetup&lt;/a&gt; was hacking. I investigated &lt;a href="http://code.google.com/appengine/"&gt;Google App Engine&amp;#8217;s &lt;span class="caps"&gt;XMPP&lt;/span&gt;&lt;/a&gt; support (and used that to build &lt;a href="http://blog.superfeedr.com/2009/11/07/notifixlite.html"&gt;notifixlite&lt;/a&gt;), and I know some friends worked on some other cool stuff. Our friend &lt;a href="http://twitter.com/sprsquish"&gt;Jeff&lt;/a&gt;, who created Blather, a pretty awesome &lt;span class="caps"&gt;XMPP&lt;/span&gt; library worked on &lt;strong&gt;another Ruby wrapper for the &lt;a href="http://superfeedr.local/documentation#xmpp"&gt;Superfeedr &lt;span class="caps"&gt;XMPP&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;&lt;/strong&gt;. &lt;a href="http://github.com/sprsquish/superfeedr-rb"&gt;Check it out&lt;/a&gt;, it&amp;#8217;s awesomely simple!&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
@@ -48,8 +71,8 @@
         <category term="Google App Engine" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/11/07/notifixlite.html"/>
-        <published>2009-11-07T00:00:00-07:00</published>
-        <updated>2009-11-07T00:00:00-07:00</updated>
+        <published>2009-11-07T00:00:00-06:00</published>
+        <updated>2009-11-07T00:00:00-06:00</updated>
         <id>blog.superfeedr.com:/2009/11/07/notifixlite</id>
         <content type="html">&lt;p&gt;Superfeedr &lt;a href="http://blog.superfeedr.com/meta/reality-checked/"&gt;comes from&lt;/a&gt; &lt;a href="http://notifixio.us/"&gt;Notifixious&lt;/a&gt;. We followed &lt;a href="http://500hats.typepad.com/"&gt;Dave&amp;#8217;s&lt;/a&gt; advice and removed many features, so much that we found a market! :) However, I am still using Notifixious on a daily basis and I know many other people do. Yet, &lt;strong&gt;I am not fully satisfied with it&lt;/strong&gt; and there are many things that deserve to be changed and improved. One of it&amp;#8217;s biggest &amp;#8220;disadvantages&amp;#8221; is its code-base : it &lt;em&gt;lacks documentation, tests&lt;/em&gt; and I am scared to even change a tiny thing because I&amp;#8217;m afraid it may break a lot of stuff.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://cache0.techcrunch.com/wp-content/google_appengine.png" style="float:right; margin: 10px;width: 35%;" alt="" /&gt; When Google announced that &lt;a href="http://code.google.com/appengine/"&gt;AppEngine&lt;/a&gt; was supporting &lt;a href="http://xmpp.org/"&gt;&lt;span class="caps"&gt;XMPP&lt;/span&gt;&lt;/a&gt;, I felt it was a great occasion to see if I could give it a shot and I created &lt;a href="http://notifixlite.appspot.com/"&gt;Notifixlite&lt;/a&gt;. It&amp;#8217;s a &lt;strong&gt;simple &lt;span class="caps"&gt;XMPP&lt;/span&gt; bot&lt;/strong&gt; that you can use to &lt;em&gt;subscribe to your favorite blogs&lt;/em&gt; and receive entries via Jabber/Gtalk. It&amp;#8217;s powered by Superfeedr and uses the &lt;a href="http://superfeedr.com/documentation#pubsubhubbub"&gt;PubSubHubbub &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;. Why not the &lt;span class="caps"&gt;XMPP&lt;/span&gt;? because &lt;strong&gt;Google&amp;#8217;s implementation of &lt;span class="caps"&gt;XMPP&lt;/span&gt; is very very light&lt;/strong&gt; and doesn&amp;#8217;t support IQs. As a matter of fact the implementation is only geared to build bots that can interact with &amp;#8220;humans&amp;#8221;.&lt;/p&gt;
@@ -71,8 +94,8 @@
         <category term="ATOM" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/11/06/funny-feeds.html"/>
-        <published>2009-11-06T00:00:00-07:00</published>
-        <updated>2009-11-06T00:00:00-07:00</updated>
+        <published>2009-11-06T00:00:00-06:00</published>
+        <updated>2009-11-06T00:00:00-06:00</updated>
         <id>blog.superfeedr.com:/2009/11/06/funny-feeds</id>
         <content type="html">&lt;p&gt;Our business cards say : &amp;#8220;&lt;em&gt;We make something stupid so that nobody else has to do it&lt;/em&gt;&amp;#8221;. And it&amp;#8217;s true : we do a lot of things so that nobody else has to. While debugging some code last weekend, I checked at some feeds that we had trouble dealing with. If you use &lt;a href="http://superfeedr.com"&gt;Superfeedr&lt;/a&gt;, you won&amp;#8217;t have to deal with that, and that&amp;#8217;s good, because these things can break your feed parsing module.&lt;/p&gt;
 &lt;h3&gt;Never Ending &lt;span class="caps"&gt;HTTP&lt;/span&gt; responses&lt;/h3&gt;
@@ -106,8 +129,8 @@
         <category term="web-apps" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/11/05/information-superhighway.html"/>
-        <published>2009-11-05T00:00:00-07:00</published>
-        <updated>2009-11-05T00:00:00-07:00</updated>
+        <published>2009-11-05T00:00:00-06:00</published>
+        <updated>2009-11-05T00:00:00-06:00</updated>
         <id>blog.superfeedr.com:/2009/11/05/information-superhighway</id>
         <content type="html">&lt;p&gt;&lt;img src="../../../../../../images/superhighway.png" style="float:right; margin: 10px;width: 35%;" alt="" /&gt; Because we provide a service to developers and businesses &lt;strong&gt;it is quite difficult to &amp;#8220;show off&amp;#8221;&lt;/strong&gt; to people without prior knowledge of the technology. &lt;a href="http://twitter.com/julien51"&gt;Julien&lt;/a&gt; built our website with quite some interactivity, but it is still rather hard to understand because you&amp;#8217;re going to see the gory protocol in detail.&lt;/p&gt;
 &lt;p&gt;The well-standardized &lt;span class="caps"&gt;XMPP&lt;/span&gt; with its many implementations has always made it easy for developers to use us. There&amp;#8217;s a &lt;strong&gt;vast amount of tools and libraries&lt;/strong&gt; out there. That makes it easy to put together a demo consumer of Superfeedr notifications in very short time.&lt;/p&gt;
@@ -156,8 +179,8 @@
         <category term="Memcache" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/11/03/post-mortem-02-11.html"/>
-        <published>2009-11-03T00:00:00-07:00</published>
-        <updated>2009-11-03T00:00:00-07:00</updated>
+        <published>2009-11-03T00:00:00-06:00</published>
+        <updated>2009-11-03T00:00:00-06:00</updated>
         <id>blog.superfeedr.com:/2009/11/03/post-mortem-02-11</id>
         <content type="html">&lt;p&gt;Superfeedr went down yesterday evening. We immediately saw that it was a &lt;strong&gt;database performance issue&lt;/strong&gt; (MySQL), given that the load on our &lt;em&gt;MySQL host was about 30+&lt;/em&gt;. Since we have 2 MySQL hosts (Master &amp;#8211; Master replication), we switched to the second one, hoping that was just a problem on the host. No luck.&lt;/p&gt;
 &lt;h3&gt;Finding the issue&lt;/h3&gt;
@@ -209,8 +232,8 @@
         <category term="eventvue" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/10/23/eventvue-s-chatter.html"/>
-        <published>2009-10-23T00:00:00-06:00</published>
-        <updated>2009-10-23T00:00:00-06:00</updated>
+        <published>2009-10-23T00:00:00-05:00</published>
+        <updated>2009-10-23T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/10/23/eventvue-s-chatter</id>
         <content type="html">&lt;p&gt;Meeting the right people at conferences is &lt;strong&gt;always very difficult&lt;/strong&gt;. Even if you&amp;#8217;re the most extraverted person in the room, most of the time, you just don&amp;#8217;t have enough time. &lt;a href="http://www.eventvue.com/"&gt;EventVue&lt;/a&gt; is providing a very elegant way for that by helping you prepare your conferences in advance.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.eventvue.com/"&gt;&lt;img src="http://cache0.techcrunch.com/wp-content/uploads/2009/08/eventvue_logo-630x315.png" style="display:block;margin-left:auto;margin-right:auto;width:50%;" alt="" /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -239,8 +262,8 @@
         <category term="smacksale" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/10/21/smacksale.html"/>
-        <published>2009-10-21T00:00:00-06:00</published>
-        <updated>2009-10-21T00:00:00-06:00</updated>
+        <published>2009-10-21T00:00:00-05:00</published>
+        <updated>2009-10-21T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/10/21/smacksale</id>
         <content type="html">&lt;p&gt;There is not a day where people don&amp;#8217;t ask us about applications that use Superfeedr. We have been truly &lt;strong&gt;amazed by the quality&lt;/strong&gt; of some of these apps and we thought we should share them with you. Today&amp;#8217;s example is &lt;a href="http://www.smacksale.com/"&gt;Smacksale&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://smacksale.com/images/logo.png" style="display:block;margin-left:auto;margin-right:auto;" alt="" /&gt;&lt;/p&gt;
@@ -262,8 +285,8 @@
         <category term="publishers" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/10/11/white-label-hubs.html"/>
-        <published>2009-10-11T00:00:00-06:00</published>
-        <updated>2009-10-11T00:00:00-06:00</updated>
+        <published>2009-10-11T00:00:00-05:00</published>
+        <updated>2009-10-11T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/10/11/white-label-hubs</id>
         <content type="html">&lt;p&gt;Today is an exciting day! We&amp;#8217;re are at the &lt;a href="http://www.readwriteweb.com/summit/"&gt;ReadWriteWeb Real-time summit&lt;/a&gt;. If you&amp;#8217;re here, come and ping us, &lt;a href="http://twitter.com/julien51"&gt;I&lt;/a&gt; wear a yellow sweatshirt.&lt;/p&gt;
 &lt;p&gt;It&amp;#8217;s also exciting because we&amp;#8217;re launching a &lt;a href="http://superfeedr.com"&gt;new version of our website&lt;/a&gt; with many many improvements over the previous iteration. I&amp;#8217;d like to thank my friend &lt;a href="http://beausmith.com/"&gt;Beau&lt;/a&gt; for his great help, as well as &lt;a href="http://www.davidrecordon.com/"&gt;David&lt;/a&gt;. We&amp;#8217;re perfectly aware that &lt;em&gt;we have a long way to go&lt;/em&gt;, but we&amp;#8217;re &lt;em&gt;moving toward the destination&lt;/em&gt;.&lt;/p&gt;
@@ -294,8 +317,8 @@
         <category term="market" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/10/10/state-of-realtime-feeds.html"/>
-        <published>2009-10-10T00:00:00-06:00</published>
-        <updated>2009-10-10T00:00:00-06:00</updated>
+        <published>2009-10-10T00:00:00-05:00</published>
+        <updated>2009-10-10T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/10/10/state-of-realtime-feeds</id>
         <content type="html">&lt;p&gt;&lt;strong&gt;Real-time is the new hotness&lt;/strong&gt;. At Superfeedr, we&amp;#8217;re lucky enough to have many feeds we&amp;#8217;re fetching, some of them being &lt;a href="http://code.google.com/p/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt; enabled, some of them being &lt;a href="http://rsscloud.org/"&gt;RSSCloud&lt;/a&gt; and other being none of that. &lt;strong&gt;We&amp;#8217;re in a good position to assess how many feeds are using which technology&lt;/strong&gt;. Being french, I appreciate showing you this &lt;del&gt;pie&lt;/del&gt; camembert chart, which shows how we get the data for the feeds in our database.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/feeds_by_technique-10-09.png" style="float:left;margin:10px; width:50%;" alt="" /&gt;&lt;/p&gt;
@@ -326,8 +349,8 @@
         <category term="Tweetdeck" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/10/08/Real-time-web-browser.html"/>
-        <published>2009-10-08T00:00:00-06:00</published>
-        <updated>2009-10-08T00:00:00-06:00</updated>
+        <published>2009-10-08T00:00:00-05:00</published>
+        <updated>2009-10-08T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/10/08/Real-time-web-browser</id>
         <content type="html">&lt;p&gt;&lt;img src="http://www.devx.com/assets/articlefigs/6939.gif" style="float:right;margin:3px;" alt="" /&gt;&lt;br /&gt;
 The &lt;a href="http://blog.superfeedr.com/gospel/real-time/time-vs-space/"&gt;web was geographical&lt;/a&gt; (&lt;a href="http://www.arcticstartup.com/2009/09/11/the-web-at-a-new-crossroads/"&gt;document-based&lt;/a&gt;) until very recently and it is now evolving faster and faster to add a &amp;#8220;time&amp;#8221; dimension. Back in the days, &lt;a href="http://en.wikipedia.org/wiki/Mosaic_(web_browser)"&gt;Mosaic&lt;/a&gt; was the very first tool to actually browse these sites from a site to another. Unfortunately, &lt;strong&gt;all these browsers were built to deal with documents, not with a stream&lt;/strong&gt;. The best proof of that is the presence of a &amp;#8220;reload&amp;#8221; button!&lt;/p&gt;
@@ -357,8 +380,8 @@ The &lt;a href="http://blog.superfeedr.com/gospel/real-time/time-vs-space/"&gt;w
         <category term="PubSubHubbub" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/10/06/RSSCloud.html"/>
-        <published>2009-10-06T00:00:00-06:00</published>
-        <updated>2009-10-06T00:00:00-06:00</updated>
+        <published>2009-10-06T00:00:00-05:00</published>
+        <updated>2009-10-06T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/10/06/RSSCloud</id>
         <content type="html">&lt;p&gt;&amp;#8220;Why make things simple when you can make them complex?&amp;#8221;. It was probably just too easy to have a common &lt;strong&gt;open&lt;/strong&gt; protocol that everyone would share and use for push notifications of feed changes. At Superfeedr, we chose &lt;a href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt;, for &lt;a href="http://www.techcrunch.com/2009/09/09/rsscloud-vs-pubsubhubbub-why-the-fat-pings-win/"&gt;obvious reasons&lt;/a&gt;, and we&amp;#8217;re quite happy with it.&lt;/p&gt;
 &lt;p&gt;Yet, &lt;a href="http://en.blog.wordpress.com/2009/09/07/rss-in-the-clouds/"&gt;some publishers&lt;/a&gt; have made a different choice and since &lt;em&gt;it always eventually comes down to the customer&amp;#8217;s experience&lt;/em&gt;, we had to implement RSSCloud. Superfeedr is now an &lt;a href="http://rsscloud.org/walkthrough.html"&gt;aggregator&lt;/a&gt;. As a user, if you give us a feed that is RSSCloud enabled, then, we will subscribe to the right &lt;em&gt;cloud&lt;/em&gt; and you should get updates from this feed in a few seconds as well (exactly like with PubSubHubbub).&lt;/p&gt;
@@ -377,8 +400,8 @@ The &lt;a href="http://blog.superfeedr.com/gospel/real-time/time-vs-space/"&gt;w
         <category term="gospel" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/09/19/time-vs-space.html"/>
-        <published>2009-09-19T00:00:00-06:00</published>
-        <updated>2009-09-19T00:00:00-06:00</updated>
+        <published>2009-09-19T00:00:00-05:00</published>
+        <updated>2009-09-19T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/09/19/time-vs-space</id>
         <content type="html">&lt;p&gt;There are several ways information comes to us, but they are either mostly either &lt;strong&gt;geographical&lt;/strong&gt; or &lt;strong&gt;temporal&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://www.informationarchitects.jp/slash/iA_WebTrends_2007_2_1600x1024.gif" style="float:right;margin:3px; width: 50%;" alt="" /&gt;&lt;/p&gt;
@@ -408,8 +431,8 @@ The &lt;a href="http://blog.superfeedr.com/gospel/real-time/time-vs-space/"&gt;w
         <category term="schema" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/09/18/atom-schema.html"/>
-        <published>2009-09-18T00:00:00-06:00</published>
-        <updated>2009-09-18T00:00:00-06:00</updated>
+        <published>2009-09-18T00:00:00-05:00</published>
+        <updated>2009-09-18T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/09/18/atom-schema</id>
         <content type="html">&lt;p&gt;We deployed yesterday a new code for our parsers, and it now includes a more &lt;a href="http://superfeedr.com/documentation#schema"&gt;complete schema&lt;/a&gt; that will allow you to do a lot more things with superfeedr!&lt;/p&gt;
 &lt;h3&gt;Content or summary?&lt;/h3&gt;
@@ -442,8 +465,8 @@ In the above example, you can see that the tags used are &lt;em&gt;sergio, expo,
         <category term="iPhone" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/09/11/real-time-rss-notification-on-iphone.html"/>
-        <published>2009-09-11T00:00:00-06:00</published>
-        <updated>2009-09-11T00:00:00-06:00</updated>
+        <published>2009-09-11T00:00:00-05:00</published>
+        <updated>2009-09-11T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/09/11/real-time-rss-notification-on-iphone</id>
         <content type="html">&lt;p&gt;I have always been a great fan of the iPhone (I had mine on June 29th 2007 : iPhone D-day), but I haven&amp;#8217;t found many applications that were making good use of the &amp;#8220;notification&amp;#8221; feature that Apple added in its last iPhone OS, until today.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://appnotifications.com/system/app_icons/0000/0001/appnotifications-icos-twitt_large.png?1252050483" style="float:right;margin:10px;" alt="" /&gt;&lt;/p&gt;
@@ -473,8 +496,8 @@ In the above example, you can see that the tags used are &lt;em&gt;sergio, expo,
         <category term="lie" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/09/10/the-little-lie-about-real-time.html"/>
-        <published>2009-09-10T00:00:00-06:00</published>
-        <updated>2009-09-10T00:00:00-06:00</updated>
+        <published>2009-09-10T00:00:00-05:00</published>
+        <updated>2009-09-10T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/09/10/the-little-lie-about-real-time</id>
         <content type="html">&lt;p&gt;It is very exciting to see all the jazz about &lt;strong&gt;real-time data&lt;/strong&gt; being available. It is however a little disappointing that the &lt;span class="caps"&gt;RSS&lt;/span&gt; vs. Atom war is starting again through the &lt;em&gt;PubSubHubbub vs. RssCloud conflict&lt;/em&gt; (read &lt;a href="http://www.techcrunch.com/2009/09/09/rsscloud-vs-pubsubhubbub-why-the-fat-pings-win/"&gt;Techcrunch&amp;#8217;s post&lt;/a&gt; about that). &lt;a href="http://en.blog.wordpress.com/2009/09/07/rss-in-the-clouds/"&gt;Wordpress said they will adopt RssCloud&lt;/a&gt;, while &lt;a href="http://googlecode.blogspot.com/2009/08/towards-programmable-web-pubsubhubbub.html"&gt;Google massively adopted PubSubHubbub&lt;/a&gt; and &lt;a href="http://sixapart.com"&gt;SixApart&lt;/a&gt; showed strong interest for the latter.&lt;/p&gt;
 &lt;p&gt;The only little lie about that is that &lt;em&gt;almost all of the data that you can access through these hubs or clouds, was actually already available through other Real-time&lt;/em&gt; (or close to real-time) means. SixApart has had an &lt;strong&gt;AtomStream&lt;/strong&gt; for years, Google implemented the &lt;strong&gt;changes.xml syntax&lt;/strong&gt; a few years ago and Wordpress announced last year that they had an &lt;strong&gt;&lt;span class="caps"&gt;XMPP&lt;/span&gt; stream&lt;/strong&gt; with all the blog posts and comments.&lt;/p&gt;
@@ -496,8 +519,8 @@ In the above example, you can see that the tags used are &lt;em&gt;sergio, expo,
         <category term="API" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/09/08/what-api-to-choose.html"/>
-        <published>2009-09-08T00:00:00-06:00</published>
-        <updated>2009-09-08T00:00:00-06:00</updated>
+        <published>2009-09-08T00:00:00-05:00</published>
+        <updated>2009-09-08T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/09/08/what-api-to-choose</id>
         <content type="html">&lt;p&gt;Superfeedr is &lt;em&gt;technology-agnostic&lt;/em&gt;, which means that we don&amp;#8217;t force you into any &lt;span class="caps"&gt;API&lt;/span&gt;. &lt;a href="http://blog.superfeedr.com/OSS/gospel/kind-of-open-source/"&gt;We use standards&lt;/a&gt; so that our users aren&amp;#8217;t locked in any way to our service. However, being agnostic doesn&amp;#8217;t mean that a solution is not better than another one in your specific case.&lt;/p&gt;
 &lt;p&gt;Actually, we even believe that in some cases, it is better to use &lt;span class="caps"&gt;XMPP&lt;/span&gt; and in some it is better to use PubSubHubbub. We creates this small &amp;#8220;decision-chart&amp;#8221; to help you decide with yes/no questions. Of course, this would apply to 99% of cases and there will always be times that this chart is wrong, but I am pretty confident that it should work for you.&lt;/p&gt;
@@ -517,8 +540,8 @@ In the above example, you can see that the tags used are &lt;em&gt;sergio, expo,
         <category term="API" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/09/02/getting-started-with-pubsubhubbub.html"/>
-        <published>2009-09-02T00:00:00-06:00</published>
-        <updated>2009-09-02T00:00:00-06:00</updated>
+        <published>2009-09-02T00:00:00-05:00</published>
+        <updated>2009-09-02T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/09/02/getting-started-with-pubsubhubbub</id>
         <content type="html">&lt;p&gt;To my knowledge, Superfeedr is the only non-google PubSubHubbub out there. Let&amp;#8217;s see why and how to use it.&lt;/p&gt;
 &lt;h3&gt;Why using PubSubHubbub?&lt;/h3&gt;
@@ -587,8 +610,8 @@ Our hub is located at &lt;a href="http://superfeedr.com/hubbub"&gt;http://superf
         <category term="foo" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/08/29/real-time-search.html"/>
-        <published>2009-08-29T00:00:00-06:00</published>
-        <updated>2009-08-29T00:00:00-06:00</updated>
+        <published>2009-08-29T00:00:00-05:00</published>
+        <updated>2009-08-29T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/08/29/real-time-search</id>
         <content type="html">&lt;p&gt;Yes, I am pissed off I am not at &lt;a href="http://en.wikipedia.org/wiki/Foo_Camp"&gt;Foo Camp&lt;/a&gt;, but I am working to be there next year, bear with me. I really wish I could be there because I think we&amp;#8217;re making the term &amp;#8220;real-time web&amp;#8221; as the new &amp;#8220;web 2.0&amp;#8221; : a &lt;a href="http://twitter.com/plasticbagUK/status/3638809764"&gt;brand as Tom calls it&lt;/a&gt;. &lt;em&gt;&amp;#8220;Blahblah is doing real-time&amp;#8221;&lt;/em&gt;, &lt;em&gt;&amp;#8220;Blihblih has a real-time approach&amp;#8221;&lt;/em&gt;&amp;#8230; And this is bad : when words lose their meaning, concepts get over-looked. &lt;strong&gt;This is not just playing on words&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Real-time_computing"&gt;Real-time is not instantaneity&lt;/a&gt;. &lt;strong&gt;Real-time means time-constrained&lt;/strong&gt;. That&amp;#8217;s it. That constraint can of course be low (up to the second if you want, even).&lt;/p&gt;
@@ -615,8 +638,8 @@ Our hub is located at &lt;a href="http://superfeedr.com/hubbub"&gt;http://superf
         <category term="architecture" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/08/25/simpler-architecture.html"/>
-        <published>2009-08-25T00:00:00-06:00</published>
-        <updated>2009-08-25T00:00:00-06:00</updated>
+        <published>2009-08-25T00:00:00-05:00</published>
+        <updated>2009-08-25T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/08/25/simpler-architecture</id>
         <content type="html">&lt;p&gt;No post for almost 2 weeks : we&amp;#8217;ve been incredibly busy. We had a lot of instability in the past 10 days, in conjonction (but not related) to significant &lt;a href="/api/pubsubhubbub/xmpp/API-changes/"&gt;&lt;span class="caps"&gt;API&lt;/span&gt; changes&lt;/a&gt;. We&amp;#8217;d like to apologize for the few times when you had problems accessing our service. We&amp;#8217;ve done our best to limit these downtime periods and most of the time they only affected subscription/unsubscriptions : &lt;strong&gt;notifications were still going on, as usual&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;In that period, the number of feeds in our system increased by 50%, most of them through the &lt;a href="http://superfeedr.com/hubbub"&gt;PubSubHubbub &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;. This significant growth in the &lt;span class="caps"&gt;HTTP&lt;/span&gt; traffic made light on the weaknesses of our &lt;span class="caps"&gt;HTTP&lt;/span&gt; architecture. The &lt;span class="caps"&gt;HTTP&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; had a direct access to the MySQL database. &lt;em&gt;This was quite bad design from us, as both the &lt;span class="caps"&gt;XMPP&lt;/span&gt; and &lt;span class="caps"&gt;HTTP&lt;/span&gt; were accessing this database and basically doing the same thing : subscribing and unsubscribing users to feeds&lt;/em&gt;.&lt;/p&gt;
@@ -665,8 +688,8 @@ Here is what happens when you subscribe or unsubscribe with the PubSubHubbub &lt
         <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/08/08/API-changes.html"/>
-        <published>2009-08-08T00:00:00-06:00</published>
-        <updated>2009-08-08T00:00:00-06:00</updated>
+        <published>2009-08-08T00:00:00-05:00</published>
+        <updated>2009-08-08T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/08/08/API-changes</id>
         <content type="html">&lt;p&gt;With more and more users, we get more and more feedback and we&amp;#8217;re slowly but surely improving our service to take into account all that feedback. As a consequence, every once in a while we need to push a new codebase with slight changes in the &lt;span class="caps"&gt;API&lt;/span&gt;. Hopefully these changes should be &lt;a href="http://en.wikipedia.org/wiki/Backward_compatibility"&gt;backward compatible&lt;/a&gt;, which means &lt;strong&gt;they shouldn&amp;#8217;t affect any of the existing applications&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;This changes will be &lt;strong&gt;released on, or after August 15&lt;/strong&gt;.&lt;/p&gt;
@@ -709,8 +732,8 @@ We will send status information along with the feeds, like in this example :&lt;
         <category term="collectd" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/08/07/performance-monitoring-with-collectd.html"/>
-        <published>2009-08-07T00:00:00-06:00</published>
-        <updated>2009-08-07T00:00:00-06:00</updated>
+        <published>2009-08-07T00:00:00-05:00</published>
+        <updated>2009-08-07T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/08/07/performance-monitoring-with-collectd</id>
         <content type="html">&lt;p&gt;One challenge we face when working in the Cloud is knowing &lt;strong&gt;when to &lt;a href="http://blog.superfeedr.com/chef/configuration/deployment/infrastructure/scale-with-chef/"&gt;scale up&lt;/a&gt;.&lt;/strong&gt; That means we need some obvious figures telling us we need more resources.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/collectd.png" style="float: right; margin: 5px;" alt="" /&gt; This requires performance monitoring. From the many tools around we chose &lt;a href="http://collectd.org/"&gt;collectd&lt;/a&gt;. This daemon is built on a very sleek plugin infrastructure, allowing it to run with only the functionality you actually need. If you want to know how clean C looks the collectd source code is worth a look.&lt;/p&gt;
@@ -737,8 +760,8 @@ We will send status information along with the feeds, like in this example :&lt;
         <category term="harper" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/08/05/harper-s-friends.html"/>
-        <published>2009-08-05T00:00:00-06:00</published>
-        <updated>2009-08-05T00:00:00-06:00</updated>
+        <published>2009-08-05T00:00:00-05:00</published>
+        <updated>2009-08-05T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/08/05/harper-s-friends</id>
         <content type="html">&lt;p&gt;There is &lt;strong&gt;already a lot of fun stuff&lt;/strong&gt; that people are doing with &lt;a href="http://superfeedr.com"&gt;Superfeedr&lt;/a&gt; and we thought it would be interesting to share them here. Of course, if you have any story, you can either write it on your blog and we&amp;#8217;ll link to it (on &lt;a href="http://twitter.com/superfeedr"&gt;twitter&lt;/a&gt; or here), or you can send it by email and we will be more than happy to post it on this &lt;a href="http://blog.superfeedr.com"&gt;blog&lt;/a&gt; .&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://twitter.com/harper"&gt;Harper&lt;/a&gt; was among our very first users, and even though he told be he was interested by &lt;span class="caps"&gt;XMPP&lt;/span&gt;, it seems that he fell in love with &lt;a href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt;. Over the course of last week end he created a small app called &lt;a href="http://www.harpersfriends.com/"&gt;Harper&amp;#8217;s friends&lt;/a&gt; (Oh Yeah!) which basically aggregates the content of his friends &lt;a href="http://www.harpersfriends.com/tweets/"&gt;twits&lt;/a&gt;, &lt;a href="http://www.harpersfriends.com/photos/"&gt;pictures&lt;/a&gt; and &lt;a href="http://www.harpersfriends.com/blogs/"&gt;blog posts&lt;/a&gt; on a page. You can also show items by users or by type, like a standalone &lt;a href="http://friendfeed.com"&gt;friendfeed&lt;/a&gt; if you want.&lt;/p&gt;
@@ -763,8 +786,8 @@ We will send status information along with the feeds, like in this example :&lt;
         <category term="configuration" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/08/02/scale-with-chef.html"/>
-        <published>2009-08-02T00:00:00-06:00</published>
-        <updated>2009-08-02T00:00:00-06:00</updated>
+        <published>2009-08-02T00:00:00-05:00</published>
+        <updated>2009-08-02T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/08/02/scale-with-chef</id>
         <content type="html">&lt;p&gt;This will be a long post, but it deserves some time. Go get a glass of water, breathe deeply and let&amp;#8217;s dive!&lt;/p&gt;
 &lt;h3&gt;The why?&lt;/h3&gt;
@@ -825,8 +848,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="OSS" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/07/28/java-wrapper.html"/>
-        <published>2009-07-28T00:00:00-06:00</published>
-        <updated>2009-07-28T00:00:00-06:00</updated>
+        <published>2009-07-28T00:00:00-05:00</published>
+        <updated>2009-07-28T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/07/28/java-wrapper</id>
         <content type="html">&lt;p&gt;This seems to be the wrapper week! Our friend &lt;a href="http://twitter.com/mastooo"&gt;Thomas&lt;/a&gt; just pushed a first version of a &lt;a href="http://github.com/superfeedr/superfeedr-java/tree/master"&gt;Java wrapper&lt;/a&gt; to our &lt;span class="caps"&gt;API&lt;/span&gt; (&lt;a href="http://github.com/mastooo/java-superfeedr/tree/master"&gt;his branch&lt;/a&gt;). I&amp;#8217;d like to take this as an occasion to explain how we see these wrappers.&lt;/p&gt;
 &lt;p&gt;We &lt;strong&gt;know our limits&lt;/strong&gt; and we know we can&amp;#8217;t actively support wrappers in all languages. Like everybody, we have our favorite languages and platform, and there is little chance that we ever get a deep enough knownledge in all that languages that you guys use to offer great services. So, for us, &lt;em&gt;the limit of what we can provide and support is our &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/em&gt; (both &lt;span class="caps"&gt;XMPP&lt;/span&gt; and PubSubHubbub).&lt;/p&gt;
@@ -850,8 +873,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="XMPP" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/07/26/a-perl-wrapper.html"/>
-        <published>2009-07-26T00:00:00-06:00</published>
-        <updated>2009-07-26T00:00:00-06:00</updated>
+        <published>2009-07-26T00:00:00-05:00</published>
+        <updated>2009-07-26T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/07/26/a-perl-wrapper</id>
         <content type="html">&lt;p&gt;Thanks to our friend &lt;a href="http://blog.cyberion.net/"&gt;Yann&lt;/a&gt;, we now have a &lt;a href="http://github.com/superfeedr/superfeedr-perl/tree/master"&gt;Perl wrapper for the Superfeedr &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt; (here is &lt;a href="http://github.com/yannk/perl-anyevent-superfeedr/tree/master"&gt;yann&amp;#8217;s repo&lt;/a&gt; if you want faster updates).&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://http.cdnlayer.com/itke/blogs.dir/8/files/2008/02/perl.jpg" style="float:left; width: 30%; margin: 10px;" alt="" /&gt;&lt;/p&gt;
@@ -876,8 +899,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="open-source" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/07/25/make-our-logo.html"/>
-        <published>2009-07-25T00:00:00-06:00</published>
-        <updated>2009-07-25T00:00:00-06:00</updated>
+        <published>2009-07-25T00:00:00-05:00</published>
+        <updated>2009-07-25T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/07/25/make-our-logo</id>
         <content type="html">&lt;p&gt;A lot of &lt;a href="http://twitter.com/lauragatning/status/2181168813"&gt;our friends complained&lt;/a&gt; about the fact that we didn&amp;#8217;t have a logo. That&amp;#8217;s a valid concern, but I really didn&amp;#8217;t have the skills (even far from it) that it takes. So what I basically asked a very &lt;a href="http://www.lafraise.com/User/profile/id/660804"&gt;talented friend&lt;/a&gt; to make a concept. He did a great job and you can see it right below, with several different colors.&lt;/p&gt;
 &lt;p&gt;I am releasing it here because I know some of you might have great ideas to actually make it even nicer, and well, I&amp;#8217;d love to be able to have feedback and improvements from our actual users.&lt;/p&gt;
@@ -900,8 +923,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="xmpp" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/07/24/the-console.html"/>
-        <published>2009-07-24T00:00:00-06:00</published>
-        <updated>2009-07-24T00:00:00-06:00</updated>
+        <published>2009-07-24T00:00:00-05:00</published>
+        <updated>2009-07-24T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/07/24/the-console</id>
         <content type="html">&lt;p&gt;It is quite hard to debug notification based systems, because &lt;em&gt;developers usually have to wait&lt;/em&gt; for a notification to happen. It&amp;#8217;s been a &lt;a href="http://groups.google.com/group/superfeedr/browse_thread/thread/b237d690372050b2"&gt;common request from several&lt;/a&gt; of our users over the past month and we&amp;#8217;re happy to say that we released today a solution to this problem : &lt;strong&gt;the console&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Basically, when logged in, you should see &amp;#8216;Your feeds&amp;#8217; in the top bar. Click there, and then, at the bottom of the page, click on &amp;#8220;Console&amp;#8221;.&lt;/p&gt;
@@ -929,8 +952,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="gospel" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/07/22/kind-of-open-source.html"/>
-        <published>2009-07-22T00:00:00-06:00</published>
-        <updated>2009-07-22T00:00:00-06:00</updated>
+        <published>2009-07-22T00:00:00-05:00</published>
+        <updated>2009-07-22T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/07/22/kind-of-open-source</id>
         <content type="html">&lt;p&gt;When &lt;a href="http://twitter.com/superfeedr/status/2762315579"&gt;I tweeted about sharing&lt;/a&gt; our Investor Deck yesterday, I received immediately a few IM and email of friends who wanted to make sure I was doing the right decision. They were scared that I would make some private things public. I &lt;strong&gt;fully understand their concern&lt;/strong&gt;, but I really want &lt;strong&gt;Superfeedr to be an Open Service&lt;/strong&gt;, where we are guided by our users more than our wallet. &lt;em&gt;We value their opinion more than ours because in the end, they are going to pay for our service, not us&lt;/em&gt;.&lt;/p&gt;
 &lt;h3&gt;Why not release our software as Open Source, then?&lt;/h3&gt;
@@ -951,8 +974,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/07/21/reality-checked.html"/>
-        <published>2009-07-21T00:00:00-06:00</published>
-        <updated>2009-07-21T00:00:00-06:00</updated>
+        <published>2009-07-21T00:00:00-05:00</published>
+        <updated>2009-07-21T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/07/21/reality-checked</id>
         <content type="html">&lt;p&gt;A lot of people have asked us why we built &lt;a href="http://superfeedr.com"&gt;Superfeedr&lt;/a&gt; or what is the relationship to &lt;a href="http://notifixio.us"&gt;Notifixious&lt;/a&gt;. Here are a few hints.&lt;/p&gt;
 &lt;p&gt;A little over a year we launched Notifixious. The idea behind it was to allow any internet user to &lt;em&gt;receive real-time updates from his favorite websites&lt;/em&gt;. We would send these updates either by email, &lt;span class="caps"&gt;SMS&lt;/span&gt; or Instant Messaging. For example, a user might subscribe to a blog to receive the last updates, or to a newspaper site. A user could also subscribe to a &lt;a href="http://sfbay.craigslist.org/apa/"&gt;Craigslist search&lt;/a&gt; to be the first to know about a new place to move in, or to &lt;a href="http://notifixio.us/simplyhired"&gt;Simply Hired&lt;/a&gt; to get the last jobs in his field of expertise.&lt;/p&gt;
@@ -979,8 +1002,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="federation" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/07/12/federating-pubsubhubbub.html"/>
-        <published>2009-07-12T00:00:00-06:00</published>
-        <updated>2009-07-12T00:00:00-06:00</updated>
+        <published>2009-07-12T00:00:00-05:00</published>
+        <updated>2009-07-12T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/07/12/federating-pubsubhubbub</id>
         <content type="html">&lt;p&gt;PubSubHubbub has been the &lt;a href="http://search.twitter.com/search?q=PubSubhubbub"&gt;RealTime web celebrity&lt;/a&gt; in the past few days. &lt;a href="http://adsenseforfeeds.blogspot.com/2009/07/whats-all-hubbub-about-pubsubhubbub.html"&gt;Google announced&lt;/a&gt; their support for Feedburner and Blogger, and that&amp;#8217;s great to see the interest growing.&lt;/p&gt;
 &lt;p&gt;We decided a few weeks ago that &lt;a href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/"&gt;PubSubHubbub would be our &lt;span class="caps"&gt;HTTP&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt; and it&amp;#8217;s been a great choice for us as many developers have started to work on language specific libraries to interact with hubs.&lt;/p&gt;
@@ -1000,8 +1023,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/07/10/customer-care-lesson.html"/>
-        <published>2009-07-10T00:00:00-06:00</published>
-        <updated>2009-07-10T00:00:00-06:00</updated>
+        <published>2009-07-10T00:00:00-05:00</published>
+        <updated>2009-07-10T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/07/10/customer-care-lesson</id>
         <content type="html">&lt;p&gt;Yesterday, the Carsonified team relaunched their website and it&amp;#8217;s looking great. The &lt;a href="http://carsonified.com/mission/"&gt;Mission page&lt;/a&gt; should be a lesson for everybody:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1027,8 +1050,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="Techcrunch" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/07/09/speeding-up-rss.html"/>
-        <published>2009-07-09T00:00:00-06:00</published>
-        <updated>2009-07-09T00:00:00-06:00</updated>
+        <published>2009-07-09T00:00:00-05:00</published>
+        <updated>2009-07-09T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/07/09/speeding-up-rss</id>
         <content type="html">&lt;p&gt;&lt;a href="http://twitter.com/Erickschonfeld"&gt;Erick Schonfeld&lt;/a&gt; published the &lt;a href="http://www.techcrunch.com/2009/07/09/speeding-up-rss/"&gt;blog post of the &lt;del&gt;day&lt;/del&gt; week&lt;/a&gt;. Despite the fact that he should have talked about &lt;a href="http://superfeedr.com"&gt;Superfeedr&lt;/a&gt;, I think this is an awesome article. I am really looking forward to &lt;a href="http://www.techcrunch.com/2009/07/08/win-a-ticket-to-the-real-time-stream-crunchup-this-friday/"&gt;tomorrow&amp;#8217;s panel&lt;/a&gt; and see what &amp;#8220;Brett&amp;#8221;, Brad, Freddy and Andy have to talk about.&lt;/p&gt;
 &lt;p&gt;The comments, though are very interesting and they show what we&amp;#8217;ve observed with &amp;quot;Notifixious&amp;quot;http://notifixio.us over the last year : Real-time notification (or faster &lt;span class="caps"&gt;RSS&lt;/span&gt;) scares people a lot. There is at least 4 or 5 comments saying that &lt;span class="caps"&gt;RSS&lt;/span&gt; is fast enough for them. The problem here, is that there is a misconception :* making &lt;span class="caps"&gt;RSS&lt;/span&gt; faster is not for individuals, but for the web itself*.&lt;/p&gt;
@@ -1046,8 +1069,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/07/09/there-is-such-thing-as-real-time-web-search.html"/>
-        <published>2009-07-09T00:00:00-06:00</published>
-        <updated>2009-07-09T00:00:00-06:00</updated>
+        <published>2009-07-09T00:00:00-05:00</published>
+        <updated>2009-07-09T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/07/09/there-is-such-thing-as-real-time-web-search</id>
         <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/"&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
 &lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href="http://google.com"&gt;Google&lt;/a&gt; or &lt;a href="http://bing.com"&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
@@ -1070,8 +1093,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="web-apps" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/07/05/the-future-of-web-apps.html"/>
-        <published>2009-07-05T00:00:00-06:00</published>
-        <updated>2009-07-05T00:00:00-06:00</updated>
+        <published>2009-07-05T00:00:00-05:00</published>
+        <updated>2009-07-05T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/07/05/the-future-of-web-apps</id>
         <content type="html">&lt;p&gt;A lot of people have shown interest in &lt;a href="http://github.com/superfeedr/aristochat/tree/master"&gt;Aristochat&lt;/a&gt; and the &lt;a href="http://superfeedr.com/chat"&gt;Superfeedr chat&lt;/a&gt; last week. However, I haven&amp;#8217;t talked about what is &amp;#8211; according to me &amp;#8211; the greatest thing about it : &lt;strong&gt;it&amp;#8217;s hosted on Github&lt;/strong&gt;. Not only the source code, &lt;a href="http://github.com/superfeedr/Superfeedr-Chat/tree/gh-pages"&gt;but the app itself&lt;/a&gt;, and since it&amp;#8217;s a &lt;a href="http://github.com/superfeedr/Superfeedr-Chat/blob/9d01a452c0f5e21b3deda1221e3d47e84e6c34c5/index.html"&gt;basic &lt;span class="caps"&gt;HTML&lt;/span&gt; file&lt;/a&gt; with a &lt;a href="http://github.com/superfeedr/Superfeedr-Chat/blob/9d01a452c0f5e21b3deda1221e3d47e84e6c34c5/chat.js"&gt;little bit of Javascript&lt;/a&gt;, it could have very been hosted on EC2 as well, or on any type server that can server &lt;span class="caps"&gt;HTML&lt;/span&gt; file.&lt;/p&gt;
 &lt;p&gt;This blog is also a great example : technically, it&amp;#8217;s an app, and yet, it&amp;#8217;s made of static &lt;span class="caps"&gt;HTML&lt;/span&gt; files, &lt;a href="http://github.com/superfeedr/superfeedr.github.com/tree/master"&gt;hosted on Github&lt;/a&gt; as well. I think these 2 examples can give us a &amp;#8220;hint&amp;#8221; on what Web apps will look like in a not so distant future :&lt;/p&gt;
@@ -1101,8 +1124,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="MUC" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/07/03/aristochat.html"/>
-        <published>2009-07-03T00:00:00-06:00</published>
-        <updated>2009-07-03T00:00:00-06:00</updated>
+        <published>2009-07-03T00:00:00-05:00</published>
+        <updated>2009-07-03T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/07/03/aristochat</id>
         <content type="html">&lt;p&gt;It all started when we used &lt;a href="http://chat.slicehost.com/"&gt;Slicehost&amp;#8217;s chat-room&lt;/a&gt; for their support : not only it&amp;#8217;s awesome to have 24/7 support, but it&amp;#8217;s also great to have a short-message interface that allows real-time discussion and interaction.&lt;/p&gt;
 &lt;p&gt;Unfortunately, &lt;a href="http://campfirenow.com/"&gt;Campfire&lt;/a&gt; is &amp;#8220;proprietary&amp;#8221; software and it doesn&amp;#8217;t seem to be &lt;span class="caps"&gt;XMPP&lt;/span&gt; based. &lt;span class="caps"&gt;XMPP&lt;/span&gt; is known as &lt;strong&gt;&lt;span class="caps"&gt;THE&lt;/span&gt;&lt;/strong&gt; instant messaging protocol, and it has the fairly well defined and complete &lt;a href="http://xmpp.org/extensions/xep-0045.html"&gt;Multi User Chat Extension&lt;/a&gt; .&lt;/p&gt;
@@ -1126,8 +1149,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="mapping" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/06/30/user-test-driven-development.html"/>
-        <published>2009-06-30T00:00:00-06:00</published>
-        <updated>2009-06-30T00:00:00-06:00</updated>
+        <published>2009-06-30T00:00:00-05:00</published>
+        <updated>2009-06-30T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/06/30/user-test-driven-development</id>
         <content type="html">&lt;p&gt;We are &lt;strong&gt;strong believer&lt;/strong&gt; of &lt;a href="http://en.wikipedia.org/wiki/Test-driven_development"&gt;Test Driven Development&lt;/a&gt;. It&amp;#8217;s a very powerful approach that allows you to write tests before actually writing code. (These tests are actually specifications). That is how we created our parsers : we selected random feeds on the web, and decided what &lt;em&gt;should&lt;/em&gt; be the mapping between their data and our &lt;a href="http://blog.superfeedr.com/Atom/schema/a-better-schema/"&gt;standard Atom schema&lt;/a&gt;. Then, we wrote the code to actually perform the mapping.&lt;/p&gt;
 &lt;p&gt;Unfortunately, the web &lt;strong&gt;isn&amp;#8217;t&lt;/strong&gt; standard (that&amp;#8217;s actually one of the problems we tackle!), so there are probably feeds out there for which the mapping that we&amp;#8217;ve identified isn&amp;#8217;t what you would expect us to do. You can help us improve our mapping to fit your needs.&lt;/p&gt;
@@ -1154,8 +1177,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="infrastructure" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/06/28/building-realtime.html"/>
-        <published>2009-06-28T00:00:00-06:00</published>
-        <updated>2009-06-28T00:00:00-06:00</updated>
+        <published>2009-06-28T00:00:00-05:00</published>
+        <updated>2009-06-28T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/06/28/building-realtime</id>
         <content type="html">&lt;p&gt;Technically, &lt;a href="http://en.wikipedia.org/wiki/Real-time_computing"&gt;Real-Time Computing&lt;/a&gt; implies that there is a &lt;em&gt;time constraint&lt;/em&gt; in a system, it&amp;#8217;s &lt;strong&gt;different from instantaneity&lt;/strong&gt;. A real-time service is a service that can guarantee that it would do something in a given amount of time. &lt;a href="http://superfeedr.com"&gt;Superfeedr&lt;/a&gt; is real-time, since we can guarantee that we will notify new entries in a feed to our users within a 15 minutes time frame.&lt;/p&gt;
 &lt;p&gt;This is only achievable if we &amp;#8220;&lt;strong&gt;push&lt;/strong&gt;&amp;#8221; the information toward our users. We couldn&amp;#8217;t guarantee delivery time if we asked them to &amp;#8220;pull&amp;#8221; from us&lt;sup class="footnote"&gt;&lt;a href="#fn1"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
@@ -1179,8 +1202,8 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
         <category term="schema" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/06/25/a-better-schema.html"/>
-        <published>2009-06-25T00:00:00-06:00</published>
-        <updated>2009-06-25T00:00:00-06:00</updated>
+        <published>2009-06-25T00:00:00-05:00</published>
+        <updated>2009-06-25T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/06/25/a-better-schema</id>
         <content type="html">&lt;p&gt;One of the great features of &lt;a href="http://superfeedr.com"&gt;Superfeedr&lt;/a&gt; is that it sends a standard format for feed entries. Whether the initial feed format was any flavor of Atom, or &lt;span class="caps"&gt;RSS&lt;/span&gt;, we would map this into a standard Atom feed. Thanks to that it is &lt;strong&gt;easier&lt;/strong&gt; for you to integrate this data into your apps, since you will gain &lt;em&gt;consistency&lt;/em&gt; in the format.&lt;/p&gt;
 &lt;p&gt;However, to achieve that, we have to make some decisions and scraps information from the initial feed. Mapping a title is easy, but that&amp;#8217;s about the only obvious data. We actually had to find the smallest common set of attribute that a feed has.&lt;br /&gt;
@@ -1214,8 +1237,8 @@ Up to now, entries that we sent had this :&lt;/p&gt;
         <category term="feeds" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/06/23/atom-or-rss-not-both.html"/>
-        <published>2009-06-23T00:00:00-06:00</published>
-        <updated>2009-06-23T00:00:00-06:00</updated>
+        <published>2009-06-23T00:00:00-05:00</published>
+        <updated>2009-06-23T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/06/23/atom-or-rss-not-both</id>
         <content type="html">&lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/RSS_(file_format)"&gt;&lt;span class="caps"&gt;RSS&lt;/span&gt;&lt;/a&gt; and &lt;a href="http://www.atomenabled.org/developers/syndication/atom-format-spec.php"&gt;&lt;span class="caps"&gt;ATOM&lt;/span&gt;&lt;/a&gt; have very similar (if not identical) purposes. I don&amp;#8217;t know any feed consumer that consumes only one type, yet, a lot of services are still providing both.&lt;/p&gt;
 &lt;p&gt;Publishing both is useless, because it&amp;#8217;s likely that services will end up polling both of them, to identify new content. It is very hard for them to be 100% sure that they actually contain (and will always contain) the same information. You know that &lt;a href="http://blog.superfeedr.com/gospel/something-stupid/"&gt;polling your blog or service is stupid&lt;/a&gt;&amp;#8230; don&amp;#8217;t make twice as stupid.&lt;/p&gt;
@@ -1239,8 +1262,8 @@ Up to now, entries that we sent had this :&lt;/p&gt;
         <category term="gospel" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/06/19/something-stupid.html"/>
-        <published>2009-06-19T00:00:00-06:00</published>
-        <updated>2009-06-19T00:00:00-06:00</updated>
+        <published>2009-06-19T00:00:00-05:00</published>
+        <updated>2009-06-19T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/06/19/something-stupid</id>
         <content type="html">&lt;p&gt;It&amp;#8217;s a fact, polling sucks, and it sucks, because it&amp;#8217;s stupid. This is what &lt;a href="http://twitter.com/kellan"&gt;kellan&lt;/a&gt; and &lt;a href="http://twitter.com/rabble"&gt;rabble&lt;/a&gt; &lt;a href="http://www.slideshare.net/rabble/beyond-rest-building-data-services-with-xmpp-pubsub?src=embed"&gt;showed last year&lt;/a&gt; at &lt;span class="caps"&gt;OSCON&lt;/span&gt; :&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1268,8 +1291,8 @@ Up to now, entries that we sent had this :&lt;/p&gt;
         <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/06/18/pubsubhubbub.html"/>
-        <published>2009-06-18T00:00:00-06:00</published>
-        <updated>2009-06-18T00:00:00-06:00</updated>
+        <published>2009-06-18T00:00:00-05:00</published>
+        <updated>2009-06-18T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/06/18/pubsubhubbub</id>
         <content type="html">&lt;p&gt;We&amp;#8217;re proud to announce that &lt;a href="http://superfeedr.com"&gt;Superfeedr&lt;/a&gt; is one of the very first services to actually support the infamous &lt;a href="http://code.google.com/p/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt; protocol. If you think the name is ugly, check the &lt;span class="caps"&gt;CSS&lt;/span&gt; style of the &lt;a href="http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.1.html"&gt;spec&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This presentation should give you enough details about PubSubhubbub.&lt;br /&gt;
@@ -1288,8 +1311,8 @@ Up to now, entries that we sent had this :&lt;/p&gt;
         <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/06/17/hello-world.html"/>
-        <published>2009-06-17T00:00:00-06:00</published>
-        <updated>2009-06-17T00:00:00-06:00</updated>
+        <published>2009-06-17T00:00:00-05:00</published>
+        <updated>2009-06-17T00:00:00-05:00</updated>
         <id>blog.superfeedr.com:/2009/06/17/hello-world</id>
         <content type="html">&lt;p&gt;Welcome to the Superfeedr&amp;#8217;s blog. I am not sure what you expect from here. You know what a geek does when he&amp;#8217;s embarrassed does, right? He gets into technical details.&lt;/p&gt;
 &lt;p&gt;This blog has been built with the great piece of code that &lt;a href="http://github.com/mojombo/jekyll/tree/master"&gt;Jekyll&lt;/a&gt; is. It is hosted on &lt;a href="http://github.com"&gt;Github&lt;/a&gt;, and I used &lt;a href="http://macromates.com/"&gt;TextMate&lt;/a&gt; Version 1.5.8 (1498) to write it. I also used &lt;a href="http://git-scm.com/"&gt;Git&lt;/a&gt; to push it on our &lt;a href="http://github.com/superfeedr"&gt;Github&lt;/a&gt; repository. TextMate runs on my &lt;a href="http://www.apple.com/macbookpro/"&gt;MacBookPro&lt;/a&gt; 2.53 Ghz Intel Core 2 Duo, with 4 GB of DD3 &lt;span class="caps"&gt;RAM&lt;/span&gt;. It&amp;#8217;s about 85° F in the &lt;a href="http://maps.google.com/maps?client=safari&amp;amp;q=PariSoma&amp;amp;oe=UTF-8&amp;amp;ie=UTF8&amp;amp;hl=en&amp;amp;ll=37.774446,-122.41044&amp;amp;spn=0.04152,0.086002&amp;amp;z=14&amp;amp;iwloc=A"&gt;room&lt;/a&gt; in which I am working right now.&lt;/p&gt;
