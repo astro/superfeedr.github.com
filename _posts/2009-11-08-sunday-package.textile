@@ -1,0 +1,23 @@
+---
+layout: post
+title: Sunday Package
+categories: [PubSubHubbub, Facebook, Sunday, wrapper, ruby]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+A few little news on this glorious sunday. 
+
+h3. Async Subscription supported with PubSubHubbub
+
+Several of our users wanted that, we did it. Up until now, we only supported the "_sync_ verification":http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.2.html#verifysub for the subscriber's intent in PubSubHubbub. That was an issue for several people who were debugging with a server that could only accept a single HTTP request at a time, or with hosts like "Heroku":http://heroku.com, which allows a limited (starting at 1) number of simultaneous HTTP requests. *You can now use @async@ for the @hub.verify@ param*. Please note however, that the dashboard currently uses the sync mode.
+
+h3. A Facebook fan page
+
+*Keeping in touch* with our friends is very important to us. There is a pretty strong chance that you're already on Facebook. "Become a Superfeedr fan":http://www.facebook.com/pages/Superfeedr/205234549391, we'll give you _exclusive content_ very soon :)
+
+h3. Another Ruby wrapper
+
+The topic of the last XMPP meetup was hacking. I investigated "Google App Engine's XMPP":http://code.google.com/appengine/ support (and used that to build "notifixlite":http://blog.superfeedr.com/2009/11/07/notifixlite.html), and I know some friends worked on some other cool stuff. Our friend "Jeff":http://twitter.com/sprsquish, who created Blather, a pretty awesome XMPP library worked on *another Ruby wrapper for the "Superfeedr XMPP API":http://superfeedr.local/documentation#xmpp*. Check it out, it's awesomely simple!
+
