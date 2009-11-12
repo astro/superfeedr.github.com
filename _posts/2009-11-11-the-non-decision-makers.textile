@@ -1,0 +1,29 @@
+---
+layout: post
+title: The Non-Decision makers
+categories: [Entrepreneurship]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Superfeedr is a very exciting venture. Yet, I am *incredibly frustrated when I am waiting for someone else to make a decision*, answer an email or write some code. You know who they are : _these partners, customers, providers, lawyers, venture capitalists_, etc... all these people you deal with and who take forever to make a decision. I claim *they are the worst ennemies for entrepreneurs*.
+
+h3. They don't want to make decisions
+
+*And they're right*. They're not the ones taking risks. VCs don't want to be wrong, so they'd rather say _maybe, later, not sure yet, I need to chat with my partners, when you have revenues_... than anything that would look like a commitment. Customers also don't want to make a decision, because they don't want to show you that you have a bargaining power, so they will keep you waiting. Even journalists don't want to make a decision : they want to talk about what everybody else will talk. The problem is : they sometime have a hard time predicting that, so they'd rather wait for a few hints before going out with your story.
+
+h3. Why no is better than maybe
+
+In France, there is a saying that states that "as long as there is life, there is hope". I'd claim that *more than hope, I want certitudes*. _Entreprendre_ is all about _making an assumption and test-proving it_, making another one and test-proving it, making a third one and test-proving it. I say "test-proof" and not "proof", because in the end, *it doesn't matter whether you're right or wrong*. What matters is that, after the process, you _know_ and you have less and less assumptions to make.
+
+When somebody says "_maybe_", "_later_", "_we'll do it_"... you don't learn anything, because that _doesn't prove anything_. When *they say "No", you know something*. 
+
+h3. A few tips
+
+As an entrepreneur, you should always *make decisions*. The "Dalaï Lama":http://en.wikipedia.org/wiki/Dalai_Lama said : "_*When you lose, don't loose the lesson*_". The only thing an entrepreneur can lose, is actually the lesson. *Make as many decisions as you want, and keep proving them right or wrong*. If you wonder if A or B is better, don't think too much : try, you'll know.
+
+You *can spot non-decision makers pretty easily* : they don't answer your emails (or at least, not right away), they never commit to anything (even the smallest things), they keep using the future when they speak/write. *One you spotted one, avoid him at any cost*. It _doesn't matter how hard you will try_, they will not help you. I wrote code, prepared scripts, documentation, how-tos... etc. If somebody isn't making the decision to use your app, all this is useless.
+
+On the other hand, every-time you meet *anyone who is making even the slightest decisions about your product* (like tweeting about it, registering, sending you an email... anything), you have to *be very very responsive*. Not only they will be great _advocates_, but since they make decisions, they will _help you learn much faster and understand things_ that would have taken years for you to grasp. You almost have to scare them with your dedication!
+
