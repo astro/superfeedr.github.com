@@ -1,0 +1,18 @@
+---
+layout: post
+title: SUP over PubSubHubbub and XMPP
+categories: [SUP, PubSubHubbub, XMPP, Real-time]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+The "Simple Update Protocol":http://code.google.com/p/simpleupdateprotocol/ is one of the _very first protocols that was built to help feed polling_. It makes it easy to find the *most appropriate time to fetch a feed*.
+
+!{float:left; padding-right:20px;}http://i.friendfeed.com/p-5d0e55aafb6a4caebe266f733dd84772-large-1!Created by the "FriendFeed":http://friendfeed.com/ team, the idea is, for a publisher, to keep track of all the feeds that have been updated in a "sup file":http://friendfeed.com/api/sup.json?pretty=1. Then, a subscriber instead of querying the feed over and over again, just have to query this sup file. If a poller is just polling one feed, that's not better, but if you're tracking 1000 feeds, instead of polling them all, you just need to poll that specific SUP file.
+
+One of the issues is that *it's not immediate*, these SUP feed have a "period" and contain all the feeds that have been updated in that given period. The standard is 60sec though, so it shouldn't be too "late"! Another issue is that these SUP *can contain a LOT of feeds*, so if you don't have an very fast and efficient way to compare all the entries in this file to see if you're actually tracking a specific feed, _it may be quite "complex" to be sure to get all the updates_.
+
+Anyway, I have no idea why I'm telling you this, because, as a matter of fact, *you don't need to implement SUP*, because Superfeedr does it for you. Give us a SUP enabled feed (from "BackType":http://www.backtype.com/, "Disqus":http://disqus.com/overview/, "Friendfeed":http://friendfeed.com/, "12seconds.tv":http://12seconds.tv/... etc), and *we'll fetch the right SUP file and you'll get your content in a "close to real-time" fashion, via PubSubHubbub or XMPP*, exactly like we did for "RSSCloud":http://blog.superfeedr.com/PubSubHubbub/api/rsscloud/RSSCloud/!
+
+

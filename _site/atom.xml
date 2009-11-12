@@ -4,9 +4,34 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-11-11T22:52:43-08:00</updated>
+    <updated>2009-11-12T11:39:03-08:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>SUP over PubSubHubbub and XMPP</title>
+        
+        <category term="SUP" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="PubSubHubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="XMPP" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/11/12/SUP-over-pubsubhubb-and-xmpp.html"/>
+        <published>2009-11-12T00:00:00-08:00</published>
+        <updated>2009-11-12T00:00:00-08:00</updated>
+        <id>blog.superfeedr.com:/2009/11/12/SUP-over-pubsubhubb-and-xmpp</id>
+        <content type="html">&lt;p&gt;The &lt;a href="http://code.google.com/p/simpleupdateprotocol/"&gt;Simple Update Protocol&lt;/a&gt; is one of the &lt;em&gt;very first protocols that was built to help feed polling&lt;/em&gt;. It makes it easy to find the &lt;strong&gt;most appropriate time to fetch a feed&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://i.friendfeed.com/p-5d0e55aafb6a4caebe266f733dd84772-large-1" style="float:left; padding-right:20px;" alt="" /&gt;Created by the &lt;a href="http://friendfeed.com/"&gt;FriendFeed&lt;/a&gt; team, the idea is, for a publisher, to keep track of all the feeds that have been updated in a &lt;a href="http://friendfeed.com/api/sup.json?pretty=1"&gt;sup file&lt;/a&gt;. Then, a subscriber instead of querying the feed over and over again, just have to query this sup file. If a poller is just polling one feed, that&amp;#8217;s not better, but if you&amp;#8217;re tracking 1000 feeds, instead of polling them all, you just need to poll that specific &lt;span class="caps"&gt;SUP&lt;/span&gt; file.&lt;/p&gt;
+&lt;p&gt;One of the issues is that &lt;strong&gt;it&amp;#8217;s not immediate&lt;/strong&gt;, these &lt;span class="caps"&gt;SUP&lt;/span&gt; feed have a &amp;#8220;period&amp;#8221; and contain all the feeds that have been updated in that given period. The standard is 60sec though, so it shouldn&amp;#8217;t be too &amp;#8220;late&amp;#8221;! Another issue is that these &lt;span class="caps"&gt;SUP&lt;/span&gt; &lt;strong&gt;can contain a &lt;span class="caps"&gt;LOT&lt;/span&gt; of feeds&lt;/strong&gt;, so if you don&amp;#8217;t have an very fast and efficient way to compare all the entries in this file to see if you&amp;#8217;re actually tracking a specific feed, &lt;em&gt;it may be quite &amp;#8220;complex&amp;#8221; to be sure to get all the updates&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Anyway, I have no idea why I&amp;#8217;m telling you this, because, as a matter of fact, &lt;strong&gt;you don&amp;#8217;t need to implement &lt;span class="caps"&gt;SUP&lt;/span&gt;&lt;/strong&gt;, because Superfeedr does it for you. Give us a &lt;span class="caps"&gt;SUP&lt;/span&gt; enabled feed (from &lt;a href="http://www.backtype.com/"&gt;BackType&lt;/a&gt;, &lt;a href="http://disqus.com/overview/"&gt;Disqus&lt;/a&gt;, &lt;a href="http://friendfeed.com/"&gt;Friendfeed&lt;/a&gt;, &lt;a href="http://12seconds.tv/"&gt;12seconds.tv&lt;/a&gt;&amp;#8230; etc), and &lt;strong&gt;we&amp;#8217;ll fetch the right &lt;span class="caps"&gt;SUP&lt;/span&gt; file and you&amp;#8217;ll get your content in a &amp;#8220;close to real-time&amp;#8221; fashion, via PubSubHubbub or &lt;span class="caps"&gt;XMPP&lt;/span&gt;&lt;/strong&gt;, exactly like we did for &lt;a href="http://blog.superfeedr.com/PubSubHubbub/api/rsscloud/RSSCloud/"&gt;RSSCloud&lt;/a&gt;!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>The Non-Decision makers</title>
@@ -21,10 +46,10 @@
 &lt;h3&gt;They don&amp;#8217;t want to make decisions&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;And they&amp;#8217;re right&lt;/strong&gt;. They&amp;#8217;re not the ones taking risks. VCs don&amp;#8217;t want to be wrong, so they&amp;#8217;d rather say &lt;em&gt;maybe, later, not sure yet, I need to chat with my partners, when you have revenues&lt;/em&gt;&amp;#8230; than anything that would look like a commitment. Customers also don&amp;#8217;t want to make a decision, because they don&amp;#8217;t want to show you that you have a bargaining power, so they will keep you waiting. Even journalists don&amp;#8217;t want to make a decision : they want to talk about what everybody else will talk. The problem is : they sometime have a hard time predicting that, so they&amp;#8217;d rather wait for a few hints before going out with your story.&lt;/p&gt;
 &lt;h3&gt;Why no is better than maybe&lt;/h3&gt;
-&lt;p&gt;In France, there is a saying that states that &amp;#8220;as long as there is life, there is hope&amp;#8221;. I&amp;#8217;d claim that &lt;strong&gt;more than hope, I want certitudes&lt;/strong&gt;. &lt;em&gt;Entreprendre&lt;/em&gt; is all about &lt;em&gt;making assumptions and test-proving them&lt;/em&gt;, making another one and test-proving it, making a third one and test-proving it. I say &amp;#8220;test-proof&amp;#8221; and not &amp;#8220;proof&amp;#8221;, because in the end, &lt;strong&gt;it doesn&amp;#8217;t matter whether you&amp;#8217;re right or wrong&lt;/strong&gt;. What matters is that, after the process, you &lt;em&gt;know&lt;/em&gt; and you have less and less assumptions to make.&lt;/p&gt;
-&lt;p&gt;When somebody says &amp;#8220;&lt;em&gt;maybe&lt;/em&gt;&amp;#8221;, &amp;#8220;&lt;em&gt;later&lt;/em&gt;&amp;#8221;, &amp;#8220;&lt;em&gt;we&amp;#8217;ll do it&lt;/em&gt;&amp;#8221;&amp;#8230; you don&amp;#8217;t learn anything, because that &lt;em&gt;doesn&amp;#8217;t prove anything&lt;/em&gt;. When &lt;strong&gt;they say &amp;#8220;No&amp;#8221;, you know something&lt;/strong&gt;. Either they&amp;#8217;re the wrong person, or you have the wrong message, or you asked the wrong question&amp;#8230; etc. At least, you can ask several people and try to reduce the uncertainty about your assumption.&lt;/p&gt;
+&lt;p&gt;In France, there is a saying that states that &amp;#8220;as long as there is life, there is hope&amp;#8221;. I&amp;#8217;d claim that &lt;strong&gt;more than hope, I want certitudes&lt;/strong&gt;. &lt;em&gt;Entreprendre&lt;/em&gt; is all about &lt;em&gt;making an assumption and test-proving it&lt;/em&gt;, making another one and test-proving it, making a third one and test-proving it. I say &amp;#8220;test-proof&amp;#8221; and not &amp;#8220;proof&amp;#8221;, because in the end, &lt;strong&gt;it doesn&amp;#8217;t matter whether you&amp;#8217;re right or wrong&lt;/strong&gt;. What matters is that, after the process, you &lt;em&gt;know&lt;/em&gt; and you have less and less assumptions to make.&lt;/p&gt;
+&lt;p&gt;When somebody says &amp;#8220;&lt;em&gt;maybe&lt;/em&gt;&amp;#8221;, &amp;#8220;&lt;em&gt;later&lt;/em&gt;&amp;#8221;, &amp;#8220;&lt;em&gt;we&amp;#8217;ll do it&lt;/em&gt;&amp;#8221;&amp;#8230; you don&amp;#8217;t learn anything, because that &lt;em&gt;doesn&amp;#8217;t prove anything&lt;/em&gt;. When &lt;strong&gt;they say &amp;#8220;No&amp;#8221;, you know something&lt;/strong&gt;.&lt;/p&gt;
 &lt;h3&gt;A few tips&lt;/h3&gt;
-&lt;p&gt;As an entrepreneur, &lt;strong&gt;you should always make decisions&lt;/strong&gt;. The current &lt;a href="http://en.wikipedia.org/wiki/Dalai_Lama"&gt;Dalaï Lama&lt;/a&gt; said : &amp;#8220;&lt;em&gt;&lt;strong&gt;When you lose, don&amp;#8217;t loose the lesson&lt;/strong&gt;&lt;/em&gt;&amp;#8221;. The only thing an entrepreneur can lose, is actually the lesson. &lt;strong&gt;Make as many decisions as you want, and keep proving them right or wrong&lt;/strong&gt;. If you wonder if A or B is better, don&amp;#8217;t think too much : try, you&amp;#8217;ll know.&lt;/p&gt;
+&lt;p&gt;As an entrepreneur, you should always &lt;strong&gt;make decisions&lt;/strong&gt;. The &lt;a href="http://en.wikipedia.org/wiki/Dalai_Lama"&gt;Dalaï Lama&lt;/a&gt; said : &amp;#8220;&lt;em&gt;&lt;strong&gt;When you lose, don&amp;#8217;t loose the lesson&lt;/strong&gt;&lt;/em&gt;&amp;#8221;. The only thing an entrepreneur can lose, is actually the lesson. &lt;strong&gt;Make as many decisions as you want, and keep proving them right or wrong&lt;/strong&gt;. If you wonder if A or B is better, don&amp;#8217;t think too much : try, you&amp;#8217;ll know.&lt;/p&gt;
 &lt;p&gt;You &lt;strong&gt;can spot non-decision makers pretty easily&lt;/strong&gt; : they don&amp;#8217;t answer your emails (or at least, not right away), they never commit to anything (even the smallest things), they keep using the future when they speak/write. &lt;strong&gt;One you spotted one, avoid him at any cost&lt;/strong&gt;. It &lt;em&gt;doesn&amp;#8217;t matter how hard you will try&lt;/em&gt;, they will not help you. I wrote code, prepared scripts, documentation, how-tos&amp;#8230; etc. If somebody isn&amp;#8217;t making the decision to use your app, all this is useless.&lt;/p&gt;
 &lt;p&gt;On the other hand, every-time you meet &lt;strong&gt;anyone who is making even the slightest decisions about your product&lt;/strong&gt; (like tweeting about it, registering, sending you an email&amp;#8230; anything), you have to &lt;strong&gt;be very very responsive&lt;/strong&gt;. Not only they will be great &lt;em&gt;advocates&lt;/em&gt;, but since they make decisions, they will &lt;em&gt;help you learn much faster and understand things&lt;/em&gt; that would have taken years for you to grasp. You almost have to scare them with your dedication!&lt;/p&gt;</content>
         <author>
