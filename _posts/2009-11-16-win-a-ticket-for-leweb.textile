@@ -1,0 +1,30 @@
+---
+layout: post
+title: Win a ticket for LeWeb!
+categories: [API, compp, rivers, Leweb]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+We're very excited to be part of "LeWeb's":http://www.leweb.net/  "startup competition":http://eu.techcrunch.com/2009/11/10/le-web-announces-the-list-for-the-startup-competition/. We will have a few minutes only to demo in front of the jury how cool superfeedr is. Needless to say that it's pretty hard for an API-based service, and we want to show-case cool stuff created with Superfeedr!
+
+!{float:left;margin:0px 10px 10px 0px;}http://www.leweb.net/sites/all/themes/leweb-leweb/logo.png!As any other candidate, _we got 2 tickets_. One for "me":http://twitter.com/julien51, and one for... *YOU*! Well, not all of you, but just the one of you who *creates a coolest app* out of a new small feature we're launching today : *our rivers*.
+
+The rivers will be _freely accessible streams of data_ out of Superfeedr. The first one (and the one that's in competition), is a *sample of our global stream, with at most 1 message every 3 seconds* : "http://rivers.superfeedr.com:8001":http://rivers.superfeedr.com:8001
+
+We built this river with the newly released "Compp":http://github.com/superfeedr/compp : a *small HTTP server* that allows you to do "Comet Streams":http://en.wikipedia.org/wiki/Comet_(programming) out of *XMPP traffic*. It's an _AtomStream_ : a never ending HTTP connection that contains ATOM entries[1].
+ 
+There will be several judges for your apps, including "Astro":http://identi.ca/astro, me and a few other people. *The rule is : no rule*! Make something, _fun, useful, profitable, open-source, downloadable, web-based, or any combination of that_! You can use any platform, any other API (you're even encouraged to), any language (heard of "Go":http://golang.org/?). 
+
+The only constraints are :
+
+* it *must use the river* that is accessible at http://rivers.superfeedr.com:8001
+* your app *must be visible* (dowloadable or web accessible) on December 4th at midnight PST.
+* you *must write a blog post or a doc page* explaining what it is, how it works and how to use it!
+
+We will let you know who is the winner on December 5th and hopefully, *you'll join me on the 9th*! 
+
+Let the best win!
+
+fn1. It's a very first release, make sure your code is robust enough to deal with errors and disconnections.
