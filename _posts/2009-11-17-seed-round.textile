@@ -1,0 +1,18 @@
+---
+layout: post
+title: Seed Round
+categories: [seed, investors, cuban, betaworks]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+That's true. We've finalized our *seed investment round*. It took us a little more time than expected, but we're very happy to join "Betawork's":http://betaworks.com/ and "Mark Cuban's":http://blogmaverick.com/ portfolios. Both of them have shown a *genuine interest and vision in what appears to be the _real-time web_*. We're also pretty excited to announce that both "Andrew Anker":http://aa.typepad.com/ and "David Recordon":http://www.davidrecordon.com/ have joined our *advisory board*.
+
+If you're following, even remotely, the world of start-up or the one of basketball, you can't ignore Mark Cuban's name. Mark founded Broadcast.com a few years ago and sold it to Yahoo!. I am thrilled to have him on board. There aren't many experienced entrepreneurs our there who have invested in start-ups like Mark did. He knows how to grow a business and *we will learn a lot from him*.
+
+Betaworks is probably the *most active investor in the real-time web*. "Their portfolio":http://static.betaworks.com/work/index.html includes names like "Twitter":http://twitter.com, "Tumblr":http://www.tumblr.com/, "Bit.ly":http://bit.ly/, "Tweetdeck":http://www.tweetdeck.com/, "Twitterfeed":http://twitterfeed.com/ as well as many others. They've proven quite successful at building a network of loosely joined pieces where all members interacts together. I am very excited to be on stage later today at Betaday to chat with "Iain":http://iain.posterous.com/ and "Tony":http://www.tonyhaile.com/ about the _death of the web page_.
+
+We're very happy and proud about this seed round, and I want to thank personally "Mark":http://twitter.com/MCuban, "John":http://twitter.com/johnBorthwick, "Andy":http://twitter.com/aweissman, "Tony":http://twitter.com/artictony, "Andrew":http://twitter.com/AA and "David":http://twitter.com/DaveMan692 for their trust. 
+
+And now : *back to work*! (not that we didn't work a lot lately :D)
