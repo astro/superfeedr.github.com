@@ -1,0 +1,17 @@
+---
+layout: post
+title: Added Title to Feed Info
+categories: [title, feed, schema]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+We just pushed a small code update (it should be fully deployed within minutes) to our schema. Of course, this is fully downward compatible. 
+
+This has been one of the _earliest feature requests_ that we had : *feed titles in the notifications*.
+
+In many apps it's crucial to show the user with the feed title. Up until now you needed to poll the feeds once in while to get that information. 
+From now on, you'll get the title in your notifications :)
+
+With "PubSubHubbub":http://superfeedr.com/documentation#pubsubhubbub, it's part of the <feed> element. With our "XMPP API":http://superfeedr.com/documentation#xmpp_api, it's included in the <status> element. Check "our schema":http://superfeedr.com/documentation#schema for a refresher :)
