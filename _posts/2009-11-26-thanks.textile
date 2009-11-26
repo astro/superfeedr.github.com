@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Thanks"
+categories: [meta]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Today is the probably the most symbolic holiday here in the US. It's about saying : Thank You!
+
+Thank you "Stephan":http://identi.ca/astro, thank you to each and everyone of our users, thank you to our "advisors and investors":http://blog.superfeedr.com/betaworks/cuban/investors/seed/seed-round/, and thank you to all my friends and family who supported me and my unbearable schedule over the past months.
+
+Thanks, and happy holiday to you and everyone in your heart.
