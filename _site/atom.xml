@@ -4,7 +4,7 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-11-25T14:19:04-08:00</updated>
+    <updated>2009-11-27T10:37:45-08:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
     
@@ -17,15 +17,39 @@
         
         <category term="market" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <link href="http://blog.superfeedr.com/2009/11/25/state-of-real-time-feeds.html"/>
-        <published>2009-11-25T00:00:00-08:00</published>
-        <updated>2009-11-25T00:00:00-08:00</updated>
-        <id>blog.superfeedr.com:/2009/11/25/state-of-real-time-feeds</id>
-        <content type="html">&lt;p&gt;As &lt;a href="http://blog.superfeedr.com/Real-time/market/statistics/state-of-realtime-feeds/"&gt;promised last month&lt;/a&gt;, here is a small update on the real-time feeds market.&lt;/p&gt;
-&lt;p&gt;First, I&amp;#8217;d like to insist on the method we use to collect these statistics. Compared to last month, we &lt;strong&gt;have three times more feeds&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;For each feed, we always &lt;em&gt;try to determine what is the best way&lt;/em&gt; to get its content and push it to our users in the &lt;em&gt;timeliest manner&lt;/em&gt;. &lt;br /&gt;
+        <link href="http://blog.superfeedr.com/2009/11/27/state-of-real-time-feeds.html"/>
+        <published>2009-11-27T00:00:00-08:00</published>
+        <updated>2009-11-27T00:00:00-08:00</updated>
+        <id>blog.superfeedr.com:/2009/11/27/state-of-real-time-feeds</id>
+        <content type="html">&lt;p&gt;As &lt;a href="http://blog.superfeedr.com/Real-time/market/statistics/state-of-realtime-feeds/"&gt;promised last month&lt;/a&gt;, here is a small update on the &lt;strong&gt;real-time feeds market&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;First, I&amp;#8217;d like to insist on the method we use to collect these statistics. For each feed, we always &lt;em&gt;try to determine what is the best way&lt;/em&gt; to get its content and push it to our users in the &lt;em&gt;timeliest manner&lt;/em&gt;. &lt;br /&gt;
 If you were building a similar infrastructure to ours, assuming you&amp;#8217;d support &lt;a href="http://superfeedr.com/hubbub"&gt;PubSubHubbub&lt;/a&gt;, &lt;a href="http://blog.superfeedr.com/PubSubHubbub/api/rsscloud/RSSCloud/"&gt;RSSCloud&lt;/a&gt; and &lt;a href="http://blog.superfeedr.com/PubSubHubbub/Real-time/SUP/XMPP/SUP-over-pubsubhubb-and-xmpp/"&gt;&lt;span class="caps"&gt;SUP&lt;/span&gt;&lt;/a&gt; &lt;sup class="footnote"&gt;&lt;a href="#fn1"&gt;1&lt;/a&gt;&lt;/sup&gt;, here is the breakdown that you would get.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/nov-09.png" style="display:block; margin-left:auto; margin-right:auto;" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;Compared to last month, we &lt;strong&gt;have three times more feeds&lt;/strong&gt; and the proportions evolved significantly.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/oct-nov-09.png" style="display:block; margin-left:auto; margin-right:auto;" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, it&amp;#8217;s pretty obvious that there are &lt;strong&gt;less and less feeds that you&amp;#8217;ll be actively polling&lt;/strong&gt; (still about 75% though).&lt;/p&gt;
+&lt;p&gt;This is mainly due to the fact that we added &lt;a href="http://superfeedr.com/publisher"&gt;white-label hubs&lt;/a&gt; to our service offering.&lt;/p&gt;
+&lt;p&gt;For example, since we have our &lt;a href="http://wordpress.superfeedr.com/"&gt;unofficial hub for wordpress&lt;/a&gt;, we subscribe to a lot of &lt;a href="http://wordpress.superfeedr.com/"&gt;RSSCloud feeds on behalf of our users&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Similarly, we now host official the &lt;a href="http://posterous.superfeedr.com/"&gt;Posterous hub&lt;/a&gt; and &lt;a href="http://backtype.superfeedr.com/"&gt;Backtype hub&lt;/a&gt; (among others), which means that if you poll their feeds, you&amp;#8217;ll use Superfeedr :) As a matter of fact, &lt;strong&gt;we host the hub for 48% of the hubbub-enabled feeds that our users subscribed to&lt;/strong&gt;.&lt;/p&gt;
 &lt;p class="footnote" id="fn1"&gt;&lt;sup&gt;1&lt;/sup&gt; As a matter of fact we implemented many other ways of getting feed updates, including some specific APIs and other techniques.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Thanks</title>
+        
+        <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/11/26/thanks.html"/>
+        <published>2009-11-26T00:00:00-08:00</published>
+        <updated>2009-11-26T00:00:00-08:00</updated>
+        <id>blog.superfeedr.com:/2009/11/26/thanks</id>
+        <content type="html">&lt;p&gt;Today is the probably the most symbolic holiday here in the US. It&amp;#8217;s about saying : Thank You!&lt;/p&gt;
+&lt;p&gt;Thank you &lt;a href="http://identi.ca/astro"&gt;Stephan&lt;/a&gt;, thank you to each and everyone of our users, thank you to our &lt;a href="http://blog.superfeedr.com/betaworks/cuban/investors/seed/seed-round/"&gt;advisors and investors&lt;/a&gt;, and thank you to all my friends and family who supported me and my unbearable schedule over the past months.&lt;/p&gt;
+&lt;p&gt;Thanks, and happy holiday to you and everyone in your heart.&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>

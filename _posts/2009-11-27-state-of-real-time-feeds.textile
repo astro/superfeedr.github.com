@@ -1,0 +1,29 @@
+---
+layout: post
+title: "State of Real-Time feeds"
+categories: [Real-time, statistics, market]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+As "promised last month":http://blog.superfeedr.com/Real-time/market/statistics/state-of-realtime-feeds/, here is a small update on the *real-time feeds market*.
+
+First, I'd like to insist on the method we use to collect these statistics. For each feed, we always _try to determine what is the best way_ to get its content and push it to our users in the _timeliest manner_. 
+If you were building a similar infrastructure to ours, assuming you'd support "PubSubHubbub":http://superfeedr.com/hubbub, "RSSCloud":http://blog.superfeedr.com/PubSubHubbub/api/rsscloud/RSSCloud/ and "SUP":http://blog.superfeedr.com/PubSubHubbub/Real-time/SUP/XMPP/SUP-over-pubsubhubb-and-xmpp/ [1], here is the breakdown that you would get.
+
+!{display:block; margin-left:auto; margin-right:auto;}/images/nov-09.png!
+
+Compared to last month, we *have three times more feeds* and the proportions evolved significantly.
+
+!{display:block; margin-left:auto; margin-right:auto;}/images/oct-nov-09.png!
+
+As you can see, it's pretty obvious that there are *less and less feeds that you'll be actively polling* (still about 75% though). 
+
+This is mainly due to the fact that we added "white-label hubs":http://superfeedr.com/publisher to our service offering.
+
+For example, since we have our "unofficial hub for wordpress":http://wordpress.superfeedr.com/, we subscribe to a lot of "RSSCloud feeds on behalf of our users":http://wordpress.superfeedr.com/.
+
+Similarly, we now host official the "Posterous hub":http://posterous.superfeedr.com/ and "Backtype hub":http://backtype.superfeedr.com/ (among others), which means that if you poll their feeds, you'll use Superfeedr :) As a matter of fact, *we host the hub for 48% of the hubbub-enabled feeds that our users subscribed to*.
+
+fn1. We implemented many other ways of getting feed updates, including some specific APIs and other techniques.
