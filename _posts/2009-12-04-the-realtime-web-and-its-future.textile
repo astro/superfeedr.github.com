@@ -10,13 +10,12 @@ author_email_md5: b30ce50678f0e934eaa6697425c59dd7
 !{float:left; margin:10px}http://www.readwriteweb.com/images/real_time_web.png!Marshall have been kind enough, when he wrote the "ReadWriteWeb":http://www.readwriteweb.com/ "report on the Real-time":http://bit.ly/rtwreport to ask for my opinion. I want to complete my thoughts as well as give a few hint on this report.
 First : go buy the report. If you're vaguely interested in the _web-economy_ you should have done that already.
 
-h2. On the report itself
+h3. On the report itself
 
 Newspapers are dying because of the internet. They're not fast enough to write about things. Even though blog are less affected, they have exactly the same issue. The fight between "ReadWriteWeb":http://www.readwriteweb.com/, "Techcrunch":http://www.techcrunch.com/, "GigaOM":http://gigaom.com/ or "Mashable":http://mashable.com/ to get exclusivity is just a proof that they can't spend a lot of time writing articles and they also need to write a lot.
 There clearly seem to be a "premium for the most frequent publisher":http://trends.google.com/websites?q=techcrunch.com%2C+readwriteweb.com%2C+mashable.com%2C+gigaom.com&geo=all&date=2009&sort=1 (less deep though :/)
 
 On top of that, people like me (and probably you, too) have a lot of trouble catching up with all that. That is why *reports like this really matter*. They bring back *"investigation" journalism* to blog and that's great.
-
 
 h3. Real-time : the peer-to-peer architecture.
 
@@ -31,7 +30,7 @@ I think the *real-time web is taking us to a world where we have a more "peer-to
 
 I'm quite happy with this quote from "John Borthwick":http://www.borthwick.com/weblog/about/, one of our investors, at "Betaworks":http://betaworks.com/ : 
 
-bq.We believe things are becoming more connected. In the future, everything will consume APIs and publish APIs.
+bq. We believe things are becoming more connected. In the future, everything will consume APIs and publish APIs.
 
 In a nutshell, this report is probably what's best today to catch-up with all the real-time web. It also contains a great list of people you should follow (not only on Twitter) and who are making the real-time web happen.
 
