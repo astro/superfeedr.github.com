@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Results of the contest"
+categories: [Real-time, contest, rivers, Leweb]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+A little over 3 weeks ago we announced "a contest":http://blog.superfeedr.com/API/Leweb/compp/rivers/win-a-ticket-for-leweb/ to win a free ticket for "LeWeb":http://www.leweb.net/. The goal was to *create an application that uses our "Rivers":http://rivers.superfeedr.com:8001/.*
+
+A few apps were submitted and *I want to thank all participants for their efforts*. Several hackers spent days to work on that and we're quite happy with the outcome : _several platforms, multiple languages, different technologies_.
+
+And the winners are (in reverse order) :
+
+h4. #3 Superfeedrfall
+
+"Superfeedrfall":http://www.rssfall.com/superfeedr/ is a simple web interface, built with a long polling webserver written in Erlang called "Hydrometeor":http://github.com/jalada/Hydrometeor. The interface shows the messages as they come as well as their source and publication date! Pretty fun and fascinating to watch :)
+
+h4. #1 (ex-aequo) Rss.im's stream
+
+"RSS.im's stream":http://rss.im/stream/ is another app with the same purpose, but they added a few little features, like the favicon loading. This time, it's built with "gevent":http://gevent.org/ and "django":http://www.djangoproject.com/. "It's open-source":http://bitbucket.org/denis/stream-web/, so if you want to learn about the real-time web technologies, you should definitely check it out!
+
+h4. #1 (ex-aequo) AppNotification's iPhone app
+
+This is a version where you can receive the rivers notifications directly on your iPhone! They use the infrastructure they built for "AppNotifications":http://www.appnotifications.com/ and just added a Ruby listener to the stream that converts the stream into notifications they can deal with.
+
+
+Luckily for us, Denis, from RSS.im is in Russia, which means that he can't really fly to Paris. As a consequence, I'm quite happy to grant Fabien from AppNotifications with the free ticket to come with us at LeWeb!
+
+Again, I want to thank everyone who participated, I believe I sent an email or chatted to each of you. You did a great job : THANK YOU! Pleas stop by the Superfeedr booth and come see me for my demo at "4PM, in the demo room":http://www.leweb.net/startupcompetition/schedule. Wish me luck!
+
+
+
