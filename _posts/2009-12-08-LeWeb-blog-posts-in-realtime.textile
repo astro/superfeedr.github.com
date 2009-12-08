@@ -1,0 +1,29 @@
+---
+layout: post
+title: "LeWeb's Official Bloggers in RealTime"
+categories: [Real-time, leweb, use-case]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+!{float:left;margin:0px 10px 10px 0px;}http://www.leweb.net/sites/all/themes/leweb-leweb/logo.png!When we've been selected to be part of "LeWeb's competition":http://www.leweb.net/ this year, we thought it was a great opportunity for us to *demo Superfeedr with a simple use case* : _how can we agregate all the content published by the Official Bloggers in real-time on the main LeWeb's site?_
+
+h3. How-to
+
+!{float:right;margin:0px 10px 10px 0px;width:20%}http://blog.cirtex.com/wp-content/uploads/2009/01/drupal.jpg!LeWeb's site uses Drupal. The idea was to automatically push notifications from Superfeedr to Drupal so that whenever one of the official bloggers published an article, it is immediately linked (with a small excerpt) on the main "LeWeb site":http://www.leweb.net/blogs/.
+
+"Drupal":http://drupal.org/ doesn't seem to have a PubSubHubbub subscriber library (yet?[1]). However it has an XML-RPC interface. The goal was then to translate PubSubHubbub notifications into XML-RPC. For that I created a very simple "Google App Engine":http://code.google.com/appengine/ application. It basically handles notifications and turn them into XML-RPC calls. _20 lines of code._
+
+To make it a little nicer, I *extracted* a few information from the "standard entry schema":http://superfeedr.com/documentation#entry_schema : author name and link, as well as categories. With the *categories*, I did some filtering to make sure we only publish stories that either mention LeWeb or explictly declare that as a tag.
+
+h3. Result
+
+In _less than 2 hours_ (litteraly), I was able to create a _"pretty good republishing platform":http://www.leweb.net/blogs/_:
+* *No polling at all* by drupal 
+* Guarantee to have *real-time content*
+* *Standard schema* that allows content *filtering* and extraction of specific fields
+
+*LeWeb starts tomorow* and I can't wait to see you there! *Stop by our booth* : we have stickers and a few new features to show you!
+
+fn1.  If you're a Drupal/PHP developer, get in touch : I'm sure such a module is much needed and should replace the aging "feeds" module.
