@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Feedburner stats for real-time web"
+categories: [Real-time, analytics, pubsubhubbub]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+It's been a feature request since day one (almost!), and we're rolling it out today : analytics. "Subscribers":Subscribers wanted to know _how many feeds they susbcribed_ to with Superfeedr, while "publishers":http://superfeedr.com/publisher wanted to _know how many feeds from them are used in real-time, as well as how many subscriptions they generated_. 
+
+!{width:95%}/images/feedburner-stats-for-realtime.png!
+
+It is very important for publishers to know how many apps are subscribed to feeds they produce. _When you're a big media company, it matters a lot to know what content is being consumed and by who_. That is exactly what these analytics allow them to do. 
+
+Of course, -as with any decent analytics solution- you can *export the data* from these analytics, and you'll soon (when we have the data!) be able to have a *weekly view*, a *monthly view* and a *yearly view*.
+
+Once more, any feedback is appreciated, *superfeedr is your app*: help us make it better!

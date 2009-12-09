@@ -4,9 +4,33 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-12-08T23:25:03+01:00</updated>
+    <updated>2009-12-09T09:31:11+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Feedburner stats for real-time web</title>
+        
+        <category term="Real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="analytics" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/12/09/analytics-launched.html"/>
+        <published>2009-12-09T00:00:00+01:00</published>
+        <updated>2009-12-09T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/2009/12/09/analytics-launched</id>
+        <content type="html">&lt;p&gt;It&amp;#8217;s been a feature request since day one (almost!), and we&amp;#8217;re rolling it out today : analytics. &lt;a href="Subscribers"&gt;Subscribers&lt;/a&gt; wanted to know &lt;em&gt;how many feeds they susbcribed&lt;/em&gt; to with Superfeedr, while &lt;a href="http://superfeedr.com/publisher"&gt;publishers&lt;/a&gt; wanted to &lt;em&gt;know how many feeds from them are used in real-time, as well as how many subscriptions they generated&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/feedburner-stats-for-realtime.png" style="width:95%;" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;It is very important for publishers to know how many apps are subscribed to feeds they produce. &lt;em&gt;When you&amp;#8217;re a big media company, it matters a lot to know what content is being consumed and by who&lt;/em&gt;. That is exactly what these analytics allow them to do.&lt;/p&gt;
+&lt;p&gt;Of course, &lt;del&gt;as with any decent analytics solution&lt;/del&gt; you can &lt;strong&gt;export the data&lt;/strong&gt; from these analytics, and you&amp;#8217;ll soon (when we have the data!) be able to have a &lt;strong&gt;weekly view&lt;/strong&gt;, a &lt;strong&gt;monthly view&lt;/strong&gt; and a &lt;strong&gt;yearly view&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Once more, any feedback is appreciated, &lt;strong&gt;superfeedr is your app&lt;/strong&gt;: help us make it better!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>LeWeb's Official Bloggers in RealTime</title>
@@ -23,9 +47,9 @@
         <id>blog.superfeedr.com:/2009/12/08/LeWeb-blog-posts-in-realtime</id>
         <content type="html">&lt;p&gt;&lt;img src="http://www.leweb.net/sites/all/themes/leweb-leweb/logo.png" style="float:left;margin:0px 10px 10px 0px;" alt="" /&gt;When we&amp;#8217;ve been selected to be part of &lt;a href="http://www.leweb.net/"&gt;LeWeb&amp;#8217;s competition&lt;/a&gt; this year, we thought it was a great opportunity for us to &lt;strong&gt;demo Superfeedr with a simple use case&lt;/strong&gt; : &lt;em&gt;how can we agregate all the content published by the Official Bloggers in real-time on the main LeWeb&amp;#8217;s site?&lt;/em&gt;&lt;/p&gt;
 &lt;h3&gt;How-to&lt;/h3&gt;
-&lt;p&gt;&lt;img src="http://blog.cirtex.com/wp-content/uploads/2009/01/drupal.jpg" style="float:right;margin:0px 10px 10px 0px;width:30%;" alt="" /&gt;LeWeb&amp;#8217;s site uses Drupal. The idea was to automatically push notifications from Superfeedr to Drupal so that whenever one of the official bloggers published an article, it is immediately linked (with a small excerpt) on the main &lt;a href="http://www.leweb.net/blogs/"&gt;LeWeb site&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Drupal doesn&amp;#8217;t seem to have a PubSubHubbub subscriber library (yet?&lt;sup class="footnote"&gt;&lt;a href="#fn1"&gt;1&lt;/a&gt;&lt;/sup&gt;). However it has an &lt;span class="caps"&gt;XML&lt;/span&gt;-&lt;span class="caps"&gt;RPC&lt;/span&gt; interface. The goal was then to translate PubSubHubbub notifications into &lt;span class="caps"&gt;XML&lt;/span&gt;-&lt;span class="caps"&gt;RPC&lt;/span&gt;. For that I created a very simple &lt;a href="http://code.google.com/appengine/"&gt;Google App Engine&lt;/a&gt; application. It basically handles notifications and turn them into &lt;span class="caps"&gt;XML&lt;/span&gt;-&lt;span class="caps"&gt;RPC&lt;/span&gt; calls. &lt;em&gt;20 lines of code.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;To make it a little nicer, I &lt;strong&gt;extracted&lt;/strong&gt; a few information from the standard entry schema : author name and link, as well as categories. With the &lt;strong&gt;categories&lt;/strong&gt;, I did some filtering to make sure we only publish stories that either mention LeWeb or explictly declare that as a tag.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://blog.cirtex.com/wp-content/uploads/2009/01/drupal.jpg" style="float:right;margin:0px 10px 10px 0px;width:20%;" alt="" /&gt;LeWeb&amp;#8217;s site uses Drupal. The idea was to automatically push notifications from Superfeedr to Drupal so that whenever one of the official bloggers published an article, it is immediately linked (with a small excerpt) on the main &lt;a href="http://www.leweb.net/blogs/"&gt;LeWeb site&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://drupal.org/"&gt;Drupal&lt;/a&gt; doesn&amp;#8217;t seem to have a PubSubHubbub subscriber library (yet?&lt;sup class="footnote"&gt;&lt;a href="#fn1"&gt;1&lt;/a&gt;&lt;/sup&gt;). However it has an &lt;span class="caps"&gt;XML&lt;/span&gt;-&lt;span class="caps"&gt;RPC&lt;/span&gt; interface. The goal was then to translate PubSubHubbub notifications into &lt;span class="caps"&gt;XML&lt;/span&gt;-&lt;span class="caps"&gt;RPC&lt;/span&gt;. For that I created a very simple &lt;a href="http://code.google.com/appengine/"&gt;Google App Engine&lt;/a&gt; application. It basically handles notifications and turn them into &lt;span class="caps"&gt;XML&lt;/span&gt;-&lt;span class="caps"&gt;RPC&lt;/span&gt; calls. &lt;em&gt;20 lines of code.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;To make it a little nicer, I &lt;strong&gt;extracted&lt;/strong&gt; a few information from the &lt;a href="http://superfeedr.com/documentation#entry_schema"&gt;standard entry schema&lt;/a&gt; : author name and link, as well as categories. With the &lt;strong&gt;categories&lt;/strong&gt;, I did some filtering to make sure we only publish stories that either mention LeWeb or explictly declare that as a tag.&lt;/p&gt;
 &lt;h3&gt;Result&lt;/h3&gt;
 &lt;p&gt;In &lt;em&gt;less than 2 hours&lt;/em&gt; (litteraly), I was able to create a &lt;em&gt;&lt;a href="http://www.leweb.net/blogs/"&gt;pretty good republishing platform&lt;/a&gt;&lt;/em&gt;:&lt;/p&gt;
 &lt;ul&gt;
