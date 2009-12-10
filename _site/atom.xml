@@ -4,9 +4,32 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-12-09T09:31:11+01:00</updated>
+    <updated>2009-12-10T01:22:18+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Tumblr has a hub</title>
+        
+        <category term="Tumblr" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="publisher" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/12/12/tumblr-has-a-hub.html"/>
+        <published>2009-12-12T00:00:00+01:00</published>
+        <updated>2009-12-12T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/2009/12/12/tumblr-has-a-hub</id>
+        <content type="html">&lt;p&gt;&lt;img src="/images/tumblr.png" style="float:left; margin: 10px;" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;There is &lt;em&gt;not a day where the real-time web isn&amp;#8217;t growing&lt;/em&gt;. It&amp;#8217;s &lt;strong&gt;now time to change how our web services consume information from each other&lt;/strong&gt; and we&amp;#8217;re quite proud to say that Superfeedr is helping services like Tumblr pave the way.&lt;/p&gt;
+&lt;p&gt;Today, we&amp;#8217;re announcing a &lt;a href="http://tumblr.superfeedr.com/"&gt;hub for Tumblr&lt;/a&gt;, one of your favorite blogging platform is publishing their feeds as &lt;a href="http://code.google.com/p/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt; via &lt;a href="http://superfeedr.com/"&gt;Superfeedr&lt;/a&gt;. I was very impressed when I met &lt;a href="http://www.davidslog.com/"&gt;David&lt;/a&gt; and &lt;a href="http://john.tumblr.com/"&gt;John&lt;/a&gt; (the &lt;a href="http://betaworks.com/"&gt;Betaworks&lt;/a&gt; gang is awesome!) : they were both aware and excited about publishing their content in real-time. We&amp;#8217;ve been able to setup their hub in a very short timeframe, and it shows how that matters to them.&lt;/p&gt;
+&lt;p&gt;They&amp;#8217;re joining our hub family with &lt;a href="http://posterous.superfeedr.com/"&gt;Posterous&lt;/a&gt;, &lt;a href="http://backtype.superfeedr.com/"&gt;Backtype&lt;/a&gt;, &lt;a href="http://wordpress.superfeedr.com/"&gt;Wordpress&lt;/a&gt; (unofficial), &lt;a href="http://identica.superfeedr.com/"&gt;Identica&lt;/a&gt; (unofficial) and a few other ones on which we&amp;#8217;re working. If you want one of your app : &lt;a href="http://superfeedr.com/publisher"&gt;get in touch&lt;/a&gt;!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Feedburner stats for real-time web</title>

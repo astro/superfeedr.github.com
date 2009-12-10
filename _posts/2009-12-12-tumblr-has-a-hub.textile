@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Tumblr has a hub"
+categories: [Tumblr, pubsubhubbub, publisher]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+!{float:left; margin: 10px;}/images/tumblr.png!
+
+
+There is _not a day where the real-time web isn't growing_. It's *now time to change how our web services consume information from each other* and we're quite proud to say that Superfeedr is helping services like Tumblr pave the way.
+
+Today, we're announcing a "hub for Tumblr":http://tumblr.superfeedr.com/, one of your favorite blogging platform is publishing their feeds as "PubSubHubbub":http://code.google.com/p/pubsubhubbub/ via "Superfeedr":http://superfeedr.com/. I was very impressed when I met "David":http://www.davidslog.com/ and "John":http://john.tumblr.com/ (the "Betaworks":http://betaworks.com/ gang is awesome!) : they were both aware and excited about publishing their content in real-time. We've been able to setup their hub in a very short timeframe, and it shows how that matters to them.
+
+They're joining our hub family with "Posterous":http://posterous.superfeedr.com/, "Backtype":http://backtype.superfeedr.com/, "Wordpress":http://wordpress.superfeedr.com/ (unofficial), "Identica":http://identica.superfeedr.com/ (unofficial) and a few other ones on which we're working. If you want one of your app : "get in touch":http://superfeedr.com/publisher!
