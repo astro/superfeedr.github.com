@@ -4,9 +4,62 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-12-10T01:22:18+01:00</updated>
+    <updated>2009-12-15T12:58:33+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>How we built Analytics</title>
+        
+        <category term="analytics" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="publisher" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="tutorial" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="mongodb" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/12/15/how-we-built-analytics.html"/>
+        <published>2009-12-15T00:00:00+01:00</published>
+        <updated>2009-12-15T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/2009/12/15/how-we-built-analytics</id>
+        <content type="html">&lt;p&gt;We weren&amp;#8217;t quite sure how to build &lt;a href="http://blog.superfeedr.com/Real-time/analytics/pubsubhubbub/analytics-launched"&gt;these analytics&lt;/a&gt;. We slowly established a set of requirements and constraints&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Zero performance impact&lt;/li&gt;
+	&lt;li&gt;Fully decoupled from the current infrastructure&lt;/li&gt;
+	&lt;li&gt;Results at most hourly&lt;/li&gt;
+	&lt;li&gt;Data is more important than graphs&lt;/li&gt;
+	&lt;li&gt;Easily-extensible, in case we want to measure more things&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Collecting&lt;/h3&gt;
+&lt;p&gt;There are 2 ways to collect data : on the fly, when things happen, or by just collecting stuff in the database. Since the top requirement was to have 0 performance impact, the most obvious way was to have a &lt;strong&gt;&amp;#8220;maintenance&amp;#8221; script&lt;/strong&gt; that runs forever and measures what needs to be &lt;strong&gt;measured in a loop&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We &lt;strong&gt;added a slave server to our main MySQL&lt;/strong&gt; server(s). We use this server for the analytics. It&amp;#8217;s a regular slave because, obviously doing analytics is about &lt;em&gt;reads&lt;/em&gt;, not &lt;em&gt;writes&lt;/em&gt;. With that, we can guarantee that the performance impact on the current is zero. If the analytics dies, nothing else will be impacted.&lt;/p&gt;
+&lt;p&gt;The scripts runs at &lt;strong&gt;regular intervals so that it takes several set of measures&lt;/strong&gt; by doing queries on the slave database.&lt;/p&gt;
+&lt;h3&gt;Storage&lt;/h3&gt;
+&lt;p&gt;&lt;img src="http://mongo-db.appspot.com/static/images/logo-mongodb-onwhite.png" style="margin: 20px;width: 40%; float:right;" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;Since we need to have an &lt;strong&gt;extensible schema&lt;/strong&gt;, we &lt;strong&gt;eliminated anything with a &amp;#8220;fixed&amp;#8221; schema&lt;/strong&gt;, like MySQL. Additionally, analytics can really be &lt;strong&gt;regarded as documents&lt;/strong&gt;, which naively lead us look at Document stores. We chose &lt;a href="http://www.mongodb.org/"&gt;MongoDB&lt;/a&gt;. It&amp;#8217;s probably the most actively maintained of its category and Ruby has a pretty neat library: &lt;a href="http://mongomapper.com/"&gt;MongoMapper&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It also has some &lt;em&gt;MapReduce functionalities&lt;/em&gt;, which will probably be useful when start having a lot of data and we want to make complex analysis of it. Unfortunately, there is no event-machine driver for it, but &lt;strong&gt;it seems that inserts return immediately&lt;/strong&gt;, which shouldn&amp;#8217;t be too bad in terms of performance.&lt;/p&gt;
+&lt;h3&gt;Querying&lt;/h3&gt;
+&lt;p&gt;Right now we don&amp;#8217;t have a lot of data, so the regular MongoMapper interface does a pretty good job. Typically, here is how we process results : &lt;strong&gt;we get all the data for a given time query in a given time-frame&lt;/strong&gt;, like a day. We &lt;strong&gt;then so some kind of Map-Reduce&lt;/strong&gt; to get results on an hourly basis : we split the result set by hours (map), compute averages/max/min (reduce) and then return the final result set.&lt;/p&gt;
+&lt;p&gt;When we&amp;#8217;ll start computing more complex stuff, we&amp;#8217;ll probably need to use Mongo&amp;#8217;s capabilities for MapReduce, but right now we&amp;#8217;re &amp;#8220;emulating&amp;#8221; that behavior from within a Ruby script.&lt;/p&gt;
+&lt;p&gt;Since the data is not expected to be updated more than hourly, &lt;strong&gt;we also cache the results in our Memcache server&lt;/strong&gt;. Another option that we&amp;#8217;re evaluating is storing this as actual documents, so we have the raw data (collected from MySQL), as well as the computed results.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;All the results are returned in a Json format&lt;/strong&gt;, which is pretty convenient for direct export!&lt;/p&gt;
+&lt;h3&gt;Displaying&lt;/h3&gt;
+&lt;p&gt;We did some research on various solutions to display the data. The first choice we had to make was :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;query some service that would build the graphs for us (like &lt;a href="http://code.google.com/apis/chart/"&gt;Google Graph&lt;/a&gt;)&lt;/li&gt;
+	&lt;li&gt;or build the graphs by ourselves.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="http://a3.twimg.com/profile_background_images/3310603/Raphaël-white-bg.png" style="margin: 20px;width: 20%; float:left;" alt="" /&gt;&lt;br /&gt;
+The first solution initially looked sexier, but then we couldn&amp;#8217;t find the flexibility we wanted, and since we export results as Json, we thought* that anyone could actually plug the data we generate for them into the 3rd party* app they wanted.&lt;/p&gt;
+&lt;p&gt;The second decision was for the &amp;#8220;type&amp;#8221; of graphs : flash? images? Usually the first one are more interactive, but they require the use of flash :/ Lucklily we found &lt;a href="http://raphaeljs.com/"&gt;Rapheal.js&lt;/a&gt; and its &lt;a href="http://g.raphaeljs.com/"&gt;charting library&lt;/a&gt; which allows us to generate nice looking interactive graphs by using the browser&amp;#8217;s capabilities to deal with &lt;span class="caps"&gt;SVG&lt;/span&gt; and other open formats! We got our winner :) Feel free to look at the source code of the graphs page to see more&amp;#8230; Hopefully I can find the time soon to &amp;#8220;bundle&amp;#8221; that in something nice on github.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Tumblr has a hub</title>

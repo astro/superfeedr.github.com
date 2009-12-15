@@ -1,0 +1,55 @@
+---
+layout: post
+title: "How we built Analytics"
+categories: [analytics, pubsubhubbub, publisher, tutorial, mongodb]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+We weren't quite sure how to build "these analytics":http://blog.superfeedr.com/Real-time/analytics/pubsubhubbub/analytics-launched. We slowly established a set of requirements and constraints
+* Zero performance impact
+* Fully decoupled from the current infrastructure
+* Results at most hourly
+* Data is more important than graphs
+* Easily-extensible, in case we want to measure more things
+
+h3. Collecting
+
+There are 2 ways to collect data : on the fly, when things happen, or by just collecting stuff in the database. Since the top requirement was to have 0 performance impact, the most obvious way was to have a *"maintenance" script* that runs forever and measures what needs to be *measured in a loop*. 
+
+We *added a slave server to our main MySQL* server(s). We use this server for the analytics. It's a regular slave because, obviously doing analytics is about _reads_, not _writes_. With that, we can guarantee that the performance impact on the current is zero. If the analytics dies, nothing else will be impacted.
+
+The scripts runs at *regular intervals so that it takes several set of measures* by doing queries on the slave database.
+
+h3. Storage
+
+!{margin: 20px;width: 40%; float:right;}http://mongo-db.appspot.com/static/images/logo-mongodb-onwhite.png!
+
+Since we need to have an *extensible schema*, we *eliminated anything with a "fixed" schema*, like MySQL. Additionally, analytics can really be *regarded as documents*, which naively lead us look at Document stores. We chose "MongoDB":http://www.mongodb.org/. It's probably the most actively maintained of its category and Ruby has a pretty neat library: "MongoMapper":http://mongomapper.com/. 
+
+It also has some _MapReduce functionalities_, which will probably be useful when start having a lot of data and we want to make complex analysis of it. Unfortunately, there is no event-machine driver for it, but *it seems that inserts return immediately*, which shouldn't be too bad in terms of performance.
+
+h3. Querying
+
+Right now we don't have a lot of data, so the regular MongoMapper interface does a pretty good job. Typically, here is how we process results : *we get all the data for a given time query in a given time-frame*, like a day. We *then so some kind of Map-Reduce* to get results on an hourly basis : we split the result set by hours (map), compute averages/max/min (reduce) and then return the final result set.
+
+When we'll start computing more complex stuff, we'll probably need to use Mongo's capabilities for MapReduce, but right now we're "emulating" that behavior from within a Ruby script.
+
+Since the data is not expected to be updated more than hourly, *we also cache the results in our Memcache server*. Another option that we're evaluating is storing this as actual documents, so we have the raw data (collected from MySQL), as well as the computed results. 
+
+*All the results are returned in a Json format*, which is pretty convenient for direct export!
+
+
+h3. Displaying
+
+
+We did some research on various solutions to display the data. The first choice we had to make was : 
+* query some service that would build the graphs for us (like "Google Graph":http://code.google.com/apis/chart/) 
+* or build the graphs by ourselves. 
+
+!{margin: 20px;width: 20%; float:left;}http://a3.twimg.com/profile_background_images/3310603/Raphaël-white-bg.png!
+The first solution initially looked sexier, but then we couldn't find the flexibility we wanted, and since we export results as Json, we thought* that anyone could actually plug the data we generate for them into the 3rd party* app they wanted.
+
+The second decision was for the "type" of graphs : flash? images? Usually the first one are more interactive, but they require the use of flash :/ Lucklily we found "Rapheal.js":http://raphaeljs.com/ and its "charting library":http://g.raphaeljs.com/ which allows us to generate nice looking interactive graphs by using the browser's capabilities to deal with SVG and other open formats! We got our winner :) Feel free to look at the source code of the graphs page to see more... Hopefully I can find the time soon to "bundle" that in something nice on github.
+
