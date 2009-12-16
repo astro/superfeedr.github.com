@@ -4,9 +4,44 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-12-15T12:58:33+01:00</updated>
+    <updated>2009-12-16T22:09:25+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Feediscovery</title>
+        
+        <category term="api" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="feeds" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="discovery" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Feediscovery" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/12/16/feediscovery.html"/>
+        <published>2009-12-16T00:00:00+01:00</published>
+        <updated>2009-12-16T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/2009/12/16/feediscovery</id>
+        <content type="html">&lt;p&gt;At &lt;a href="http://superfeedr.com"&gt;Superfeedr&lt;/a&gt;, we believe &lt;em&gt;we have to do one thing only in the best way it can be done&lt;/em&gt;: &lt;strong&gt;make feeds real-time&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;There are a ton of small feature requests that our users ask for and that aren&amp;#8217;t part of this grand scheme. One of the most common ones is &lt;strong&gt;feed discovery&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A lot of apps that are built using Superfeedr allow their users to type in any site url. Since Superfeedr only deals with feeds, it means that these apps have to&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Download this specific page,&lt;/li&gt;
+	&lt;li&gt;Parse the &lt;span class="caps"&gt;HTML&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;Extract the &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt; tags to get the corresponding feed(s) urls.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It&amp;#8217;s definitely &lt;strong&gt;not a very hard thing to do&lt;/strong&gt;, yet, there is* absolutely no reason that everybody should write the same code over and over* for that basic purpose. Obviously, you could use great libraries such as &lt;a href="http://axiombox.com/feedbag"&gt;feedbag&lt;/a&gt;, yet, these libraries are language-centric (Ruby in this case).&lt;/p&gt;
+&lt;p&gt;We built &lt;a href="http://feediscovery.appspot.com/"&gt;feediscovery&lt;/a&gt; : a simple &amp;#8211; in the cloud! &amp;#8211; &lt;strong&gt;feed discovery &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/strong&gt;. To use it, send a &lt;code&gt;GET&lt;/code&gt; request to http://feediscovery.appspot.com/ with the &lt;code&gt;url&lt;/code&gt; parameter from which you&amp;#8217;d like to extract feeds from. The app should return a small json string of the feed(s) information (href, title, rel, type).&lt;/p&gt;
+&lt;h4&gt;Example:&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;GET http://feediscovery.appspot.com/?url=http://blog.superfeedr.com&lt;/code&gt;&lt;br /&gt;
+&amp;#8594; &lt;code&gt;{"href":"http://blog.superfeedr.com/atom.xml","title":"Superfeedr' thoughts","rel":"alternate","type":"application/atom+xml"}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;We truly believe &lt;strong&gt;web apps are soon to become the next base-component&lt;/strong&gt;, and will, in many cases, replace libraries, gems, packages, modules.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>How we built Analytics</title>
