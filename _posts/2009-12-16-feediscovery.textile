@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Feediscovery"
+categories: [api, feeds, discovery, feediscovery]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+At "Superfeedr":http://superfeedr.com, we believe _we have to do one thing only in the best way it can be done_: *make feeds real-time*. 
+
+There are a ton of small feature requests that our users ask for and that aren't part of this grand scheme. One of the most common ones is *feed discovery*.
+
+A lot of apps that are built using Superfeedr allow their users to type in any site url. Since Superfeedr only deals with feeds, it means that these apps have to 
+* Download this specific page, 
+* Parse the HTML
+* Extract the <code><link></code> tags to get the corresponding feed(s) urls. 
+
+It's definitely *not a very hard thing to do*, yet, there is* absolutely no reason that everybody should write the same code over and over* for that basic purpose. Obviously, you could use great libraries such as "feedbag":http://axiombox.com/feedbag, yet, these libraries are language-centric (Ruby in this case).
+
+We built "feediscovery":http://feediscovery.appspot.com/ : a simple - in the cloud! - *feed discovery API*. To use it, send a <code>GET</code> request to http://feediscovery.appspot.com/ with the <code>url</code> parameter from which you'd like to extract feeds from. The app should return a small json string of the feed(s) information (href, title, rel, type). 
+
+h4. Example:
+
+<code>GET http://feediscovery.appspot.com/?url=http://blog.superfeedr.com</code>
+-> <code>{"href":"http://blog.superfeedr.com/atom.xml","title":"Superfeedr' thoughts","rel":"alternate","type":"application/atom+xml"}</code>
+
+We truly believe *web apps are soon to become the next base-component*, and will, in many cases, replace libraries, gems, packages, modules.
