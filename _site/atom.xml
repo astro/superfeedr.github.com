@@ -4,9 +4,44 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-12-16T22:09:25+01:00</updated>
+    <updated>2009-12-17T16:59:07+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Be my guest</title>
+        
+        <category term="blog" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="meta" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="superfeedr" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="ecosystem" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/12/17/be-my-guest.html"/>
+        <published>2009-12-17T00:00:00+01:00</published>
+        <updated>2009-12-17T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/2009/12/17/be-my-guest</id>
+        <content type="html">&lt;p&gt;We use &lt;a href="http://"&gt;Jekyll&lt;/a&gt; as our blog engine, and we use &lt;a href="http://github.com"&gt;github&lt;/a&gt; to host said blog. As a matter of fact, our blog is a &lt;strong&gt;regular git repository&lt;/strong&gt;. This as several consequences, including the fact that it&amp;#8217;s quite easy for us to add &amp;#8220;remote&amp;#8221; contributions. If you want to write about Superfeedr related stuff : your experience with Superfeedr, but also the technologies that we use (&lt;a href="http://www.google.com/search?q=xmpp+site:blog.superfeedr.com"&gt;&lt;span class="caps"&gt;XMPP&lt;/span&gt;&lt;/a&gt;, &lt;a href="http://www.google.com/search?q=PubSubHubbub+site:blog.superfeedr.com"&gt;PubSubHubbub&lt;/a&gt;, &lt;a href="http://www.google.com/search?q=chef+site:blog.superfeedr.com"&gt;Chef&lt;/a&gt;, &lt;a href="http://www.google.com/search?q=collectd+site:blog.superfeedr.com"&gt;Collectd&lt;/a&gt;&amp;#8230;), or even your &lt;em&gt;thoughts on the real-time web&lt;/em&gt;; this space is yours.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s actually quite easy, you just have to &lt;a href="http://github.com/superfeedr/superfeedr.github.com"&gt;fork our blog&amp;#8217;s&lt;/a&gt; repository, write your own blog post in the &lt;code&gt;_post&lt;/code&gt; directory, and then do a pull-request. If we like it (we will try to keep our censorship to a minimum level, but we need to make sure your posts aren&amp;#8217;t too &lt;em&gt;self-advertising&lt;/em&gt; and are &lt;em&gt;still related&lt;/em&gt; to Superfeedr).&lt;/p&gt;
+&lt;p&gt;The protocol is fairly easy : name a file &lt;code&gt;yyyy-mm-dd-title-of-your-post.textile&lt;/code&gt;, then, add your post content. Make sure you follow the &amp;#8220;Textile syntax&amp;#8221;: if you want to make your text &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, add &lt;a href="http://"&gt;links&lt;/a&gt; or even titles&amp;#8230; Finally, add a top part to the file like that:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;
+---&lt;/p&gt;
+&lt;p&gt;layout: post&lt;/p&gt;
+&lt;p&gt;title: &amp;#8220;Title of Your Post&amp;#8221;&lt;/p&gt;
+&lt;p&gt;categories: [tags, categories]&lt;/p&gt;
+&lt;p&gt;author_name: Your Name&lt;/p&gt;
+&lt;p&gt;author_uri: http://you-uri.com&lt;/p&gt;
+&lt;p&gt;author_email_md5: an-md5-string-of-your-email-for-gravatar-support&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Done! This place is now yours too :)&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Feediscovery</title>
@@ -17,7 +52,7 @@
         
         <category term="discovery" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <category term="Feediscovery" scheme="http://www.sixapart.com/ns/types#tag" />
+        <category term="feediscovery" scheme="http://www.sixapart.com/ns/types#tag" />
         
         <link href="http://blog.superfeedr.com/2009/12/16/feediscovery.html"/>
         <published>2009-12-16T00:00:00+01:00</published>
@@ -1464,26 +1499,6 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
     </entry>
     
     <entry>
-        <title>There is no such thing as Real Time Search</title>
-        
-        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
-        
-        <link href="http://blog.superfeedr.com/2009/07/09/there-is-such-thing-as-real-time-web-search.html"/>
-        <published>2009-07-09T00:00:00+02:00</published>
-        <updated>2009-07-09T00:00:00+02:00</updated>
-        <id>blog.superfeedr.com:/2009/07/09/there-is-such-thing-as-real-time-web-search</id>
-        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/"&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
-&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href="http://google.com"&gt;Google&lt;/a&gt; or &lt;a href="http://bing.com"&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://search.twitter.com"&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href="http://collecta.com"&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
-&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
-        <author>
-            <name>Julien</name>
-            <uri>http://twitter.com/julien51</uri>
-        </author>
-    </entry>
-    
-    <entry>
         <title>Speeding Up RSS : what for?</title>
         
         <category term="RSS" scheme="http://www.sixapart.com/ns/types#tag" />
@@ -1504,6 +1519,26 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
 &lt;p&gt;The comments, though are very interesting and they show what we&amp;#8217;ve observed with &amp;quot;Notifixious&amp;quot;http://notifixio.us over the last year : Real-time notification (or faster &lt;span class="caps"&gt;RSS&lt;/span&gt;) scares people a lot. There is at least 4 or 5 comments saying that &lt;span class="caps"&gt;RSS&lt;/span&gt; is fast enough for them. The problem here, is that there is a misconception :* making &lt;span class="caps"&gt;RSS&lt;/span&gt; faster is not for individuals, but for the web itself*.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt; has the potential to bring Push to the &lt;span class="caps"&gt;RSS&lt;/span&gt; and Atom technologies. So not only it will be faster, but it will be instantaneous, and when Feed updates will be instantaneous, nobody will pull anymore (&lt;a href="http://blog.superfeedr.com/gospel/something-stupid/"&gt;not even us&lt;/a&gt;) and the web will be better.&lt;/p&gt;
 &lt;p&gt;Better? Publishers will not have to &lt;em&gt;handle massive loads anymore&lt;/em&gt; (like Twitter had to), and Subscribers (services) will &lt;em&gt;not have to poll over and over to get updates&lt;/em&gt;.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>There is no such thing as Real Time Search</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/07/09/there-is-such-thing-as-real-time-web-search.html"/>
+        <published>2009-07-09T00:00:00+02:00</published>
+        <updated>2009-07-09T00:00:00+02:00</updated>
+        <id>blog.superfeedr.com:/2009/07/09/there-is-such-thing-as-real-time-web-search</id>
+        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/"&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
+&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href="http://google.com"&gt;Google&lt;/a&gt; or &lt;a href="http://bing.com"&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://search.twitter.com"&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href="http://collecta.com"&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
+&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>

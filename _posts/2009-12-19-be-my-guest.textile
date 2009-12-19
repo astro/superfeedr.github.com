@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Be my guest"
+categories: [blog, meta, superfeedr, ecosystem]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+We use "Jekyll":http://github.com/mojombo/jekyll as our blog engine, and we use "github":http://github.com to host said blog. As a matter of fact, our blog is a *regular git repository*. This as several consequences, including the fact that it's quite easy for us to add "remote" contributions. If you want to write about Superfeedr related stuff : your experience with Superfeedr, but also the technologies that we use ("XMPP":http://www.google.com/search?q=xmpp+site:blog.superfeedr.com, "PubSubHubbub":http://www.google.com/search?q=PubSubHubbub+site:blog.superfeedr.com, "Chef":http://www.google.com/search?q=chef+site:blog.superfeedr.com, "Collectd":http://www.google.com/search?q=collectd+site:blog.superfeedr.com...), or even your _thoughts on the real-time web_; this space is yours.
+
+It's actually quite easy, you just have to "fork our blog's":http://github.com/superfeedr/superfeedr.github.com repository, write your own blog post in the @_post@ directory, and then do a pull-request. If we like it (we will try to keep our censorship to a minimum level, but we need to make sure your posts aren't too _self-advertising_ and are _still related_ to Superfeedr).
+
+The protocol is fairly easy : name a file @yyyy-mm-dd-title-of-your-post.textile@, then, add your post content. Make sure you follow the "Textile syntax": if you want to make your text *bold*, _italic_, add "links":http:// or even titles... Finally, add a top part to the file like that:
+
+<code>
+---
+
+layout: post
+
+title: "Title of Your Post"
+
+categories: [tags, categories]
+
+author_name: Your Name
+
+author_uri: http://you-uri.com
+
+author_email_md5: an-md5-string-of-your-email-for-gravatar-support
+
+---
+</code>
+
+Done! This place is now yours too :)
