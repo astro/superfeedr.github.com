@@ -4,9 +4,36 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-12-17T16:59:07+01:00</updated>
+    <updated>2009-12-21T18:08:41+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Distributed and Federated Social Networks</title>
+        
+        <category term="social-networks" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="federation" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="XMPP" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/12/21/distributed-social-networks.html"/>
+        <published>2009-12-21T00:00:00+01:00</published>
+        <updated>2009-12-21T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/2009/12/21/distributed-social-networks</id>
+        <content type="html">&lt;p&gt;There &lt;a href="http://staynalive.com/articles/2009/12/19/developers-its-time-to-open-up-twitters-api/"&gt;is&lt;/a&gt; &lt;a href="http://code-bear.com/bearlog/2009/12/20/responding-to-jesses-call-to-open-twitters-api/"&gt;a lot&lt;/a&gt; of debate around on &lt;a href="http://groups.google.com/group/opentwitter"&gt;OpenTwitter&lt;/a&gt;, &lt;a href="http://bit.ly/4voQKK"&gt;OpenFriendFeed&lt;/a&gt; &lt;a href="http://bit.ly/8J9SIv"&gt;OpenFacebook&lt;/a&gt;.  these days. The &lt;a href="http://www.avc.com/a_vc/2009/12/open-apis-and-open-standards.html"&gt;de-facto standard&lt;/a&gt; which is now Twitter&amp;#8217;s &lt;span class="caps"&gt;API&lt;/span&gt; is a good news. Yet, social Networks have 2 big features : &lt;strong&gt;publish content&lt;/strong&gt; (it seems that Twitter&amp;#8217;s &lt;span class="caps"&gt;API&lt;/span&gt; is the reference now), and &lt;strong&gt;consume content&lt;/strong&gt; from your friends. This second part seems much harder and I think &lt;strong&gt;PubSubHubbub&lt;/strong&gt; and &lt;strong&gt;&lt;span class="caps"&gt;XMPP&lt;/span&gt;&lt;/strong&gt; can provide this &lt;span class="caps"&gt;API&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Whatever the social network, user profiles usually have a link (Atom or &lt;span class="caps"&gt;RSS&lt;/span&gt;) which represents a user&amp;#8217;s stream of activities. Whether it&amp;#8217;s &lt;a href="http://www.flickr.com/photos/juliengenestoux"&gt;Flickr&lt;/a&gt;, &lt;a href="http://delicious.com/julien51"&gt;Delicious&lt;/a&gt;, &lt;a href="http://twitter.com/julien51"&gt;Twitter&lt;/a&gt;, or even your blog (yes, it&amp;#8217;s a social network in a way), &lt;em&gt;all our online activities are represented as feeds&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The next step is to make these feeds &amp;#8220;real-time&amp;#8221; so that the consuming applications shouldn&amp;#8217;t need to poll thousands of feeds or services. &lt;em&gt;To consume my friends information, I shouldn&amp;#8217;t even need to be part of the network on which they publish&lt;/em&gt;. &lt;strong&gt;PubSubHubbub enables that&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I like consuming my friend&amp;#8217;s feed via Facebook. Yet, a lot of my friend&amp;#8217;s content is not there : their tweets, the pictures they post on Flickr, etc&amp;#8230; and some of my friends are not even on Facebook.&lt;/p&gt;
+&lt;p&gt;I wish somebody (&lt;a href="http://tweetdeck.com/"&gt;Tweetdeck&lt;/a&gt;, &lt;a href="http://seesmic.com/"&gt;Seesmic&lt;/a&gt;, &lt;a href="http://brizzly.com/"&gt;Brizzly&lt;/a&gt;&amp;#8230; can you hear me?) would have a &lt;strong&gt;built-in PubSubHubbub subscriber&lt;/strong&gt;. Then they would allow me to paste one of my friend&amp;#8217;s profile page on &lt;a href="http://www.last.fm/user/julien51"&gt;Last.fm&lt;/a&gt; or Foursquare (or allow me to select directly pages on specific services). From that page, they would &lt;em&gt;auto-discover the feed&lt;/em&gt;, and &lt;em&gt;then its hub and subscribe to it&lt;/em&gt;. Finally, when my friends update their social network (provided that this one uses PubSubHubbub to make its feeds real-time, but &lt;a href="http://superfeedr.com/publisher"&gt;we can help&lt;/a&gt;), I would receive instantly the update into my &lt;strong&gt;Social Network consuming app&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;When publishing my content, I shouldn&amp;#8217;t have to publish it on 36 different services just to make sure all my friends will get it. It should go wherever my friends will consume it!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Be my guest</title>
@@ -19,11 +46,11 @@
         
         <category term="ecosystem" scheme="http://www.sixapart.com/ns/types#tag" />
         
-        <link href="http://blog.superfeedr.com/2009/12/17/be-my-guest.html"/>
-        <published>2009-12-17T00:00:00+01:00</published>
-        <updated>2009-12-17T00:00:00+01:00</updated>
-        <id>blog.superfeedr.com:/2009/12/17/be-my-guest</id>
-        <content type="html">&lt;p&gt;We use &lt;a href="http://"&gt;Jekyll&lt;/a&gt; as our blog engine, and we use &lt;a href="http://github.com"&gt;github&lt;/a&gt; to host said blog. As a matter of fact, our blog is a &lt;strong&gt;regular git repository&lt;/strong&gt;. This as several consequences, including the fact that it&amp;#8217;s quite easy for us to add &amp;#8220;remote&amp;#8221; contributions. If you want to write about Superfeedr related stuff : your experience with Superfeedr, but also the technologies that we use (&lt;a href="http://www.google.com/search?q=xmpp+site:blog.superfeedr.com"&gt;&lt;span class="caps"&gt;XMPP&lt;/span&gt;&lt;/a&gt;, &lt;a href="http://www.google.com/search?q=PubSubHubbub+site:blog.superfeedr.com"&gt;PubSubHubbub&lt;/a&gt;, &lt;a href="http://www.google.com/search?q=chef+site:blog.superfeedr.com"&gt;Chef&lt;/a&gt;, &lt;a href="http://www.google.com/search?q=collectd+site:blog.superfeedr.com"&gt;Collectd&lt;/a&gt;&amp;#8230;), or even your &lt;em&gt;thoughts on the real-time web&lt;/em&gt;; this space is yours.&lt;/p&gt;
+        <link href="http://blog.superfeedr.com/2009/12/19/be-my-guest.html"/>
+        <published>2009-12-19T00:00:00+01:00</published>
+        <updated>2009-12-19T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/2009/12/19/be-my-guest</id>
+        <content type="html">&lt;p&gt;We use &lt;a href="http://github.com/mojombo/jekyll"&gt;Jekyll&lt;/a&gt; as our blog engine, and we use &lt;a href="http://github.com"&gt;github&lt;/a&gt; to host said blog. As a matter of fact, our blog is a &lt;strong&gt;regular git repository&lt;/strong&gt;. This as several consequences, including the fact that it&amp;#8217;s quite easy for us to add &amp;#8220;remote&amp;#8221; contributions. If you want to write about Superfeedr related stuff : your experience with Superfeedr, but also the technologies that we use (&lt;a href="http://www.google.com/search?q=xmpp+site:blog.superfeedr.com"&gt;&lt;span class="caps"&gt;XMPP&lt;/span&gt;&lt;/a&gt;, &lt;a href="http://www.google.com/search?q=PubSubHubbub+site:blog.superfeedr.com"&gt;PubSubHubbub&lt;/a&gt;, &lt;a href="http://www.google.com/search?q=chef+site:blog.superfeedr.com"&gt;Chef&lt;/a&gt;, &lt;a href="http://www.google.com/search?q=collectd+site:blog.superfeedr.com"&gt;Collectd&lt;/a&gt;&amp;#8230;), or even your &lt;em&gt;thoughts on the real-time web&lt;/em&gt;; this space is yours.&lt;/p&gt;
 &lt;p&gt;It&amp;#8217;s actually quite easy, you just have to &lt;a href="http://github.com/superfeedr/superfeedr.github.com"&gt;fork our blog&amp;#8217;s&lt;/a&gt; repository, write your own blog post in the &lt;code&gt;_post&lt;/code&gt; directory, and then do a pull-request. If we like it (we will try to keep our censorship to a minimum level, but we need to make sure your posts aren&amp;#8217;t too &lt;em&gt;self-advertising&lt;/em&gt; and are &lt;em&gt;still related&lt;/em&gt; to Superfeedr).&lt;/p&gt;
 &lt;p&gt;The protocol is fairly easy : name a file &lt;code&gt;yyyy-mm-dd-title-of-your-post.textile&lt;/code&gt;, then, add your post content. Make sure you follow the &amp;#8220;Textile syntax&amp;#8221;: if you want to make your text &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, add &lt;a href="http://"&gt;links&lt;/a&gt; or even titles&amp;#8230; Finally, add a top part to the file like that:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;
