@@ -4,7 +4,7 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-12-28T14:22:32+01:00</updated>
+    <updated>2009-12-28T14:25:02+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
     
@@ -27,7 +27,7 @@
 Obviously, it matters for publishers to know who will subscribe to their feeds if &lt;a href="http://superfeedr.com/publisher"&gt;they use a hub&lt;/a&gt; for their feeds.&lt;/p&gt;
 &lt;p&gt;Our monthly list market numbers show a pretty interesting image in terms of how many feeds are PubSubHubub enabled. Here is some more &amp;#8220;qualitative&amp;#8221; data to assess who implemented the &amp;#8220;subscriber&amp;#8221; side of the protocol (&lt;a href="http://blog.superfeedr.com/API/pubsubhubbub/getting-started-with-pubsubhubbub/"&gt;get started with PubSubHubbub&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Since we now host several official (&lt;a href="http://posterous.superfeedr.com/"&gt;Posterous&lt;/a&gt;, &lt;a href="http://tumblr.superfeedr.com/"&gt;Tumblr&lt;/a&gt;, &lt;a href="http://backtype.superfeedr.com/"&gt;Backtype&lt;/a&gt;, &lt;a href="http://enjoysthings.superfeedr.com/"&gt;enjoysthings&lt;/a&gt;&amp;#8230; more to come!) hubs and a few unofficial (&lt;a href="http://identica.superfeedr.com/"&gt;identica&lt;/a&gt;, &lt;a href="http://wordpress.superfeedr.com/"&gt;wordpress&lt;/a&gt;)&amp;#8230; We can then know quite easily which services have subscribed to these hubs for some feeds published by these guys.&lt;/p&gt;
-&lt;p&gt;In no particular order, here are the services for which we have callbacks :&lt;/p&gt;
+&lt;p&gt;In no particular order, here are the main services for which we have callbacks :&lt;/p&gt;
 &lt;ul&gt;
 	&lt;li&gt;&lt;a href="http://www.dailyradar.com/"&gt;DailyRadar&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href="http://twitterfeed.com/"&gt;Twitterfeed&lt;/a&gt;&lt;/li&gt;

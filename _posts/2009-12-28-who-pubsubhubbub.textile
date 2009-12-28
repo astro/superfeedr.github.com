@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Who Implemented PubSubHubbub"
+categories: [PubSubHubbub, Feeds, real-time, stats]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+"PubSubHubbub":http://code.google.com/p/pubsubhubbub/ is now more or less _6 months old_. We have daily talks with people who wonder whether they should implement it in their feeds. 
+Obviously, it matters for publishers to know who will subscribe to their feeds if "they use a hub":http://superfeedr.com/publisher for their feeds. 
+
+Our monthly list market numbers show a pretty interesting image in terms of how many feeds are PubSubHubub enabled. Here is some more "qualitative" data to assess who implemented the "subscriber" side of the protocol ("get started with PubSubHubbub":http://blog.superfeedr.com/API/pubsubhubbub/getting-started-with-pubsubhubbub/). 
+
+Since we now host several official ("Posterous":http://posterous.superfeedr.com/, "Tumblr":http://tumblr.superfeedr.com/, "Backtype":http://backtype.superfeedr.com/, "enjoysthings":http://enjoysthings.superfeedr.com/... more to come!) hubs and a few unofficial ("identica":http://identica.superfeedr.com/, "wordpress":http://wordpress.superfeedr.com/)... We can then know quite easily which services have subscribed to these hubs for some feeds published by these guys.
+
+In no particular order, here are the main services for which we have callbacks :
+* "DailyRadar":http://www.dailyradar.com/
+* "Twitterfeed":http://twitterfeed.com/
+* "Interspring":http://interspring.com/enter
+* "PushBot":http://push-bot.appspot.com/
+* "Kingofeed":http://kingofeed.com.br/
+* "Friendfeed":http://friendfeed.com/
+* "RSSForward":http://rssforward.com/
+* "Cliqset":http://cliqset.com/
+* "Showhype":http://showhype.com/
+* "RSSInclude":http://www.rssinclude.com/
+* "Favit":http://favit.com/
+* "RSSMicro":http://www.rssmicro.com/
+* "Livedoor":http://www.livedoor.com/
+* "Ballhype":http://ballhype.com/
+* "Lazyfeed":http://www.lazyfeed.com/
+* "Superfeedr":http://superfeedr.com/ (obviously :))
+
+We have *about 200 different domains with registered callbacks*, but we couldn't really identify the service to which they relate. Also, these numbers do not take the subscriptions to "Superfeedr's hub":http://superfeedr.com/hubbub into account. Just the hubs we're hosting.
+
+There may be a few other (please tell us in the comments), but we can't confirm that they subscribed to any of the hubs we host though.
+
+I tend to think that the *number of services who subscribes matters more than the number of publishers* from now on. Let me know your thoughts on that.
+
+
+
+
+
+
+
