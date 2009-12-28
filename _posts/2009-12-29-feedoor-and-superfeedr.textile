@@ -1,0 +1,41 @@
+---
+layout: post
+title: "Feedoor and Superfeedr"
+categories: [PubSubHubbub, use-case, feedoor, API, Perl]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Earlier this month "Mamod":http://twitter.com/Mamod sent me a notice saying that they enabled real-time feeds management to any website or blog (See "Arabcrunch":http://arabcrunch.com/2009/12/feedoor-enables-real-time-feeds-management-to-any-website-or-blog.html) used through "Feedoor":http://www.feedoor.com/.
+
+Mamod was kind enough to create this great presentation on how he integrated "Superfeedr":http://superfeedr.com/ into Feedoor :
+
+<div style="width:425px;text-align:left" id="__ss_2705362"><a style="font:14px Helvetica,Arial,Sans-serif;display:block;margin:12px 0 3px 0;text-decoration:underline;" href="http://www.slideshare.net/mamod/superfeedr-integration-with-feedoor2" title="Superfeedr Integration With Feedoor">Superfeedr Integration With Feedoor</a><object style="margin:0px" width="425" height="355"><param name="movie" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=superfeedrintegrationwithfeedoor2-091212111230-phpapp02&stripped_title=superfeedr-integration-with-feedoor2" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><embed src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=superfeedrintegrationwithfeedoor2-091212111230-phpapp02&stripped_title=superfeedr-integration-with-feedoor2" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="355"></embed></object><div style="font-size:11px;font-family:tahoma,arial;height:26px;padding-top:2px;">View more <a style="text-decoration:underline;" href="http://www.slideshare.net/">presentations</a> from <a style="text-decoration:underline;" href="http://www.slideshare.net/mamod">mamod</a>.</div></div>
+
+He also sent me the following :
+
+bq. Our major concern was to make all bloggers able to *enable real-time support for their feeds*, and Superfeedr helped us to achieve that. 
+ 
+bq. In the beginning we supported "RssCloud":http://rsscloud.org/ protocol and then "Pubsubhubbub":http://code.google.com/p/pubsubhubbub/, these protocols are the most well known protocols in the world of real-time, however, *the problem lies in the lack of real-time protocols in most feeds*, which means that we need to find a smart solution to overcome this problem. The solution is to poll feeds with no real-time protocol periodically and intelligently, and then match with the previous content, if there is new content we ping feed services and subscribers, this is the only way we can achieve as close as possible to real-time for feeds with no real-time protocols. For those who do not know how difficult this process is,* the process of polling thousands of feeds several times a day needs lots of resources and planning, it's simply a very crazy task*. Luckily we found a crazy service which already do that exact thing we needed and surprisingly they do it right and efficiently, *Superfeedr, they're so crazy* but glad we found them. Now when ever we manage a feed with no real-time protocol we send it to Superfeedr and *they do the polling and the checking on our behalf*, and all we need to do is waiting for their pings :) 
+ 
+bq. As for how to integrate Superfeedr in our service, we used "their HTTP API":http://superfeedr.com/documentation#pubsubhubbub, it was *very easy* and just like dealing with Pubsubhubbub real-time protocol as *they use the same specifications*, they are a big hub that supports all real-time protocols and smartly poll feeds frequently. 
+
+
+Here is what Feedoor used to integrate with Superfeedr :
+
+* Superfeedr API: "_HTTP API_":http://superfeedr.com/documentation#pubsubhubbub
+* Programming Language Used: _Perl_ 
+* Modules and Libraries: _In house_
+
+
+
+
+
+
+
+
+
+
+
+
