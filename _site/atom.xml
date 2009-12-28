@@ -4,9 +4,56 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-12-21T18:08:41+01:00</updated>
+    <updated>2009-12-28T14:22:32+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Who Implemented PubSubHubbub</title>
+        
+        <category term="PubSubHubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Feeds" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="stats" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/12/28/who-pubsubhubbub.html"/>
+        <published>2009-12-28T00:00:00+01:00</published>
+        <updated>2009-12-28T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/2009/12/28/who-pubsubhubbub</id>
+        <content type="html">&lt;p&gt;&lt;a href="http://code.google.com/p/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt; is now more or less &lt;em&gt;6 months old&lt;/em&gt;. We have daily talks with people who wonder whether they should implement it in their feeds. &lt;br /&gt;
+Obviously, it matters for publishers to know who will subscribe to their feeds if &lt;a href="http://superfeedr.com/publisher"&gt;they use a hub&lt;/a&gt; for their feeds.&lt;/p&gt;
+&lt;p&gt;Our monthly list market numbers show a pretty interesting image in terms of how many feeds are PubSubHubub enabled. Here is some more &amp;#8220;qualitative&amp;#8221; data to assess who implemented the &amp;#8220;subscriber&amp;#8221; side of the protocol (&lt;a href="http://blog.superfeedr.com/API/pubsubhubbub/getting-started-with-pubsubhubbub/"&gt;get started with PubSubHubbub&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Since we now host several official (&lt;a href="http://posterous.superfeedr.com/"&gt;Posterous&lt;/a&gt;, &lt;a href="http://tumblr.superfeedr.com/"&gt;Tumblr&lt;/a&gt;, &lt;a href="http://backtype.superfeedr.com/"&gt;Backtype&lt;/a&gt;, &lt;a href="http://enjoysthings.superfeedr.com/"&gt;enjoysthings&lt;/a&gt;&amp;#8230; more to come!) hubs and a few unofficial (&lt;a href="http://identica.superfeedr.com/"&gt;identica&lt;/a&gt;, &lt;a href="http://wordpress.superfeedr.com/"&gt;wordpress&lt;/a&gt;)&amp;#8230; We can then know quite easily which services have subscribed to these hubs for some feeds published by these guys.&lt;/p&gt;
+&lt;p&gt;In no particular order, here are the services for which we have callbacks :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="http://www.dailyradar.com/"&gt;DailyRadar&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://twitterfeed.com/"&gt;Twitterfeed&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://interspring.com/enter"&gt;Interspring&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://push-bot.appspot.com/"&gt;PushBot&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://kingofeed.com.br/"&gt;Kingofeed&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://friendfeed.com/"&gt;Friendfeed&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://rssforward.com/"&gt;RSSForward&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://cliqset.com/"&gt;Cliqset&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://showhype.com/"&gt;Showhype&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://www.rssinclude.com/"&gt;RSSInclude&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://favit.com/"&gt;Favit&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://www.rssmicro.com/"&gt;RSSMicro&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://www.livedoor.com/"&gt;Livedoor&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://ballhype.com/"&gt;Ballhype&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://www.lazyfeed.com/"&gt;Lazyfeed&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://superfeedr.com/"&gt;Superfeedr&lt;/a&gt; (obviously :))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We have &lt;strong&gt;about 200 different domains with registered callbacks&lt;/strong&gt;, but we couldn&amp;#8217;t really identify the service to which they relate. Also, these numbers do not take the subscriptions to &lt;a href="http://superfeedr.com/hubbub"&gt;Superfeedr&amp;#8217;s hub&lt;/a&gt; into account. Just the hubs we&amp;#8217;re hosting.&lt;/p&gt;
+&lt;p&gt;There may be a few other (please tell us in the comments), but we can&amp;#8217;t confirm that they subscribed to any of the hubs we host though.&lt;/p&gt;
+&lt;p&gt;I tend to think that the &lt;strong&gt;number of services who subscribes matters more than the number of publishers&lt;/strong&gt; from now on. Let me know your thoughts on that.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Distributed and Federated Social Networks</title>
