@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Scaling Superfeedr"
+categories: [Superfeedr, lateness, scaling]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+I'd like to start this post by *wishing everybody a wonderful 2010 year, and a great 2nd decade of this millennium*.
+
+We will remember these early days are pretty hectic, here at Superfeedr. As a matter of facts _our users keep feeding us with more and more feeds_ (+20% in a week!). It's great, except that it *makes little issues much bigger*. And we're currently fighting hard (like 16hours a day) to improve our scheduling algorithm.
+
+The difficulty that we have is that we need to deal with a lot of pings, telling us that a given feed has been updated. Technically, at the moment when we receive a ping, we need to fetch the feed and push that to our subscribers, which means that _we're already late to deal with this feed_.
+
+So, at any time, we know _how many feeds are late_. Also, we need to fetch all of our feeds at least every 15 minutes, which roughly tells us _how late we are on average for each feed_.
+
+Right now, we're at about 10% of late feeds, which means that, on average, we're 1.5 minutes late on pings. Yes, it's much higher than acceptable and we're working on that - but it reached 50% earlier today :( -
+
+Contrary to many services out there, Superfeedr has to scale "internally". Most of web apps and web services usually work like this :
+# A user sends a query
+# the application processes that query
+# the application returns the response.
+
+It's not always easy to scale all the time, but at least *it's a fairly known science*. Adding cache to skip the 2nd step is the most obvious thing and it can do miracles :)
+
+Unfortunately for us, that is not how Superfeedr works. Of course, like I mentioned we deal with incoming pings, but we also have to deal with polling for a lot of feeds (even the pinged feeds, as a failover), which means that as opposed to almost every web service out there, *we do not act upon user input*. The good news is that we can probably have a bigger query -> response time. The bad news is that caching[1] is useless!
+
+As a matter of fact, our biggest problem is to *distribute all our data-processing smoothly and evenly across our whole infrastructure* so that we always have a capacity utilization of 100%. And that's what I'll be spending the next hours and days on :)
+
+fn1. And caching is evil for real-time stuff :)

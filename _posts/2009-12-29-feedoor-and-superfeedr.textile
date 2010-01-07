@@ -28,14 +28,3 @@ Here is what Feedoor used to integrate with Superfeedr :
 * Programming Language Used: _Perl_ 
 * Modules and Libraries: _In house_
 
-
-
-
-
-
-
-
-
-
-
-
