@@ -29,13 +29,12 @@
     <div id="page">
         <div id="sidebar">
             <h2>Superfeedr speaking</h2>
-            <p>We build a complex feed fetching and parsing infrastructure so that you don't have to.</p>
-            <ul>
-                <li><a href="http://superfeedr.com">Superfeedr</a></li>
-                <li><a href="http://twitter.com/superfeedr">@superfeedr</a></li>
-                <li><a href="/archive.html">Archive</a></li>
-            </ul>
-            
+            <form action="http://www.feedmyinbox.com/feeds/verify/" method="post" id="fmi" target="fmi" onsubmit="window.open('http://www.feedmyinbox.com/', 'fmi', 'scrollbars=yes,width=520,height=490');return true;">
+                <input type="hidden" value="http://blog.superfeedr.com/atom.xml" name="feed"/>
+                <p style="line-height:200%">We build a <a href="http://superfeedr.com">complex feed fetching and parsing infrastructure</a> so that you don't have to. Susbcribe to our <a href="http://blog.superfeedr.com/atom.xml">Atom Feed</a>, <a href="http://twitter.com/superfeedr">follow us on Twitter</a>, read the <a href="/archive.html">archive</a> or receive emails at <input type="text" value="" name="email" />    <input type="submit" value="Submit"/>
+                </p>
+            </form>
+
             <div id="facebook_div">
                 <script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US"></script><script type="text/javascript">FB.init("dfb41a1fd39d0fdac38081c0dd771c32");</script><fb:fan profile_id="205234549391" stream="" connections="" width="300"></fb:fan><div style="font-size:8px; padding-left:10px"><a href="http://www.facebook.com/pages/Superfeedr/205234549391">Superfeedr on Facebook</a> </div>
             </div>
@@ -55,6 +54,8 @@
              
 <h1>Superfeedr Blog Archive</h1>
 <ul>
+    
+          <li><a href="/2010/01/06/scaling-superfeedr.html">Scaling Superfeedr</a></li>
     
           <li><a href="/2009/12/29/feedoor-and-superfeedr.html">Feedoor and Superfeedr</a></li>
     
@@ -156,9 +157,9 @@
     
           <li><a href="/2009/07/10/customer-care-lesson.html">Customer Care Lesson</a></li>
     
-          <li><a href="/2009/07/09/speeding-up-rss.html">Speeding Up RSS : what for?</a></li>
-    
           <li><a href="/2009/07/09/there-is-such-thing-as-real-time-web-search.html">There is no such thing as Real Time Search</a></li>
+    
+          <li><a href="/2009/07/09/speeding-up-rss.html">Speeding Up RSS : what for?</a></li>
     
           <li><a href="/2009/07/05/the-future-of-web-apps.html">The future of Web apps?</a></li>
     

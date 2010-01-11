@@ -4,9 +4,43 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2009-12-28T15:43:57+01:00</updated>
+    <updated>2010-01-11T12:36:45+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Scaling Superfeedr</title>
+        
+        <category term="Superfeedr" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="lateness" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="scaling" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2010/01/06/scaling-superfeedr.html"/>
+        <published>2010-01-06T00:00:00+01:00</published>
+        <updated>2010-01-06T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/2010/01/06/scaling-superfeedr</id>
+        <content type="html">&lt;p&gt;I&amp;#8217;d like to start this post by &lt;strong&gt;wishing everybody a wonderful 2010 year, and a great 2nd decade of this millennium&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We will remember these early days are pretty hectic, here at Superfeedr. As a matter of facts &lt;em&gt;our users keep feeding us with more and more feeds&lt;/em&gt; (+20% in a week!). It&amp;#8217;s great, except that it &lt;strong&gt;makes little issues much bigger&lt;/strong&gt;. And we&amp;#8217;re currently fighting hard (like 16hours a day) to improve our scheduling algorithm.&lt;/p&gt;
+&lt;p&gt;The difficulty that we have is that we need to deal with a lot of pings, telling us that a given feed has been updated. Technically, at the moment when we receive a ping, we need to fetch the feed and push that to our subscribers, which means that &lt;em&gt;we&amp;#8217;re already late to deal with this feed&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;So, at any time, we know &lt;em&gt;how many feeds are late&lt;/em&gt;. Also, we need to fetch all of our feeds at least every 15 minutes, which roughly tells us &lt;em&gt;how late we are on average for each feed&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Right now, we&amp;#8217;re at about 10% of late feeds, which means that, on average, we&amp;#8217;re 1.5 minutes late on pings. Yes, it&amp;#8217;s much higher than acceptable and we&amp;#8217;re working on that &amp;#8211; but it reached 50% earlier today :( -&lt;/p&gt;
+&lt;p&gt;Contrary to many services out there, Superfeedr has to scale &amp;#8220;internally&amp;#8221;. Most of web apps and web services usually work like this :&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;A user sends a query&lt;/li&gt;
+	&lt;li&gt;the application processes that query&lt;/li&gt;
+	&lt;li&gt;the application returns the response.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It&amp;#8217;s not always easy to scale all the time, but at least &lt;strong&gt;it&amp;#8217;s a fairly known science&lt;/strong&gt;. Adding cache to skip the 2nd step is the most obvious thing and it can do miracles :)&lt;/p&gt;
+&lt;p&gt;Unfortunately for us, that is not how Superfeedr works. Of course, like I mentioned we deal with incoming pings, but we also have to deal with polling for a lot of feeds (even the pinged feeds, as a failover), which means that as opposed to almost every web service out there, &lt;strong&gt;we do not act upon user input&lt;/strong&gt;. The good news is that we can probably have a bigger query &amp;#8594; response time. The bad news is that caching&lt;sup class="footnote"&gt;&lt;a href="#fn1"&gt;1&lt;/a&gt;&lt;/sup&gt; is useless!&lt;/p&gt;
+&lt;p&gt;As a matter of fact, our biggest problem is to &lt;strong&gt;distribute all our data-processing smoothly and evenly across our whole infrastructure&lt;/strong&gt; so that we always have a capacity utilization of 100%. And that&amp;#8217;s what I&amp;#8217;ll be spending the next hours and days on :)&lt;/p&gt;
+&lt;p class="footnote" id="fn1"&gt;&lt;sup&gt;1&lt;/sup&gt; And caching is evil for real-time stuff :)&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Feedoor and Superfeedr</title>
@@ -38,12 +72,12 @@
 &lt;blockquote&gt;
 &lt;p&gt;As for how to integrate Superfeedr in our service, we used &lt;a href="http://superfeedr.com/documentation#pubsubhubbub"&gt;their &lt;span class="caps"&gt;HTTP&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;, it was &lt;strong&gt;very easy&lt;/strong&gt; and just like dealing with Pubsubhubbub real-time protocol as &lt;strong&gt;they use the same specifications&lt;/strong&gt;, they are a big hub that supports all real-time protocols and smartly poll feeds frequently.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;Here is what Feedoor used to integrate with Superfeedr :&lt;/p&gt;
 &lt;ul&gt;
-	&lt;li&gt;Programming Language Used: Perl&lt;/li&gt;
-	&lt;li&gt;Modules and Libraries: In house&lt;/li&gt;
-	&lt;li&gt;Superfeedr &lt;span class="caps"&gt;API&lt;/span&gt;: &lt;span class="caps"&gt;HTTP&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;li&gt;</content>
+	&lt;li&gt;Superfeedr &lt;span class="caps"&gt;API&lt;/span&gt;: &lt;a href="http://superfeedr.com/documentation#pubsubhubbub"&gt;&lt;em&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;Programming Language Used: &lt;em&gt;Perl&lt;/em&gt;&lt;/li&gt;
+	&lt;li&gt;Modules and Libraries: &lt;em&gt;In house&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
@@ -1615,6 +1649,26 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
     </entry>
     
     <entry>
+        <title>There is no such thing as Real Time Search</title>
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2009/07/09/there-is-such-thing-as-real-time-web-search.html"/>
+        <published>2009-07-09T00:00:00+02:00</published>
+        <updated>2009-07-09T00:00:00+02:00</updated>
+        <id>blog.superfeedr.com:/2009/07/09/there-is-such-thing-as-real-time-web-search</id>
+        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/"&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
+&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href="http://google.com"&gt;Google&lt;/a&gt; or &lt;a href="http://bing.com"&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://search.twitter.com"&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href="http://collecta.com"&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
+&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
         <title>Speeding Up RSS : what for?</title>
         
         <category term="RSS" scheme="http://www.sixapart.com/ns/types#tag" />
@@ -1635,26 +1689,6 @@ When you have a few cookbooks, clone that chef repo on your chef server and run 
 &lt;p&gt;The comments, though are very interesting and they show what we&amp;#8217;ve observed with &amp;quot;Notifixious&amp;quot;http://notifixio.us over the last year : Real-time notification (or faster &lt;span class="caps"&gt;RSS&lt;/span&gt;) scares people a lot. There is at least 4 or 5 comments saying that &lt;span class="caps"&gt;RSS&lt;/span&gt; is fast enough for them. The problem here, is that there is a misconception :* making &lt;span class="caps"&gt;RSS&lt;/span&gt; faster is not for individuals, but for the web itself*.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://blog.superfeedr.com/api/http/pubsubhubbub/pubsubhubbub/"&gt;PubSubHubbub&lt;/a&gt; has the potential to bring Push to the &lt;span class="caps"&gt;RSS&lt;/span&gt; and Atom technologies. So not only it will be faster, but it will be instantaneous, and when Feed updates will be instantaneous, nobody will pull anymore (&lt;a href="http://blog.superfeedr.com/gospel/something-stupid/"&gt;not even us&lt;/a&gt;) and the web will be better.&lt;/p&gt;
 &lt;p&gt;Better? Publishers will not have to &lt;em&gt;handle massive loads anymore&lt;/em&gt; (like Twitter had to), and Subscribers (services) will &lt;em&gt;not have to poll over and over to get updates&lt;/em&gt;.&lt;/p&gt;</content>
-        <author>
-            <name>Julien</name>
-            <uri>http://twitter.com/julien51</uri>
-        </author>
-    </entry>
-    
-    <entry>
-        <title>There is no such thing as Real Time Search</title>
-        
-        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
-        
-        <link href="http://blog.superfeedr.com/2009/07/09/there-is-such-thing-as-real-time-web-search.html"/>
-        <published>2009-07-09T00:00:00+02:00</published>
-        <updated>2009-07-09T00:00:00+02:00</updated>
-        <id>blog.superfeedr.com:/2009/07/09/there-is-such-thing-as-real-time-web-search</id>
-        <content type="html">&lt;p&gt;&lt;em&gt;Real-time search&lt;/em&gt; seems to be the most common tagline these days. Real-time is the new hotness (&lt;a href="http://blog.superfeedr.com/gospel/infrastructure/realtime/building-realtime/"&gt;we agree&lt;/a&gt;!) and Google almost made &amp;#8216;Revenue&amp;#8217; and &amp;#8216;Search&amp;#8217; synonyms. I guess it was tempting to mix both ;)&lt;/p&gt;
-&lt;p&gt;When I am doing a &amp;#8220;search&amp;#8221; on &lt;a href="http://google.com"&gt;Google&lt;/a&gt; or &lt;a href="http://bing.com"&gt;Bing&lt;/a&gt; (try it!), I technically don&amp;#8217;t know what I will find. To be more precise, I don&amp;#8217;t know where I will find the information, and I even don&amp;#8217;t know if what I am looking for exists.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://search.twitter.com"&gt;Twitter Search&lt;/a&gt; (ex-summize) is clearly the best known example of Real-time Search and &lt;a href="http://collecta.com"&gt;Collecta&lt;/a&gt; is a good &amp;#8220;cross-services&amp;#8221; examples. I wouldn&amp;#8217;t call any of them search engines, but rather &amp;#8220;&lt;strong&gt;filters&lt;/strong&gt;&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;In both cases, I do searches about things that are happening (Jackson&amp;#8217;s death, Palin&amp;#8217;s resignation&amp;#8230;), which proves they exist. I also tend to know what I&amp;#8217;ll find : images, links to more in-depth articles&amp;#8230; etc. I am just trying to &amp;#8220;filter&amp;#8221; the stream of information, not searching for an answer.&lt;/p&gt;
-&lt;p&gt;In the end, both traditional search-engines and real-time filters have to deal with &lt;strong&gt;relevance&lt;/strong&gt;, but I think the &lt;strong&gt;user&amp;#8217;s expectations are very different in both cases&lt;/strong&gt;. What do you think?&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
