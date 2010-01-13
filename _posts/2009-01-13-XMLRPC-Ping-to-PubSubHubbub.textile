@@ -1,0 +1,15 @@
+---
+layout: post
+title: "XML-RPC Ping to PubSubHubbub"
+categories: [XML-RPC, Ping, PubSubHubbub, XMPP, Real-time]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Slow blogging these days, but we're still (more than ever!) crushing it :) *XML-RPC ping* is the grand father of all ping mechanisms for feeds and blogs. There are a few famous ping servers, including "Google":http://www.google.com/help/blogsearch/pinging_API.html's or "Ping-o-matic":http://pingomatic.com/ from "Automattic":http://automattic.com/. Unfortunately, the lack of "subscription" have made this ping servers *a nest for spammers*. Check the "changes.xml":http://rpc.weblogs.com/changes.xml files to see how many notifications are spam vs. legit. Sad :(.
+
+Yet, *many publishers have implemented this protocol*, and we decided that there was no reason to leave this people on side, so we mapped this protocol into "PubSubHubbub":http://superfeedr.com/hubbub so if people subscribe to your feed and you ping us, we will take that ping into account and send them the update in real-time!
+
+If you're a "publisher":http://superfeedr.com/publisher and if you have implemented the ping protocol, then, the next step for you have a PubSubHubbub hub is just to "add the discovery xml":http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.2.html#discovery into your feeds and let me know so I can plug your feeds to our hub :) It shouldn't take more than a few minutes on either side!
+
