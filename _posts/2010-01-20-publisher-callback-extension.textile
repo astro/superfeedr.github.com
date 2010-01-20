@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Publisher Callback Extension to PubSubHubbub"
+categories: [PubSubHubbub, Spec, Extension]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Superfeedr now hosts "several hubs":http://superfeedr.com/hubbub. We had discussion with a lot of data publishers, including blog platforms, but also social network and regular "media" sites.
+
+All of the people with whom we talked were *excited by real-time feeds* and most of them see *PubSubHubbub* as a good way for them to rely less on polling and actively push their data toward subscribers. However, a lot of them _raised the concern that the protocol was a little too blind_ for them. They want to have a certain visibility on who (the callback urls) subscribed to what (the feed urls).
+
+The concern goes from regular logging and backup of the subscriptions, to spam control or even paid-subscription. 
+
+The following scenario scared a lot of the media sites we talked to: we all know that a lot of spam sites crawl and 'steal' content from them. They put -a lot of- ads and usually use black hat SEO to obtain better rankings in the search engines. PubSubHubbub makes the spammer's life easier because they don't even have to poll for the data anymore. There are several techniques for publishers to filter spammers when they poll (IP filtering... etc), but they don't apply to PubSubHubbub since the publisher is _blind_.
+
+Obviously *this is a legal matter more than a technical matter*, but there is no reason either to provide spammers with a tool which would make that easier for them (specially since it's not always easy to enforce copyright internationally). 
+
+Another use case is to allow subscriptions from certain feeds only. Take our "Tumblr hub":http://tumblr.com as an example. We can only allow subscriptions for feeds that are on Tumblr. The callback mechanism can help us query Tumblr to make sure they actually host a given blog (when the blog uses a custom domain, it's not always easy to tell).
+
+We "published the proposal":http://code.google.com/p/pubsubhubbub/wiki/AcceptingSubscriptionForPublishers for this (optional!) extension, we'd love to have feedback from the community. Obviously this is a draft, which means that it NEEDS more work :)
+
+
+
