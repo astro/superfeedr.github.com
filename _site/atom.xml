@@ -4,9 +4,61 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-01-11T12:36:45+01:00</updated>
+    <updated>2010-01-20T08:21:34+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Publisher Callback Extension to PubSubHubbub</title>
+        
+        <category term="PubSubHubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Spec" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Extension" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2010/01/20/publisher-callback-extension.html"/>
+        <published>2010-01-20T00:00:00+01:00</published>
+        <updated>2010-01-20T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/2010/01/20/publisher-callback-extension</id>
+        <content type="html">&lt;p&gt;Superfeedr now hosts &lt;a href="http://superfeedr.com/hubbub"&gt;several hubs&lt;/a&gt;. We had discussion with a lot of data publishers, including blog platforms, but also social network and regular &amp;#8220;media&amp;#8221; sites.&lt;/p&gt;
+&lt;p&gt;All of the people with whom we talked were &lt;strong&gt;excited by real-time feeds&lt;/strong&gt; and most of them see &lt;strong&gt;PubSubHubbub&lt;/strong&gt; as a good way for them to rely less on polling and actively push their data toward subscribers. However, a lot of them &lt;em&gt;raised the concern that the protocol was a little too blind&lt;/em&gt; for them. They want to have a certain visibility on who (the callback urls) subscribed to what (the feed urls).&lt;/p&gt;
+&lt;p&gt;The concern goes from regular logging and backup of the subscriptions, to spam control or even paid-subscription.&lt;/p&gt;
+&lt;p&gt;The following scenario scared a lot of the media sites we talked to: we all know that a lot of spam sites crawl and &amp;#8216;steal&amp;#8217; content from them. They put &lt;del&gt;a lot of&lt;/del&gt; ads and usually use black hat &lt;span class="caps"&gt;SEO&lt;/span&gt; to obtain better rankings in the search engines. PubSubHubbub makes the spammer&amp;#8217;s life easier because they don&amp;#8217;t even have to poll for the data anymore. There are several techniques for publishers to filter spammers when they poll (IP filtering&amp;#8230; etc), but they don&amp;#8217;t apply to PubSubHubbub since the publisher is &lt;em&gt;blind&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Obviously &lt;strong&gt;this is a legal matter more than a technical matter&lt;/strong&gt;, but there is no reason either to provide spammers with a tool which would make that easier for them (specially since it&amp;#8217;s not always easy to enforce copyright internationally).&lt;/p&gt;
+&lt;p&gt;Another use case is to allow subscriptions from certain feeds only. Take our &lt;a href="http://tumblr.com"&gt;Tumblr hub&lt;/a&gt; as an example. We can only allow subscriptions for feeds that are on Tumblr. The callback mechanism can help us query Tumblr to make sure they actually host a given blog (when the blog uses a custom domain, it&amp;#8217;s not always easy to tell).&lt;/p&gt;
+&lt;p&gt;We &lt;a href="http://code.google.com/p/pubsubhubbub/wiki/AcceptingSubscriptionForPublishers"&gt;published the proposal&lt;/a&gt; for this (optional!) extension, we&amp;#8217;d love to have feedback from the community. Obviously this is a draft, which means that it &lt;span class="caps"&gt;NEEDS&lt;/span&gt; more work :)&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>XML-RPC Ping to PubSubHubbub</title>
+        
+        <category term="XML-RPC" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Ping" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="PubSubHubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="XMPP" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2010/01/13/XMLRPC-Ping-to-PubSubHubbub.html"/>
+        <published>2010-01-13T00:00:00+01:00</published>
+        <updated>2010-01-13T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/2010/01/13/XMLRPC-Ping-to-PubSubHubbub</id>
+        <content type="html">&lt;p&gt;Slow blogging these days, but we&amp;#8217;re still (more than ever!) crushing it :) &lt;strong&gt;&lt;span class="caps"&gt;XML&lt;/span&gt;-&lt;span class="caps"&gt;RPC&lt;/span&gt; ping&lt;/strong&gt; is the grand father of all ping mechanisms for feeds and blogs. There are a few famous ping servers, including &lt;a href="http://www.google.com/help/blogsearch/pinging_API.html&amp;#39;s"&gt;Google&lt;/a&gt; or &lt;a href="http://pingomatic.com/"&gt;Ping-o-matic&lt;/a&gt; from &lt;a href="http://automattic.com/"&gt;Automattic&lt;/a&gt;. Unfortunately, the lack of &amp;#8220;subscription&amp;#8221; have made this ping servers &lt;strong&gt;a nest for spammers&lt;/strong&gt;. Check the &lt;a href="http://rpc.weblogs.com/changes.xml"&gt;changes.xml&lt;/a&gt; files to see how many notifications are spam vs. legit. Sad :(.&lt;/p&gt;
+&lt;p&gt;Yet, &lt;strong&gt;many publishers have implemented this protocol&lt;/strong&gt;, and we decided that there was no reason to leave this people on side, so we mapped this protocol into &lt;a href="http://superfeedr.com/hubbub"&gt;PubSubHubbub&lt;/a&gt; so if people subscribe to your feed and you ping us, we will take that ping into account and send them the update in real-time!&lt;/p&gt;
+&lt;p&gt;If you&amp;#8217;re a &lt;a href="http://superfeedr.com/publisher"&gt;publisher&lt;/a&gt; and if you have implemented the ping protocol, then, the next step for you have a PubSubHubbub hub is just to &lt;a href="http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.2.html#discovery"&gt;add the discovery xml&lt;/a&gt; into your feeds and let me know so I can plug your feeds to our hub :) It shouldn&amp;#8217;t take more than a few minutes on either side!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Scaling Superfeedr</title>
