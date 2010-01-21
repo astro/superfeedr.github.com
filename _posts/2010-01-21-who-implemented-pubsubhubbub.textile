@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Who Implemented PubSubHubbub"
+categories: [PubSubHubbub, Feeds, real-time, stats]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Exactly like "last month":http://blog.superfeedr.com/Feeds/PubSubHubbub/real-time/stats/who-pubsubhubbub/, here is a _list of domains for which we have callback urls_ : *they implemented PubSubHubbub*! 
+
+Let's start with the new kids in the room, who were not in the list last month, again, in absolutely no particular order: 
+- "netvibes":http://www.netvibes.com/
+- "tailsweep.com":http://www.tailsweep.com/
+- "rss2twitter":http://rss2twitter.com/
+- "fliptop-inc.com":http://fliptop-inc.com/
+- "geowhy.org":http://geowhy.org/
+- "sfr.fr":http://sfr.fr
+- "viewsflow.com":http://viewsflow.com
+- "chitthajagat.in":http://chitthajagat.in
+- "tbablogs.com":http://tbablogs.com
+- "webwag.com":http://www.webwag.com/startup/
+- "nababu.org":http://nababu.org
+- "pitchfork.com":http://pitchfork.com/
+
+Obviously, all the "big guys from last time":http://blog.superfeedr.com/Feeds/PubSubHubbub/real-time/stats/who-pubsubhubbub/ are still here :)
+
+In total, we now have 177 different domains with callback urls. This is very exciting! 

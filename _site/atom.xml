@@ -4,9 +4,46 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-01-20T08:21:34+01:00</updated>
+    <updated>2010-01-21T09:33:53+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Who Implemented PubSubHubbub</title>
+        
+        <category term="PubSubHubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Feeds" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="stats" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/2010/01/21/who-implemented-pubsubhubbub.html"/>
+        <published>2010-01-21T00:00:00+01:00</published>
+        <updated>2010-01-21T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/2010/01/21/who-implemented-pubsubhubbub</id>
+        <content type="html">&lt;p&gt;Exactly like &lt;a href="http://blog.superfeedr.com/Feeds/PubSubHubbub/real-time/stats/who-pubsubhubbub/"&gt;last month&lt;/a&gt;, here is a &lt;em&gt;list of domains for which we have callback urls&lt;/em&gt; : &lt;strong&gt;they implemented PubSubHubbub&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s start with the new kids in the room, who were not in the list last month, again, in absolutely no particular order: &lt;br /&gt;
+- &lt;a href="http://www.netvibes.com/"&gt;netvibes&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="http://www.tailsweep.com/"&gt;tailsweep.com&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="http://rss2twitter.com/"&gt;rss2twitter&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="http://fliptop-inc.com/"&gt;fliptop-inc.com/&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="http://geowhy.org/"&gt;geowhy.org&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="http://sfr.fr"&gt;sfr.fr&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="http://viewsflow.com"&gt;viewsflow.com&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="http://chitthajagat.in"&gt;chitthajagat.in&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="http://tbablogs.com"&gt;tbablogs.com&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="http://www.webwag.com/startup/"&gt;webwag.com&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="http://nababu.org"&gt;nababu.org&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="http://pitchfork.com/"&gt;pitchfork.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Obviously, all the &lt;a href="http://blog.superfeedr.com/Feeds/PubSubHubbub/real-time/stats/who-pubsubhubbub/"&gt;big guys from last time&lt;/a&gt; are still here :)&lt;/p&gt;
+&lt;p&gt;In total, we now have 177 different domains with callback urls. This is very exciting!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Publisher Callback Extension to PubSubHubbub</title>
