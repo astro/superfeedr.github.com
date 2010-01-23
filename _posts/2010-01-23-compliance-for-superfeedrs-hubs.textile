@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Compliance for Superfeedr's Hubs"
+categories: [pubsubhubbub, testing, compliance]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+We "said it in the past":http://blog.superfeedr.com/OSS/gospel/kind-of-open-source/, *abiding by standards makes the web better*. Yet, sometimes, standards have a tendency to diverge from an implementation to another. You know, the _theory vs. practice_ thing. 
+
+!{width:20%;float:left;margin:5px}/images/robocop.jpg!
+
+PubSubHubbub is a standard. Since it's relies on HTTP, it makes it quite easy to test and specify, and that's what "progrium":http://progrium.com/ "did a while ago":http://code.google.com/p/pubsubhubbub/source/browse/trunk/testsuite/README. 
+
+Today I checked and cleaned a little bit the test suite, and I uploaded it to "Superfeedr's github repo":http://github.com/superfeedr/pubsubhubbub_hub_testsuite. I tested it with the hubs we host and, good news : we're fully compliant on the subscriber part :)
+
+The publisher part is a _little bit trickier_, because it expects the hub to fetch a url after a ping. However, in Superfeedr's case, the scheduling algorithm is a slightly more complex, and it makes it "non-deterministic" from the outside world : quite hard to specify.
+
+Obviously, you can run that code by yourself to make sure we're doing good! We will also try to update both the hub and the test suite when the specification evolves! (Also, I need to find a way to push that back to Google's svn, but my svn is probably not better than my ancient greek...)
