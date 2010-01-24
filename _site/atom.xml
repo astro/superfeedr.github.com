@@ -4,7 +4,7 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-01-25T00:11:27+01:00</updated>
+    <updated>2010-01-25T00:19:44+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
     
@@ -22,6 +22,7 @@
         <updated>2010-01-24T00:00:00+01:00</updated>
         <id>blog.superfeedr.com:/hub/pubsubhubbub/usecase/a-hub-for-dotspots</id>
         <content type="html">&lt;p&gt;As &lt;a href=&quot;http://twitter.com/mmastrac&quot;&gt;Matt&lt;/a&gt; &lt;a href=&quot;http://blog.dotspots.com/2010/01/21/dotspots-goes-real-time/&quot;&gt;announced earlier&lt;/a&gt; this week, &lt;a href=&quot;http://dotspots.com/&quot;&gt;Dotspots&lt;/a&gt; now as a &lt;a href=&quot;http://dotspots.superfeedr.com/&quot;&gt;PubSubHubbub hub&lt;/a&gt;, hosted by Superfeedr.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://dotspots.superfeedr.com/images/hubs/dotspots.gif&quot; style=&quot;width:20%;float:left;padding:10px;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;DotSpots enables anyone to update the news in real-time with dots: mini-blog posts, including videos, pictures, documents and links, that appear in context on all relevant news articles.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;

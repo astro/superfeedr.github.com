@@ -9,6 +9,8 @@ author_email_md5: b30ce50678f0e934eaa6697425c59dd7
 
 As "Matt":http://twitter.com/mmastrac "announced earlier":http://blog.dotspots.com/2010/01/21/dotspots-goes-real-time/ this week, "Dotspots":http://dotspots.com/ now as a "PubSubHubbub hub":http://dotspots.superfeedr.com/, hosted by Superfeedr.
 
+!{width:20%;float:left;padding:10px}http://dotspots.superfeedr.com/images/hubs/dotspots.gif!
+
 bq. _DotSpots enables anyone to update the news in real-time with dots: mini-blog posts, including videos, pictures, documents and links, that appear in context on all relevant news articles._
 
 Using superfeedr's hub is quite easy and involves 2 steps :
