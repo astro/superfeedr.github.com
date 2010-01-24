@@ -4,9 +4,45 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-01-23T12:24:00+01:00</updated>
+    <updated>2010-01-25T00:11:27+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>A hub for Dotspots</title>
+        
+        <category term="hub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="usecase" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/hub/pubsubhubbub/usecase/a-hub-for-dotspots"/>
+        <published>2010-01-24T00:00:00+01:00</published>
+        <updated>2010-01-24T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/hub/pubsubhubbub/usecase/a-hub-for-dotspots</id>
+        <content type="html">&lt;p&gt;As &lt;a href=&quot;http://twitter.com/mmastrac&quot;&gt;Matt&lt;/a&gt; &lt;a href=&quot;http://blog.dotspots.com/2010/01/21/dotspots-goes-real-time/&quot;&gt;announced earlier&lt;/a&gt; this week, &lt;a href=&quot;http://dotspots.com/&quot;&gt;Dotspots&lt;/a&gt; now as a &lt;a href=&quot;http://dotspots.superfeedr.com/&quot;&gt;PubSubHubbub hub&lt;/a&gt;, hosted by Superfeedr.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;DotSpots enables anyone to update the news in real-time with dots: mini-blog posts, including videos, pictures, documents and links, that appear in context on all relevant news articles.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Using superfeedr&amp;#8217;s hub is quite easy and involves 2 steps :&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;Adding the &lt;strong&gt;discovery&lt;/strong&gt; to the &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;/atom feeds. This is just a small &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt; snippet to indicate that a given feed has a hub and its location.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Pinging&lt;/strong&gt; superfeedr. Even though we &lt;em&gt;always failover to polling&lt;/em&gt;, it&amp;#8217;s also always better if you can ping us when a feed has been updated.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I asked Matt some feedback on the process of using Superfeedr&amp;#8217;s hub, and he kindly sent me the following :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Turning on real-time updates with &lt;strong&gt;PubSubHubbub was really easy&lt;/strong&gt;. We use the &lt;a href=&quot;(https://rome.dev.java.net/&quot;&gt;Rome library&lt;/a&gt; to output &lt;strong&gt;Atom&lt;/strong&gt; feeds for a number of different views on the data. We added a simple hub link to each feed to do this:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;script src=&quot;http://gist.github.com/285503.js?file=add_link.java&quot;&gt;&lt;/script&gt;&lt;blockquote&gt;
+&lt;p&gt;Our architecture already includes an asynchronous queue of events for mutation of different objects. We just needed to add another listener on the events for dot creation and modification that &lt;strong&gt;notifies the Superfeedr hub of changes&lt;/strong&gt;. When a dot is modified, the event queue notifies the PubSubHubbub notifier, which then pushes out the updates to any of the feeds modified by the action. Notifications use the built-in Java support for &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt;:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;script src=&quot;http://gist.github.com/285504.js?file=ping.java&quot;&gt;&lt;/script&gt;&lt;p&gt;As you can see, it&amp;#8217;s quite straightforward&amp;#8230; You can start today : &lt;a href=&quot;http://superfeedr.com/publisher&quot;&gt;Setup a PubSubHubbub hub&lt;/a&gt;&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Compliance for Superfeedr's Hubs</title>
@@ -40,7 +76,12 @@
         <published>2010-01-22T00:00:00+01:00</published>
         <updated>2010-01-22T00:00:00+01:00</updated>
         <id>blog.superfeedr.com:/state-fo-realtime-feeds</id>
-        <content type="html"></content>
+        <content type="html">&lt;p&gt;superhubbub &amp;#8211; 158505&lt;br /&gt;
+hubbub &amp;#8211; 12429 (433 in common)&lt;br /&gt;
+rsscloud &amp;#8211; 46715 (49287)&lt;br /&gt;
+sup &amp;#8211; 28256 (28166 in common)&lt;br /&gt;
+twitter &amp;#8211; 3821 ()&lt;br /&gt;
+xmlrpc &amp;#8211; 135948 (128072)&lt;/p&gt;</content>
         <author>
             <name></name>
             <uri></uri>

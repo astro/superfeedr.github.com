@@ -1,0 +1,29 @@
+---
+layout: post
+title: A hub for Dotspots
+categories: [hub, usecase, pubsubhubbub]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+As "Matt":http://twitter.com/mmastrac "announced earlier":http://blog.dotspots.com/2010/01/21/dotspots-goes-real-time/ this week, "Dotspots":http://dotspots.com/ now as a "PubSubHubbub hub":http://dotspots.superfeedr.com/, hosted by Superfeedr.
+
+bq. _DotSpots enables anyone to update the news in real-time with dots: mini-blog posts, including videos, pictures, documents and links, that appear in context on all relevant news articles._
+
+Using superfeedr's hub is quite easy and involves 2 steps :
+
+# Adding the *discovery* to the RSS/atom feeds. This is just a small XML snippet to indicate that a given feed has a hub and its location.
+# *Pinging* superfeedr. Even though we _always failover to polling_, it's also always better if you can ping us when a feed has been updated.
+
+I asked Matt some feedback on the process of using Superfeedr's hub, and he kindly sent me the following :
+
+bq. Turning on real-time updates with *PubSubHubbub was really easy*. We use the "Rome library":(https://rome.dev.java.net/ to output *Atom* feeds for a number of different views on the data. We added a simple hub link to each feed to do this:
+
+<script src="http://gist.github.com/285503.js?file=add_link.java"></script>
+
+bq. Our architecture already includes an asynchronous queue of events for mutation of different objects. We just needed to add another listener on the events for dot creation and modification that *notifies the Superfeedr hub of changes*. When a dot is modified, the event queue notifies the PubSubHubbub notifier, which then pushes out the updates to any of the feeds modified by the action. Notifications use the built-in Java support for HTTP:
+
+<script src="http://gist.github.com/285504.js?file=ping.java"></script>
+
+As you can see, it's quite straightforward... You can start today : "Setup a PubSubHubbub hub":http://superfeedr.com/publisher
