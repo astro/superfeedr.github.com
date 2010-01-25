@@ -32,7 +32,6 @@ bq. _Becoming a realtime publisher means being in control, rather than relying o
 Eventually, when your service will build its traffic, both approaches will exist :
 
 # *Passive*: you update your content and leave it as is, ready for people to randomly find it (through search engines, link sharing... etc) 
-
 # *Active* : you push it to subscribing application : feed readers, content aggregators, feed to email gateways, feed to SMS gateways, realtime search engines... etc
 
 
