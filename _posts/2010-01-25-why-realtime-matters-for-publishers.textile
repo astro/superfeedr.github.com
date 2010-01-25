@@ -1,0 +1,39 @@
+---
+layout: post
+title: Why realtime matters for publishers
+categories: [realtime, publisher]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Several people wonder if *realtime feeds* is something they _need_, since they have regular RSS and Atom feeds. 
+
+h3. Now
+
+The web now is organized in such a way that every service or person needs to go fetch any information, or have to "accidentally" find it again. No matter how great your content is, you'll have to _wait for visitors to come_, and once they're gone, you have _very little way of telling them about new content_.
+
+I was surprised to find out last week, during the "S2S diner":http://startup2startup.com/ in Palo Alto that the "biggest email sender were social networks":http://twitter.com/cmccann7/statuses/8056229661 (except for spammers, obviously). They send you an email for a LOT of things : a new friend request, somebody tagged you, somebody mentioned you... etc. This is _their_ way of pulling you back to the site. 
+
+When you look around, the sites which generate the *more engagement are the sites who send the best emails*, because email alerts is almost the only product that can get you back to a site regularly. 
+
+Unfortunately *not all services can rely on email*. As much as giving personal information (like your email) to a social network is ok, it doesn't make sense to subscribe to any mailing list out there. Also, when a social network sends an email, it's _always_ *accurate and personalized*! If I subscribe to the NYT's mailing lists, there is actually little chances that the emails I am going to get will be relevant.
+
+This situation is also giving a *huge importance to search engines*. If you have no way of reclaiming your visitors, you want to always be in their way when they search for content. Yet, there is no guarantee that your rankings in "Google":http://www.google.com/ or "Bing":http://www.bing.com/ will stay identical forever. On top of that _search engines are not the best way to work on your branding_: from a google search result page, can you tell the different between a NYT article and a page from somebody that can't really be trusted? No.
+
+h3. In realtime
+
+The *_realtime web_ is synonymous with _pushed web_*. I even said it in the past : the time factor doesn't matter much. What *truly matters is that the information is pushed, that it will eventually reach* services/people away even if they do not come to check it out.
+
+In the process, when a publisher pushes its content, he is the "initiator", *he is active*. When a publishers waits for others to come check its content, *he is passive* and relies on the capacity (and willing!) of others to come by themselves.
+
+bq. _Becoming a realtime publisher means being in control, rather than relying on others_.
+
+Eventually, when your service will build its traffic, both approaches will exist :
+
+# *Passive*: you update your content and leave it as is, ready for people to randomly find it (through search engines, link sharing... etc) 
+
+# *Active* : you push it to subscribing application : feed readers, content aggregators, feed to email gateways, feed to SMS gateways, realtime search engines... etc
+
+
+By "building hubs":http://superfeedr.com/publisher, we make it very easy for *any publisher to publish in realtime*. You _need_ one, get one now!

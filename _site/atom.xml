@@ -4,9 +4,47 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-01-25T00:19:44+01:00</updated>
+    <updated>2010-01-25T15:40:19+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Why realtime matters for publishers</title>
+        
+        <category term="realtime" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="publisher" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/publisher/realtime/why-realtime-matters-for-publishers"/>
+        <published>2010-01-25T00:00:00+01:00</published>
+        <updated>2010-01-25T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/publisher/realtime/why-realtime-matters-for-publishers</id>
+        <content type="html">&lt;p&gt;Several people wonder if &lt;strong&gt;realtime feeds&lt;/strong&gt; is something they &lt;em&gt;need&lt;/em&gt;, since they have regular &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; and Atom feeds.&lt;/p&gt;
+&lt;h3&gt;Now&lt;/h3&gt;
+&lt;p&gt;The web now is organized in such a way that every service or person needs to go fetch any information, or have to &amp;#8220;accidentally&amp;#8221; find it again. No matter how great your content is, you&amp;#8217;ll have to &lt;em&gt;wait for visitors to come&lt;/em&gt;, and once they&amp;#8217;re gone, you have &lt;em&gt;very little way of telling them about new content&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I was surprised to find out last week, during the &lt;a href=&quot;http://startup2startup.com/&quot;&gt;S2S diner&lt;/a&gt; in Palo Alto that the &lt;a href=&quot;http://twitter.com/cmccann7/statuses/8056229661&quot;&gt;biggest email sender were social networks&lt;/a&gt; (except for spammers, obviously). They send you an email for a &lt;span class=&quot;caps&quot;&gt;LOT&lt;/span&gt; of things : a new friend request, somebody tagged you, somebody mentioned you&amp;#8230; etc. This is &lt;em&gt;their&lt;/em&gt; way of pulling you back to the site.&lt;/p&gt;
+&lt;p&gt;When you look around, the sites which generate the &lt;strong&gt;more engagement are the sites who send the best emails&lt;/strong&gt;, because email alerts is almost the only product that can get you back to a site regularly.&lt;/p&gt;
+&lt;p&gt;Unfortunately &lt;strong&gt;not all services can rely on email&lt;/strong&gt;. As much as giving personal information (like your email) to a social network is ok, it doesn&amp;#8217;t make sense to subscribe to any mailing list out there. Also, when a social network sends an email, it&amp;#8217;s &lt;em&gt;always&lt;/em&gt; &lt;strong&gt;accurate and personalized&lt;/strong&gt;! If I subscribe to the NYT&amp;#8217;s mailing lists, there is actually little chances that the emails I am going to get will be relevant.&lt;/p&gt;
+&lt;p&gt;This situation is also giving a &lt;strong&gt;huge importance to search engines&lt;/strong&gt;. If you have no way of reclaiming your visitors, you want to always be in their way when they search for content. Yet, there is no guarantee that your rankings in &lt;a href=&quot;http://www.google.com/&quot;&gt;Google&lt;/a&gt; or &lt;a href=&quot;http://www.bing.com/&quot;&gt;Bing&lt;/a&gt; will stay identical forever. On top of that &lt;em&gt;search engines are not the best way to work on your branding&lt;/em&gt;: from a google search result page, can you tell the different between a &lt;span class=&quot;caps&quot;&gt;NYT&lt;/span&gt; article and a page from somebody that can&amp;#8217;t really be trusted? No.&lt;/p&gt;
+&lt;h3&gt;In realtime&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;&lt;em&gt;realtime web&lt;/em&gt; is synonymous with &lt;em&gt;pushed web&lt;/em&gt;&lt;/strong&gt;. I even said it in the past : the time factor doesn&amp;#8217;t matter much. What &lt;strong&gt;truly matters is that the information is pushed, that it will eventually reach&lt;/strong&gt; services/people away even if they do not come to check it out.&lt;/p&gt;
+&lt;p&gt;In the process, when a publisher pushes its content, he is the &amp;#8220;initiator&amp;#8221;, &lt;strong&gt;he is active&lt;/strong&gt;. When a publishers waits for others to come check its content, &lt;strong&gt;he is passive&lt;/strong&gt; and relies on the capacity (and willing!) of others to come by themselves.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Becoming a realtime publisher means being in control, rather than relying on others&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Eventually, when your service will build its traffic, both approaches will exist :&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;&lt;strong&gt;Passive&lt;/strong&gt;: you update your content and leave it as is, ready for people to randomly find it (through search engines, link sharing&amp;#8230; etc)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+	&lt;li&gt;&lt;strong&gt;Active&lt;/strong&gt; : you push it to subscribing application : feed readers, content aggregators, feed to email gateways, feed to &lt;span class=&quot;caps&quot;&gt;SMS&lt;/span&gt; gateways, realtime search engines&amp;#8230; etc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;By &amp;#8220;building hubs&amp;#8221;;http://superfeedr.com/publisher, we make it very easy for &lt;strong&gt;any publisher to publish in realtime&lt;/strong&gt;. You &lt;em&gt;need&lt;/em&gt; one, get one now!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>A hub for Dotspots</title>
