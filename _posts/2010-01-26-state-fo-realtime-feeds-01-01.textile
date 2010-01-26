@@ -1,0 +1,60 @@
+---
+layout: post
+title: "State of Real-Time feeds"
+categories: [Real-time, statistics, market]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+It's this time again : the time for the _very_ controversial numbers about realtime feeds. Before anything else, I'd like to indicate that it would be great for other services to publish similar numbers. We know "who":http://blog.superfeedr.com/Feeds/PubSubHubbub/real-time/stats/who-implemented-pubsubhubbub/ "implemented":http://blog.superfeedr.com/Feeds/PubSubHubbub/real-time/stats/who-pubsubhubbub/:http://blog.superfeedr.com/Feeds/PubSubHubbub/real-time/stats/who-pubsubhubbub/ *PubSubHubbub*, I guess some of them implemented *RSSCloud* and *SUP* too. 
+
+Since we have so much debate in the past about the methodology:
+
+* Superfeedr has many feeds in management. Some of them are for the "hubs we host":http://superfeedr.com/hubbub. *We don't count the feeds from the hubs we host*, because they would obviously inflate the PubSubHubbub number a lot. 
+* For each feed, since we try to avoid polling it too, we use any available technique to get in realtime, se we're able to tell whether it's PubSubHubbub, RSSCloud, or SUP. We just counted these. 
+* Some feeds implemented 2 or more protocols (the best example would be wordpress.com blog that have a feedburner feed), we counted them in both categories.
+
+A few notes on the result set before. We have *multiplied by 6 the number of feeds we managed* since the last time we count, which should make our set a little more representative. As a matter of fact we gained a lot of feeds that are not blogs.
+
+<table style="text-align:center;">
+    <tr>
+        <th></th>
+        <th style="width: 20%;">Polling</th>
+        <th style="width: 20%;">RSSCloud</th>
+        <th style="width: 20%;">PubSubHubbub</th>
+        <th style="width: 20%;">SUP</th>
+    </tr>
+    <tr>
+        <td>Oct 1,  2009</td>
+        <td>92.7%</td>
+        <td>0.3%</td>
+        <td>7.1%</td>
+        <td>0.0%[1]</td>
+    </tr>
+    <tr>
+        <td>Nov 1,  2009</td>
+        <td>73.3%</td>
+        <td>0.8%</td>
+        <td>25.8%</td>
+        <td>0.1%</td>
+    </tr>
+    <tr style="font-weight:bold">
+        <td>Jan 26, 2010</td>
+        <td>87.4%</td>
+        <td>0.9%</td>
+        <td>11.5%</td>
+        <td>0.1%</td>
+    </tr>
+</table>
+
+!{float:left; display:block;}/images/push-rsscloud-sup-01-10.png!
+
+
+You can immediately see that the *proportion of feeds we're polling increased* compared to the last measure. This is the _consequence of less PubSubHubbub feeds_. Back in november, "we counted the PubSubHubbub feeds":http://blog.superfeedr.com/Real-time/market/statistics/state-of-real-time-feeds/ we were hosting. *That was a mistake*, we changed that this time and _will not count them in the future either_. The RSSCloud proportion grew in comparison, since PubSubHubbub numbers were inflated.
+
+We are now *continuously measuring* the proportions, which should make these posts way more regular. I look forward to the next month!
+
+In conclusion, I'd like to remind you that "we implemented many other ways":http://superfeedr.com/technology of getting feed updates, including some specific APIs, "XML-RPC Ping":http://blog.superfeedr.com/Ping/PubSubHubbub/Real-time/XML-RPC/XMPP/XMLRPC-Ping-to-PubSubHubbub/ and other techniques. If you use Superfeedr, you will benefit from these and get feeds in realtime! 
+
+fn1. At that time we had not implemented SUP.

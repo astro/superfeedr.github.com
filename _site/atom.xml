@@ -4,9 +4,71 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-01-25T15:40:19+01:00</updated>
+    <updated>2010-01-26T15:32:44+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>State of Real-Time feeds</title>
+        
+        <category term="Real-time" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="statistics" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="market" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/Real-time/market/statistics/state-fo-realtime-feeds-01-01"/>
+        <published>2010-01-26T00:00:00+01:00</published>
+        <updated>2010-01-26T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/Real-time/market/statistics/state-fo-realtime-feeds-01-01</id>
+        <content type="html">&lt;p&gt;It&amp;#8217;s this time again : the time for the &lt;em&gt;very&lt;/em&gt; controversial numbers about realtime feeds. Before anything else, I&amp;#8217;d like to indicate that it would be great for other services to publish similar numbers. We know &lt;a href=&quot;http://blog.superfeedr.com/Feeds/PubSubHubbub/real-time/stats/who-implemented-pubsubhubbub/&quot;&gt;who&lt;/a&gt; &lt;a href=&quot;http://blog.superfeedr.com/Feeds/PubSubHubbub/real-time/stats/who-pubsubhubbub/:http://blog.superfeedr.com/Feeds/PubSubHubbub/real-time/stats/who-pubsubhubbub/&quot;&gt;implemented&lt;/a&gt; &lt;strong&gt;PubSubHubbub&lt;/strong&gt;, I guess some of them implemented &lt;strong&gt;RSSCloud&lt;/strong&gt; and &lt;strong&gt;&lt;span class=&quot;caps&quot;&gt;SUP&lt;/span&gt;&lt;/strong&gt; too.&lt;/p&gt;
+&lt;p&gt;Since we have so much debate in the past about the methodology:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Superfeedr has many feeds in management. Some of them are for the &lt;a href=&quot;http://superfeedr.com/hubbub&quot;&gt;hubs we host&lt;/a&gt;. &lt;strong&gt;We don&amp;#8217;t count the feeds from the hubs we host&lt;/strong&gt;, because they would obviously inflate the PubSubHubbub number a lot.&lt;/li&gt;
+	&lt;li&gt;For each feed, since we try to avoid polling it too, we use any available technique to get in realtime, se we&amp;#8217;re able to tell whether it&amp;#8217;s PubSubHubbub, RSSCloud, or &lt;span class=&quot;caps&quot;&gt;SUP&lt;/span&gt;. We just counted these.&lt;/li&gt;
+	&lt;li&gt;Some feeds implemented 2 or more protocols (the best example would be wordpress.com blog that have a feedburner feed), we counted them in both categories.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A few notes on the result set before. We have &lt;strong&gt;multiplied by 6 the number of feeds we managed&lt;/strong&gt; since the last time we count, which should make our set a little more representative. As a matter of fact we gained a lot of feeds that are not blogs.&lt;/p&gt;
+&lt;table style=&quot;text-align:center;&quot;&gt;
+&lt;tr&gt;
+        &lt;th&gt;&lt;/th&gt;
+        &lt;th style=&quot;width: 20%;&quot;&gt;Polling&lt;/th&gt;
+        &lt;th style=&quot;width: 20%;&quot;&gt;RSSCloud&lt;/th&gt;
+        &lt;th style=&quot;width: 20%;&quot;&gt;PubSubHubbub&lt;/th&gt;
+        &lt;th style=&quot;width: 20%;&quot;&gt;&lt;span class=&quot;caps&quot;&gt;SUP&lt;/span&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+        &lt;td&gt;Oct 1,  2009&lt;/td&gt;
+        &lt;td&gt;92.7%&lt;/td&gt;
+        &lt;td&gt;0.3%&lt;/td&gt;
+        &lt;td&gt;7.1%&lt;/td&gt;
+        &lt;td&gt;0.0%&lt;sup class=&quot;footnote&quot;&gt;&lt;a href=&quot;#fn1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+        &lt;td&gt;Nov 1,  2009&lt;/td&gt;
+        &lt;td&gt;73.3%&lt;/td&gt;
+        &lt;td&gt;0.8%&lt;/td&gt;
+        &lt;td&gt;25.8%&lt;/td&gt;
+        &lt;td&gt;0.1%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;font-weight:bold&quot;&gt;
+        &lt;td&gt;Jan 26, 2010&lt;/td&gt;
+        &lt;td&gt;87.4%&lt;/td&gt;
+        &lt;td&gt;0.9%&lt;/td&gt;
+        &lt;td&gt;11.5%&lt;/td&gt;
+        &lt;td&gt;0.1%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&quot;/images/push-rsscloud-sup-01-10.png&quot; style=&quot;float:left; display:block;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;You can immediately see that the &lt;strong&gt;proportion of feeds we&amp;#8217;re polling increased&lt;/strong&gt; compared to the last measure. This is the &lt;em&gt;consequence of less PubSubHubbub feeds&lt;/em&gt;. Back in november, &lt;a href=&quot;http://blog.superfeedr.com/Real-time/market/statistics/state-of-real-time-feeds/&quot;&gt;we counted the PubSubHubbub feeds&lt;/a&gt; we were hosting. &lt;strong&gt;That was a mistake&lt;/strong&gt;, we changed that this time and &lt;em&gt;will not count them in the future either&lt;/em&gt;. The RSSCloud proportion grew in comparison, since PubSubHubbub numbers were inflated.&lt;/p&gt;
+&lt;p&gt;We are now &lt;strong&gt;continuously measuring&lt;/strong&gt; the proportions, which should make these posts way more regular. I look forward to the next month!&lt;/p&gt;
+&lt;p&gt;In conclusion, I&amp;#8217;d like to remind you that &lt;a href=&quot;http://superfeedr.com/technology&quot;&gt;we implemented many other ways&lt;/a&gt; of getting feed updates, including some specific APIs, &lt;a href=&quot;http://blog.superfeedr.com/Ping/PubSubHubbub/Real-time/XML-RPC/XMPP/XMLRPC-Ping-to-PubSubHubbub/&quot;&gt;&lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt;-&lt;span class=&quot;caps&quot;&gt;RPC&lt;/span&gt; Ping&lt;/a&gt; and other techniques. If you use Superfeedr, you will benefit from these and get feeds in realtime!&lt;/p&gt;
+&lt;p class=&quot;footnote&quot; id=&quot;fn1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt; At that time we had not implemented &lt;span class=&quot;caps&quot;&gt;SUP&lt;/span&gt;.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Why realtime matters for publishers</title>
@@ -35,11 +97,9 @@
 &lt;p&gt;Eventually, when your service will build its traffic, both approaches will exist :&lt;/p&gt;
 &lt;ol&gt;
 	&lt;li&gt;&lt;strong&gt;Passive&lt;/strong&gt;: you update your content and leave it as is, ready for people to randomly find it (through search engines, link sharing&amp;#8230; etc)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
 	&lt;li&gt;&lt;strong&gt;Active&lt;/strong&gt; : you push it to subscribing application : feed readers, content aggregators, feed to email gateways, feed to &lt;span class=&quot;caps&quot;&gt;SMS&lt;/span&gt; gateways, realtime search engines&amp;#8230; etc&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;By &amp;#8220;building hubs&amp;#8221;;http://superfeedr.com/publisher, we make it very easy for &lt;strong&gt;any publisher to publish in realtime&lt;/strong&gt;. You &lt;em&gt;need&lt;/em&gt; one, get one now!&lt;/p&gt;</content>
+&lt;p&gt;By &lt;a href=&quot;http://superfeedr.com/publisher&quot;&gt;building hubs&lt;/a&gt;, we make it very easy for &lt;strong&gt;any publisher to publish in realtime&lt;/strong&gt;. You &lt;em&gt;need&lt;/em&gt; one, get one now!&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
@@ -105,25 +165,6 @@
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>
-        </author>
-    </entry>
-    
-    <entry>
-        <title>State Fo Realtime Feeds</title>
-        
-        <link href="http://blog.superfeedr.com/state-fo-realtime-feeds"/>
-        <published>2010-01-22T00:00:00+01:00</published>
-        <updated>2010-01-22T00:00:00+01:00</updated>
-        <id>blog.superfeedr.com:/state-fo-realtime-feeds</id>
-        <content type="html">&lt;p&gt;superhubbub &amp;#8211; 158505&lt;br /&gt;
-hubbub &amp;#8211; 12429 (433 in common)&lt;br /&gt;
-rsscloud &amp;#8211; 46715 (49287)&lt;br /&gt;
-sup &amp;#8211; 28256 (28166 in common)&lt;br /&gt;
-twitter &amp;#8211; 3821 ()&lt;br /&gt;
-xmlrpc &amp;#8211; 135948 (128072)&lt;/p&gt;</content>
-        <author>
-            <name></name>
-            <uri></uri>
         </author>
     </entry>
     
@@ -870,7 +911,7 @@ From now on, you&amp;#8217;ll get the title in your notifications :)&lt;/p&gt;
 &lt;h3&gt;A Facebook fan page&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Keeping in touch&lt;/strong&gt; with our friends is very important to us. There is a pretty strong chance that you&amp;#8217;re already on Facebook. &lt;a href=&quot;http://www.facebook.com/pages/Superfeedr/205234549391&quot;&gt;Become a Superfeedr fan&lt;/a&gt;, we&amp;#8217;ll give you &lt;em&gt;exclusive content&lt;/em&gt; very soon :)&lt;/p&gt;
 &lt;h3&gt;Another Ruby wrapper&lt;/h3&gt;
-&lt;p&gt;The topic of the last &lt;a href=&quot;http://technology.meetup.com/11/&quot;&gt;&lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; meetup&lt;/a&gt; was hacking. I investigated &lt;a href=&quot;http://code.google.com/appengine/&quot;&gt;Google App Engine&amp;#8217;s &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt;&lt;/a&gt; support (and used that to build &lt;a href=&quot;http://blog.superfeedr.com/2009/11/07/notifixlite.html&quot;&gt;notifixlite&lt;/a&gt;), and I know some friends worked on some other cool stuff. Our friend &lt;a href=&quot;http://twitter.com/sprsquish&quot;&gt;Jeff&lt;/a&gt;, who created Blather, a pretty awesome &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; library worked on &lt;strong&gt;another Ruby wrapper for the &lt;a href=&quot;http://superfeedr.local/documentation#xmpp&quot;&gt;Superfeedr &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/a&gt;&lt;/strong&gt;. &lt;a href=&quot;http://github.com/sprsquish/superfeedr-rb&quot;&gt;Check it out&lt;/a&gt;, it&amp;#8217;s awesomely simple!&lt;/p&gt;</content>
+&lt;p&gt;The topic of the last &lt;a href=&quot;http://technology.meetup.com/11/&quot;&gt;&lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; meetup&lt;/a&gt; was hacking. I investigated &lt;a href=&quot;http://code.google.com/appengine/&quot;&gt;Google App Engine&amp;#8217;s &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt;&lt;/a&gt; support (and used that to build &lt;a href=&quot;http://blog.superfeedr.com/2009/11/07/notifixlite.html&quot;&gt;notifixlite&lt;/a&gt;), and I know some friends worked on some other cool stuff. Our friend &lt;a href=&quot;http://twitter.com/sprsquish&quot;&gt;Jeff&lt;/a&gt;, who created Blather, a pretty awesome &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; library worked on &lt;strong&gt;another Ruby wrapper for the &lt;a href=&quot;http://superfeedr.com/documentation#xmpp&quot;&gt;Superfeedr &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/a&gt;&lt;/strong&gt;. &lt;a href=&quot;http://github.com/sprsquish/superfeedr-rb&quot;&gt;Check it out&lt;/a&gt;, it&amp;#8217;s awesomely simple!&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
             <uri>http://twitter.com/julien51</uri>

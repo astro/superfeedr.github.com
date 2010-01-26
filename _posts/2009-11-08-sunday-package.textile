@@ -19,5 +19,5 @@ h3. A Facebook fan page
 
 h3. Another Ruby wrapper
 
-The topic of the last "XMPP meetup":http://technology.meetup.com/11/ was hacking. I investigated "Google App Engine's XMPP":http://code.google.com/appengine/ support (and used that to build "notifixlite":http://blog.superfeedr.com/2009/11/07/notifixlite.html), and I know some friends worked on some other cool stuff. Our friend "Jeff":http://twitter.com/sprsquish, who created Blather, a pretty awesome XMPP library worked on *another Ruby wrapper for the "Superfeedr XMPP API":http://superfeedr.local/documentation#xmpp*. "Check it out":http://github.com/sprsquish/superfeedr-rb, it's awesomely simple!
+The topic of the last "XMPP meetup":http://technology.meetup.com/11/ was hacking. I investigated "Google App Engine's XMPP":http://code.google.com/appengine/ support (and used that to build "notifixlite":http://blog.superfeedr.com/2009/11/07/notifixlite.html), and I know some friends worked on some other cool stuff. Our friend "Jeff":http://twitter.com/sprsquish, who created Blather, a pretty awesome XMPP library worked on *another Ruby wrapper for the "Superfeedr XMPP API":http://superfeedr.com/documentation#xmpp*. "Check it out":http://github.com/sprsquish/superfeedr-rb, it's awesomely simple!
 
