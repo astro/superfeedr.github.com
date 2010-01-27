@@ -4,9 +4,46 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-01-26T15:32:44+01:00</updated>
+    <updated>2010-01-27T17:24:44+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>10 Feed Publishing Best Practices</title>
+        
+        <category term="Feeds" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="RSS" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Atom" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Best Practice" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/Atom/Best Practice/Feeds/RSS/feed-publishing-best-practices"/>
+        <published>2010-01-27T00:00:00+01:00</published>
+        <updated>2010-01-27T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/Atom/Best Practice/Feeds/RSS/feed-publishing-best-practices</id>
+        <content type="html">&lt;p&gt;Working with publishers and polling hundreds of thousands of feed has taught us a few lessons and best practices for people who publish &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; or Atom feeds. You might disagree with some of them, so please, let us know in the comments.&lt;/p&gt;
+&lt;p&gt;I want to emphasize that these best practices are &lt;em&gt;technical&lt;/em&gt;, not business related.&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;&lt;strong&gt;Don&amp;#8217;t use &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; and &lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt;&lt;/strong&gt;. There is no good feed parser that doesn&amp;#8217;t accept both. Providing one will make subscribers life much easier :)&lt;/li&gt;
+	&lt;li&gt;Make sure your feeds are &lt;strong&gt;valid&lt;/strong&gt;.&lt;/li&gt;
+	&lt;li&gt;Use &lt;strong&gt;unique identifiers&lt;/strong&gt; for entries : &lt;code&gt;&amp;lt;guid&amp;gt;&lt;/code&gt; in &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; and &lt;code&gt;&amp;lt;id&amp;gt;&lt;/code&gt; in &lt;span class=&quot;caps&quot;&gt;ATOM&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Don&amp;#8217;t use feed caching&lt;/strong&gt; if you can&amp;#8217;t explicitly expire the cache. In other words, don&amp;#8217;t use time based caches. &lt;em&gt;Corollary : use Feedburner only if you use pingshot&lt;/em&gt;.&lt;/li&gt;
+	&lt;li&gt;Make sure your &lt;strong&gt;date format is valid&lt;/strong&gt; : &lt;code&gt;ISO8601&lt;/code&gt; is the one you should choose.&lt;/li&gt;
+	&lt;li&gt;Add the feeds &lt;strong&gt;discovery&lt;/strong&gt; in your &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; pages. Most modern browsers (Chrome : &lt;span class=&quot;caps&quot;&gt;WTF&lt;/span&gt;?!) will be able to detect that and show your visitors that the page references a feed. It will also help feed readers to auto-extract feeds.&lt;/li&gt;
+	&lt;li&gt;Make sure you&amp;#8217;re &lt;strong&gt;RESTful&lt;/strong&gt; in your feeds discovery. If you&amp;#8217;re in a resource page, show feeds that relate to that resource. Make sure a given feed is accessible at a given url only.&lt;/li&gt;
+	&lt;li&gt;Use the &amp;#8220;de-facto&amp;#8221; standard in terms of &lt;strong&gt;calendar : Roman&lt;/strong&gt;. The subscribing app may convert to other calendar, based on the user&amp;#8217;s settings.&lt;/li&gt;
+	&lt;li&gt;Keep the &lt;strong&gt;feed urls simple&lt;/strong&gt;. Do some &lt;span class=&quot;caps&quot;&gt;URL&lt;/span&gt; rewriting.&lt;/li&gt;
+	&lt;li&gt;It&amp;#8217;s ok to have only &lt;code&gt;&amp;lt;summary&amp;gt;&lt;/code&gt; instead of the full &lt;code&gt;&amp;lt;content&amp;gt;&lt;/code&gt; (it&amp;#8217;s a business decision) : but don&amp;#8217;t show it as full content if it&amp;#8217;s just a summary.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Special Bonus&lt;/strong&gt; : publish feeds in realtime. &lt;a href=&quot;http://superfeedr.com/publisher&quot;&gt;We can help&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Thoughts?&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>State of Real-Time feeds</title>

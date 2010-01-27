@@ -1,0 +1,26 @@
+---
+layout: post
+title: "10 Feed Publishing Best Practices"
+categories: [Feeds, RSS, Atom, Best Practice]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Working with publishers and polling hundreds of thousands of feed has taught us a few lessons and best practices for people who publish RSS or Atom feeds. You might disagree with some of them, so please, let us know in the comments.
+
+I want to emphasize that these best practices are _technical_, not business related.
+
+# *Don't use RSS and ATOM*. There is no good feed parser that doesn't accept both. Providing one will make subscribers life much easier :)
+# Make sure your feeds are *valid*.
+# Use *unique identifiers* for entries : @<guid>@ in RSS and @<id>@ in ATOM
+# *Don't use feed caching* if you can't explicitly expire the cache. In other words, don't use time based caches. _Corollary : use Feedburner only if you use pingshot_.
+# Make sure your *date format is valid* : @ISO8601@ is the one you should choose.
+# Add the feeds *discovery* in your HTML pages. Most modern browsers (Chrome : WTF?!) will be able to detect that and show your visitors that the page references a feed. It will also help feed readers to auto-extract feeds.
+# Make sure you're *RESTful* in your feeds discovery. If you're in a resource page, show feeds that relate to that resource. Make sure a given feed is accessible at a given url only.
+# Use the "de-facto" standard in terms of *calendar : Roman*. The subscribing app may convert to other calendar, based on the user's settings.
+# Keep the *feed urls simple*. Do some URL rewriting.
+# It's ok to have only @<summary>@ instead of the full @<content>@ (it's a business decision) : but don't show it as full content if it's just a summary.
+# *Special Bonus* : publish feeds in realtime. "We can help":http://superfeedr.com/publisher.
+
+Thoughts?
