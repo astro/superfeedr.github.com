@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Gawker Media and ReadWriteWeb have hubs"
+categories: [PubSubHubbub, readwriteweb, gawker, Lifehacker, Gizmodo]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+"ReadWriteWeb":http://www.readwriteweb.com/ is one of the _most respected_ tech blogs in the Valley. Both "Marshall":http://marshallk.com/ and "Frederic":http://twitter.com/Fredericl, along with "Erick":http://twitter.com/Erickschonfeld and "Steve":http://twitter.com/SteveGillmor at Techcrunch, have been early realtime supporters. ReadWriteWeb also wrote a "very insightful report":http://bit.ly/rtwreport on this trend and you should read it.
+
+Gawker Media is one of the biggest and most successful blog-oriented media companies. Their publications include the following names : <a href="http://gawker.com">Gawker.com</a>, <a href="http://www.defamer.com.au">Defamer</a>, <a href="http://fleshbot.com/">Fleshbot</a>, <a href="http://deadspin.com/">Deadspin</a>, <a href="http://lifehacker.com/">Lifehacker</a>, <a href="http://gizmodo.com/">Gizmodo</a>, <a href="http://io9.com/">io9</a>, <a href="http://kotaku.com/">Kotaku</a>, <a href="http://jalopnik.com/">Jalopnik</a> and <a href="http://jezebel.com/">Jezebel</a>. 
+
+Today, we're quite proud to say, that they now push their content in realtime : they have their hubs : "http://rww.superfeedr.com":http://rww.superfeedr.com, "http://gawker.superfeedr.com":http://gawker.superfeedr.com.
+
+We're very happy to have gawker and rww using Superfeedr. In the past we announced *hubs for blog platforms*, and we're excited to see what will happen for another kind of publisher : media companies.
+
+It's been amazing to see how some implementers of the PubSubHubbub protocol already found their hubs and subscribed to several feeds[1] :)
+
+You (and your app) could also "benefit from a superfeedr hosted hub":http://superfeedr.com/publisher if you do publish content on the web. _Reach out!_
+
+fn1. To be fair... they almost forced us to write about these hubs!

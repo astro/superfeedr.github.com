@@ -4,9 +4,39 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-01-27T17:24:44+01:00</updated>
+    <updated>2010-01-30T01:34:23+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Gawker Media and ReadWriteWeb have hubs</title>
+        
+        <category term="PubSubHubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="readwriteweb" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="gawker" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Lifehacker" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Gizmodo" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/Gizmodo/Lifehacker/PubSubHubbub/gawker/readwriteweb/rww-gawker-media-have-hubs"/>
+        <published>2010-01-29T00:00:00+01:00</published>
+        <updated>2010-01-29T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/Gizmodo/Lifehacker/PubSubHubbub/gawker/readwriteweb/rww-gawker-media-have-hubs</id>
+        <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.readwriteweb.com/&quot;&gt;ReadWriteWeb&lt;/a&gt; is one of the &lt;em&gt;most respected&lt;/em&gt; tech blogs in the Valley. Both &lt;a href=&quot;http://marshallk.com/&quot;&gt;Marshall&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/Fredericl&quot;&gt;Frederic&lt;/a&gt;, along with &lt;a href=&quot;http://twitter.com/Erickschonfeld&quot;&gt;Erick&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/SteveGillmor&quot;&gt;Steve&lt;/a&gt; at Techcrunch, have been early realtime supporters. ReadWriteWeb also wrote a &lt;a href=&quot;http://bit.ly/rtwreport&quot;&gt;very insightful report&lt;/a&gt; on this trend and you should read it.&lt;/p&gt;
+&lt;p&gt;Gawker Media is one of the biggest and most successful blog-oriented media companies. Their publications include the following names : &lt;a href=&quot;http://gawker.com&quot;&gt;Gawker.com&lt;/a&gt;, &lt;a href=&quot;http://www.defamer.com.au&quot;&gt;Defamer&lt;/a&gt;, &lt;a href=&quot;http://fleshbot.com/&quot;&gt;Fleshbot&lt;/a&gt;, &lt;a href=&quot;http://deadspin.com/&quot;&gt;Deadspin&lt;/a&gt;, &lt;a href=&quot;http://lifehacker.com/&quot;&gt;Lifehacker&lt;/a&gt;, &lt;a href=&quot;http://gizmodo.com/&quot;&gt;Gizmodo&lt;/a&gt;, &lt;a href=&quot;http://io9.com/&quot;&gt;io9&lt;/a&gt;, &lt;a href=&quot;http://kotaku.com/&quot;&gt;Kotaku&lt;/a&gt;, &lt;a href=&quot;http://jalopnik.com/&quot;&gt;Jalopnik&lt;/a&gt; and &lt;a href=&quot;http://jezebel.com/&quot;&gt;Jezebel&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Today, we&amp;#8217;re quite proud to say, that they now push their content in realtime : they have their hubs : &lt;a href=&quot;http://rww.superfeedr.com&quot;&gt;http://rww.superfeedr.com&lt;/a&gt;, &lt;a href=&quot;http://gawker.superfeedr.com&quot;&gt;http://gawker.superfeedr.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We&amp;#8217;re very happy to have gawker and rww using Superfeedr. In the past we announced &lt;strong&gt;hubs for blog platforms&lt;/strong&gt;, and we&amp;#8217;re excited to see what will happen for another kind of publisher : media companies.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s been amazing to see how some implementers of the PubSubHubbub protocol already found their hubs and subscribed to several feeds&lt;sup class=&quot;footnote&quot;&gt;&lt;a href=&quot;#fn1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; :)&lt;/p&gt;
+&lt;p&gt;You (and your app) could also &lt;a href=&quot;http://superfeedr.com/publisher&quot;&gt;benefit from a superfeedr hosted hub&lt;/a&gt; if you do publish content on the web. &lt;em&gt;Reach out!&lt;/em&gt;&lt;/p&gt;
+&lt;p class=&quot;footnote&quot; id=&quot;fn1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt; To be fair&amp;#8230; they almost forced us to write about these hubs!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>10 Feed Publishing Best Practices</title>
