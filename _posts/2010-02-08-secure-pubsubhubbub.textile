@@ -1,0 +1,25 @@
+---
+layout: post
+title: "PubSubHubbub : security"
+categories: [PubSubHubbub, API, secure]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+One of the great advantages of our "XMPP API":http://superfeedr.com/documentation#xmpp_pubsub is that there is no need for the subscriber to know whether the content he gets is actually from Superfeedr. "PubSubHubbub":http://superfeedr.com/documentation#pubsubhubbub doesn't benefit from that, since it relies on HTTP callbacks which makes it hard to know where a notification comes from. A subscriber could obviously check the IP(s) as well as the UserAgent, but the first one will break when we add servers and the second one is pretty easy to spoof.
+
+The "protocol":http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.2.html defines a strategy for that and we implement it at Superfeedr. Here is how it works :
+
+1. The user subscribes to the hub url and provides a @hub.secret@ value. To make that secure, the subscriber should use the http*s* url to the hub. (All "our hubs":http://superfeedr.com/hubbub have an http and https url).
+
+2. Upon notification, the hub will *compute an HMAC signature* with the supplied @hub.secret@, as well as will the body of the notification, and will include this signature in the headers of its notification.
+
+3. When notified, the subscriber will *compute the same signature* (he should have kept track of the secret!), and will *compare* with the http header received from the hub.
+
+If the 2 HMAC signature are the same, then, the subscriber knows for sure that the notification comes from the hub. If not, it should silently ignore it.
+
+
+
+ 
+

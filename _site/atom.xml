@@ -4,9 +4,35 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-01-30T01:34:23+01:00</updated>
+    <updated>2010-02-08T14:04:35+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>PubSubHubbub : security</title>
+        
+        <category term="PubSubHubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="API" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="secure" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/API/PubSubHubbub/secure/secure-pubsubhubbub"/>
+        <published>2010-02-08T00:00:00+01:00</published>
+        <updated>2010-02-08T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/API/PubSubHubbub/secure/secure-pubsubhubbub</id>
+        <content type="html">&lt;p&gt;One of the great advantages of our &lt;a href=&quot;http://superfeedr.com/documentation#xmpp_pubsub&quot;&gt;&lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/a&gt; is that there is no need for the subscriber to know whether the content he gets is actually from Superfeedr. &lt;a href=&quot;http://superfeedr.com/documentation#pubsubhubbub&quot;&gt;PubSubHubbub&lt;/a&gt; doesn&amp;#8217;t benefit from that, since it relies on &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; callbacks which makes it hard to know where a notification comes from. A subscriber could obviously check the &lt;acronym title=&quot;s&quot;&gt;&lt;span class=&quot;caps&quot;&gt;IP&lt;/span&gt;&lt;/acronym&gt; as well as the UserAgent, but the first one will break when we add servers and the second one is pretty easy to spoof.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.2.html&quot;&gt;protocol&lt;/a&gt; defines a strategy for that and we implement it at Superfeedr. Here is how it works :&lt;/p&gt;
+&lt;p&gt;1. The user subscribes to the hub url and provides a &lt;code&gt;hub.secret&lt;/code&gt; value. To make that secure, the subscriber should use the http*s* url to the hub. (All &lt;a href=&quot;http://superfeedr.com/hubbub&quot;&gt;our hubs&lt;/a&gt; have an http and https url).&lt;/p&gt;
+&lt;p&gt;2. Upon notification, the hub will &lt;strong&gt;compute an &lt;span class=&quot;caps&quot;&gt;HMAC&lt;/span&gt; signature&lt;/strong&gt; with the supplied &lt;code&gt;hub.secret&lt;/code&gt;, as well as will the body of the notification, and will include this signature in the headers of its notification.&lt;/p&gt;
+&lt;p&gt;3. When notified, the subscriber will &lt;strong&gt;compute the same signature&lt;/strong&gt; (he should have kept track of the secret!), and will &lt;strong&gt;compare&lt;/strong&gt; with the http header received from the hub.&lt;/p&gt;
+&lt;p&gt;If the 2 &lt;span class=&quot;caps&quot;&gt;HMAC&lt;/span&gt; signature are the same, then, the subscriber knows for sure that the notification comes from the hub. If not, it should silently ignore it.&lt;/p&gt;
+</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Gawker Media and ReadWriteWeb have hubs</title>
@@ -25,7 +51,7 @@
         <published>2010-01-29T00:00:00+01:00</published>
         <updated>2010-01-29T00:00:00+01:00</updated>
         <id>blog.superfeedr.com:/Gizmodo/Lifehacker/PubSubHubbub/gawker/readwriteweb/rww-gawker-media-have-hubs</id>
-        <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.readwriteweb.com/&quot;&gt;ReadWriteWeb&lt;/a&gt; is one of the &lt;em&gt;most respected&lt;/em&gt; tech blogs in the Valley. Both &lt;a href=&quot;http://marshallk.com/&quot;&gt;Marshall&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/Fredericl&quot;&gt;Frederic&lt;/a&gt;, along with &lt;a href=&quot;http://twitter.com/Erickschonfeld&quot;&gt;Erick&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/SteveGillmor&quot;&gt;Steve&lt;/a&gt; at Techcrunch, have been early realtime supporters. ReadWriteWeb also wrote a &lt;a href=&quot;http://bit.ly/rtwreport&quot;&gt;very insightful report&lt;/a&gt; on this trend and you should read it.&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.readwriteweb.com/&quot;&gt;ReadWriteWeb&lt;/a&gt; is one of the &lt;em&gt;most respected&lt;/em&gt; tech blogs in the Valley. &lt;a href=&quot;http://marshallk.com/&quot;&gt;Marshall&lt;/a&gt;, &lt;a href=&quot;http://twitter.com/Fredericl&quot;&gt;Frederic&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/jaredwsmith&quot;&gt;Jared Smith&lt;/a&gt;, along with &lt;a href=&quot;http://twitter.com/Erickschonfeld&quot;&gt;Erick&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/SteveGillmor&quot;&gt;Steve&lt;/a&gt; at Techcrunch, have been early realtime supporters. ReadWriteWeb also wrote a &lt;a href=&quot;http://bit.ly/rtwreport&quot;&gt;very insightful report&lt;/a&gt; on this trend and you should read it.&lt;/p&gt;
 &lt;p&gt;Gawker Media is one of the biggest and most successful blog-oriented media companies. Their publications include the following names : &lt;a href=&quot;http://gawker.com&quot;&gt;Gawker.com&lt;/a&gt;, &lt;a href=&quot;http://www.defamer.com.au&quot;&gt;Defamer&lt;/a&gt;, &lt;a href=&quot;http://fleshbot.com/&quot;&gt;Fleshbot&lt;/a&gt;, &lt;a href=&quot;http://deadspin.com/&quot;&gt;Deadspin&lt;/a&gt;, &lt;a href=&quot;http://lifehacker.com/&quot;&gt;Lifehacker&lt;/a&gt;, &lt;a href=&quot;http://gizmodo.com/&quot;&gt;Gizmodo&lt;/a&gt;, &lt;a href=&quot;http://io9.com/&quot;&gt;io9&lt;/a&gt;, &lt;a href=&quot;http://kotaku.com/&quot;&gt;Kotaku&lt;/a&gt;, &lt;a href=&quot;http://jalopnik.com/&quot;&gt;Jalopnik&lt;/a&gt; and &lt;a href=&quot;http://jezebel.com/&quot;&gt;Jezebel&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Today, we&amp;#8217;re quite proud to say, that they now push their content in realtime : they have their hubs : &lt;a href=&quot;http://rww.superfeedr.com&quot;&gt;http://rww.superfeedr.com&lt;/a&gt;, &lt;a href=&quot;http://gawker.superfeedr.com&quot;&gt;http://gawker.superfeedr.com&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;We&amp;#8217;re very happy to have gawker and rww using Superfeedr. In the past we announced &lt;strong&gt;hubs for blog platforms&lt;/strong&gt;, and we&amp;#8217;re excited to see what will happen for another kind of publisher : media companies.&lt;/p&gt;
