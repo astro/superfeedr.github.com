@@ -4,9 +4,35 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-02-08T14:04:35+01:00</updated>
+    <updated>2010-02-09T21:06:04+01:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Google's Buzz is PubSubHubbub in, and out</title>
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="use-case" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="google" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/google/pubsubhubbub/use-case/google-buzz"/>
+        <published>2010-02-09T00:00:00+01:00</published>
+        <updated>2010-02-09T00:00:00+01:00</updated>
+        <id>blog.superfeedr.com:/google/pubsubhubbub/use-case/google-buzz</id>
+        <content type="html">&lt;p&gt;Today, Google launched &lt;a href=&quot;http://www.google.com/buzz&quot;&gt;Buzz&lt;/a&gt;. Aside from the great &lt;strong&gt;social features&lt;/strong&gt; that it brings, I want to emphasize how PubSubHubbub is at the core of it. As Brad (who is clearly behind that in some way) &lt;a href=&quot;http://twitter.com/bradfitz/status/8866417834&quot;&gt;said&lt;/a&gt;, Buzz is PubSubHubbub both &lt;a href=&quot;http://code.google.com/apis/buzz/documentation/#connect&quot;&gt;in&lt;/a&gt;, and &lt;a href=&quot;http://code.google.com/apis/buzz/documentation/#syndication&quot;&gt;out&lt;/a&gt;. This means that Buzz gets its data via PubSubHubbub, but also publishes it in realtime, via PubSubHubbub as well.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.google.com/s2/static/images/1444417344-GoogleBuzzLogo68.png&quot; style=&quot;float:left; margin: 10px;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;From day 1, &lt;em&gt;Google actively promoted the PubSubHubbub protocol on the publisher side&lt;/em&gt;, but they took a while to &lt;strong&gt;integrate the subscriber side&lt;/strong&gt; that in existing products, like Google Reader, iGoogle, Feedburner&amp;#8230; etc. Today not only they did that, but they also put it at the core of a brand new product.&lt;/p&gt;
+&lt;p&gt;In the past few weeks, we started to see a ton of subscriptions from Google to a lot of feeds for which we host the feed. I was confirmed by the google team that these subscriptions were used by all Google properties, including Buzz!&lt;/p&gt;
+&lt;h3&gt;Huh, and the rest of us?&lt;/h3&gt;
+&lt;p&gt;It simply means that if you have a &lt;a href=&quot;http://posterous.com/&quot;&gt;Posterous&lt;/a&gt; Blog, a &lt;a href=&quot;http://www.tumblr.com/&quot;&gt;Tumblr&lt;/a&gt; Blog, or if you have a feed for which &lt;a href=&quot;http://superfeedr.com/hubbub&quot;&gt;superfeedr host the hub&lt;/a&gt;, you can (and should!) add that to your &lt;a href=&quot;http://www.google.com/profiles&quot;&gt;Google Profile&lt;/a&gt; so that the next story you publish is available into Buzz almost instantly and your friends can see, comment and like it :)&lt;/p&gt;
+&lt;p&gt;Obviously, PubSubHubbub (between services) and &lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt; (behind the firewall) will be the base layers for the realtime and social web. Whatever your app is, you need to make it realtime by &lt;a href=&quot;http://superfeedr.com/publisher&quot;&gt;supporting PubSubHubbub&lt;/a&gt; in your feeds!&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>PubSubHubbub : security</title>

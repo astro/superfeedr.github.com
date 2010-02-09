@@ -1,0 +1,23 @@
+---
+layout: post
+title: Google's Buzz is PubSubHubbub in, and out
+categories: [pubsubhubbub, use-case, google]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Today, Google launched "Buzz":http://www.google.com/buzz. Aside from the great *social features* that it brings, I want to emphasize how PubSubHubbub is at the core of it. As Brad (who is clearly behind that in some way) "said":http://twitter.com/bradfitz/status/8866417834, Buzz is PubSubHubbub both "in":http://code.google.com/apis/buzz/documentation/#connect, and "out":http://code.google.com/apis/buzz/documentation/#syndication. This means that Buzz gets its data via PubSubHubbub, but also publishes it in realtime, via PubSubHubbub as well.
+
+!{float:left; margin: 10px}http://www.google.com/s2/static/images/1444417344-GoogleBuzzLogo68.png!
+
+From day 1, _Google actively promoted the PubSubHubbub protocol on the publisher side_, but they took a while to *integrate the subscriber side* that in existing products, like Google Reader, iGoogle, Feedburner... etc. Today not only they did that, but they also put it at the core of a brand new product.
+
+In the past few weeks, we started to see a ton of subscriptions from Google to a lot of feeds for which we host the feed. I was confirmed by the google team that these subscriptions were used by all Google properties, including Buzz!
+
+h3. Huh, and the rest of us?
+
+It simply means that if you have a "Posterous":http://posterous.com/ Blog, a "Tumblr":http://www.tumblr.com/ Blog, or if you have a feed for which "superfeedr host the hub":http://superfeedr.com/hubbub, you can (and should!) add that to your "Google Profile":http://www.google.com/profiles so that the next story you publish is available into Buzz almost instantly and your friends can see, comment and like it :)
+
+Obviously, PubSubHubbub (between services) and XMPP (behind the firewall) will be the base layers for the realtime and social web. Whatever your app is, you need to make it realtime by "supporting PubSubHubbub":http://superfeedr.com/publisher in your feeds!
+
