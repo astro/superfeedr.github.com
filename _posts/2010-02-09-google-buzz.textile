@@ -13,7 +13,7 @@ Today, Google launched "Buzz":http://www.google.com/buzz. Aside from the great *
 
 From day 1, _Google actively promoted the PubSubHubbub protocol on the publisher side_, but they took a while to *integrate the subscriber side* that in existing products, like Google Reader, iGoogle, Feedburner... etc. Today not only they did that, but they also put it at the core of a brand new product.
 
-In the past few weeks, we started to see a ton of subscriptions from Google to a lot of feeds for which we host the feed. I was confirmed by the google team that these subscriptions were used by all Google properties, including Buzz!
+In the past few weeks, we started to see a ton of subscriptions from Google to a lot of feeds for which we host the feed. I'm pretty sure that soon all Google properties will use PubSubHubbub for the feeds!
 
 h3. Huh, and the rest of us?
 
