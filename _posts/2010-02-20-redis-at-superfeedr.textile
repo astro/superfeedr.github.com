@@ -1,0 +1,64 @@
+---
+layout: post
+title: Redis at Superfeedr
+categories: [redis, mysql, memcache, datastore, performance]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+A lot of the problems we had to tackle in the last months were directly related to the _data stores_ we used, as well as the _schema_ of the objects we stored.
+
+We've been using "MySQL":http://www.mysql.com/ and "Memcached":http://memcached.org/ from day one, because it's always good when you have 50 different problems to tackle to "use tools that you know":http://blogmaverick.com/2008/03/09/my-rules-for-startups/ (read this article by "@mcuban":http://twitter.com/mcuban if you're about to take the red pill).
+
+However, given our growth, we reached a step where the complexity of scaling horizontally involves sharding and other stuff that we weren't convinced MySQL would do well (at least, because we need to have Memcached in front too). Rather than heading too far into "bending MySQL":http://code.flickr.com/blog/2010/02/08/using-abusing-and-scaling-mysql-at-flickr/, we thought we should give a chance to "Redis":http://code.google.com/p/redis/. And here the story.
+
+h2. How it is/was
+
+Let me start first to say that _we're not dumping MySQL + Memcache altogether_. We identified one type of data for which it wasn't appropriate anymore : the feed entries.
+
+One of the key things "the hub":http://superfeedr.com/hubbub does is diff-ing : identify new entries from old entries in the feed. 
+
+We do this by storing some kind of data when for each entry, in each feed. We use a _hash of the entry id_ in our schema. The problem is that a feed can have several dozen of entries, and we obviously need to keep track of them all, plus some older ones, because you don't want entries to "re-appear" in a feed (if a more recent entry has been deleted).  When you have say *1M feeds, and you need to store 50 entries per feed on average, that's 50M entries*. And every time we fetched a feed, we need to compare the existing entries to see if we've seen them already[1]. And we fetched all our feeds _at most_ every 15 minutes : that's a lot of queries.
+
+Also, some feeds have new entries every few seconds, if we leave that for a while, say, 2 days, that's a lot of entries stored that we'll never see again. So, as soon as we see a new entry in a feed, *we have to clean older entries*. 
+
+Needless to say that this whole traffic is too much for our "simple" MySQL setting on a 8GB of RAM server. We had to put a Memcached in front of that to store the most recent entries. We obviously can't use Memcached alone, because if the server goes down (or if we just need to reboot, update the configuration it), all the traffic will end up on MySQL which will obviously die in hell in seconds.
+
+h3. Requirements
+
+As a matter of fact, _we have the same exact information in Memcache and MySQL_. We can't use either of them alone. *MySQL is just too slow* to deal with that much traffic (even with all the InnoDB indices in RAM), and *Memcache isn't persistent*, so we can't accept to use it alone. Also, we actually store our very own datastructure into Memcached, because it only deals with key/value that are strings. In our case, we have a key which is our internal feed id and the value is a string of all the entries' id joined together. 
+Also, we do some sharding on Memcached (on the client side), based on the superfeedr-wide feed id, and we'd love to keep that.
+
+We wanted to find a tool that has the _"speed" of Memcached_, _some persistence_, and which should be _easy to shard on the client side_. Also, we want to use a store that could just _silently fail_, to avoid any bottleneck (at the risk of having duplicate entries). Also, this tool should ideally have some kind of _data-structures_ so we don't have to hack one that can be mapped in strings at a low extra-size cost.
+
+A few months ago, I heard about and played with "Redis":http://code.google.com/p/redis/. I was quite impressed by it and thought I should keep that in mind. A few weeks ago, "Antirez":http://antirez.com/ added 2 awesome features that made Redis an excellent candidate : "Append-On-File":http://code.google.com/p/redis/wiki/AppendOnlyFileHowto persistence (instead of periodic snapshots) and "Sorted Sets":http://code.google.com/p/redis/wiki/IntroductionToRedisDataTypes.
+
+h3. Implementation
+
+!{float:right; margin:10px}/images/redis.png!
+*We use ZSETS* (sorted sets). Each feed has it's own sorted set. The _key is the global feed id_, the _members are the entries ids_, and the scores are _feed entries timestamps_. When fetching a feed, *we compare the unique_ids* in the set very efficiently (in parallel). Then, when the size of the sorted sets goes beyond an arbitrary limit, *we use the score to delete the oldest entries*. Easy!
+
+For the client, since all of "our components are evented":http://superfeedr.com/technology, we use "em-redis":http://github.com/madsimian/em-redis. It allows us to run the comparisons of new entries in parallel. However, we had to "hack it a little bit":http://gist.github.com/310288 to allow *silent fail* when/if the server is not present.
+
+Obviously, we use "AOF":http://code.google.com/p/redis/wiki/AppendOnlyFileHowto for persistence, so even if Redis goes down abruptly, *we shouldn't lose any data*. We keep the regular snapshot ("BGSAVE":http://code.google.com/p/redis/wiki/BgsaveCommand) every 15 minutes or so, just to make sure we have the data twice (and we copy it somewhere else).
+
+We *shard based on the feed id*. We do not use a hash key, because (even if we used consistent hashing), we would have duplicate entry for each new redis server we add to our farm. We based that on the fact our ids are consecutive and we store 250k feeds per server. @id < 150000, redis = server1; if id < 300000, redis = server2 ...@. that's not the cleanest thing but that works :)
+
+We use 2GB slices at "slicehost":http://www.slicehost.com/ and all the entries should fit in there, which is good. If not, we'll keep less entries per feed (we currently keep between twice and 3 times as much entries that there are currently in the feed.)
+
+When getting into prod, we had a few issues with Redis and the "performance was very disappointing":http://groups.google.com/group/redis-db/browse_thread/thread/9dc579d4afab6dfa, specifically at the time of the snapshots. It appeared that it was degraded by some changes "antirez":http://twitter.com/antirez introduced in the last version. We were delighted that he acknowledged the issue very fast and even used one of our boxes to debug. A few hours later "1.2.2 was out":http://code.google.com/p/redis/downloads/detail?name=redis-1.2.2.tar.gz&can=2&q=#makechanges, fixing all the issues! Who said customer service sucked with Open Source Software?
+
+h4. Tip 
+
+If you can run redis servers with less than 4GB of RAM, *compile[2] and run it in 32bits* : redis is very greedy in terms of pointers and 64bits pointers are twice as long as 32bits pointers (suprising!). On one of our servers, we gained 40% (from 1602428 to 1002124). Pretty big! Also, you _want_ to have servers with less than 4GB : it's probably *safer to have many small redis instances than just a few big ones*.
+
+h3. Conclusion
+
+It's been now in production a few days, each of our redis servers process on average *3500 queries per second*. They store on average slightly less than 1GB for 200k sorted sets (with about 4k per key/value), which should give enough space for more entries. The load is consistently below 0.1 on a quad-core. This will probably not grow much, so *we're more RAM bound than CPU bound* here, so you want to implement the trick above :)
+
+It feels good to not have an "horizon" anymore in terms of scale for the entries. Our only concern is to find the best way to provision and deploy more redis servers when we need them :D
+
+fn1. I'm oversimplifying, we use @Etag@, @If-Mofidied-Since@ and a global feed hash, to avoid comparing that every times, but that's still pretty high!
+
+fn2. Change the 32bit target: to @make ARCH="-m32"@. Then, @make 32bit@
