@@ -1,0 +1,34 @@
+---
+layout: post
+title: UrbanAirship
+categories: [Use-Case, Python, PubSubHubbub]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+We've had a few customer feedback and use-cases in the past. This week, I'd like to write about "UrbanAirship":http://urbanairship.com/. We've been in touch with "Scott":http://kveton.com/blog/ and "Michael":http://mtrichardson.com/ for a while now, and they "recently announced":http://blog.urbanairship.com/2010/02/16/urban-airship-secures-1-1-million-in-venture-capital-funding/ a Series A round.
+
+For this time, I have sent 5 questions over to Mike... here they are! 
+
+!{float:right; margin:10px}/images/urbanairship.jpg!
+
+h3. What's your product/service?
+
+Urban Airship provides an _easy way to deliver in app content and send messages to mobile customers_.  We've delivered over 130 million messages and talk to over 11 million phones.  Our key strategy is to make it incredibly easy and cheap to get going with *in-app purchase or push notifications*.  Our simple RESTful API makes it a breeze to integrate into an existing system and we support a lot of advanced features, such as arbitrary tags, aliased users, or broadcast messages.
+
+h3. How do you use Superfeedr for? 
+
+We want to make it *really easy to integrate push notifications to existing services*.  One easy way to integrate messages into an existing flow is to hook up an RSS/Atom feed.  When that feeds gets updated, we wanted our customers to be able to send a broadcast message to all their users with those updates.  This makes some applications very easy to build.  So, now, developers can just hook up an RSS feed to their Urban Airship application and broadcast messages are delivered - no fuss required.
+
+h3. Why do you use Superfeedr? (vs building your own!)
+
+We're constantly adding features and working on improving our service.  We're also a very small team.  We didn't want to bother with building out yet another component of our infrastructure dedicated to this feature, especially when we know how tricky parsing a large number of potentially unsafe and poorly formatted feeds can be.  That's why *Superfeedr was an obvious choice*.  It was a _very easy integration_ and we can _rest easily at night knowing that that's one less thing that we have to worry about_.
+
+h3. What's your stack? Language? Superfeedr API you use?
+
+We're a *Python* shop - our front end is written in *Django* with custom back-end services for message delivery.  We choose the *PubSubHubbub* API since it was the easiest to get up and running.  It's also much easier to maintain a Django application dedicated to it than another infrastructure component.
+
+h3. What would you change if you were in charge of Superfeedr for 1 day?
+
+I think I'd give Julien a vacation - he's constantly available for help and seems to be everywhere he can be lending a helping hand.

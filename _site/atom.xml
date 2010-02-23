@@ -4,9 +4,41 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-02-21T06:03:50-07:00</updated>
+    <updated>2010-02-22T21:06:07-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>UrbanAirship</title>
+        
+        <category term="Use-Case" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="Python" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="PubSubHubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/PubSubHubbub/Python/Use-Case/urbain-airship"/>
+        <published>2010-02-22T00:00:00-07:00</published>
+        <updated>2010-02-22T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/PubSubHubbub/Python/Use-Case/urbain-airship</id>
+        <content type="html">&lt;p&gt;We&amp;#8217;ve had a few customer feedback and use-cases in the past. This week, I&amp;#8217;d like to write about &lt;a href=&quot;http://urbanairship.com/&quot;&gt;UrbanAirship&lt;/a&gt;. We&amp;#8217;ve been in touch with &lt;a href=&quot;http://kveton.com/blog/&quot;&gt;Scott&lt;/a&gt; and &lt;a href=&quot;http://mtrichardson.com/&quot;&gt;Michael&lt;/a&gt; for a while now, and they &lt;a href=&quot;http://blog.urbanairship.com/2010/02/16/urban-airship-secures-1-1-million-in-venture-capital-funding/&quot;&gt;recently announced&lt;/a&gt; a Series A round.&lt;/p&gt;
+&lt;p&gt;For this time, I have sent 5 questions over to Mike&amp;#8230; here they are!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/urbanairship.jpg&quot; style=&quot;float:right; margin:10px;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;What&amp;#8217;s your product/service?&lt;/h3&gt;
+&lt;p&gt;Urban Airship provides an &lt;em&gt;easy way to deliver in app content and send messages to mobile customers&lt;/em&gt;.  We&amp;#8217;ve delivered over 130 million messages and talk to over 11 million phones.  Our key strategy is to make it incredibly easy and cheap to get going with &lt;strong&gt;in-app purchase or push notifications&lt;/strong&gt;.  Our simple RESTful &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; makes it a breeze to integrate into an existing system and we support a lot of advanced features, such as arbitrary tags, aliased users, or broadcast messages.&lt;/p&gt;
+&lt;h3&gt;How do you use Superfeedr for?&lt;/h3&gt;
+&lt;p&gt;We want to make it &lt;strong&gt;really easy to integrate push notifications to existing services&lt;/strong&gt;.  One easy way to integrate messages into an existing flow is to hook up an &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt;/Atom feed.  When that feeds gets updated, we wanted our customers to be able to send a broadcast message to all their users with those updates.  This makes some applications very easy to build.  So, now, developers can just hook up an &lt;span class=&quot;caps&quot;&gt;RSS&lt;/span&gt; feed to their Urban Airship application and broadcast messages are delivered &amp;#8211; no fuss required.&lt;/p&gt;
+&lt;h3&gt;Why do you use Superfeedr? (vs building your own!)&lt;/h3&gt;
+&lt;p&gt;We&amp;#8217;re constantly adding features and working on improving our service.  We&amp;#8217;re also a very small team.  We didn&amp;#8217;t want to bother with building out yet another component of our infrastructure dedicated to this feature, especially when we know how tricky parsing a large number of potentially unsafe and poorly formatted feeds can be.  That&amp;#8217;s why &lt;strong&gt;Superfeedr was an obvious choice&lt;/strong&gt;.  It was a &lt;em&gt;very easy integration&lt;/em&gt; and we can &lt;em&gt;rest easily at night knowing that that&amp;#8217;s one less thing that we have to worry about&lt;/em&gt;.&lt;/p&gt;
+&lt;h3&gt;What&amp;#8217;s your stack? Language? Superfeedr &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; you use?&lt;/h3&gt;
+&lt;p&gt;We&amp;#8217;re a &lt;strong&gt;Python&lt;/strong&gt; shop &amp;#8211; our front end is written in &lt;strong&gt;Django&lt;/strong&gt; with custom back-end services for message delivery.  We choose the &lt;strong&gt;PubSubHubbub&lt;/strong&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; since it was the easiest to get up and running.  It&amp;#8217;s also much easier to maintain a Django application dedicated to it than another infrastructure component.&lt;/p&gt;
+&lt;h3&gt;What would you change if you were in charge of Superfeedr for 1 day?&lt;/h3&gt;
+&lt;p&gt;I think I&amp;#8217;d give Julien a vacation &amp;#8211; he&amp;#8217;s constantly available for help and seems to be everywhere he can be lending a helping hand.&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>Redis at Superfeedr</title>
