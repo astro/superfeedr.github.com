@@ -1,0 +1,26 @@
+---
+layout: post
+title: On Outsourcing
+categories: [outsourcing, startups, validation]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+I catch a small conversation between "Alex Payne":http://al3x.net/ and "Matt Galligan":http://mgalligan.com/ today :
+
+bq. "Al3x":http://twitter.com/al3x/status/9547000653 : Something you hear over and over again from people running startups that made it: "[some capability] matters too much to outsource".
+
+bq. "Mg":http://twitter.com/mg/status/9547557255 : @al3x I generally like to call bullshit on that statement
+
+Needless to say that I fully agree with Matt. As a matter of fact, this is something that _we hear a lot from people we go after_. And I think this is terribly wrong, specially when you're a small startup.
+
+I think most people agree that the *biggest hurdle* for most startups out there is not proving the technology anymore, but *proving the market*. If you don't agree with that, just read "Dave McClure's blog":http://500hats.typepad.com/ and "presentations":http://www.slideshare.net/dmc500hats : _doing tech stuff is the simple/easy part of doing a startup_. *Proving the market, getting users and eventually customers, milking their needs to make your own profit is the hard part*.
+
+If you have that in mind, when you start a company, the first thing you want to take out of the way is the technical stuff, _you don't want to spend even minutes building stuff that somebody else already built_. As a matter of fact, if you start building stuff yourself, there is no chance that what you built in the early days is even going to last as much for a few months : *why doing and re-doing something that somebody did already*?
+
+Also, what matters too much, when you have nothing? When I hear people building small apps saying _"this feature matters too much"_, I can't help but think "matters to much to what?". The only think you should preserve at all cost is your *time*! Luckily you can't outsource that anyway. 
+
+When your startup grows, when you've proven the whole market thing, then, yes, you can start to decide what matters most, what you can do better (then the others), and what you want to take internally, rather than leave outside.
+
+Also, the internet is now the *biggest toolbox in the world*, you can find services that do "analytics":http://www.google.com/analytics/, "hosting":http://www.linode.com/index.cfm, "geolocation":http://simplegeo.com/, "realtime feeds":http://superfeedr.com/, image hosting... and software for everything else : building a startup is all about picking up the right bricks, and stacking up with a good mortar. *It's not about making the bricks!*

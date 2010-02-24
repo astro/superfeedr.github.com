@@ -4,9 +4,41 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-02-22T21:06:07-07:00</updated>
+    <updated>2010-02-23T20:31:37-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>On Outsourcing</title>
+        
+        <category term="outsourcing" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="startups" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="validation" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/outsourcing/startups/validation/on-outsourcing"/>
+        <published>2010-02-23T00:00:00-07:00</published>
+        <updated>2010-02-23T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/outsourcing/startups/validation/on-outsourcing</id>
+        <content type="html">&lt;p&gt;I catch a small conversation between &lt;a href=&quot;http://al3x.net/&quot;&gt;Alex Payne&lt;/a&gt; and &lt;a href=&quot;http://mgalligan.com/&quot;&gt;Matt Galligan&lt;/a&gt; today :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/al3x/status/9547000653&quot;&gt;Al3x&lt;/a&gt; : Something you hear over and over again from people running startups that made it: &amp;#8220;[some capability] matters too much to outsource&amp;#8221;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/mg/status/9547557255&quot;&gt;Mg&lt;/a&gt; : @al3x I generally like to call bullshit on that statement&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Needless to say that I fully agree with Matt. As a matter of fact, this is something that &lt;em&gt;we hear a lot from people we go after&lt;/em&gt;. And I think this is terribly wrong, specially when you&amp;#8217;re a small startup.&lt;/p&gt;
+&lt;p&gt;I think most people agree that the &lt;strong&gt;biggest hurdle&lt;/strong&gt; for most startups out there is not proving the technology anymore, but &lt;strong&gt;proving the market&lt;/strong&gt;. If you don&amp;#8217;t agree with that, just read &lt;a href=&quot;http://500hats.typepad.com/&quot;&gt;Dave McClure&amp;#8217;s blog&lt;/a&gt; and &lt;a href=&quot;http://www.slideshare.net/dmc500hats&quot;&gt;presentations&lt;/a&gt; : &lt;em&gt;doing tech stuff is the simple/easy part of doing a startup&lt;/em&gt;. &lt;strong&gt;Proving the market, getting users and eventually customers, milking their needs to make your own profit is the hard part&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If you have that in mind, when you start a company, the first thing you want to take out of the way is the technical stuff, &lt;em&gt;you don&amp;#8217;t want to spend even minutes building stuff that somebody else already built&lt;/em&gt;. As a matter of fact, if you start building stuff yourself, there is no chance that what you built in the early days is even going to last as much for a few months : &lt;strong&gt;why doing and re-doing something that somebody did already&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;Also, what matters too much, when you have nothing? When I hear people building small apps saying &lt;em&gt;&amp;#8220;this feature matters too much&amp;#8221;&lt;/em&gt;, I can&amp;#8217;t help but think &amp;#8220;matters to much to what?&amp;#8221;. The only think you should preserve at all cost is your &lt;strong&gt;time&lt;/strong&gt;! Luckily you can&amp;#8217;t outsource that anyway.&lt;/p&gt;
+&lt;p&gt;When your startup grows, when you&amp;#8217;ve proven the whole market thing, then, yes, you can start to decide what matters most, what you can do better (then the others), and what you want to take internally, rather than leave outside.&lt;/p&gt;
+&lt;p&gt;Also, the internet is now the &lt;strong&gt;biggest toolbox in the world&lt;/strong&gt;, you can find services that do &lt;a href=&quot;http://www.google.com/analytics/&quot;&gt;analytics&lt;/a&gt;, &lt;a href=&quot;http://www.linode.com/index.cfm&quot;&gt;hosting&lt;/a&gt;, &lt;a href=&quot;http://simplegeo.com/&quot;&gt;geolocation&lt;/a&gt;, &lt;a href=&quot;http://superfeedr.com/&quot;&gt;realtime feeds&lt;/a&gt;, image hosting&amp;#8230; and software for everything else : building a startup is all about picking up the right bricks, and stacking up with a good mortar. &lt;strong&gt;It&amp;#8217;s not about making the bricks!&lt;/strong&gt;&lt;/p&gt;</content>
+        <author>
+            <name>Julien</name>
+            <uri>http://twitter.com/julien51</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>UrbanAirship</title>
