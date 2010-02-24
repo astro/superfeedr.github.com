@@ -4,7 +4,7 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-02-24T07:25:05-07:00</updated>
+    <updated>2010-02-24T07:30:20-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
     
@@ -27,7 +27,7 @@
         <published>2010-02-23T00:00:00-07:00</published>
         <updated>2010-02-23T00:00:00-07:00</updated>
         <id>blog.superfeedr.com:/PuSH/RSSCloud/kaleidico/pubsubhubbub/social-media/zend-framework/Do-You-Prefer-Buffet-or-Sit-down</id>
-        <content type="html">&lt;p&gt;&lt;em&gt;&lt;strong&gt;Editor’s note&lt;/strong&gt;: As we &lt;a href=&quot;http://blog.superfeedr.com/blog/ecosystem/meta/superfeedr/be-my-guest/&quot;&gt;mentioned a few weeks ago&lt;/a&gt; we want to offer our readers the ability to also write on that blog. This post by &lt;a href=&quot;http://kaleidico.com&quot;&gt;Doug Van De Motter&lt;/a&gt; explains why they chose PubSubHubbub and Superfeedr for &lt;a href=&quot;http://kaleidico.com/eavesdropper&quot;&gt;Eavesdropper&lt;/a&gt; .&lt;/em&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;em&gt;&lt;strong&gt;Editor’s note&lt;/strong&gt;: As we &lt;a href=&quot;/blog/ecosystem/meta/superfeedr/be-my-guest/&quot;&gt;mentioned a few weeks ago&lt;/a&gt; we want to offer our readers the ability to also write on that blog. This post by &lt;a href=&quot;http://kaleidico.com&quot;&gt;Doug Van De Motter&lt;/a&gt; explains why they chose PubSubHubbub and Superfeedr for &lt;a href=&quot;http://kaleidico.com/eavesdropper&quot;&gt;Eavesdropper&lt;/a&gt; .&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/maciejdakowicz/3952937924/&quot;&gt;&lt;img src=&quot;http://farm3.static.flickr.com/2425/3952937924_7662a771b3.jpg&quot; style=&quot;height:200px; float:right; padding:10px;&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In the real time web world, currently there are two main choices for feed consumers &amp;#8211; &lt;a href=&quot;http://grack.com/blog/2009/09/07/pubsubhubbub-vs-rsscloud/&quot;&gt;&lt;b&gt;RSSCloud and Pubsubhubbub&lt;/b&gt;&lt;/a&gt; (PuSH). You can liken RSSCloud to a buffet for feeds and PuSH to a sit-down dinner. The hubs processing the feeds are the waiters taking your order &amp;#8211; &amp;#8220;Do you prefer buffet or sit-down?&amp;#8221;&lt;/p&gt;
 &lt;p&gt;At the RSSCloud buffet, the waiter will take your feed subscription order, and when the cook (the feed publisher) has an update ready the waiter will be notified. The waiter in turn will send you a simple ping alerting you of the update so you can go to the cook&amp;#8217;s buffet table and grab it. The waiter will also send a notice to all the other subscribers who will rush to the buffet table to get their updates, possibly crowding you out and making you wait. It&amp;#8217;s also possible that the publisher may not  anticipate the demand for the update and the table is overwhelmed with impatient buffet patrons who overturn the table.&lt;/p&gt;
@@ -661,16 +661,11 @@ Obviously, it matters for publishers to know who will subscribe to their feeds i
         <content type="html">&lt;p&gt;We use &lt;a href=&quot;http://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt; as our blog engine, and we use &lt;a href=&quot;http://github.com&quot;&gt;github&lt;/a&gt; to host said blog. As a matter of fact, our blog is a &lt;strong&gt;regular git repository&lt;/strong&gt;. This as several consequences, including the fact that it&amp;#8217;s quite easy for us to add &amp;#8220;remote&amp;#8221; contributions. If you want to write about Superfeedr related stuff : your experience with Superfeedr, but also the technologies that we use (&lt;a href=&quot;http://www.google.com/search?q=xmpp+site:blog.superfeedr.com&quot;&gt;&lt;span class=&quot;caps&quot;&gt;XMPP&lt;/span&gt;&lt;/a&gt;, &lt;a href=&quot;http://www.google.com/search?q=PubSubHubbub+site:blog.superfeedr.com&quot;&gt;PubSubHubbub&lt;/a&gt;, &lt;a href=&quot;http://www.google.com/search?q=chef+site:blog.superfeedr.com&quot;&gt;Chef&lt;/a&gt;, &lt;a href=&quot;http://www.google.com/search?q=collectd+site:blog.superfeedr.com&quot;&gt;Collectd&lt;/a&gt;&amp;#8230;), or even your &lt;em&gt;thoughts on the real-time web&lt;/em&gt;; this space is yours.&lt;/p&gt;
 &lt;p&gt;It&amp;#8217;s actually quite easy, you just have to &lt;a href=&quot;http://github.com/superfeedr/superfeedr.github.com&quot;&gt;fork our blog&amp;#8217;s&lt;/a&gt; repository, write your own blog post in the &lt;code&gt;_post&lt;/code&gt; directory, and then do a pull-request. If we like it (we will try to keep our censorship to a minimum level, but we need to make sure your posts aren&amp;#8217;t too &lt;em&gt;self-advertising&lt;/em&gt; and are &lt;em&gt;still related&lt;/em&gt; to Superfeedr).&lt;/p&gt;
 &lt;p&gt;The protocol is fairly easy : name a file &lt;code&gt;yyyy-mm-dd-title-of-your-post.textile&lt;/code&gt;, then, add your post content. Make sure you follow the &amp;#8220;Textile syntax&amp;#8221;: if you want to make your text &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, add &lt;a href=&quot;http://&quot;&gt;links&lt;/a&gt; or even titles&amp;#8230; Finally, add a top part to the file like that:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;
----&lt;/p&gt;
-&lt;p&gt;layout: post&lt;/p&gt;
-&lt;p&gt;title: &amp;#8220;Title of Your Post&amp;#8221;&lt;/p&gt;
-&lt;p&gt;categories: [tags, categories]&lt;/p&gt;
-&lt;p&gt;author_name: Your Name&lt;/p&gt;
-&lt;p&gt;author_uri: http://you-uri.com&lt;/p&gt;
-&lt;p&gt;author_email_md5: an-md5-string-of-your-email-for-gravatar-support&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;script src=&quot;http://gist.github.com/313462.js?file=gistfile1.txt&quot;&gt;&lt;/script&gt;&lt;p&gt;When you&amp;#8217;re done, you should test the layout, by using the &lt;a href=&quot;http://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt; :&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;&lt;a href=&quot;http://wiki.github.com/mojombo/jekyll/install&quot;&gt;Install the gem&lt;/a&gt; (if you have ruby installed)&lt;/li&gt;
+	&lt;li&gt;Type &lt;code&gt;jekyll --server&lt;/code&gt; in your fork of the &lt;a href=&quot;http://github.com/superfeedr/superfeedr.github.com&quot;&gt;blog&amp;#8217;s source&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;Done! This place is now yours too :)&lt;/p&gt;</content>
         <author>
             <name>Julien</name>
