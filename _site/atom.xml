@@ -4,9 +4,42 @@
     <link href="http://blog.superfeedr.com/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="http://blog.superfeedr.com/" rel="alternate" type="text/html"/>
     <link rel="hub" href="http://superfeedr.com/hubbub" />
-    <updated>2010-02-22T21:06:07-07:00</updated>
+    <updated>2010-02-24T07:25:05-07:00</updated>
     <id>http://blog.superfeedr.com/</id>
     
+    
+    <entry>
+        <title>Do You Prefer Buffet or Sit-Down?</title>
+        
+        <category term="kaleidico" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="pubsubhubbub" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="PuSH" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="RSSCloud" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="social-media" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <category term="zend-framework" scheme="http://www.sixapart.com/ns/types#tag" />
+        
+        <link href="http://blog.superfeedr.com/PuSH/RSSCloud/kaleidico/pubsubhubbub/social-media/zend-framework/Do-You-Prefer-Buffet-or-Sit-down"/>
+        <published>2010-02-23T00:00:00-07:00</published>
+        <updated>2010-02-23T00:00:00-07:00</updated>
+        <id>blog.superfeedr.com:/PuSH/RSSCloud/kaleidico/pubsubhubbub/social-media/zend-framework/Do-You-Prefer-Buffet-or-Sit-down</id>
+        <content type="html">&lt;p&gt;&lt;em&gt;&lt;strong&gt;Editor’s note&lt;/strong&gt;: As we &lt;a href=&quot;http://blog.superfeedr.com/blog/ecosystem/meta/superfeedr/be-my-guest/&quot;&gt;mentioned a few weeks ago&lt;/a&gt; we want to offer our readers the ability to also write on that blog. This post by &lt;a href=&quot;http://kaleidico.com&quot;&gt;Doug Van De Motter&lt;/a&gt; explains why they chose PubSubHubbub and Superfeedr for &lt;a href=&quot;http://kaleidico.com/eavesdropper&quot;&gt;Eavesdropper&lt;/a&gt; .&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/maciejdakowicz/3952937924/&quot;&gt;&lt;img src=&quot;http://farm3.static.flickr.com/2425/3952937924_7662a771b3.jpg&quot; style=&quot;height:200px; float:right; padding:10px;&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In the real time web world, currently there are two main choices for feed consumers &amp;#8211; &lt;a href=&quot;http://grack.com/blog/2009/09/07/pubsubhubbub-vs-rsscloud/&quot;&gt;&lt;b&gt;RSSCloud and Pubsubhubbub&lt;/b&gt;&lt;/a&gt; (PuSH). You can liken RSSCloud to a buffet for feeds and PuSH to a sit-down dinner. The hubs processing the feeds are the waiters taking your order &amp;#8211; &amp;#8220;Do you prefer buffet or sit-down?&amp;#8221;&lt;/p&gt;
+&lt;p&gt;At the RSSCloud buffet, the waiter will take your feed subscription order, and when the cook (the feed publisher) has an update ready the waiter will be notified. The waiter in turn will send you a simple ping alerting you of the update so you can go to the cook&amp;#8217;s buffet table and grab it. The waiter will also send a notice to all the other subscribers who will rush to the buffet table to get their updates, possibly crowding you out and making you wait. It&amp;#8217;s also possible that the publisher may not  anticipate the demand for the update and the table is overwhelmed with impatient buffet patrons who overturn the table.&lt;/p&gt;
+&lt;p&gt;If you prefer the PuSH sit-down dinner, the waiter will take your feed subscription order, just like at the buffet, but when the cook&amp;#8217;s update is ready the complete order is delivered directly to you by the waiter using a fat ping, and you&amp;#8217;re ready to consume as you like.&lt;/p&gt;
+&lt;p&gt;Being basically lazy and preferring our pings with a lot of fat, we opted for the PuSH sit-down protocol which we integrated into our &lt;a href=&quot;http://kaleidico.com/eavesdropper&quot;&gt;&lt;b&gt;Eavesdropper&lt;/b&gt;&lt;/a&gt; product using &lt;a href=&quot;http://zendframework.com/manual/en/zend.feed.pubsubhubbub.introduction.html&quot;&gt;&lt;b&gt;Zend Feed Pubsubhubbub&lt;/b&gt;&lt;/a&gt; and &lt;a href=&quot;http://superfeedr.com/subscriber&quot;&gt;&lt;b&gt;Superfeedr&lt;/b&gt;&lt;/a&gt; . The  Zend Feed Pubsuhubbub component is new to Zend Framework 1.10 and makes integrating the PuSH protocol into an app very easy. We chose the Superfeedr hub for it&amp;#8217;s standardization into Atom of any feed to which we want to subscribe, and because they handle the complexity of the alphabet soup of feed standards so we can just relax and enjoy our meal.&lt;/p&gt;
+&lt;p&gt;Eavesdropper is our &lt;em&gt;real-time monitoring tool&lt;/em&gt; that can be used for reputation management, competitive intelligence, lead generation and crisis management, or many other uses depending on your needs. With the addition of PuSH, you can monitor any feed of interest en &amp;#8211; dash for example, you may come across a blog post through Eavesdropper where users are actively discussing your product or service, and if the comments are feed-enabled you can subscribe to them directly within Eavesdropper to follow the discussion as it happens.&lt;/p&gt;
+&lt;p&gt;So, as a hungry feed consumer, do you prefer buffet or sit-down?&lt;/p&gt;</content>
+        <author>
+            <name>Doug Van De Motter</name>
+            <uri>http://kaleidico.com</uri>
+        </author>
+    </entry>
     
     <entry>
         <title>UrbanAirship</title>

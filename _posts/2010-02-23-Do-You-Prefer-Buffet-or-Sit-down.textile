@@ -1,16 +1,15 @@
+---
 layout: post
-
-title: “Do You Prefer Buffet or Sit-Down?”
-
-categories: kaleidico, pubsubhubbub, PuSH, RSSCloud, social media, superfeedr, zend framework
-
+title: "Do You Prefer Buffet or Sit-Down?"
+categories: [kaleidico, pubsubhubbub, PuSH, RSSCloud, "social-media", "zend-framework"]
 author_name: Doug Van De Motter
-
 author_uri: http://kaleidico.com
-
 author_email_md5: f08393cddc01a9fe28578b16bc1df4c9
+---
 
-"!{height:250px; width:167px; align:right}http://farm3.static.flickr.com/2425/3952937924_7662a771b3.jpg!":http://www.flickr.com/photos/maciejdakowicz/3952937924/
+_*Editor’s note*: As we "mentioned a few weeks ago":http://blog.superfeedr.com/blog/ecosystem/meta/superfeedr/be-my-guest/ we want to offer our readers the ability to also write on that blog. This post by "Doug Van De Motter":http://kaleidico.com explains why they chose PubSubHubbub and Superfeedr for "Eavesdropper":http://kaleidico.com/eavesdropper ._
+
+"!{height:200px; float:right; padding:10px;}http://farm3.static.flickr.com/2425/3952937924_7662a771b3.jpg!":http://www.flickr.com/photos/maciejdakowicz/3952937924/
 
 In the real time web world, currently there are two main choices for feed consumers - "**RSSCloud and Pubsubhubbub**":http://grack.com/blog/2009/09/07/pubsubhubbub-vs-rsscloud/ (PuSH). You can liken RSSCloud to a buffet for feeds and PuSH to a sit-down dinner. The hubs processing the feeds are the waiters taking your order - "Do you prefer buffet or sit-down?"
 
@@ -18,8 +17,8 @@ At the RSSCloud buffet, the waiter will take your feed subscription order, and w
 
 If you prefer the PuSH sit-down dinner, the waiter will take your feed subscription order, just like at the buffet, but when the cook's update is ready the complete order is delivered directly to you by the waiter using a fat ping, and you're ready to consume as you like.
 
-Being basically lazy and preferring our pings with a lot of fat, we opted for the PuSH sit-down protocol which we integrated into our "**Eavesdropper**":http://kaleidico.com/eavesdropper product using "**Zend_Feed_Pubsubhubbub**":http://zendframework.com/manual/en/zend.feed.pubsubhubbub.introduction.html and "**Superfeedr**":http://superfeedr.com/subscriber . The  Zend_Feed_Pubsuhubbub component is new to Zend Framework 1.10 and makes integrating the PuSH protocol into an app very easy. We chose the Superfeedr hub for it's standardization into Atom of any feed to which we want to subscribe, and because they handle the complexity of the alphabet soup of feed standards so we can just relax and enjoy our meal.
+Being basically lazy and preferring our pings with a lot of fat, we opted for the PuSH sit-down protocol which we integrated into our "**Eavesdropper**":http://kaleidico.com/eavesdropper product using "**Zend Feed Pubsubhubbub**":http://zendframework.com/manual/en/zend.feed.pubsubhubbub.introduction.html and "**Superfeedr**":http://superfeedr.com/subscriber . The  Zend Feed Pubsuhubbub component is new to Zend Framework 1.10 and makes integrating the PuSH protocol into an app very easy. We chose the Superfeedr hub for it's standardization into Atom of any feed to which we want to subscribe, and because they handle the complexity of the alphabet soup of feed standards so we can just relax and enjoy our meal.
 
-Eavesdropper is our real-time monitoring tool that can be used for reputation management, competitive intelligence, lead generation and crisis management, or many other uses depending on your needs. With the addition of PuSH, you can monitor any feed of interest en - dash for example, you may come across a blog post through Eavesdropper where users are actively discussing your product or service, and if the comments are feed-enabled you can subscribe to them directly within Eavesdropper to follow the discussion as it happens.
+Eavesdropper is our _real-time monitoring tool_ that can be used for reputation management, competitive intelligence, lead generation and crisis management, or many other uses depending on your needs. With the addition of PuSH, you can monitor any feed of interest en - dash for example, you may come across a blog post through Eavesdropper where users are actively discussing your product or service, and if the comments are feed-enabled you can subscribe to them directly within Eavesdropper to follow the discussion as it happens.
 
 So, as a hungry feed consumer, do you prefer buffet or sit-down?
