@@ -1,0 +1,63 @@
+---
+layout: post
+title: "A Hub for Twitter"
+categories: [PubSubHubbub, Twitter, API, feeds, streaming]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+If you claim to be some kind of social app but don't use *PubSubHubbub*, I think you're missing out the opportunity to support a *de-facto standard for service to service communication*.
+
+On the other hand, if you're a *realtime feed standard* that is not used by "Twitter":http://twitter.com/, _you're also missing something_. 
+
+Based on these simple facts, I think Twitter needs to have a "PubSubHubbub":http://superfeedr.com/hubbub hub. They recently announced that more and more apps are "getting their firehose":http://blog.twitter.com/2010/03/enabling-rush-of-innovation.html, this is great and shows us that *they want their data out* (hey, "Facebook":http://facebook.com/, did you hear that?). However, a few conversations with both "John":http://twitter.com/jkalucki and "Ryan":http://twitter.com/Rsarver showed me that they weren't so keen of doing so. *Sad*.
+
+To prove them wrong, we started a "little poll 2 days ago":http://bit.ly/hub4twitter. The goal was to show Twitter that people would use this hub, and that, with it, the consumption of Twitter data will eventually grow over time.
+
+Here are the results (obviously, it's never too late to answer) :
+
+!{float:right}http://chart.apis.google.com/chart?cht=p&chs=230x100&chco=ff9900&chl=Yes%20%5B45%5D%7CNo%20%5B2%5D&chd=e%3A9QCu!
+
+h4. Would you use a Twitter PubSubHubbub hub if it was available?
+Yes		45	96%
+No		2	4%
+
+I think this is the most important question here :) One could argue that the people who responded are also more tempted to say they would use it, than not. A legit question that somebody raised is that it would probably not work behind the firewall. I agree with that, but _I also think that most apps who are behind firewalls use the regular REST API_.
+
+!{float:right}http://chart.apis.google.com/chart?cht=p&chs=230x100&chco=0000e0&chl=Yes%20%5B21%5D%7CNo%20%5B26%5D&chd=e%3AcljZ!
+
+h4. Do you currently use the Twitter Streaming API?
+Yes		21	45%
+No		26	55%
+
+This is interesting to compare with the previous question. *Almost everybody said they would use a PubSubHubbub hub, but less than half currently use the streaming API*. This means that the streaming API is not fulfilling their needs, while a hub would.
+
+!{float:right}http://chart.apis.google.com/chart?cht=p&chs=230x100&chco=dcca02&chl=Yes%20%5B45%5D%7CNo%20%5B2%5D&chd=e%3A9QCu!
+
+h4. Do you think a hub would increase your Twitter data consumption?
+Yes		45	96%
+No		2	4%
+
+Again, that, I think, proves that a hub would be better suited for the data consumption for many applications. Also, I think that Twitter genuinely wants the data to "get out". This proves that _this goal would be achieved_.
+
+!{float:right}http://chart.apis.google.com/chart?cht=p&chs=230x100&chco=00d000&chl=Yes%20%5B30%5D%7CNo%20%5B17%5D&chd=e%3Ao1XJ!
+
+h4. Have you already implemented PubSubHubbub?
+Yes		30	64%
+No		17	36%
+
+A key concern when _implementing an API is the speed of adoption_. The streaming API has been out for a few months, but is still not so widely used, if Twitter had a hub, a lot of people would be able to start using it from day 1, because they already implemented the protocol on their ends.
+
+!{float:right}http://chart.apis.google.com/chart?cht=bhs&chs=345x90&chbh=24%2C6&chco=df5353%7Cd00000&chxt=x%2Cy&chxl=0%3A%7C0%7C8%7C16%7C24%7C32%7C40%7C48%7C1%3A%7CTrack%20(search%20feeds)%7CFollow%20(user%20feeds)&chxs=0%2C000000%2C12%2C0%2Clt%7C1%2C000000%2C12%2C1%2Clt&chds=0%2C48&chd=t%3A42%2C39!
+
+I *will send the detail results to both John and Ryan*, as well as the list of people who responded (in a BCC email), so anybody can start the conversation from there.
+
+Twitter will make the decision on whether they want to support that or not. It's obvious that if they do, I'd rather see that happen via a "Superfeedr hub":http://superfeedr.com/hubbub. However, I think it's still great for *PubSubHubbub* and the internets in general if Twitter decides to go down this route, but without us. 
+
+Like always, I'm here to help anyway.
+
+
+
+
+
