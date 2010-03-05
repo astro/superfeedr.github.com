@@ -1,0 +1,54 @@
+---
+layout: post
+title: "Ping me I'm famous"
+categories: [ping, api, infrastructure, realtime]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+Ping is both the *ancestor* and the _root_ of any realtime feed protocol. A ping is a way to say : "_hey this content was updated_". It can be light, which means the this gives a link to the content, or "fat":http://techcrunch.com/2009/09/09/rsscloud-vs-pubsubhubbub-why-the-fat-pings-win/, when the ping actually contains the content.
+
+As always with the internets, there are many ways to do that same thing. A pretty famous one is "XML-RPC":http://www.xmlrpc.com/weblogsCom. "PubsubHubbub":http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.3.html#anchor9 has its own way of taking them into account too, RSSCloud as well... etc. *They all work with Superfeedr*, as we have implemented them all :).
+By the way, if you want to start pinging us when you update your content, and if you already ping services like "Pingomatic":http://pingomatic.com/, "Technorati":http://technorati.com/ or "Google Blog search":http://blogsearch.google.com/, you can also add *"http://ping.superfeedr.com/rpc":http://ping.superfeedr.com/rpc* to the list of services to ping.
+
+h3. Building a Ping Cache.
+
+Most of ping protocols are actually *HTTP Post requests* sent to a url. That's pretty easy to implement. Once we get a ping, we either _extract the right params, or parse the XML body_. That's what's after which is interesting!
+
+Remember, pings can sometimes concern a feed url, but they can also concern a *regular web page*. Lucky for us, these pages often hold a feed, so we can consider that if we get a ping for a given page, we can consider that the feed itself as been updated. As a matter of fact, we use "Redis":http://code.google.com/p/redis/ ("again":http://blog.superfeedr.com/datastore/memcache/mysql/performance/redis/redis-at-superfeedr/!) to store a massive dictionary like this :
+
+@url1 => [feed_id1, feed_id2], url2 => [feed_id3], url3 => [feed_id1, feed_id2]@
+
+Each url might have *several feeds associated*, so we use an *set*. So far this is quite common. To be even more efficient, for each feed that we monitor, we fetch all the related "alternate" urls, and their "alternate" urls. What's the purpose of that? *Identifying clusters of urls that are updated at the same time.*
+
+Let's take an example :
+
+Let's say a user is monitoring this feed @"http://superfeedr.typepad.com/blog/atom.xml":http://superfeedr.typepad.com/blog/atom.xml@. In our system it has an unique id of @123@.
+
+When we fetch this feed, to build the Redis-based ping cache, we see that it links (with @rel="alternate"@) to @"http://superfeedr.typepad.com/":http://superfeedr.typepad.com/@. Hence, we'll map both @.../atom.xml@ and @http://superfeedr.typepad.com/@ to the @123@ in our cache, so that if we receive a ping for @http://superfeedr.typepad.com/@ we'll assume that the feed's content has been updated. We also fetch @http://superfeedr.typepad.com/@, and this time, we see that it contains links (again, with @rel="alternate"@) to :
+
+* @http://superfeedr.typepad.com/blog/atom.xml@
+* @http://superfeedr.typepad.com/blog/index.rdf@
+* @http://superfeedr.typepad.com/blog/rss.xml@
+
+Similarly, we can now add to our cache the 2 extra feeds. As soon as we get a ping for any url, we will then assume that all of them have been updated! 
+
+h3. Fetching the feed.
+
+We have a *complex scheduling mechanism*. Contrary to the "Google Demo hub":http://pubsubhubbub.appspot.com/, "Superfeedr":http://superfeedr.com/ has an _aggressive polling strategy_ for which we roughly poll any feed we have under 15 minutes. This amount of feed does that _at every single second we have several thousands of feeds to fetch_. 
+
+Our scheduling algorithm works in a *non-deterministic way* : it picks feeds that -will soon- need to be fetched, but on a random order. Obviously we can't treat pings (for which the chance of update is hight) the same way as feeds that are just scheduled to be fetched (for which the chance of new entry is low). 
+
+!{float:right; margin: 10px}http://www.rabbitmq.com/img/rabbitmqlogonostrap.png!
+
+For the pings, we use a *deterministic system*: a queue system where _what goes in first, goes out first_. Each of our dispatcher, are subscribed to the queue, and as soon as they get a message from it, they push it to some parsers. For the queue, we use "RabbitMQ":http://www.rabbitmq.com/, and the excellent "AMQP EventMachine":http://github.com/tmm1/amqp library does an awesome job :) 
+
+It's funny to see that our dispatchers are now *multi-modal components*: they are "XMPP Components":http://xmpp.org/extensions/xep-0114.html, send all of our HTTP notifications, and get messages from an AMQP queue. Each protocol is used at what it is best :)
+
+
+
+
+
+
+
