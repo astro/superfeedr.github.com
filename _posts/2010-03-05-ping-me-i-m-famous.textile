@@ -24,9 +24,9 @@ Each url might have *several feeds associated*, so we use an *set*. So far this 
 
 Let's take an example :
 
-Let's say a user is monitoring this feed @"http://superfeedr.typepad.com/blog/atom.xml":http://superfeedr.typepad.com/blog/atom.xml@. In our system it has an unique id of @123@.
+Let's say a user is monitoring this feed "http://superfeedr.typepad.com/blog/atom.xml":http://superfeedr.typepad.com/blog/atom.xml. In our system it has an unique id of @123@.
 
-When we fetch this feed, to build the Redis-based ping cache, we see that it links (with @rel="alternate"@) to @"http://superfeedr.typepad.com/":http://superfeedr.typepad.com/@. Hence, we'll map both @.../atom.xml@ and @http://superfeedr.typepad.com/@ to the @123@ in our cache, so that if we receive a ping for @http://superfeedr.typepad.com/@ we'll assume that the feed's content has been updated. We also fetch @http://superfeedr.typepad.com/@, and this time, we see that it contains links (again, with @rel="alternate"@) to :
+When we fetch this feed, to build the Redis-based ping cache, we see that it links (with @rel="alternate"@) to "http://superfeedr.typepad.com/":http://superfeedr.typepad.com/. Hence, we'll map both @.../atom.xml@ and @http://superfeedr.typepad.com/@ to the @123@ in our cache, so that if we receive a ping for @http://superfeedr.typepad.com/@ we'll assume that the feed's content has been updated. We also fetch @http://superfeedr.typepad.com/@, and this time, we see that it contains links (again, with @rel="alternate"@) to :
 
 * @http://superfeedr.typepad.com/blog/atom.xml@
 * @http://superfeedr.typepad.com/blog/index.rdf@
