@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Chasing Real-Time Raindrops in an Ocean of Content"
+categories: [realtime, search, web]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+
+_The web is huge. And growing. Faster everyday_. It's almost like an ocean where there would be no evaporation (the data on the web stays there virtually forever), but yet, it's always raining in it. The rain is the new content that's added into the ocean. *Every tweet is a drop*, every blog post is a drop, every checkin is a drop *that falls into the Ocean*. This ocean is almost constantly under a tropical storm in some places, like "Twitter":http://twitter.com/ or "Facebook":http://www.facebook.com/.
+
+!{width: 40%; float:left; }http://rww.superfeedr.com/images/hubs/rww.png!
+
+_I've been invited by "Marshall Kirkpatrick":http://marshallk.com/ to write a guest post on "ReadWriteWeb":http://www.readwriteweb.com/ about the fact that Google will soon include PubSubHubbub data in its search engine. I hope you can "read it and leave some comments there":http://www.readwriteweb.com/archives/chasing_real-time_raindrops_in_an_ocean_of_content.php._
