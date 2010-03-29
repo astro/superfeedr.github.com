@@ -1,0 +1,42 @@
+---
+layout: post
+title: Unicorn
+categories: [webapp, pubsubhubbub, architecture, nnicorn]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+!{float:left; padding:10px}http://github.com/images/error/angry_unicorn.png!
+
+In the past few weeks, our web server have really been pushed to limits that we weren't expecting to reach so quickly. We're now receiving between *150 and 300 requests* per second. Some of them are "PubSubHubbub subscriptions":http://superfeedr.com/documentation#pubsubhubbub, but the bulk of it is pings that we receive for the various hubs that we host.
+
+This brought a whole lot of issues in the past weeks. Issues that we decided to address by *splitting the web server and the app server*. Up until now, we were using "Passenger":http://www.modrails.com/ and "Nginx":http://nginx.org/. We now use the new cool kid in the field: "Unicorn":http://unicorn.bogomips.org/ to serve the app.
+
+The migration was easy : we set up a new server from the ground, and, since we host our DNS server, we just changed the DNS to the IP of this new server. The old one is still "on" for a week, after which we will turn it off.
+
+
+h3. Recipe
+
+A 2GB server, with Ubuntu. A base of "Ruby Enterprise Edition":http://www.rubyenterpriseedition.com/, as for most of our Ruby programs. Nginx as the web server, and, Unicorn to serve the Rails app. 
+
+Settings were quite easy too. We mostly copied what was available in the "Unicorn doc":http://unicorn.bogomips.org/Unicorn/Configurator.html. Here is for the NginX :
+<script src="http://gist.github.com/347898.js?file=gistfile1.txt"></script>
+Note that we have similar settings for @https@ (port 443).
+
+We then added the @unicorn.rb@ file to our git repo for the web app. Again, we "copied them from the doc":http://unicorn.bogomips.org/examples/unicorn.conf.rb. Here it is:
+<script src="http://gist.github.com/347907.js?file=gistfile1.rb"></script>
+
+As you can see, we disconnect the master unicorn process from MySQL and Mongo before forking, and we connect them (as well as Redis and the Queue) after forking, so they can be used directly by the worker processes.
+
+Finally, we added a small @init.d@ script to allow easier control of the unicorn processes :
+<script src="http://gist.github.com/347910.js?file=gistfile1.sh"></script>
+
+On a site note, I rewrote the "Bosh gem":http://rubygems.org/gems/bosh. "Bosh":http://xmpp.org/extensions/xep-0124.html is the magic which allows to communicate with an XMPP server via HTTP. This gem allows to pre-bind the XMPP connection (and obfuscate the credentials) for faster handling in the browser, with "StropheJs":http://code.stanziq.com/strophe/, for example. The existing "RubyBOSH":http://github.com/skyfallsin/ruby_bosh worked fine but used "Hpricot":http://hpricot.com/ and "RestClient";http://rdoc.info/projects/archiloque/rest-client, while our web app already had dependencies for "Nokogiri":http://nokogiri.org/ and "Typhoeus":http://github.com/pauldix/typhoeus. It's always good to _reduce the memory footprint by removing un-neeede dependencies_.
+
+We have a few more things to fine tune, for our server seems to be much more at ease now :) A small "ab":http://httpd.apache.org/docs/2.0/programs/ab.html benchmark shows us that the new settings as an average response time 20% shorter than with Nginx+Passenger. At the same time, the load on the web server was divided by 2.
+
+One of the great benefits of that, is that we can already prepare the moment where we'll use 2 (or more) instances of unicorn running on different hosts, with Nginx in front of them all. if you want to read more about Unicorn, the "Github article":http://github.com/blog/517-unicorn by "@defunkt":http://github.com/defunkt is probably one of the most complete :)
+
+Ah, and yes, we got rid of the stripes. Unicorns don't have stripes.
+
