@@ -1,0 +1,38 @@
+---
+layout: post
+title: Memprof
+categories: [memprof, ruby, debugging, memory]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+We use a lot of Ruby at Superfeedr. Even though we have some lower level languages for a few layers in our stack, we're willing to *trade some performance for the ease of development, testing and maintenance* that Ruby offers. Also, our distributed architecture allows us to run more processes very transparently if some of them are too slow. My friend Joe "tells it better":http://stu.mp/2008/04/its-not-the-language-stupid.html.
+
+Yet, one of the biggest missing links in our day to day development cycles is the *lack of good Memory Profiler* for Ruby. Luckily, in the past few months, 2 of my favorite Ruby Hackers : "Aman":http://twitter.com/tmm1 and "Joe":http://timetobleed.com/ have been working on "Memprof.com":http://memprof.com/. They launched it last week, and it's already very very useful.
+
+h3. The pitch
+
+Don't change anything in your code. Just install a "small gem":http://rubygems.org/gems/memprof, require it from your code. Once it's been running for a few minutes, just run @memprof@ (which came up with the gem), and it will upload a full heap dump of your app to "Memprof.com":http://memprof.com/.
+
+From there, memprof.com will *classify*, *count*, *sort*, *aggregate* all your app's objects so you can go search for leaks quite easily!
+
+h3. The Quest
+
+Don't fool yourself : it won't point you to the line in your code that's leaky. It actually does much better : it helps you see a snapshot of your app so you can *learn more about how it deals with memory*.
+
+Our app didn't technically had a leak (memory that can't be released), however, like many Ruby apps, it was *keeping track of object that should have long been released*, like objects in an array, keys in a hash... etc.
+
+The "root" of a heap dump shows you the language used, the number of objects, the number of classes and modules, the source files, the methods, the number of arrays, hashes, strings, procs, threads.
+
+Obviously, it can be interesting to compare dumps between 2 versions of your code to see if you've introduced a pattern which increases the memory consumption.
+
+You can also group most of the items by age (when they've been allocated), and by type (strings, arrays...) or even by size in the case of "countable" items.
+
+h3. The treasure
+
+In our case, we were surprised to see that the number of *Proc objects was pretty high*. Grouping them by file showed us that most of them where issued from the em-mysql driver : since this driver is async, it is called with a block. If the server is a bit slow to respond, we stacked up these callbacks and all the context in which they're being called. When our app starts having a few hundreds of these, it eats more memory than it should!
+
+We also found that it was allocating a lot of empty strings (default values), while we could have used a global @EMPTY_STRING@ variable... etc.
+
+Memprof is a very promising app. Even if you don't necessarily feel that you're app is leaking, it may be interesting to at least dump the heap once to see where it can be optimized. 
