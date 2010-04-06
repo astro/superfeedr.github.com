@@ -11,7 +11,7 @@ We use a lot of Ruby at Superfeedr. Even though we have some lower level languag
 
 Yet, one of the biggest missing links in our day to day development cycles is the *lack of good Memory Profiler* for Ruby. Luckily, in the past few months, 2 of my favorite Ruby Hackers : "Aman":http://twitter.com/tmm1 and "Joe":http://timetobleed.com/ have been working on "Memprof.com":http://memprof.com/. They launched it last week, and it's already very very useful.
 
-h3. The pitch
+h3. The Pitch
 
 Don't change anything in your code. Just install a "small gem":http://rubygems.org/gems/memprof, require it from your code. Once it's been running for a few minutes, just run @memprof@ (which came up with the gem), and it will upload a full heap dump of your app to "Memprof.com":http://memprof.com/.
 
@@ -29,7 +29,7 @@ Obviously, it can be interesting to compare dumps between 2 versions of your cod
 
 You can also group most of the items by age (when they've been allocated), and by type (strings, arrays...) or even by size in the case of "countable" items.
 
-h3. The treasure
+h3. The Treasure
 
 In our case, we were surprised to see that the number of *Proc objects was pretty high*. Grouping them by file showed us that most of them where issued from the em-mysql driver : since this driver is async, it is called with a block. If the server is a bit slow to respond, we stacked up these callbacks and all the context in which they're being called. When our app starts having a few hundreds of these, it eats more memory than it should!
 
