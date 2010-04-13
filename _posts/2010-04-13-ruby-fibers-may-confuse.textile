@@ -7,7 +7,7 @@ author_uri: http://spaceboyz.net/~astro/
 author_email_md5: 0120a25badc6b1e50f6890527dca7042
 ---
 
-Like many others, we use "Ruby EventMachine":http://rubyeventmachine.com/ to make most use of CPU time in the cloud. The asynchronous programming model is callback-based and makes otherwise pretty Ruby code look a bit unwieldy:
+Like many others, we use "Ruby EventMachine":http://rubyeventmachine.com/ to make most use of CPU time in the cloud. Instead of blocking and waiting for responses from remote systems, we just memorize what is to be done and return to the main loop, taking care other things that are currently going on. The asynchronous programming model is callback-based and makes otherwise pretty Ruby code look a bit unwieldy:
 
 <pre><code>server.get(key) do |content|
   content.modify!
@@ -23,7 +23,7 @@ content.modify!
 server.set(key, content)
 proceed_doing_stuff</code></pre>
 
-This works because <code>server.get</code> and <code>server.set</code> can obtain the remaining code as a reference (like the callback block before): the _Current Continuation_.
+This works because <code>server.get</code> and <code>server.set</code> can obtain the remaining code as a reference (like the callback block before): the _Current Continuation_. The semantics are only subtly different, we can regard these simply as two ways to express code.
 
 This article is not a praise on the pretty syntax and features of Ruby. Remember what we gain with the asynchronous programming model: not only raw performance by avoiding threads and locking, but also the convenience of always running in a single thread and not having the current state made inconsistent by getting preempted by other code.
 
@@ -38,4 +38,8 @@ sent += content.size
 set_stats received, sent
 proceed_doing_stuff</code></pre>
 
-During <code>server.get</code> and <code>server.set</code> the Fiber has been yielded and resumed, and another Fiber may have modified the stats in the meanwhile. By using callback blocks instead of Fibers the problem is still there but the code looks *explicitly asynchronous*.
+This is the code from above, extended with very simple statistics collection. The statistics are global state, but we're safe because we don't use threads. Are we?
+
+No. All the issues come back to life that are difficult with writing threaded code. During <code>server.get</code> and <code>server.set</code> the Fiber has been yielded and resumed, and another Fiber may have modified the stats in the meanwhile. This could have been caused by the very same code, just handling another server from your connection pool.
+
+By using callback blocks instead of Fibers the problem is still there but the code looks *explicitly asynchronous*. They tell the reader: _"I am running somewhat later, please pay attention to any shared state!"_
