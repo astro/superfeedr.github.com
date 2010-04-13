@@ -1,0 +1,41 @@
+---
+layout: post
+title: Ruby Fibers may confuse
+categories: [ruby, open]
+author_name: Astro
+author_uri: http://spaceboyz.net/~astro/
+author_email_md5: 0120a25badc6b1e50f6890527dca7042
+---
+
+Like many others, we use "Ruby EventMachine":http://rubyeventmachine.com/ to make most use of CPU time in the cloud. The asynchronous programming model is callback-based and makes otherwise pretty Ruby code look a bit unwieldy:
+
+<pre><code>server.get(key) do |content|
+  content.modify!
+  server.set(key, content) do
+    proceed_doing_stuff
+  end
+end</code></pre>
+
+_Call with Current Continuation_ (*callcc*) and the advent of *Fibers* in Ruby 1.9 to the rescue. They can help us make the code look pretty again:
+
+<pre><code>content = server.get(key)
+content.modify!
+server.set(key, content)
+proceed_doing_stuff</code></pre>
+
+This works because <code>server.get</code> and <code>server.set</code> can obtain the remaining code as a reference (like the callback block before): the _Current Continuation_.
+
+This article is not a praise on the pretty syntax and features of Ruby. Remember what we gain with the asynchronous programming model: not only raw performance by avoiding threads and locking, but also the convenience of always running in a single thread and not having the current state made inconsistent by getting preempted by other code.
+
+Now what are Fibers introducing? We still run only one high-performing Ruby thread, but we gain *cooperative multi-tasking*. The situations a coder may find him/herself in are quite controllable through these "well-definable" preemption points. Still, to illustrate take a look at this stupid but trivial example:
+
+<pre><code>received, sent = get_stats
+content = server.get(key)
+received += content.size
+content.modify!
+server.set(key, content)
+sent += content.size
+set_stats received, sent
+proceed_doing_stuff</code></pre>
+
+During <code>server.get</code> and <code>server.set</code> the Fiber has been yielded and resumed, and another Fiber may have modified the stats in the meanwhile. By using callback blocks instead of Fibers the problem is still there but the code looks *explicitly asynchronous*.
