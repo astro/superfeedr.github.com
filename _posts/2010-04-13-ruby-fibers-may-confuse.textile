@@ -40,7 +40,7 @@ proceed_doing_stuff</code></pre>
 
 This is the code from above, extended with very simple statistics collection. The statistics are global state, but we're safe because we don't use threads. Are we?
 
-!{width:40%;float:right;margin:5px}../../../images/shared-mutable-state.jpg!
+!{width:40%;float:right;margin:5px}/images/shared-mutable-state.jpg!
 No. All the issues come back to life that are difficult with writing threaded code. During <code>server.get</code> and <code>server.set</code> the Fiber has been yielded and resumed, and another Fiber may have modified the stats in the meanwhile. This could have been caused by the very same code, just handling another server from your connection pool.
 
 By using callback blocks instead of Fibers the problem is still there but the code looks *explicitly asynchronous*. They tell the reader: _"I am running somewhat later, please pay attention to any shared state!"_
