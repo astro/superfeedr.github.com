@@ -9,7 +9,7 @@ author_email_md5: b30ce50678f0e934eaa6697425c59dd7
 
 There is no doubt that feeds and social networks go along together very well. I even argued that "building a social application without feeds and PubSubHubbub was a mistake":http://blog.superfeedr.com/open/pubsubhubbub/social/xmpp/a-social-network/. Today, we're announcing that Superfeedr is now able to parse "ActivityStreams":http://activitystrea.ms/ data! We decided to add this to our schema (like we did a "few weeks ago for GeoRSS":http://www.readwriteweb.com/archives/superfeedr_now_adds_location_to_feeds_automaticall.php).
 
-!/images/activitystreams.png!{color:{color:{color:#FFF}}}
+!/images/activitystreams.png!
 
 Even if atom entries are the smallest common denominator to describe online content, it's now obvious that _they're not allowing us to represent fully the richness of social data_.
 
