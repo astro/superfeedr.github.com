@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Activity Streams
-categories: [activity streams pubsubhubbub]
+categories: [activity, streams, pubsubhubbub]
 author_name: Julien
 author_uri: http://twitter.com/julien51
 author_email_md5: b30ce50678f0e934eaa6697425c59dd7
