@@ -1,0 +1,23 @@
+---
+layout: post
+title: Activity Streams
+categories: [activity streams pubsubhubbub]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+There is no doubt that feeds and social networks go along together very well. I even argued that "building a social application without feeds and PubSubHubbub was a mistake":http://blog.superfeedr.com/open/pubsubhubbub/social/xmpp/a-social-network/. Today, we're announcing that Superfeedr is now able to parse "ActivityStreams":http://activitystrea.ms/ data! We decided to add this to our schema (like we did a "few weeks ago for GeoRSS":http://www.readwriteweb.com/archives/superfeedr_now_adds_location_to_feeds_automaticall.php).
+
+!/images/activitystreams.png!{color:{color:{color:#FFF}}}
+
+Even if atom entries are the smallest common denominator to describe online content, it's now obvious that _they're not allowing us to represent fully the richness of social data_.
+
+If you're not familiar with it. Here is a small intro to Activity Streams.
+
+They're support by a lot of the big social players, including "Facebook":http://wiki.developers.facebook.com/index.php/Using_Activity_Streams, "MySpace":http://wiki.developer.myspace.com/index.php?title=Standards_for_Activity_Streams, "Windows Live":http://http://dev.live.com/blogs/devlive/archive/2009/09/14/503.aspx, "Google Buzz":http://code.google.com/apis/buzz/, "Opera":http://dev.opera.com/libraries/activitystream/, "TypePad"https://wiki.activitystrea.ms/TypePad-Activity-Streams, "Gowalla":http://www.readwriteweb.com/archives/gowalla_adds_real-time_feeds_and_activity_streams.php...
+
+They extends the regular @atom entries@, by adding 2 nodes: @verbs@ and @object@. The @author@ information can also be extended.
+With this, it is possible to represent almost any action done by a specific user: _Julien commented on a blog post_. _Astro was tagged in a picture_. _John friended Andy_.
+
+Soon, we will start to *extrapolate ActivityStreams data out of non-as data*, and then, all the data that you'll get from Superfeedr will be ActivityStream!
