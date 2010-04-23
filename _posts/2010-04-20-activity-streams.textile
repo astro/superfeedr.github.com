@@ -15,7 +15,7 @@ Even if atom entries are the smallest common denominator to describe online cont
 
 If you're not familiar with it. Here is a small intro to Activity Streams.
 
-They're support by a lot of the big social players, including "Facebook":http://wiki.developers.facebook.com/index.php/Using_Activity_Streams, "MySpace":http://wiki.developer.myspace.com/index.php?title=Standards_for_Activity_Streams, "Windows Live":http://http://dev.live.com/blogs/devlive/archive/2009/09/14/503.aspx, "Google Buzz":http://code.google.com/apis/buzz/, "Opera":http://dev.opera.com/libraries/activitystream/, "TypePad"https://wiki.activitystrea.ms/TypePad-Activity-Streams, "Gowalla":http://www.readwriteweb.com/archives/gowalla_adds_real-time_feeds_and_activity_streams.php...
+They're supported by a lot of the big social players, including "Facebook":http://wiki.developers.facebook.com/index.php/Using_Activity_Streams, "MySpace":http://wiki.developer.myspace.com/index.php?title=Standards_for_Activity_Streams, "Windows Live":http://http://dev.live.com/blogs/devlive/archive/2009/09/14/503.aspx, "Google Buzz":http://code.google.com/apis/buzz/, "Opera":http://dev.opera.com/libraries/activitystream/, "TypePad:"https://wiki.activitystrea.ms/TypePad-Activity-Streams, "Gowalla":http://www.readwriteweb.com/archives/gowalla_adds_real-time_feeds_and_activity_streams.php...
 
 They extends the regular @atom entries@, by adding 2 nodes: @verbs@ and @object@. The @author@ information can also be extended.
 With this, it is possible to represent almost any action done by a specific user: _Julien commented on a blog post_. _Astro was tagged in a picture_. _John friended Andy_.
