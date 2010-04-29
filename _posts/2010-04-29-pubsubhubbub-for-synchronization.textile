@@ -1,0 +1,26 @@
+---
+layout: post
+title: PubSubHubbub for Synchronization
+categories: [pubsubhubbub, synchronization, gospel]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+I trust that _we haven't seen yet how much the realtime web is about to change the web_. It's currently quite hard to synchronize data between 2 services in an efficient way. 
+
+Let's see this scenario : Tom uses "LinkedIn":http://www.linkedin.com/ to store his job title. He also use "Google Profile":http://www.google.com/profiles, on which he entered his job title. He also entered his work information on "Facebook":http://www.facebook.com/... _and again and again and again_. Tom is always surprised to have to enter this again and again, but it's short, so it's not so big of deal. Luckily, more and more services now *allow Tom to link his Facebook profile* with them so he doesn't have to enter that information. This is great!
+
+!{float:left; width:200px; margin: 0px 10px 15px 0px}/images/fail.png!Today is a sunny day and Tom just got promoted and has a new title. Tom now *wants to update his job title on the web*. Yes, he can change it on Facebook, but *other services will never know about it*. He even _doesn't remember all the places that he needs to update_. Tom just leaves the outdated information and hopes that people will eventually find about his new title... *FAIL*!
+
+Let's now enter a world where *instead of allowing service X to get Tom's Facebook information, service X is able to subscribe to Tom's profile on Facebook*. Now, every time Tom changes his profile data on Facebook, all the other services are notified. Even better, when he updates his job title, Tom can choose what is sent to which service. Ideally, _Facebook would also subscribe to his LinkedIn profile, and LinkedIn would subscribe to his Facebook profile_. With this, if Tom update any network, the information would be *deployed on all networks and apps that Tom uses*. Ideally, Tom's profile would also include the list of all subscriptions that other services hold. If one day Facebook disappears (-god forbid!-), then, no big deal, the services which got their info from Facebook will now get it from LinkedIn.
+
+This looks nice. I wish I'd live in this future. *Wait, this can happen now*! Everything is here already!
+
+Obviously, this involves a few step : a *profile is nothing more than an "activity stream":http://activitystrea.ms/*[1]. If I update my profile, it just adds an entry to this stream. The subscription process is done by "PubSubHubbub":http://en.wikipedia.org/wiki/PubSubHubbub. The profile are linked together with stuff like "XFN":http://gmpg.org/xfn/and/. 
+
+Now, you may think that this looks cool, but social networks aren't really 'serious'... guess what? You probably know about services like "Dropbox":https://www.dropbox.com/home or "FilesAnywhere":http://www.filesanywhere.com/, or "Box.net":http://box.net/ and "Google Docs":http://docs.google.com/... well, this model can help you sync them all over the web : _when you add a file to GoogleDoc, it appears on your dropbox, so you can edit on your laptop while offline_. 
+
+This can happen. Whatever your app is doing, "you just need a hub":http://superfeedr.com/publisher.
+
+fn1. Twitter's user stream is currently moving in this direction and it's the biggest thing Twitter announced at Chirp, according to me. I just wished they were using an open-protocol to represent the information (rather than their own schema). Generally, *everything I in your app do should be in the same feed*. Subscribing spplications can chose what they want to show or not.
