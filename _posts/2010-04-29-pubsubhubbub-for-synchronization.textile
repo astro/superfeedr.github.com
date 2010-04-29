@@ -23,4 +23,4 @@ Now, you may think that this looks cool, but social networks aren't really 'seri
 
 This can happen. Whatever your app is doing, "you just need a hub":http://superfeedr.com/publisher.
 
-fn1. Twitter's user stream is currently moving in this direction and it's the biggest thing Twitter announced at Chirp, according to me. I just wished they were using an open-protocol to represent the information (rather than their own schema). Generally, *everything I in your app do should be in the same feed*. Subscribing spplications can chose what they want to show or not.
+fn1. Twitter's user stream is currently moving in this direction and it's the biggest thing Twitter announced at Chirp, according to me. I just wished they were using an open-protocol to represent the information (rather than their own schema). Generally, *everything I do in your app should be in the same feed*. Subscribing applications can chose what they want to show or not.
