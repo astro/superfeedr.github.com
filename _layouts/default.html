@@ -2,7 +2,7 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-    <title>Superfeedr Blog : {{ page.title }} </title>
+    <title>Superfeedr : {{ page.title }} </title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <link href="http://superfeedr.com/stylesheets/main.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="http://superfeedr.com/stylesheets/shjs/sh_nedit.min.css" media="screen" rel="stylesheet" type="text/css" />
@@ -25,7 +25,7 @@
     <div id="user-navigation">
         <div>&nbsp;</div>
     </div>
-    
+
     <div id="page">
         <div id="sidebar">
             <h2>Superfeedr speaking</h2>
@@ -39,35 +39,34 @@
                 <script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US"></script><script type="text/javascript">FB.init("dfb41a1fd39d0fdac38081c0dd771c32");</script><fb:fan profile_id="205234549391" stream="" connections="" width="300"></fb:fan><div style="font-size:8px; padding-left:10px"><a href="http://www.facebook.com/pages/Superfeedr/205234549391">Superfeedr on Facebook</a> </div>
             </div>
 
-            
-            
+
+
             <div id="dsq-recentcomments" class="dsq-widget"><h2 class="dsq-widget-title">Recent Comments</h2><script type="text/javascript" src="http://disqus.com/forums/superfeedr-thoughts/recent_comments_widget.js?num_items=5&avatar_size=32"></script></div><a href="http://disqus.com">Powered by Disqus</a>
-            
+
             <div id="twitter_div">
-            <h2>Twitter Updates</h2>
-            <ul id="twitter_update_list"></ul>
-            <a href="http://twitter.com/superfeedr" id="twitter-link" style="display:block;text-align:right;">follow me on Twitter</a>
+                <h2>Twitter Updates</h2>
+                <ul id="twitter_update_list"></ul>
+                <a href="http://twitter.com/superfeedr" id="twitter-link" style="display:block;text-align:right;">follow me on Twitter</a>
             </div>
-            
+
         </div>
         <div id="main">
             {{ content }}
         </div>
-    </div>
-</div>
 
-
-    <div id="bottom">
-        <a href="http://superfeedr.com">Home</a> |
-        <a href="http://superfeedr.com/documentation">Documentation</a> |
-        <a href="http://groups.google.com/group/superfeedr/web/frequently-asked-questions">Faq</a> |
-        <a href="http://groups.google.com/group/superfeedr">Community</a> |
-        <a href="http://superfeedr.com/about">About</a>
+        <div id="bottom">
+            <a href="http://superfeedr.com">Home</a> |
+            <a href="http://superfeedr.com/documentation">Documentation</a> |
+            <a href="http://groups.google.com/group/superfeedr/web/frequently-asked-questions">Faq</a> |
+            <a href="http://groups.google.com/group/superfeedr">Community</a> |
+            <a href="http://superfeedr.com/about">About</a>
+        </div>
     </div>
+
     <script>
-		sh_highlightDocument();
-	</script>
-	
+    sh_highlightDocument();
+    </script>
+
     <!-- Google Analytics Code -->
     <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -81,26 +80,25 @@
     pageTracker._trackPageview();
     //--><!]]>
     </script>
-    
+
     <!-- Twitter Badge Code -->
     <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
     <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/superfeedr.json?callback=twitterCallback2&amp;count=5"></script>    
-    
+
     <script type="text/javascript">
     //<![CDATA[
     (function() {
-    		var links = document.getElementsByTagName('a');
-    		var query = '?';
-    		for(var i = 0; i < links.length; i++) {
-    			if(links[i].href.indexOf('#disqus_thread') >= 0) {
-    				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-    			}
-    		}
-    		document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/superfeedr-thoughts/get_num_replies.js' + query + '"></' + 'script>');
-    	})();
-    //]]>
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+            if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+            }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/superfeedr-thoughts/get_num_replies.js' + query + '"></' + 'script>');
+        })();
+        //]]>
     </script>
-
 </body>
 </html>
 

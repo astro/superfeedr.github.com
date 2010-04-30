@@ -1,0 +1,33 @@
+---
+layout: default
+title: "Publishers : how to deal with the Superfeedr polling?"
+---
+
+<h1>Publisher's best practice</h1>
+
+<p>Superfeedr is polling your feeds <strong>on behalf of other applications</strong>. We think polling is broken, but it's the only thing we can do to get updates in your feeds if you don't ping us.</p>
+
+<p>We know how hard we're sometimes polling your service and <strong>we sincerely apologize if this is causing any issue on your end</strong>. We believe the web is currently not efficient in the way information is propagated and we're committed to make this better. Please bear with us.  Here are a few best practices to decrease the load on your server.</p>
+
+<p>Please do not hesitate to get in <a href="http://superfeedr.com/about">touch personally</a> with our team (<code>parser@superfeedr.com</code>) if you have questions or need help.</p>
+
+<h2>Setup a hub</h2>
+
+<p>This is obviously the best thing you can do. <a href="http://code.google.com/p/pubsubhubbub/">PubSubHubbub</a> is an <strong>open</strong> protocol implemented by a lot of great feed subscribers, including <a href="http://www.google.com">Google</a>, <a href="http://netvibes.com">Netvibes</a>, <a href="http://sixapart.com">SixApart</a>, <a href="http://facebook.com/">Facebook</a> (Friendfeed), <a href="http://twitterfeed.com/">Twitterfeed</a>... etc. </p>
+<p>By setting up a hub, you <em>allow all these subscribers to get your content in realtime, without polling</em>.</p>
+<p><a href="http://superfeedr.com/publisher">Superfeedr host hubs</a> and it's free. You may want to look into that direction.</p>
+
+<h2>Use Etag and If-Modified-Headers</h2>
+<p>
+    Setting up a hub involves pinging us. If you do ping us, we will know about updates and we won't need to poll your feeds anymore. If you don't want to ping us, then, you need to implement a way for us to know that your content hasn't changed.
+</p>
+<p>
+    The HTTP specification has 2 similar mechanisms for this : <a href="http://en.wikipedia.org/wiki/HTTP_ETag">ETag</a> and <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">If-Modified-Since</a>. In both cases, you will serve us a <code>304</code> HTTP status code, which basically means: "this content wasn't modified since you last polled it". You don't have to serve a body along with it.
+</p>
+
+<h4>See Also</h4>
+<ul>
+    <li><a href="http://gist.github.com/364100">List of our IPs</a></li>
+    <li><a href="http://blog.superfeedr.com/Atom/Best%20Practice/Feeds/RSS/feed-publishing-best-practices/">Feed publishing best practices</a></li>
+</ul>
+
