@@ -1,0 +1,22 @@
+---
+layout: post
+title: Fun Numbers
+categories: [push, twitter]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+It's hard to talk about numbers, because they're often subject to interpretation. I was crunching a few of them earlier today for some presentation that I'm working on and I found out that Superfeedr is currently *pushing away about 237 new entries per second*.
+
+On a daily basis, this is @237 * 3 600 * 24 = 20,476,800@. 
+
+I would argue that a *tweet is the rough equivalent of an Atom entry* (much shorter usually.) Back in February, Twitter was pushing about "50 million tweets daily":http://blog.twitter.com/2010/02/measuring-tweets.html. Yes, we're at 40% of Twitter's scale in number of messages pushed.
+
+Obviously, we just push the data and don't have to handle incoming requests, like twitter does. But we could -we could- very well _be pushing all this data to S3 and let Amazon deal with the scaling issues_ of having client poll them :) At the same time, we do a hell of a lot of polling, which twitter doesn't.
+
+I'm not sure we could double up with the current number of servers, but based on the fact that we have less than 0.8‰ (that's about 8 for 10k feeds) of "late" feeds in our scheduling algorithm, I will say _our capacity utilization is low_.
+
+Our architecture for doing this is built *at 90% on XMPP*. It's basically a network of 120 XMPP clients who work together (on 35 512MB slices from Slicehost). Add 2 XMPP servers, 2 MySQL servers, 10 Redis data stores and you've got pretty much the whole Superfeedr task force.
+
+We want to push all these limits even further! "Send us your data":http://superfeedr.com/publisher!
