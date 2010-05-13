@@ -1,0 +1,60 @@
+---
+layout: post
+title: Digest and Heartbeat notifications
+categories: [pubsubhubbub, pubsub, digest, heartbeat]
+author_name: Julien
+author_uri: http://twitter.com/julien51
+author_email_md5: b30ce50678f0e934eaa6697425c59dd7
+---
+
+One of the most common problem of all Publish-Subscribe pattern is that they *fail silently*. 
+
+Since the subscriber will always wait for the publisher (or the hub) to send him data, when a subscriber doesn't receive new data _it will assume that none was sent_. Unfortunately, there could be other reasons : the publisher may be gone (or the hub), the subscription may be lost (or have expired), the connection between the 2 might have been flaky for some time... etc.
+
+Here is a new feature which should help subscribers gain confidence : *digest notifications*. They server 2 purposes : 
+
+* *Heartbeat* : guarantee the subscriber that at least once day, we'll notify it. No matter what happens, the subscriber will get a notification. It might be empty (if no entry was ever published on that feed).
+
+* *Digest* : the notification will include at most 10 entries (the last 10 entries published in it). This will allow the subscriber to check whether he got all the notifications or if he missed one.
+
+h3. Subscribing
+
+h4. XMPP API
+
+It's as easy as adding a @digest=true@ element in the subscribe element of the subscribe stanza. This element belongs to the _superfeedr namespace_ for compatibility with any XMPP client.
+
+<script src="http://gist.github.com/399627.js?file=gistfile1.xml"></script>
+
+Also, remember that you can setup your XMPP settings so you can get notifications every time we fetch a feed on your behalf, whether there were new entries or not. (see your Settings)
+
+h4. PubSubHubbub API
+
+Upon subscription, just provide an extra HTTP Post param like this @superfeedr.digest=true@.
+
+Please note that you'll need to re-subscribe any existing subscription for the digest to be taken into account. 
+
+h3. What next?
+
+Once you're subscribed with a digest, you can expect a notification at least once every 24 hours. Please, note that this won't be a fixed time of the day, and will not be 24 hours after your subscription.
+
+h4. XMPP API
+
+If this is a digest, the XMPP notification will include a digest flag in the @status@ node.
+
+<script src="http://gist.github.com/399628.js?file=gistfile1.xml"></script>
+
+h4. PubSubHubbub API
+
+The notification will just have a digest attribute within the @feed@ node of the body. This attribute belongs to the superfeedr namespace. 
+
+<script src="http://gist.github.com/399630.js?file=gistfile1.xml"></script>
+
+h3. Credits
+
+This extension works for both the "public hosted hubs":http://superfeedr.com/publisher and the default "pubsubhubbub hub":http://superfeedr.com/hubbub (works with any feed).
+
+Superfeedr is still in Beta, but when we'll get out of it, we will start counting credits for each notification we send (not for the hosted hubs). *The digest notification will count as 1 credit too*.
+
+As some of you requested (and may have guessed), we will *soon* allow a "GET" on both APIs so you can retrieve the content of any feed at any time. We're still finalizing a few details to make sure we're doing things right and are not being polled on behalf of publishers!
+
+<small>This is still an alpha feature. Please bear with us for a small period as we make sure this all scales as expected. As you may guess it's not easy to store 20M entries daily.</small>
