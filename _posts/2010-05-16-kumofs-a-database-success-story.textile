@@ -7,18 +7,20 @@ author_uri: http://spaceboyz.net/~astro/
 author_email_md5: 0120a25badc6b1e50f6890527dca7042
 ---
 
-Superfeedr is growing, and we want to add value for our clients. "Our newest feature":http://blog.superfeedr.com/digest/heartbeat/pubsub/pubsubhubbub/digest-and-heartbeat-notification/ requires us to store a lot of data, so we went out to look for appropriate solutions in the NoSQL ecosystem. The first decision was "Riak":http://riak.basho.com/, featuring persistent storage on disk and a very tunable clustering layer.
+"Superfeedr is growing":http://blog.superfeedr.com/push/twitter/number-of-the-day/, and we want to *add value for our clients*. "Our newest feature":http://blog.superfeedr.com/digest/heartbeat/pubsub/pubsubhubbub/digest-and-heartbeat-notification/ requires us to store a lot of data, so we went out to look for appropriate solutions in the NoSQL ecosystem. The first decision was "Riak":http://riak.basho.com/, featuring persistent storage on disk and a very tunable clustering layer.
 
 The current use-case consists of simply pulling a feed from the database, extend it with the newest entries, and finally write it back for durability. That's for about 30 feeds with 250 new 20KB entries per second.
 
-Unfortunately, "Riak disappointed us.":http://lists.basho.com/pipermail/riak-users_lists.basho.com/2010-May/001170.html The Basho guys approached us to offer help, but we were already fighting for days. I was frustrated and slacked off to read tech news, which led me to discover the newly open-sourced "KumoFS.":http://kumofs.sourceforge.net/
+Unfortunately, "Riak disappointed us.":http://lists.basho.com/pipermail/riak-users_lists.basho.com/2010-May/001170.html The Basho guys approached us to offer help, but we were already fighting for days. I was frustrated and slacked off to read tech news, which led me to discover the newly open-sourced "KumoFS":http://kumofs.sourceforge.net/ which advertises like this :
 
-The website looks promising and we decided to give it a shot. Because our use-case isn't complicated yet, and memcached client libraries exist plentifully, the whole switch was done in less than two hours.
+bq. _Extremely fast and scalable distributed key-value store. Tokyo Cabinet backend and memcached protocol support._
 
-And that's where the success story comes in: while Riak brought the whole machine to a grinding halt (loadavg at 50 for hours), KumoFS chewed our data like a Kids Menu. We were happy.
+The website looks promising and we decided to give it a shot. Because our use-case isn't complicated yet, and *memcached client libraries exist plentifully*, the whole switch was done in *less than two hours*.
 
-Well, you can't have everything: when Riak thrashed the whole machine due to throughput, KumoFS fares much better, but the kumo-gateway and kumo-server processes were slowly growing their buffers. Having these processes eating swap space before we can add machines to our cluster will be fatal for performance. Our safety belt: *ulimit -v*
+And that's where the success story comes in: while Riak brought the whole machine to a grinding halt (loadavg at 50 for hours), *KumoFS chewed our data like a Kids Menu*. We were happy.
+
+Well, you can't have everything: when Riak thrashed the whole machine due to throughput, KumoFS fares much better, but the @kumo-gateway@ and @kumo-server@ processes were slowly growing their buffers. Having these processes eating swap space before we can add machines to our cluster will be fatal for performance. Our safety belt: @ulimit -v@.
 
 Another itch were the missing concurrency controls. KumoFS already uses vector clocks internally and supports the memcached binary protocol, so "we filed a bug.":http://github.com/etolabo/kumofs/issues/#issue/1 To our very pleasant surprise, it was quickly picked up the author, "Furuhashi Sadayuki.":http://github.com/frsyuki As of KumoFS 0.4.0, we are now able use memcached's Compare & Swap mechanism. When we read a key, we get its CAS value. When we write to an existing key, we send that CAS value along. If the key has been updated by another process, KumoFS responds with a conflict, and our code will retry the whole transaction. No data is lost. The concept is very common to NoSQL databases, it's called *Optimistic Concurrency Control.*
 
-KumoFS still has few documentation, and we haven't played much with clustering yet. But so far, it is making us so happy that we are seriously beginning to consider it for replacement of our "Redis":http://code.google.com/p/redis/ installation. We are annoyed about the high memory requirements, and client-side sharding becomes cumbersome when you have heterogeneous clients.
+KumoFS still has few documentation, and we haven't played much with clustering yet. But so far, it is making us so happy that we are seriously beginning to consider it for replacement to some of our "Redis":http://code.google.com/p/redis/ servers which has high memory requirements (at least for sorted sets), and _client-side sharding_ becomes cumbersome when you have heterogeneous clients.
