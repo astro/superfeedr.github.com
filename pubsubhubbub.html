@@ -1,0 +1,25 @@
+---
+layout: one_column
+title: Superfeedr is PubSubHubbub with benefits
+---
+
+<h2>PubSubHubbub with benefits</h2>
+
+<p>It looks like you're a <strong>PubSubHubbub</strong> subscriber. You implemented this protocol in your app and you're now able to subscribe to feeds in realtime. Superfeedr hosts many of these hubs, like the one for <a href="http://tumblr.superfeedr.com/" title="tumblr pubsubhubbub">Tumblr</a>, <a href="http://posterous.superfeedr.com/" title="Posterous pubsubhubbub">Posterous</a>, or <a href="http://hub.gowalla.com/" title="Gowalla pubsubhubbub">Gowalla</a>.</p>
+<p>We thought PubSubHubbub was great, but we also were (and are still) convinced that it doesn't solve all the problems. If you used Superfeedr's default hub, you can get notification from <strong>any feed</strong>.</p>
+
+<h3>No more polling</h3>
+<p>
+   Polling is an option. Polling is also hard to scale and there exists several technologies out there to determine when a given feed has been updated. <strong>Superfeedr implements a lot of them so you don't have too</strong>. <em>RSSCloud</em>, <em>SUP</em>, <em>XML-RPC</em> ping, <em>custom streaming APIs</em>? We've got you covered. We keep the complexity on our end and push content to you exactly as if it was all PubSubHubbub.
+</p>
+
+<h3>Data Normalization</h3>
+<p>You actually already benefit from this, but <strong>Superfeedr does content normalization</strong>. You probably know it already, but it's a pain to get content in <em>so many different formats</em>, and often times <em>invalid</em>. Superfeedr deals with this complexity on your behalf. No matter the original format, we map this into some clean <strong>Atom</strong>, with a hint of <strong>georss</strong> for geo-location and <strong>ActivityStreams</strong> for any social web data.
+</p>
+<h3>Digest and Querying</h3>
+<p>
+    As any other Publish-Subscribe pattern, <em>PubSubHubbub fails silently</em>. Ever wondered what happens if the hub to which subscribed died? On the other hand, what happens if, for some reason your app has been offline for a few hours? Don't worry, Superfeedr offers <strong>digest notifications</strong> which will guarantee you that you'll get content. You can also query superfeedr to <strong>get the last 10 entries of a given feed</strong>. This way, you won't miss any data.
+</p>
+
+<h2>Get started</h2>
+<p><a href="http://superfeedr.com/hubbub">Signup for Superfeedr</a>. The only you have to do is point to <code>http(s)://user:password@superfeedr.com/hubbub</code> for the hub url. Yes, <strong>that's it</strong>.</p>
