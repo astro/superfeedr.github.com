@@ -1,0 +1,18 @@
+---
+layout: post
+title: RESTful Access To Superfeedr
+categories: [OSS, open-source, HTTP, REST]
+author_name: Astro
+author_uri: http://spaceboyz.net/~astro/
+author_email_md5: 0120a25badc6b1e50f6890527dca7042
+---
+
+As the superheroes who parse feeds we naturally have a strong relationship with HTTP. We also noticed that our PubsubHubbub interface is more popular than our XMPP API. Many developers feel more comfortable within the familar environment of the Web. Reusability of libraries, frameworks and platforms is a major concern: while many XMPP implementations already exist, they are easily outnumbered by the vast amount of HTTP tools that fit any scenario.
+
+PubsubHubbub requires some implementation effort itself. We can make it easier for new developers: a plain HTTP interface following the conventions of "REpresentational State Transfer":http://en.wikipedia.org/wiki/REST. You can manage subscriptions with simple POST and DELETE requests. We would like you to reuse as much software as possible, like clients for the ATOM and JSON stream interfaces. Those solutions have been successfully used at other content providers, such as "Sixapart":http://www.sixapart.com/developers/atom.html and "Twitter":http://apiwiki.twitter.com/Streaming-API-Documentation.
+
+Please understand that this bridge requires HTTP Basic Authentication in order to provide your Superfeedr subscriber context. Technically, it is a simple *XMPP PubSub to HTTP proxy*.
+
+We're currently busy launching other features. Therefore we're releasing the software as Open Source for you to play with. You'll need "node.js":http://www.nodejs.org/ and "Firetail":http://github.com/astro/firetail itself. Don't hesitate, it'll pull all other dependencies via Git submodules.
+
+*node.js* is a JavaScript environment for high-performance network software. Unfortunately, this platform isn't very mature yet. node.js aims at the Web, and despite an XMPP library existed we questioned its suitability for us. That's why I took a step back, created "bindings to a very fast XML parser":http://github.com/astro/node-expat, and wrote "node-xmpp":http://github.com/astro/node-xmpp from scratch. We hope that these libraries will be of use whatever you do with Superfeedr or XMPP in general.
